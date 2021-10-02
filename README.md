@@ -3,6 +3,9 @@ This project was my Senior design project for SE491 and SE492 Iowa State.
 
 We created a POS tagger specifically for Software Documentation by adding a new tag set, getting new training data, and using various models - ultimately ending on a CRF to get the best results.  
 
+Check out the [project poster](https://github.com/Jamesetay1/Documentation-POS-Tagger/files/7271985/Final.Poster.pdf) for the quickest way to learn about the project.   
+The project website is available [here](https://sdmay21-35.sd.ece.iastate.edu/)
+
 My role on the project was Computational Linguistics SME - I would often be the lead designer of our approach to problems like tag set, which model to use and with what parameters.  
 
 This was done in collaboration with:
