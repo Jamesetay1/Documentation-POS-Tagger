@@ -1,0 +1,152 @@
+
+
+Enumeration (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.util
+Interface Enumeration<E>
+
+All Known Subinterfaces:
+NamingEnumeration<T>
+
+All Known Implementing Classes:
+StringTokenizer
+
+<pre>public interface Enumeration<E></pre>
+An object that implements the Enumeration interface generates a
+ series of elements, one at a time. Successive calls to the
+ <code>nextElement</code> method return successive elements of the
+ series.
+ <p>
+ For example, to print all elements of a Vector<E> v:
+ <pre>
+   for (Enumeration<E> e = v.elements(); e.hasMoreElements();)
+       System.out.println(e.nextElement());</pre>
+ <p>
+ Methods are provided to enumerate through the elements of a
+ vector, the keys of a hashtable, and the values in a hashtable.
+ Enumerations are also used to specify the input streams to a
+ <code>SequenceInputStream</code>.
+ <p>
+ NOTE: The functionality of this interface is duplicated by the Iterator
+ interface.  In addition, Iterator adds an optional remove operation, and
+ has shorter method names.  New implementations should consider using
+ Iterator in preference to Enumeration.
+
+Since:
+JDK1.0
+See Also:
+<code>Iterator</code>, 
+<code>SequenceInputStream</code>, 
+<code>nextElement()</code>, 
+<code>Hashtable</code>, 
+<code>Hashtable.elements()</code>, 
+<code>Hashtable.keys()</code>, 
+<code>Vector</code>, 
+<code>Vector.elements()</code>
+
+Method Summary
+
+All Methods Instance Methods Abstract Methods 
+
+Modifier and Type
+Method and Description
+
+<code>boolean</code>
+<code>hasMoreElements()</code>
+Tests if this enumeration contains more elements.
+
+<code>E</code>
+<code>nextElement()</code>
+Returns the next element of this enumeration if this enumeration
+ object has at least one more element to provide.
+
+Method Detail
+
+hasMoreElements
+<pre>boolean hasMoreElements()</pre>
+Tests if this enumeration contains more elements.
+
+Returns:
+<code>true</code> if and only if this enumeration object
+           contains at least one more element to provide;
+          <code>false</code> otherwise.
+
+nextElement
+<pre>E nextElement()</pre>
+Returns the next element of this enumeration if this enumeration
+ object has at least one more element to provide.
+
+Returns:
+the next element of this enumeration.
+Throws:
+<code>NoSuchElementException</code> - if no more elements exist.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

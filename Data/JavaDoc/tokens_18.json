@@ -1,0 +1,7577 @@
+{
+  "tokens": [
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "concrete"
+    },
+    {
+      "tag": "NN",
+      "token": "subclass"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "NumberFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "DT",
+      "token": "that"
+    },
+    {
+      "tag": "NNS",
+      "token": "formats"
+    },
+    {
+      "tag": "JJ",
+      "token": "decimal"
+    },
+    {
+      "tag": "NNS",
+      "token": "numbers"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "PRP",
+      "token": "It"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "variety"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "features"
+    },
+    {
+      "tag": "VBN",
+      "token": "designed"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "make"
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "JJ",
+      "token": "possible"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "parse"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VB",
+      "token": "format"
+    },
+    {
+      "tag": "NNS",
+      "token": "numbers"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "any"
+    },
+    {
+      "tag": "NN",
+      "token": "locale"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBG",
+      "token": "including"
+    },
+    {
+      "tag": "NN",
+      "token": "support"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "NNP",
+      "token": "Western"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NNP",
+      "token": "Arabic"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NNP",
+      "token": "Indic"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "PRP",
+      "token": "It"
+    },
+    {
+      "tag": "RB",
+      "token": "also"
+    },
+    {
+      "tag": "VBZ",
+      "token": "supports"
+    },
+    {
+      "tag": "JJ",
+      "token": "different"
+    },
+    {
+      "tag": "NNS",
+      "token": "kinds"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "numbers"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBG",
+      "token": "including"
+    },
+    {
+      "tag": "NNS",
+      "token": "integers"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "CD",
+      "token": "123"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBN",
+      "token": "fixed"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NN",
+      "token": "point"
+    },
+    {
+      "tag": "NNS",
+      "token": "numbers"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "CD",
+      "token": "123"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "LS",
+      "token": "4"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "JJ",
+      "token": "scientific"
+    },
+    {
+      "tag": "NN",
+      "token": "notation"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "23E4"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NNS",
+      "token": "percentages"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "CD",
+      "token": "12"
+    },
+    {
+      "tag": "NN",
+      "token": "%"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NN",
+      "token": "currency"
+    },
+    {
+      "tag": "NNS",
+      "token": "amounts"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "$",
+      "token": "$"
+    },
+    {
+      "tag": "CD",
+      "token": "123"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "All"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "these"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "localized"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "TO",
+      "token": "To"
+    },
+    {
+      "tag": "VB",
+      "token": "obtain"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "NumberFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "specific"
+    },
+    {
+      "tag": "NN",
+      "token": "locale"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBG",
+      "token": "including"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "default"
+    },
+    {
+      "tag": "NN",
+      "token": "locale"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VB",
+      "token": "call"
+    },
+    {
+      "tag": "CD",
+      "token": "one"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "NumberFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "``",
+      "token": "'"
+    },
+    {
+      "tag": "POS",
+      "token": "s"
+    },
+    {
+      "tag": "NN",
+      "token": "factory"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "getInstance"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "In"
+    },
+    {
+      "tag": "JJ",
+      "token": "general"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBP",
+      "token": "do"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "call"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "constructors"
+    },
+    {
+      "tag": "RB",
+      "token": "directly"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "since"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "NumberFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "factory"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "VB",
+      "token": "return"
+    },
+    {
+      "tag": "NNS",
+      "token": "subclasses"
+    },
+    {
+      "tag": "JJ",
+      "token": "other"
+    },
+    {
+      "tag": "IN",
+      "token": "than"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "VBP",
+      "token": "need"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "customize"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "format"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VB",
+      "token": "do"
+    },
+    {
+      "tag": "NN",
+      "token": "something"
+    },
+    {
+      "tag": "IN",
+      "token": "like"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "NumberFormat"},
+    {
+      "tag": "<var>",
+      "token": "f"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "NumberFormat"},
+    {"token": "."},
+    {"token": "getInstance"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "loc"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<?st>",
+      "token": "if"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "f"
+    },
+    {"token": "instanceof"},
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<var>",
+      "token": "f"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {"token": "."},
+    {"token": "setDecimalSeparatorAlwaysShown"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "true"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "DT",
+      "token": "A"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "comprises"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "set"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "symbols"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "set"
+    },
+    {
+      "tag": "RB",
+      "token": "directly"
+    },
+    {
+      "tag": "VBG",
+      "token": "using"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "applyPattern"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "RB",
+      "token": "indirectly"
+    },
+    {
+      "tag": "VBG",
+      "token": "using"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "API"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NNS",
+      "token": "symbols"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "stored"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormatSymbols"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "WRB",
+      "token": "When"
+    },
+    {
+      "tag": "VBG",
+      "token": "using"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "NumberFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "factory"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NNS",
+      "token": "symbols"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "read"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "VBN",
+      "token": "localized"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "ResourceBundle"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "s"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNS",
+      "token": "Patterns"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "patterns"
+    },
+    {
+      "tag": "VBP",
+      "token": "have"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBG",
+      "token": "following"
+    },
+    {
+      "tag": "NN",
+      "token": "syntax"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Pattern"},
+    {"token": ":"},
+    {"token": "PositivePattern"},
+    {"token": "PositivePattern"},
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "NegativePattern"},
+    {"token": "PositivePattern"},
+    {"token": ":"},
+    {"token": "Prefix"},
+    {"token": "opt"},
+    {"token": "Number"},
+    {"token": "Suffix"},
+    {"token": "opt"},
+    {"token": "NegativePattern"},
+    {"token": ":"},
+    {"token": "Prefix"},
+    {"token": "opt"},
+    {"token": "Number"},
+    {"token": "Suffix"},
+    {"token": "opt"},
+    {"token": "Prefix"},
+    {"token": ":"},
+    {"token": "any"},
+    {"token": "Unicode"},
+    {"token": "characters"},
+    {"token": "except"},
+    {"token": "\\"},
+    {"token": "uFFFE"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\\"},
+    {"token": "uFFFF"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "and"},
+    {"token": "special"},
+    {"token": "characters"},
+    {"token": "Suffix"},
+    {"token": ":"},
+    {"token": "any"},
+    {"token": "Unicode"},
+    {"token": "characters"},
+    {"token": "except"},
+    {"token": "\\"},
+    {"token": "uFFFE"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\\"},
+    {"token": "uFFFF"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "and"},
+    {"token": "special"},
+    {"token": "characters"},
+    {"token": "Number"},
+    {"token": ":"},
+    {"token": "Integer"},
+    {"token": "Exponent"},
+    {"token": "opt"},
+    {"token": "Integer"},
+    {"token": "."},
+    {"token": "Fraction"},
+    {"token": "Exponent"},
+    {"token": "opt"},
+    {"token": "Integer"},
+    {"token": ":"},
+    {"token": "MinimumInteger"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "Integer"},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "Integer"},
+    {"token": "MinimumInteger"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "MinimumInteger"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "MinimumInteger"},
+    {"token": "Fraction"},
+    {"token": ":"},
+    {"token": "MinimumFraction"},
+    {"token": "opt"},
+    {"token": "OptionalFraction"},
+    {"token": "opt"},
+    {"token": "MinimumFraction"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "MinimumFraction"},
+    {"token": "opt"},
+    {"token": "OptionalFraction"},
+    {"token": ":"},
+    {"token": "#"},
+    {"token": "OptionalFraction"},
+    {"token": "opt"},
+    {"token": "Exponent"},
+    {"token": ":"},
+    {"token": "E"},
+    {"token": "MinimumExponent"},
+    {"token": "MinimumExponent"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "MinimumExponent"},
+    {"token": "opt"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "DT",
+      "token": "A"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": "VBZ",
+      "token": "contains"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "positive"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NN",
+      "token": "subpattern"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "00"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "00"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "Each"
+    },
+    {
+      "tag": "NN",
+      "token": "subpattern"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "prefix"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "JJ",
+      "token": "numeric"
+    },
+    {
+      "tag": "NN",
+      "token": "part"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NN",
+      "token": "subpattern"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "optional"
+    },
+    {
+      "tag": ":",
+      "token": ";"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "JJ",
+      "token": "absent"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "RB",
+      "token": "then"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "positive"
+    },
+    {
+      "tag": "NN",
+      "token": "subpattern"
+    },
+    {
+      "tag": "VBN",
+      "token": "prefixed"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBN",
+      "token": "localized"
+    },
+    {
+      "tag": "CC",
+      "token": "minus"
+    },
+    {
+      "tag": "NN",
+      "token": "sign"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "'"},
+    {"token": "-"},
+    {"token": "'"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "JJS",
+      "token": "most"
+    },
+    {
+      "tag": "NNS",
+      "token": "locales"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NN",
+      "token": "subpattern"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "That"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "00"
+    },
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "RB",
+      "token": "alone"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "equivalent"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "00"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "-"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "00"
+    },
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "EX",
+      "token": "there"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "JJ",
+      "token": "explicit"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NN",
+      "token": "subpattern"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "VBZ",
+      "token": "serves"
+    },
+    {
+      "tag": "RB",
+      "token": "only"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "specify"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NN",
+      "token": "prefix"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": ":",
+      "token": ";"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "JJ",
+      "token": "minimal"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "other"
+    },
+    {
+      "tag": "NNS",
+      "token": "characteristics"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "PDT",
+      "token": "all"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "same"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "positive"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "That"
+    },
+    {
+      "tag": "VBZ",
+      "token": "means"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "#"},
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "#"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "produces"
+    },
+    {
+      "tag": "RB",
+      "token": "precisely"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "same"
+    },
+    {
+      "tag": "NN",
+      "token": "behavior"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "#"},
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "#"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NNS",
+      "token": "prefixes"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NNS",
+      "token": "suffixes"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "various"
+    },
+    {
+      "tag": "NNS",
+      "token": "symbols"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "NN",
+      "token": "infinity"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NNS",
+      "token": "thousands"
+    },
+    {
+      "tag": "NNS",
+      "token": "separators"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "JJ",
+      "token": "decimal"
+    },
+    {
+      "tag": "NNS",
+      "token": "separators"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "FW",
+      "token": "etc"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "set"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "JJ",
+      "token": "arbitrary"
+    },
+    {
+      "tag": "NNS",
+      "token": "values"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "PRP",
+      "token": "they"
+    },
+    {
+      "tag": "MD",
+      "token": "will"
+    },
+    {
+      "tag": "VB",
+      "token": "appear"
+    },
+    {
+      "tag": "RB",
+      "token": "properly"
+    },
+    {
+      "tag": "IN",
+      "token": "during"
+    },
+    {
+      "tag": "VBG",
+      "token": "formatting"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "RB",
+      "token": "However"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NN",
+      "token": "care"
+    },
+    {
+      "tag": "MD",
+      "token": "must"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "taken"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "symbols"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NNS",
+      "token": "strings"
+    },
+    {
+      "tag": "VBP",
+      "token": "do"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "NN",
+      "token": "conflict"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "VBG",
+      "token": "parsing"
+    },
+    {
+      "tag": "MD",
+      "token": "will"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "JJ",
+      "token": "unreliable"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "For"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "either"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "positive"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NNS",
+      "token": "prefixes"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "suffixes"
+    },
+    {
+      "tag": "MD",
+      "token": "must"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "JJ",
+      "token": "distinct"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {"token": "."},
+    {"token": "parse"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "JJ",
+      "token": "able"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "distinguish"
+    },
+    {
+      "tag": "JJ",
+      "token": "positive"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NNS",
+      "token": "values"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "PRP",
+      "token": "they"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "JJ",
+      "token": "identical"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "RB",
+      "token": "then"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "MD",
+      "token": "will"
+    },
+    {
+      "tag": "VB",
+      "token": "behave"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "DT",
+      "token": "no"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NN",
+      "token": "subpattern"
+    },
+    {
+      "tag": "VBD",
+      "token": "was"
+    },
+    {
+      "tag": "VBN",
+      "token": "specified"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "DT",
+      "token": "Another"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "decimal"
+    },
+    {
+      "tag": "NN",
+      "token": "separator"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NNS",
+      "token": "thousands"
+    },
+    {
+      "tag": "NN",
+      "token": "separator"
+    },
+    {
+      "tag": "MD",
+      "token": "should"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "JJ",
+      "token": "distinct"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "VBG",
+      "token": "parsing"
+    },
+    {
+      "tag": "MD",
+      "token": "will"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "JJ",
+      "token": "impossible"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "grouping"
+    },
+    {
+      "tag": "NN",
+      "token": "separator"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "RB",
+      "token": "commonly"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "NNS",
+      "token": "thousands"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "but"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "some"
+    },
+    {
+      "tag": "NNS",
+      "token": "countries"
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "VBZ",
+      "token": "separates"
+    },
+    {
+      "tag": "CD",
+      "token": "ten"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NNS",
+      "token": "thousands"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "grouping"
+    },
+    {
+      "tag": "NN",
+      "token": "size"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "constant"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "IN",
+      "token": "between"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "grouping"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "CD",
+      "token": "3"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "CD",
+      "token": "100"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CD",
+      "token": "000"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CD",
+      "token": "000"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "CD",
+      "token": "4"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CD",
+      "token": "0000"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CD",
+      "token": "0000"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "VBP",
+      "token": "supply"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "JJ",
+      "token": "multiple"
+    },
+    {
+      "tag": "NN",
+      "token": "grouping"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "interval"
+    },
+    {
+      "tag": "IN",
+      "token": "between"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "last"
+    },
+    {
+      "tag": "NN",
+      "token": "one"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "end"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "one"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "RB",
+      "token": "So"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "SYM",
+      "token": "="
+    },
+    {
+      "tag": "SYM",
+      "token": "="
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "SYM",
+      "token": "="
+    },
+    {
+      "tag": "SYM",
+      "token": "="
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJ",
+      "token": "Special"
+    },
+    {
+      "tag": "NN",
+      "token": "Pattern"
+    },
+    {
+      "tag": "NNS",
+      "token": "Characters"
+    },
+    {
+      "tag": "JJ",
+      "token": "Many"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "taken"
+    },
+    {
+      "tag": "RB",
+      "token": "literally"
+    },
+    {
+      "tag": ":",
+      "token": ";"
+    },
+    {
+      "tag": "PRP",
+      "token": "they"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "matched"
+    },
+    {
+      "tag": "IN",
+      "token": "during"
+    },
+    {
+      "tag": "VBG",
+      "token": "parsing"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NN",
+      "token": "output"
+    },
+    {
+      "tag": "JJ",
+      "token": "unchanged"
+    },
+    {
+      "tag": "IN",
+      "token": "during"
+    },
+    {
+      "tag": "VBG",
+      "token": "formatting"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJ",
+      "token": "Special"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "on"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "other"
+    },
+    {
+      "tag": "NN",
+      "token": "hand"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VB",
+      "token": "stand"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "JJ",
+      "token": "other"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NNS",
+      "token": "strings"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "NNS",
+      "token": "classes"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "PRP",
+      "token": "They"
+    },
+    {
+      "tag": "MD",
+      "token": "must"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "quoted"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "unless"
+    },
+    {
+      "tag": "VBN",
+      "token": "noted"
+    },
+    {
+      "tag": "RB",
+      "token": "otherwise"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "PRP",
+      "token": "they"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "appear"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "prefix"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "NNS",
+      "token": "literals"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": "VBN",
+      "token": "listed"
+    },
+    {
+      "tag": "RB",
+      "token": "here"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "AFX",
+      "token": "non"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "VBN",
+      "token": "localized"
+    },
+    {
+      "tag": "NNS",
+      "token": "patterns"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VBN",
+      "token": "Localized"
+    },
+    {
+      "tag": "NNS",
+      "token": "patterns"
+    },
+    {
+      "tag": "VBP",
+      "token": "use"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBG",
+      "token": "corresponding"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": "VBN",
+      "token": "taken"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "NN",
+      "token": "formatter"
+    },
+    {
+      "tag": "''",
+      "token": "'"
+    },
+    {
+      "tag": "POS",
+      "token": "s"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormatSymbols"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": "RB",
+      "token": "instead"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "DT",
+      "token": "these"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": "VBP",
+      "token": "lose"
+    },
+    {
+      "tag": "PRP$",
+      "token": "their"
+    },
+    {
+      "tag": "JJ",
+      "token": "special"
+    },
+    {
+      "tag": "NN",
+      "token": "status"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "CD",
+      "token": "Two"
+    },
+    {
+      "tag": "NNS",
+      "token": "exceptions"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "currency"
+    },
+    {
+      "tag": "NN",
+      "token": "sign"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "UH",
+      "token": "quote"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VBN",
+      "token": "localized"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNP",
+      "token": "Chart"
+    },
+    {
+      "tag": "VBG",
+      "token": "showing"
+    },
+    {
+      "tag": "NN",
+      "token": "symbol"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NN",
+      "token": "location"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBN",
+      "token": "localized"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NN",
+      "token": "meaning"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Symbol"
+    },
+    {
+      "tag": "NN",
+      "token": "Location"
+    },
+    {
+      "tag": "VBN",
+      "token": "Localized"
+    },
+    {
+      "tag": ".",
+      "token": "?"
+    },
+    {
+      "tag": "VBG",
+      "token": "Meaning"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNP",
+      "token": "Number"
+    },
+    {
+      "tag": "NNP",
+      "token": "Yes"
+    },
+    {
+      "tag": "NNP",
+      "token": "Digit"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "#"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNP",
+      "token": "Number"
+    },
+    {
+      "tag": "NNP",
+      "token": "Yes"
+    },
+    {
+      "tag": "NNP",
+      "token": "Digit"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CD",
+      "token": "zero"
+    },
+    {
+      "tag": "NNS",
+      "token": "shows"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "JJ",
+      "token": "absent"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "."},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Number"
+    },
+    {
+      "tag": "UH",
+      "token": "Yes"
+    },
+    {
+      "tag": "JJ",
+      "token": "Decimal"
+    },
+    {
+      "tag": "NN",
+      "token": "separator"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "JJ",
+      "token": "monetary"
+    },
+    {
+      "tag": "NN",
+      "token": "decimal"
+    },
+    {
+      "tag": "NN",
+      "token": "separator"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "-"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Number"
+    },
+    {
+      "tag": "UH",
+      "token": "Yes"
+    },
+    {
+      "tag": "NNP",
+      "token": "Minus"
+    },
+    {
+      "tag": "VB",
+      "token": "sign"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNP",
+      "token": "Number"
+    },
+    {
+      "tag": "NNP",
+      "token": "Yes"
+    },
+    {
+      "tag": "NNP",
+      "token": "Grouping"
+    },
+    {
+      "tag": "NNP",
+      "token": "separator"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "E"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNP",
+      "token": "Number"
+    },
+    {
+      "tag": "NNP",
+      "token": "Yes"
+    },
+    {
+      "tag": "VBZ",
+      "token": "Separates"
+    },
+    {
+      "tag": "NN",
+      "token": "mantissa"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NN",
+      "token": "exponent"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "JJ",
+      "token": "scientific"
+    },
+    {
+      "tag": "NN",
+      "token": "notation"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VBP",
+      "token": "Need"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "quoted"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "NN",
+      "token": "prefix"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNP",
+      "token": "Subpattern"
+    },
+    {
+      "tag": "NN",
+      "token": "boundary"
+    },
+    {
+      "tag": "UH",
+      "token": "Yes"
+    },
+    {
+      "tag": "VBZ",
+      "token": "Separates"
+    },
+    {
+      "tag": "JJ",
+      "token": "positive"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NNS",
+      "token": "subpatterns"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "%"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Prefix"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": "UH",
+      "token": "Yes"
+    },
+    {
+      "tag": "VB",
+      "token": "Multiply"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "CD",
+      "token": "100"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VB",
+      "token": "show"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "NN",
+      "token": "percentage"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\\"},
+    {"token": "u2030"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Prefix"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": "UH",
+      "token": "Yes"
+    },
+    {
+      "tag": "VB",
+      "token": "Multiply"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "CD",
+      "token": "1000"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VB",
+      "token": "show"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "IN",
+      "token": "per"
+    },
+    {
+      "tag": "NN",
+      "token": "mille"
+    },
+    {
+      "tag": "NN",
+      "token": "value"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "¤"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\\"},
+    {"token": "u00A4"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "NN",
+      "token": "Prefix"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": "DT",
+      "token": "No"
+    },
+    {
+      "tag": "NN",
+      "token": "Currency"
+    },
+    {
+      "tag": "NN",
+      "token": "sign"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBN",
+      "token": "replaced"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "NN",
+      "token": "currency"
+    },
+    {
+      "tag": "NN",
+      "token": "symbol"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "VBN",
+      "token": "doubled"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBN",
+      "token": "replaced"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "JJ",
+      "token": "international"
+    },
+    {
+      "tag": "NN",
+      "token": "currency"
+    },
+    {
+      "tag": "NN",
+      "token": "symbol"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "JJ",
+      "token": "present"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "monetary"
+    },
+    {
+      "tag": "NN",
+      "token": "decimal"
+    },
+    {
+      "tag": "NN",
+      "token": "separator"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "RB",
+      "token": "instead"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "decimal"
+    },
+    {
+      "tag": "NN",
+      "token": "separator"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "'"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Prefix"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": "DT",
+      "token": "No"
+    },
+    {
+      "tag": "VBN",
+      "token": "Used"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "quote"
+    },
+    {
+      "tag": "JJ",
+      "token": "special"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "prefix"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "'"},
+    {"token": "#"},
+    {"token": "'"},
+    {"token": "#"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "formats"
+    },
+    {
+      "tag": "CD",
+      "token": "123"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {
+      "tag": "<num>",
+      "token": "123"
+    },
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "TO",
+      "token": "To"
+    },
+    {
+      "tag": "VB",
+      "token": "create"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "single"
+    },
+    {
+      "tag": "NN",
+      "token": "quote"
+    },
+    {
+      "tag": "PRP",
+      "token": "itself"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VB",
+      "token": "use"
+    },
+    {
+      "tag": "CD",
+      "token": "two"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "row"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {"token": "o"},
+    {"token": "'"},
+    {"token": "'"},
+    {"token": "clock"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJ",
+      "token": "Scientific"
+    },
+    {
+      "tag": "NN",
+      "token": "Notation"
+    },
+    {
+      "tag": "NNS",
+      "token": "Numbers"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "JJ",
+      "token": "scientific"
+    },
+    {
+      "tag": "NN",
+      "token": "notation"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "expressed"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "product"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "mantissa"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "power"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "CD",
+      "token": "ten"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CD",
+      "token": "1234"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "expressed"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "CD",
+      "token": "234"
+    },
+    {
+      "tag": "SYM",
+      "token": "x"
+    },
+    {
+      "tag": "CD",
+      "token": "10"
+    },
+    {
+      "tag": "SYM",
+      "token": "^"
+    },
+    {
+      "tag": "CD",
+      "token": "3"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "mantissa"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "RB",
+      "token": "often"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "range"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "CD",
+      "token": "0"
+    },
+    {
+      "tag": "SYM",
+      "token": "≤"
+    },
+    {
+      "tag": "NN",
+      "token": "x"
+    },
+    {
+      "tag": "SYM",
+      "token": "<"
+    },
+    {
+      "tag": "CD",
+      "token": "10"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "CD",
+      "token": "0"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "but"
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "MD",
+      "token": "need"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "instructed"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "NN",
+      "token": "format"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VB",
+      "token": "parse"
+    },
+    {
+      "tag": "JJ",
+      "token": "scientific"
+    },
+    {
+      "tag": "NN",
+      "token": "notation"
+    },
+    {
+      "tag": "RB",
+      "token": "only"
+    },
+    {
+      "tag": "IN",
+      "token": "via"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": ":",
+      "token": ";"
+    },
+    {
+      "tag": "EX",
+      "token": "there"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "RB",
+      "token": "currently"
+    },
+    {
+      "tag": "DT",
+      "token": "no"
+    },
+    {
+      "tag": "NN",
+      "token": "factory"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBZ",
+      "token": "creates"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "scientific"
+    },
+    {
+      "tag": "NN",
+      "token": "notation"
+    },
+    {
+      "tag": "NN",
+      "token": "format"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "In"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "exponent"
+    },
+    {
+      "tag": "NN",
+      "token": "character"
+    },
+    {
+      "tag": "RB",
+      "token": "immediately"
+    },
+    {
+      "tag": "VBN",
+      "token": "followed"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "CD",
+      "token": "one"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "JJR",
+      "token": "more"
+    },
+    {
+      "tag": "NN",
+      "token": "digit"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": "VBZ",
+      "token": "indicates"
+    },
+    {
+      "tag": "JJ",
+      "token": "scientific"
+    },
+    {
+      "tag": "NN",
+      "token": "notation"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "E0"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "formats"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "CD",
+      "token": "1234"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "."},
+    {"token": "234E3"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "digit"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": "IN",
+      "token": "after"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "exponent"
+    },
+    {
+      "tag": "NN",
+      "token": "character"
+    },
+    {
+      "tag": "VBZ",
+      "token": "gives"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "minimum"
+    },
+    {
+      "tag": "NN",
+      "token": "exponent"
+    },
+    {
+      "tag": "NN",
+      "token": "digit"
+    },
+    {
+      "tag": "NN",
+      "token": "count"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "EX",
+      "token": "There"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "no"
+    },
+    {
+      "tag": "NN",
+      "token": "maximum"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJ",
+      "token": "Negative"
+    },
+    {
+      "tag": "NNS",
+      "token": "exponents"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "formatted"
+    },
+    {
+      "tag": "VBG",
+      "token": "using"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBN",
+      "token": "localized"
+    },
+    {
+      "tag": "CC",
+      "token": "minus"
+    },
+    {
+      "tag": "NN",
+      "token": "sign"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "prefix"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NN",
+      "token": "suffix"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "VBZ",
+      "token": "allows"
+    },
+    {
+      "tag": "NNS",
+      "token": "patterns"
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "E0"},
+    {"token": "m"},
+    {"token": "/"},
+    {"token": "s"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "minimum"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "maximum"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "interpreted"
+    },
+    {
+      "tag": "RB",
+      "token": "together"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "maximum"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJR",
+      "token": "greater"
+    },
+    {
+      "tag": "IN",
+      "token": "than"
+    },
+    {
+      "tag": "PRP$",
+      "token": "their"
+    },
+    {
+      "tag": "JJ",
+      "token": "minimum"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJR",
+      "token": "greater"
+    },
+    {
+      "tag": "IN",
+      "token": "than"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "VBZ",
+      "token": "forces"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "exponent"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "multiple"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "maximum"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "minimum"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "interpreted"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "RBS",
+      "token": "most"
+    },
+    {
+      "tag": "JJ",
+      "token": "common"
+    },
+    {
+      "tag": "NN",
+      "token": "use"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "generate"
+    },
+    {
+      "tag": "NN",
+      "token": "engineering"
+    },
+    {
+      "tag": "NN",
+      "token": "notation"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "exponent"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "multiple"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "CD",
+      "token": "three"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NN",
+      "token": "e"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "g"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "E0"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VBG",
+      "token": "Using"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "CD",
+      "token": "12345"
+    },
+    {
+      "tag": "NNS",
+      "token": "formats"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "12"
+    },
+    {"token": "."},
+    {"token": "345E3"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "CD",
+      "token": "123456"
+    },
+    {
+      "tag": "NNS",
+      "token": "formats"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "123"
+    },
+    {"token": "."},
+    {"token": "456E3"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "RB",
+      "token": "Otherwise"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "minimum"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "achieved"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "VBG",
+      "token": "adjusting"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "exponent"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "CD",
+      "token": "0"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "CD",
+      "token": "00123"
+    },
+    {
+      "tag": "VBN",
+      "token": "formatted"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "00"
+    },
+    {"token": "."},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "E0"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "yields"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "12"
+    },
+    {"token": "."},
+    {"token": "3E"},
+    {"token": "-"},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "JJ",
+      "token": "significant"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "mantissa"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "sum"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "minimum"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "maximum"
+    },
+    {
+      "tag": "NN",
+      "token": "fraction"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "unaffected"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "maximum"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "For"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CD",
+      "token": "12345"
+    },
+    {
+      "tag": "VBN",
+      "token": "formatted"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "#"},
+    {"token": "#"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {"token": "#"},
+    {"token": "#"},
+    {"token": "E0"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "12"
+    },
+    {"token": "."},
+    {"token": "3E3"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "TO",
+      "token": "To"
+    },
+    {
+      "tag": "VB",
+      "token": "show"
+    },
+    {
+      "tag": "DT",
+      "token": "all"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBD",
+      "token": "set"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "significant"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "VBP",
+      "token": "count"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "CD",
+      "token": "zero"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "JJ",
+      "token": "significant"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "VBZ",
+      "token": "does"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "affect"
+    },
+    {
+      "tag": "VBG",
+      "token": "parsing"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJ",
+      "token": "Exponential"
+    },
+    {
+      "tag": "NNS",
+      "token": "patterns"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "contain"
+    },
+    {
+      "tag": "NN",
+      "token": "grouping"
+    },
+    {
+      "tag": "NNS",
+      "token": "separators"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VBG",
+      "token": "Rounding"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "provides"
+    },
+    {
+      "tag": "VBG",
+      "token": "rounding"
+    },
+    {
+      "tag": "NNS",
+      "token": "modes"
+    },
+    {
+      "tag": "VBN",
+      "token": "defined"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "RoundingMode"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "VBG",
+      "token": "formatting"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "By"
+    },
+    {
+      "tag": "NN",
+      "token": "default"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "VBZ",
+      "token": "uses"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "RoundingMode"},
+    {"token": "."},
+    {"token": "HALF"},
+    {"token": "_"},
+    {"token": "EVEN"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNS",
+      "token": "Digits"
+    },
+    {
+      "tag": "IN",
+      "token": "For"
+    },
+    {
+      "tag": "VBG",
+      "token": "formatting"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "uses"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "CD",
+      "token": "ten"
+    },
+    {
+      "tag": "JJ",
+      "token": "consecutive"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": "VBG",
+      "token": "starting"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBN",
+      "token": "localized"
+    },
+    {
+      "tag": "CD",
+      "token": "zero"
+    },
+    {
+      "tag": "NN",
+      "token": "digit"
+    },
+    {
+      "tag": "VBN",
+      "token": "defined"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormatSymbols"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "For"
+    },
+    {
+      "tag": "VBG",
+      "token": "parsing"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "these"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "RB",
+      "token": "as"
+    },
+    {
+      "tag": "RB",
+      "token": "well"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "DT",
+      "token": "all"
+    },
+    {
+      "tag": "NNP",
+      "token": "Unicode"
+    },
+    {
+      "tag": "NN",
+      "token": "decimal"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "VBN",
+      "token": "defined"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Character"},
+    {"token": "."},
+    {"token": "digit"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "recognized"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJ",
+      "token": "Special"
+    },
+    {
+      "tag": "NNS",
+      "token": "Values"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "NaN"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "formatted"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "string"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": "RB",
+      "token": "typically"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "single"
+    },
+    {
+      "tag": "NN",
+      "token": "character"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\\"},
+    {"token": "uFFFD"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "NN",
+      "token": "string"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "determined"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormatSymbols"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "only"
+    },
+    {
+      "tag": "NN",
+      "token": "value"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "prefixes"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NNS",
+      "token": "suffixes"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Infinity"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "formatted"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "string"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": "RB",
+      "token": "typically"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "single"
+    },
+    {
+      "tag": "NN",
+      "token": "character"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\\"},
+    {"token": "u221E"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "positive"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NNS",
+      "token": "prefixes"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NNS",
+      "token": "suffixes"
+    },
+    {
+      "tag": "VBD",
+      "token": "applied"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "infinity"
+    },
+    {
+      "tag": "NN",
+      "token": "string"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "determined"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "DecimalFormatSymbols"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJ",
+      "token": "Negative"
+    },
+    {
+      "tag": "CD",
+      "token": "zero"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "-"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "VBZ",
+      "token": "parses"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "BigDecimal"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "isParseBigDecimal"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "true"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Long"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "isParseBigDecimal"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "false"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "isParseIntegerOnly"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "true"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Double"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "-"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "DT",
+      "token": "both"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "isParseBigDecimal"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "isParseIntegerOnly"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "JJ",
+      "token": "false"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Synchronization"
+    },
+    {
+      "tag": "JJ",
+      "token": "Decimal"
+    },
+    {
+      "tag": "NNS",
+      "token": "formats"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "RB",
+      "token": "generally"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VBN",
+      "token": "synchronized"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "PRP",
+      "token": "It"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "recommended"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "create"
+    },
+    {
+      "tag": "JJ",
+      "token": "separate"
+    },
+    {
+      "tag": "NN",
+      "token": "format"
+    },
+    {
+      "tag": "NNS",
+      "token": "instances"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "NN",
+      "token": "thread"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "JJ",
+      "token": "multiple"
+    },
+    {
+      "tag": "NNS",
+      "token": "threads"
+    },
+    {
+      "tag": "VBP",
+      "token": "access"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "format"
+    },
+    {
+      "tag": "RB",
+      "token": "concurrently"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "MD",
+      "token": "must"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "synchronized"
+    },
+    {
+      "tag": "RB",
+      "token": "externally"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "<strong>"},
+    {"token": "/"},
+    {"token": "/"},
+    {"token": "Print"},
+    {"token": "out"},
+    {"token": "a"},
+    {"token": "number"},
+    {"token": "using"},
+    {"token": "the"},
+    {"token": "localized"},
+    {"token": "number"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "integer"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "currency"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "/"},
+    {"token": "/"},
+    {"token": "and"},
+    {"token": "percent"},
+    {"token": "format"},
+    {"token": "for"},
+    {"token": "each"},
+    {"token": "locale"},
+    {"token": "<\/strong>"},
+    {"token": "Locale"},
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<var>",
+      "token": "locales"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "NumberFormat"},
+    {"token": "."},
+    {"token": "getAvailableLocales"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<typen>",
+      "token": "double"
+    },
+    {
+      "tag": "<var>",
+      "token": "myNumber"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "-"},
+    {
+      "tag": "<num>",
+      "token": "1234"
+    },
+    {"token": "."},
+    {
+      "tag": "<num>",
+      "token": "56"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "NumberFormat"},
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "for"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<typen>",
+      "token": "int"
+    },
+    {
+      "tag": "<var>",
+      "token": "j"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<var>",
+      "token": "j"
+    },
+    {"token": "<"},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "+"},
+    {"token": "+"},
+    {
+      "tag": "<var>",
+      "token": "j"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "System"},
+    {"token": "."},
+    {"token": "out"},
+    {"token": "."},
+    {"token": "println"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "\""},
+    {"token": "FORMAT"},
+    {"token": "\""},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "for"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<typen>",
+      "token": "int"
+    },
+    {
+      "tag": "<var>",
+      "token": "i"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<var>",
+      "token": "i"
+    },
+    {"token": "<"},
+    {
+      "tag": "<var>",
+      "token": "locales"
+    },
+    {"token": "."},
+    {"token": "length"},
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "+"},
+    {"token": "+"},
+    {
+      "tag": "<var>",
+      "token": "i"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {
+      "tag": "<?st>",
+      "token": "if"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "locales"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<var>",
+      "token": "i"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "."},
+    {"token": "getCountry"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {"token": "."},
+    {"token": "length"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "continue"},
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "/"},
+    {"token": "/"},
+    {"token": "Skip"},
+    {"token": "language"},
+    {"token": "-"},
+    {"token": "only"},
+    {
+      "tag": "<var>",
+      "token": "locales"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {"token": "System"},
+    {"token": "."},
+    {"token": "out"},
+    {"token": "."},
+    {"token": "print"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "locales"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<var>",
+      "token": "i"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "."},
+    {"token": "getDisplayName"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "switch"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "j"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "case"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "NumberFormat"},
+    {"token": "."},
+    {"token": "getInstance"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "locales"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<var>",
+      "token": "i"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "break"},
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "case"},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "NumberFormat"},
+    {"token": "."},
+    {"token": "getIntegerInstance"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "locales"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<var>",
+      "token": "i"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "break"},
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "case"},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "NumberFormat"},
+    {"token": "."},
+    {"token": "getCurrencyInstance"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "locales"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<var>",
+      "token": "i"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "break"},
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "default"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "NumberFormat"},
+    {"token": "."},
+    {"token": "getPercentInstance"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "locales"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<var>",
+      "token": "i"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "break"},
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<?st>",
+      "token": "if"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {"token": "instanceof"},
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "System"},
+    {"token": "."},
+    {"token": "out"},
+    {"token": "."},
+    {"token": "print"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "\""},
+    {"token": ":"},
+    {"token": "\""},
+    {"token": "+"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "DecimalFormat"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {"token": "."},
+    {"token": "toPattern"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {"token": "System"},
+    {"token": "."},
+    {"token": "out"},
+    {"token": "."},
+    {"token": "print"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "\""},
+    {"token": "-"},
+    {"token": ">"},
+    {"token": "\""},
+    {"token": "+"},
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {"token": "."},
+    {"token": "format"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "myNumber"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "try"},
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "System"},
+    {"token": "."},
+    {"token": "out"},
+    {"token": "."},
+    {"token": "println"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "\""},
+    {"token": "-"},
+    {"token": ">"},
+    {"token": "\""},
+    {"token": "+"},
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {"token": "."},
+    {"token": "parse"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "form"
+    },
+    {"token": "."},
+    {"token": "format"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "myNumber"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {"token": "catch"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "ParseException"},
+    {"token": "e"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    }
+  ],
+  "type": "autotagged"
+}

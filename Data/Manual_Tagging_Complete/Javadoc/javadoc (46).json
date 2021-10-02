@@ -1,0 +1,1229 @@
+{
+  "tokens": [
+    {
+      "tag": "JJ",
+      "token": "Key"
+    },
+    {
+      "tag": "NNS",
+      "token": "factories"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "convert"
+    },
+    {
+      "tag": "NNS",
+      "token": "keys"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "JJ",
+      "token": "opaque"
+    },
+    {
+      "tag": "JJ",
+      "token": "cryptographic"
+    },
+    {
+      "tag": "NNS",
+      "token": "keys"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "type"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Key"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "IN",
+      "token": "into"
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NNS",
+      "token": "specifications"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "JJ",
+      "token": "transparent"
+    },
+    {
+      "tag": "NNS",
+      "token": "representations"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBG",
+      "token": "underlying"
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NN",
+      "token": "material"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "RB",
+      "token": "vice"
+    },
+    {
+      "tag": "RB",
+      "token": "versa"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJ",
+      "token": "Key"
+    },
+    {
+      "tag": "NNS",
+      "token": "factories"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "NN",
+      "token": "bi"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "JJ",
+      "token": "directional"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "That"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "PRP",
+      "token": "they"
+    },
+    {
+      "tag": "VBP",
+      "token": "allow"
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "build"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "JJ",
+      "token": "opaque"
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "VBN",
+      "token": "given"
+    },
+    {
+      "tag": "NN",
+      "token": "key"
+    },
+    {
+      "tag": "NN",
+      "token": "specification"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NN",
+      "token": "material"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "retrieve"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBG",
+      "token": "underlying"
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NN",
+      "token": "material"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "suitable"
+    },
+    {
+      "tag": "NN",
+      "token": "format"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJ",
+      "token": "Multiple"
+    },
+    {
+      "tag": "JJ",
+      "token": "compatible"
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NNS",
+      "token": "specifications"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "VB",
+      "token": "exist"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "same"
+    },
+    {
+      "tag": "NN",
+      "token": "key"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "For"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NNP",
+      "token": "DSA"
+    },
+    {
+      "tag": "JJ",
+      "token": "public"
+    },
+    {
+      "tag": "NN",
+      "token": "key"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "specified"
+    },
+    {
+      "tag": "VBG",
+      "token": "using"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "DSAPublicKeySpec"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "X509EncodedKeySpec"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "A"
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NN",
+      "token": "factory"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "translate"
+    },
+    {
+      "tag": "IN",
+      "token": "between"
+    },
+    {
+      "tag": "JJ",
+      "token": "compatible"
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NNS",
+      "token": "specifications"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "VBG",
+      "token": "following"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "WRB",
+      "token": "how"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "use"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "key"
+    },
+    {
+      "tag": "NN",
+      "token": "factory"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "NN",
+      "token": "order"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "instantiate"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NNP",
+      "token": "DSA"
+    },
+    {
+      "tag": "JJ",
+      "token": "public"
+    },
+    {
+      "tag": "NN",
+      "token": "key"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "PRP$",
+      "token": "its"
+    },
+    {
+      "tag": "NN",
+      "token": "encoding"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VB",
+      "token": "Assume"
+    },
+    {
+      "tag": "NNP",
+      "token": "Alice"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "VBN",
+      "token": "received"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "digital"
+    },
+    {
+      "tag": "NN",
+      "token": "signature"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "NNP",
+      "token": "Bob"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNP",
+      "token": "Bob"
+    },
+    {
+      "tag": "RB",
+      "token": "also"
+    },
+    {
+      "tag": "VBD",
+      "token": "sent"
+    },
+    {
+      "tag": "PRP$",
+      "token": "her"
+    },
+    {
+      "tag": "PRP$",
+      "token": "his"
+    },
+    {
+      "tag": "JJ",
+      "token": "public"
+    },
+    {
+      "tag": "NN",
+      "token": "key"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "VBN",
+      "token": "encoded"
+    },
+    {
+      "tag": "NN",
+      "token": "format"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "verify"
+    },
+    {
+      "tag": "PRP$",
+      "token": "his"
+    },
+    {
+      "tag": "NN",
+      "token": "signature"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNP",
+      "token": "Alice"
+    },
+    {
+      "tag": "RB",
+      "token": "then"
+    },
+    {
+      "tag": "VBZ",
+      "token": "performs"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBG",
+      "token": "following"
+    },
+    {
+      "tag": "NNS",
+      "token": "actions"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "X509EncodedKeySpec"
+    },
+    {
+      "tag": "<var>",
+      "token": "bobPubKeySpec"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<new>",
+      "token": "new"
+    },
+    {
+      "tag": "<typen>",
+      "token": "X509EncodedKeySpec"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<par>",
+      "token": "bobEncodedPubKey"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<typen>",
+      "token": "KeyFactory"
+    },
+    {
+      "tag": "<var>",
+      "token": "keyFactory"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<typen>",
+      "token": "KeyFactory"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "getInstance"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<\">",
+      "token": "\""
+    },
+    {
+      "tag": "<par>",
+      "token": "DSA"
+    },
+    {
+      "tag": "<\">",
+      "token": "\""
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<typen>",
+      "token": "PublicKey"
+    },
+    {
+      "tag": "<var>",
+      "token": "bobPubKey"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "keyFactory"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "generatePublic"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "bobPubKeySpec"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Signature"
+    },
+    {
+      "tag": "<var>",
+      "token": "sig"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<typen>",
+      "token": "Signature"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "getInstance"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<\">",
+      "token": "\""
+    },
+    {
+      "tag": "<par>",
+      "token": "DSA"
+    },
+    {
+      "tag": "<\">",
+      "token": "\""
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<var>",
+      "token": "sig"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "initVerify"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "bobPubKey"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<var>",
+      "token": "sig"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "update"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<par>",
+      "token": "data"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<var>",
+      "token": "sig"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "verify"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<par>",
+      "token": "signature"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "DT",
+      "token": "Every"
+    },
+    {
+      "tag": "NN",
+      "token": "implementation"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNP",
+      "token": "Java"
+    },
+    {
+      "tag": "NN",
+      "token": "platform"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "required"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "support"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "following"
+    },
+    {
+      "tag": "JJ",
+      "token": "standard"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "KeyFactory"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "algorithms"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<value>",
+      "token": "DiffieHellman"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<value>",
+      "token": "DSA"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<value>",
+      "token": "RSA"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "DT",
+      "token": "These"
+    },
+    {
+      "tag": "NNS",
+      "token": "algorithms"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "described"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNP",
+      "token": "KeyFactory"
+    },
+    {
+      "tag": "NN",
+      "token": "section"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNP",
+      "token": "Java"
+    },
+    {
+      "tag": "NNP",
+      "token": "Security"
+    },
+    {
+      "tag": "NNP",
+      "token": "Standard"
+    },
+    {
+      "tag": "NNP",
+      "token": "Algorithm"
+    },
+    {
+      "tag": "NNPS",
+      "token": "Names"
+    },
+    {
+      "tag": "NNP",
+      "token": "Specification"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VB",
+      "token": "Consult"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "release"
+    },
+    {
+      "tag": "NN",
+      "token": "documentation"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "PRP$",
+      "token": "your"
+    },
+    {
+      "tag": "NN",
+      "token": "implementation"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "see"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "DT",
+      "token": "any"
+    },
+    {
+      "tag": "JJ",
+      "token": "other"
+    },
+    {
+      "tag": "NNS",
+      "token": "algorithms"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "supported"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

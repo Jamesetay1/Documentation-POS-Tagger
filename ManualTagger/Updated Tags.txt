@@ -1,0 +1,27 @@
+Added Tags:
+
+//English Tags
+IN
+NN
+.
+:
+DT
+VBZ
+VB
+MD
+CC
+RB
+JJ
+
+
+//Code Tag
+<op_mat>
+<.>
+<value>
+<">
+<'>
+
+
+Noticed Issues:
+Sometimes "2" was being incorrectly identified as a variable, not as a value (or left up to manual)
+-2 is being split into "-", "2"

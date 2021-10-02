@@ -1,0 +1,26 @@
+
+==========FIELD SUMMARY==========
+           static Boolean FALSE                          The <code>Boolean</code> object corresponding to the primitive value <code>false</code>.
+           static Boolean TRUE                           The <code>Boolean</code> object corresponding to the primitive value <code>true</code>.
+             static Class TYPE                           The Class object representing the primitive type boolean.
+
+==========CONSTRUCTOR SUMMARY==========
+   Boolean(boolean value) Allocates a <code>Boolean</code> object representing the <code>value</code> argument.
+                Boolean() Allocates a <code>Boolean</code> object representing the value <code>true</code> if the string argument is not <code>null</code> and is equal, ignoring case, to the string <code>"true"</code>.
+
+==========METHOD SUMMARY==========
+                  boolean booleanValue()                 Returns the value of this <code>Boolean</code> object as a boolean primitive.
+               static int compare(boolean x,       boolean y) Compares two <code>boolean</code> values.
+                      int compareTo()                    Compares this <code>Boolean</code> instance with another.
+                  boolean equals()                       Returns <code>true</code> if and only if the argument is not <code>null</code> and is a <code>Boolean</code> object that represents the same <code>boolean</code> value as this object.
+           static boolean getBoolean()                   Returns <code>true</code> if and only if the system property named by the argument exists and is equal to the string <code>"true"</code>.
+                      int hashCode()                     Returns a hash code for this <code>Boolean</code> object.
+               static int hashCode(boolean value)        Returns a hash code for a <code>boolean</code> value; compatible with <code>Boolean.hashCode()</code>.
+           static boolean logicalAnd(boolean a,          boolean b) Returns the result of applying the logical AND operator to the specified <code>boolean</code> operands.
+           static boolean logicalOr(boolean a,         boolean b) Returns the result of applying the logical OR operator to the specified <code>boolean</code> operands.
+           static boolean logicalXor(boolean a,          boolean b) Returns the result of applying the logical XOR operator to the specified <code>boolean</code> operands.
+           static boolean parseBoolean()                 Parses the string argument as a boolean.
+                   String toString()                     Returns a <code>String</code> object representing this Boolean's value.
+                     None toString(boolean b)            Returns a <code>String</code> object representing the specified boolean.
+                     None valueOf(boolean b)             Returns a <code>Boolean</code> instance representing the specified <code>boolean</code> value.
+                     None valueOf()                      Returns a <code>Boolean</code> with a value represented by the specified string.

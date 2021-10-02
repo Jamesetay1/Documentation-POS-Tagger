@@ -1,0 +1,11 @@
+<p> Given a signed 32 - bit integer <code> x </code> , return <code> x </code> <em> with its digits reversed </em> . 
+If reversing <code> x </code> causes the value to go outside the signed 32 - bit integer range <code> [ - 231 , 231 - 1 ] </code> , then return <code> 0 </code> . </p> 
+<p> Assume the environment does not allow you to store 64 - bit integers ( signed or unsigned ) . </p> 
+<p> </p> 
+<p> Example 1 : </p> <pre> Input : x = 123 Output : 321 </pre> 
+<p> Example 2 : </p> <pre> Input : x = - 123 Output : - 321 </pre> 
+<p> Example 3 : </p> <pre> Input : x = 120 Output : 21 </pre> 
+<p> Example 4 : </p> <pre> Input : x = 0 Output : 0 </pre> 
+<p> </p> 
+<p> Constraints : </p> 
+<code> - 231 < = x < = 231 - 1 </code> 

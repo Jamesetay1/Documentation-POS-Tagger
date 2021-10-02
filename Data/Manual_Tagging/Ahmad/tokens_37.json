@@ -1,0 +1,98 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "NN",
+      "token": "class"
+    },
+    {
+      "tag": "VBZ",
+      "token": "consists"
+    },
+    {
+      "tag": "RB",
+      "token": "exclusively"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "static"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBP",
+      "token": "return"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Path"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "VBG",
+      "token": "converting"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "path"
+    },
+    {
+      "tag": "NN",
+      "token": "string"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "URI"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}": "autotagged"
+}

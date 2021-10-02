@@ -1,0 +1,54 @@
+<p>Given an array of distinct integers <code>candidates</code> and a target integer <code>target</code>, return <em>a list of all unique combinations of </em><code>candidates</code><em> where the chosen numbers sum to </em><code>target</code><em>.</em> You may return the combinations in any order.</p>
+
+<p>The same number may be chosen from <code>candidates</code> an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.</p>
+
+<p>It is guaranteed that the number of unique combinations that sum up to <code>target</code> is less than <code>150</code> combinations for the given input.</p>
+
+<p> </p>
+<p>Example 1:</p>
+
+<pre>
+Input: candidates = [2,3,6,7], target = 7
+Output: [[2,2,3],[7]]
+Explanation:
+2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
+7 is a candidate, and 7 = 7.
+These are the only two combinations.
+</pre>
+
+<p>Example 2:</p>
+
+<pre>
+Input: candidates = [2,3,5], target = 8
+Output: [[2,2,2,2],[2,3,3],[3,5]]
+</pre>
+
+<p>Example 3:</p>
+
+<pre>
+Input: candidates = [2], target = 1
+Output: []
+</pre>
+
+<p>Example 4:</p>
+
+<pre>
+Input: candidates = [1], target = 1
+Output: [[1]]
+</pre>
+
+<p>Example 5:</p>
+
+<pre>
+Input: candidates = [1], target = 2
+Output: [[1,1]]
+</pre>
+
+<p> </p>
+<p>Constraints:</p>
+
+<code>1 <= candidates.length <= 30</code>
+<code>1 <= candidates[i] <= 200</code>
+All elements of <code>candidates</code> are distinct.
+<code>1 <= target <= 500</code>
+

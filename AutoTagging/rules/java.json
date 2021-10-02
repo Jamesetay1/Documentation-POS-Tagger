@@ -1,0 +1,278 @@
+{
+  "matchers": [
+    {
+      "tag": "<am>",
+      "rules": [
+        {
+          "type": "keywordset",
+          "keywords": [
+            "public",
+            "private",
+            "protected",
+            "final",
+            "static"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "<?st>",
+      "rules": [
+        {
+          "type": "keywordset",
+          "keywords": [
+            "if",
+            "else",
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "<;>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": ";"
+        }
+      ]
+    },
+    {
+      "tag": "<type>",
+      "rules": [
+        {
+          "type": "keywordset",
+          "keywords": [
+            "class",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "<typen>",
+      "rules": [
+        {
+          "type": "or",
+          "rules": [
+            {
+              "type": "offset",
+              "offset": -1,
+              "tag": "typec"
+            },
+            {
+              "type": "offset",
+              "offset": -1,
+              "tag": "enum"
+            },
+            {
+              "type": "matchingtag",
+              "tag": "<type>"
+            },
+            {
+              "type": "keywordset",
+              "keywords": [
+                "String",
+                "char",
+                "int",
+                "bool",
+                "short",
+                "byte",
+                "long",
+                "float",
+                "double"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "<{>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": "{"
+        }
+      ]
+    },
+    {
+      "tag": "<}>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": "}"
+        }
+      ]
+    },
+    {
+      "tag": "<(>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": "("
+        }
+      ]
+    },
+    {
+      "tag": "<)>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": ")"
+        }
+      ]
+    },
+    {
+      "tag": "<[>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": "["
+        }
+      ]
+    },
+    {
+      "tag": "<]>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": "]"
+        }
+      ]
+    },
+    {
+      "tag": ",",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": ","
+        }
+      ]
+    },
+    {
+      "tag": "<var>",
+      "rules": [
+        {
+          "type": "or",
+          "rules": [
+            {
+              "type": "offset",
+              "offset": -1,
+              "tag": "<type>"
+            },
+            {
+              "type": "offset",
+              "offset": 1,
+              "tag": "<=>"
+            },
+            {
+              "type": "matchingtag",
+              "tag": "<var>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "<fun>",
+      "rules": [
+        {
+          "type": "offset",
+          "offset": -1,
+          "tag": "<type>"
+        }
+      ]
+    },
+    {
+      "tag": "<=>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": "="
+        }
+      ]
+    },
+    {
+      "tag": "<par>",
+      "rules": [
+        {
+          "type": "or",
+          "rules": [
+            {
+              "type": "offset",
+              "offset": -2,
+              "tag": "<fun>"
+            },
+            {
+              "type": "offset",
+              "offset": -3,
+              "tag": "<fun>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "<return>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": "return"
+        }
+      ]
+    },
+    {
+      "tag": "<package>",
+      "rules": [
+        {
+          "type": "keyword",
+          "keyword": "package"
+        }
+      ]
+    },
+    {
+      "tag": "<packagen>",
+      "rules": [
+        {
+          "type": "offset",
+          "offset": -1,
+          "tag": "<package>"
+        }
+      ]
+    },
+    {
+      "tag": "<code>",
+      "rules": [
+        {
+          "type": "keywordset",
+          "keywords": [
+            "<code>",
+            "</code>"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "<p>",
+      "rules": [
+        {
+          "type": "keywordset",
+          "keywords": [
+            "<p>",
+            "</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "<num>",
+      "rules": [
+        {
+          "type": "regex",
+          "regex": "^-?\\d+$"
+        }
+      ]
+    }
+  ]
+}

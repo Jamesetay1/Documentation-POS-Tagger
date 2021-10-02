@@ -1,0 +1,22 @@
+{
+  "code-tags": ["code", "pre"],
+  "websites": [
+    {
+      "matchers": [
+        "^.*docs\\.oracle\\.com.*$"
+      ],
+      "xpaths": [
+        "/html/body/main/div[2]/div[1]/ul/li/div",
+        "/html/body/main/div[2]/div[3]/ul/li/section[3]/ul/li/ul/li/div"
+      ]
+    },
+    {
+      "matchers": [
+        "^.*leetcode\\.com/problems/.*$"
+      ],
+      "xpaths": [
+        "//div[starts-with(@class, 'description')]/div[2]"
+      ]
+    }
+  ]
+}

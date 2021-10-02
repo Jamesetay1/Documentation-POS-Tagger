@@ -1,0 +1,105 @@
+Writer ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . io Class Writer 
+java . lang . 
+Object 
+java . io . 
+Writer 
+All Implemented Interfaces : Closeable , Flushable , Appendable , AutoCloseable 
+Direct Known Subclasses : BufferedWriter , CharArrayWriter , FilterWriter , OutputStreamWriter , PipedWriter , PrintWriter , StringWriter 
+<pre> public abstract class Writer extends Object implements Appendable , Closeable , Flushable </pre> Abstract class for writing to character streams . 
+The only methods that a subclass must implement are write ( char [ ] , int , int ) , flush ( ) , and close ( ) . Most subclasses , however , will override some of the methods defined here in order to provide higher efficiency , additional functionality , or both . 
+Since : JDK1 . 1 See Also : <code> Writer </code> , <code> BufferedWriter </code> , <code> CharArrayWriter </code> , <code> FilterWriter </code> , <code> OutputStreamWriter </code> , <code> FileWriter </code> , <code> PipedWriter </code> , <code> PrintWriter </code> , <code> StringWriter </code> , <code> Reader </code> 
+Field Summary 
+Fields 
+Modifier and Type Field and Description 
+<code> protected Object </code> <code> lock </code> The object used to synchronize operations on this stream . 
+Constructor Summary 
+Constructors 
+Modifier Constructor and Description 
+<code> protected </code> <code> Writer ( ) </code> Creates a new character - stream writer whose critical sections will synchronize on the writer itself . 
+<code> protected </code> <code> Writer ( Object lock ) </code> Creates a new character - stream writer whose critical sections will synchronize on the given object . 
+Method Summary 
+All Methods Instance Methods Abstract Methods Concrete Methods 
+Modifier and Type Method and Description 
+<code> Writer </code> <code> append ( char c ) </code> Appends the specified character to this writer . 
+<code> Writer </code> <code> append ( CharSequence csq ) </code> Appends the specified character sequence to this writer . 
+<code> Writer </code> <code> append ( CharSequence csq , int start , int end ) </code> Appends a subsequence of the specified character sequence to this writer . 
+<code> abstract void </code> <code> close ( ) </code> Closes the stream , flushing it first . 
+<code> abstract void </code> <code> flush ( ) </code> Flushes the stream . 
+<code> void </code> <code> write ( char [ ] cbuf ) </code> Writes an array of characters . 
+<code> abstract void </code> <code> write ( char [ ] cbuf , int off , int len ) </code> Writes a portion of an array of characters . 
+<code> void </code> <code> write ( int c ) </code> Writes a single character . 
+<code> void </code> <code> write ( String str ) </code> Writes a string . 
+<code> void </code> <code> write ( String str , int off , int len ) </code> Writes a portion of a string . 
+Methods inherited from class java . lang . 
+Object <code> clone , equals , finalize , getClass , hashCode , notify , notifyAll , toString , wait , wait , wait </code> 
+Field Detail 
+lock <pre> protected Object lock </pre> The object used to synchronize operations on this stream . 
+For efficiency , a character - stream object may use an object other than itself to protect critical sections . 
+A subclass should therefore use the object in this field rather than this or a synchronized method . 
+Constructor Detail 
+Writer <pre> protected Writer ( ) </pre> Creates a new character - stream writer whose critical sections will synchronize on the writer itself . 
+Writer <pre> protected Writer ( Object lock ) </pre> Creates a new character - stream writer whose critical sections will synchronize on the given object . 
+Parameters : <code> lock </code> - Object to synchronize on 
+Method Detail 
+write <pre> public void write ( int c ) throws IOException </pre> Writes a single character . 
+The character to be written is contained in the 16 low - order bits of the given integer value ; the 16 high - order bits are ignored . 
+<p> Subclasses that intend to support efficient single - character output should override this method . 
+Parameters : <code> c </code> - int specifying a character to be written Throws : <code> IOException </code> - If an I / O error occurs 
+write <pre> public void write ( char [ ] cbuf ) throws IOException </pre> Writes an array of characters . 
+Parameters : <code> cbuf </code> - Array of characters to be written Throws : <code> IOException </code> - If an I / O error occurs 
+write <pre> public abstract void write ( char [ ] cbuf , int off , int len ) throws IOException </pre> Writes a portion of an array of characters . 
+Parameters : <code> cbuf </code> - Array of characters <code> off </code> - Offset from which to start writing characters <code> len </code> - Number of characters to write Throws : <code> IOException </code> - If an I / O error occurs 
+write <pre> public void write ( String str ) throws IOException </pre> Writes a string . 
+Parameters : <code> str </code> - String to be written Throws : <code> IOException </code> - If an I / O error occurs 
+write <pre> public void write ( String str , int off , int len ) throws IOException </pre> Writes a portion of a string . 
+Parameters : <code> str </code> - A String <code> off </code> - Offset from which to start writing characters <code> len </code> - Number of characters to write Throws : <code> IndexOutOfBoundsException </code> - If off is negative , or len is negative , or off + len is negative or greater than the length of the given string <code> IOException </code> - If an I / O error occurs 
+append <pre> public Writer append ( CharSequence csq ) throws IOException </pre> Appends the specified character sequence to this writer . 
+<p> An invocation of this method of the form out . append ( csq ) behaves in exactly the same way as the invocation 
+<pre> out . write ( csq . toString ( ) ) </pre> 
+<p> Depending on the specification of toString for the character sequence csq , the entire sequence may not be appended . 
+For instance , invoking the toString method of a character buffer will return a subsequence whose content depends upon the buffer ' s position and limit . 
+Specified by : <code> append </code> in interface <code> Appendable </code> Parameters : <code> csq </code> - The character sequence to append . 
+If csq is null , then the four characters " null " are appended to this writer . Returns : This writer Throws : <code> IOException </code> - If an I / O error occurs Since : 1 . 5 
+append <pre> public Writer append ( CharSequence csq , int start , int end ) throws IOException </pre> Appends a subsequence of the specified character sequence to this writer . Appendable . 
+<p> An invocation of this method of the form out . append ( csq , start , end ) when csq is not null behaves in exactly the same way as the invocation 
+<pre> out . write ( csq . subSequence ( start , end ) . toString ( ) ) </pre> 
+Specified by : <code> append </code> in interface <code> Appendable </code> Parameters : <code> csq </code> - The character sequence from which a subsequence will be appended . 
+If csq is null , then characters will be appended as if csq contained the four characters " null " . <code> start </code> - The index of the first character in the subsequence <code> end </code> - The index of the character following the last character in the subsequence Returns : This writer Throws : <code> IndexOutOfBoundsException </code> - If start or end are negative , start is greater than end , or end is greater than csq . length ( ) <code> IOException </code> - If an I / O error occurs Since : 1 . 5 
+append <pre> public Writer append ( char c ) throws IOException </pre> Appends the specified character to this writer . 
+<p> An invocation of this method of the form out . append ( c ) behaves in exactly the same way as the invocation 
+<pre> out . write ( c ) </pre> 
+Specified by : <code> append </code> in interface <code> Appendable </code> Parameters : <code> c </code> - The 16 - bit character to append Returns : This writer Throws : <code> IOException </code> - If an I / O error occurs Since : 1 . 5 
+flush <pre> public abstract void flush ( ) throws IOException </pre> Flushes the stream . 
+If the stream has saved any characters from the various write ( ) methods in a buffer , write them immediately to their intended destination . 
+Then , if that destination is another character or byte stream , flush it . 
+Thus one flush ( ) invocation will flush all the buffers in a chain of Writers and OutputStreams . 
+<p> If the intended destination of this stream is an abstraction provided by the underlying operating system , for example a file , then flushing the stream guarantees only that bytes previously written to the stream are passed to the operating system for writing ; it does not guarantee that they are actually written to a physical device such as a disk drive . 
+Specified by : <code> flush </code> in interface <code> Flushable </code> Throws : <code> IOException </code> - If an I / O error occurs 
+close <pre> public abstract void close ( ) throws IOException </pre> Closes the stream , flushing it first . 
+Once the stream has been closed , further write ( ) or flush ( ) invocations will cause an IOException to be thrown . 
+Closing a previously closed stream has no effect . 
+Specified by : <code> close </code> in interface <code> Closeable </code> Specified by : <code> close </code> in interface <code> AutoCloseable </code> Throws : <code> IOException </code> - If an I / O error occurs 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

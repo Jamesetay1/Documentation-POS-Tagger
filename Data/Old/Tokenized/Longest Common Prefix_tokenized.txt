@@ -1,0 +1,10 @@
+<p> Write a function to find the longest common prefix string amongst an array of strings . </p> 
+<p> If there is no common prefix , return an empty string <code> " " </code> . </p> 
+<p> </p> 
+<p> Example 1 : </p> 
+<pre> Input : strs = [ " flower " , " flow " , " flight " ] Output : " fl " </pre> 
+<p> Example 2 : </p> 
+<pre> Input : strs = [ " dog " , " racecar " , " car " ] Output : " " Explanation : There is no common prefix among the input strings . </pre> 
+<p> </p> 
+<p> Constraints : </p> 
+<code> 0 < = strs . length < = 200 </code> <code> 0 < = strs [ i ] . length < = 200 </code> <code> strs [ i ] </code> consists of only lower - case English letters . 

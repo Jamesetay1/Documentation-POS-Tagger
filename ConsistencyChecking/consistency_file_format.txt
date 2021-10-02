@@ -1,0 +1,4 @@
+original, sentence, words, split, with, commas, .
+part, of, speech, tags, corresponding, to, each, word
+
+Repeat this two line pattern for each processed sentence.

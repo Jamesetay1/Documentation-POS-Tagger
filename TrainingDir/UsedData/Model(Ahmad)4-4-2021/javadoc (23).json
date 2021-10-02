@@ -1,0 +1,810 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "An"
+    },
+    {
+      "tag": "JJ",
+      "token": "unbounded"
+    },
+    {
+      "tag": "NN",
+      "token": "blocking"
+    },
+    {
+      "tag": "NN",
+      "token": "queue"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Delayed"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "elements"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "element"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "RB",
+      "token": "only"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "taken"
+    },
+    {
+      "tag": "WRB",
+      "token": "when"
+    },
+    {
+      "tag": "PRP$",
+      "token": "its"
+    },
+    {
+      "tag": "NN",
+      "token": "delay"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "VBN",
+      "token": "expired"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "head"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "queue"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Delayed"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "element"
+    },
+    {
+      "tag": "WP$",
+      "token": "whose"
+    },
+    {
+      "tag": "NN",
+      "token": "delay"
+    },
+    {
+      "tag": "VBD",
+      "token": "expired"
+    },
+    {
+      "tag": "JJS",
+      "token": "furthest"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "past"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "DT",
+      "token": "no"
+    },
+    {
+      "tag": "NN",
+      "token": "delay"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "VBN",
+      "token": "expired"
+    },
+    {
+      "tag": "EX",
+      "token": "there"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "no"
+    },
+    {
+      "tag": "NN",
+      "token": "head"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<func>",
+      "token": "poll"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "MD",
+      "token": "will"
+    },
+    {
+      "tag": "VB",
+      "token": "return"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<value>",
+      "token": "null"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Expiration"
+    },
+    {
+      "tag": "VBZ",
+      "token": "occurs"
+    },
+    {
+      "tag": "WRB",
+      "token": "when"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "element"
+    },
+    {
+      "tag": "POS",
+      "token": "'"
+    },
+    {
+      "tag": "NN",
+      "token": "s"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<func>",
+      "token": "getDelay"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<par>",
+      "token": "TimeUnit"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<par>",
+      "token": "NANOSECONDS"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": "VBZ",
+      "token": "returns"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "value"
+    },
+    {
+      "tag": "JJR",
+      "token": "less"
+    },
+    {
+      "tag": "IN",
+      "token": "than"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "JJ",
+      "token": "equal"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "CD",
+      "token": "zero"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "RB",
+      "token": "Even"
+    },
+    {
+      "tag": "IN",
+      "token": "though"
+    },
+    {
+      "tag": "JJ",
+      "token": "unexpired"
+    },
+    {
+      "tag": "NNS",
+      "token": "elements"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "removed"
+    },
+    {
+      "tag": "VBG",
+      "token": "using"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<func>",
+      "token": "take"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<func>",
+      "token": "poll"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "PRP",
+      "token": "they"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "RB",
+      "token": "otherwise"
+    },
+    {
+      "tag": "VBN",
+      "token": "treated"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "JJ",
+      "token": "normal"
+    },
+    {
+      "tag": "NNS",
+      "token": "elements"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "For"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<func>",
+      "token": "size"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": "VBZ",
+      "token": "returns"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "count"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "both"
+    },
+    {
+      "tag": "VBD",
+      "token": "expired"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "unexpired"
+    },
+    {
+      "tag": "NNS",
+      "token": "elements"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "NN",
+      "token": "queue"
+    },
+    {
+      "tag": "VBZ",
+      "token": "does"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "NN",
+      "token": "permit"
+    },
+    {
+      "tag": "JJ",
+      "token": "null"
+    },
+    {
+      "tag": "NNS",
+      "token": "elements"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "NN",
+      "token": "class"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "PRP$",
+      "token": "its"
+    },
+    {
+      "tag": "NN",
+      "token": "iterator"
+    },
+    {
+      "tag": "VB",
+      "token": "implement"
+    },
+    {
+      "tag": "DT",
+      "token": "all"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "optional"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Collection"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Iterator"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "interfaces"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NNP",
+      "token": "Iterator"
+    },
+    {
+      "tag": "VBN",
+      "token": "provided"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<func>",
+      "token": "iterator"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VBN",
+      "token": "guaranteed"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "traverse"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "elements"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNP",
+      "token": "DelayQueue"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "any"
+    },
+    {
+      "tag": "JJ",
+      "token": "particular"
+    },
+    {
+      "tag": "NN",
+      "token": "order"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "NN",
+      "token": "class"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "member"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNP",
+      "token": "Java"
+    },
+    {
+      "tag": "NNPS",
+      "token": "Collections"
+    },
+    {
+      "tag": "NNP",
+      "token": "Framework"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}tag": "NNP",
+      "token": "Java"
+    },
+    {
+      "tag": "NNPS",
+      "token": "Collections"
+    },
+    {
+      "tag": "NNP",
+      "token": "Framework"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

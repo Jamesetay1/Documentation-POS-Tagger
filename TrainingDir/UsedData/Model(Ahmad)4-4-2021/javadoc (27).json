@@ -1,0 +1,925 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "A"
+    },
+    {
+      "tag": "JJ",
+      "token": "random"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "NN",
+      "token": "generator"
+    },
+    {
+      "tag": "VBN",
+      "token": "isolated"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "current"
+    },
+    {
+      "tag": "NN",
+      "token": "thread"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "Like"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "global"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Random"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "generator"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Math"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "class"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "ThreadLocalRandom"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "initialized"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "RB",
+      "token": "internally"
+    },
+    {
+      "tag": "VBN",
+      "token": "generated"
+    },
+    {
+      "tag": "NN",
+      "token": "seed"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "RB",
+      "token": "otherwise"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "modified"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "WRB",
+      "token": "When"
+    },
+    {
+      "tag": "JJ",
+      "token": "applicable"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NN",
+      "token": "use"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<",
+      "token": "ThreadLocalRandom"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "RB",
+      "token": "rather"
+    },
+    {
+      "tag": "IN",
+      "token": "than"
+    },
+    {
+      "tag": "VBN",
+      "token": "shared"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Random"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "objects"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "JJ",
+      "token": "concurrent"
+    },
+    {
+      "tag": "NNS",
+      "token": "programs"
+    },
+    {
+      "tag": "MD",
+      "token": "will"
+    },
+    {
+      "tag": "RB",
+      "token": "typically"
+    },
+    {
+      "tag": "VB",
+      "token": "encounter"
+    },
+    {
+      "tag": "RB",
+      "token": "much"
+    },
+    {
+      "tag": "JJR",
+      "token": "less"
+    },
+    {
+      "tag": "NN",
+      "token": "overhead"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NN",
+      "token": "contention"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNP",
+      "token": "Use"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "ThreadLocalRandom"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "RB",
+      "token": "particularly"
+    },
+    {
+      "tag": "JJ",
+      "token": "appropriate"
+    },
+    {
+      "tag": "WRB",
+      "token": "when"
+    },
+    {
+      "tag": "JJ",
+      "token": "multiple"
+    },
+    {
+      "tag": "NNS",
+      "token": "tasks"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "LS",
+      "token": "a"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "ForkJoinTask"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "VB",
+      "token": "use"
+    },
+    {
+      "tag": "JJ",
+      "token": "random"
+    },
+    {
+      "tag": "NNS",
+      "token": "numbers"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "NN",
+      "token": "parallel"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "NN",
+      "token": "thread"
+    },
+    {
+      "tag": "NNS",
+      "token": "pools"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNS",
+      "token": "Usages"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "NN",
+      "token": "class"
+    },
+    {
+      "tag": "MD",
+      "token": "should"
+    },
+    {
+      "tag": "RB",
+      "token": "typically"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "form"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "ThreadLocalRandom"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "current"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "nextX"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "WRB",
+      "token": "where"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "X"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<type>",
+      "token": "Int"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<type>",
+      "token": "Long"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "FW",
+      "token": "etc"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "WRB",
+      "token": "When"
+    },
+    {
+      "tag": "DT",
+      "token": "all"
+    },
+    {
+      "tag": "NNS",
+      "token": "usages"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "NN",
+      "token": "form"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "RB",
+      "token": "never"
+    },
+    {
+      "tag": "JJ",
+      "token": "possible"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "RB",
+      "token": "accidentally"
+    },
+    {
+      "tag": "VB",
+      "token": "share"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "ThreadLocalRandom"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "RB",
+      "token": "across"
+    },
+    {
+      "tag": "JJ",
+      "token": "multiple"
+    },
+    {
+      "tag": "NNS",
+      "token": "threads"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "NN",
+      "token": "class"
+    },
+    {
+      "tag": "RB",
+      "token": "also"
+    },
+    {
+      "tag": "VBZ",
+      "token": "provides"
+    },
+    {
+      "tag": "JJ",
+      "token": "additional"
+    },
+    {
+      "tag": "RB",
+      "token": "commonly"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "VBD",
+      "token": "bounded"
+    },
+    {
+      "tag": "JJ",
+      "token": "random"
+    },
+    {
+      "tag": "NN",
+      "token": "generation"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNS",
+      "token": "Instances"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "ThreadLocalRandom"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "RB",
+      "token": "cryptographically"
+    },
+    {
+      "tag": "JJ",
+      "token": "secure"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VB",
+      "token": "Consider"
+    },
+    {
+      "tag": "RB",
+      "token": "instead"
+    },
+    {
+      "tag": "VBG",
+      "token": "using"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "SecureRandom"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "NN",
+      "token": "security"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "JJ",
+      "token": "sensitive"
+    },
+    {
+      "tag": "NNS",
+      "token": "applications"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "RB",
+      "token": "Additionally"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NN",
+      "token": "default"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "VBN",
+      "token": "constructed"
+    },
+    {
+      "tag": "NNS",
+      "token": "instances"
+    },
+    {
+      "tag": "VBP",
+      "token": "do"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "use"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "RB",
+      "token": "cryptographically"
+    },
+    {
+      "tag": "JJ",
+      "token": "random"
+    },
+    {
+      "tag": "NN",
+      "token": "seed"
+    },
+    {
+      "tag": "IN",
+      "token": "unless"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "system"
+    },
+    {
+      "tag": "NN",
+      "token": "property"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "java"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<typen>",
+      "token": "util"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "secureRandomSeed"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "set"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<value>",
+      "token": "true"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

@@ -1,0 +1,69 @@
+Number ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . lang Class Number 
+java . lang . 
+Object 
+java . lang . 
+Number 
+All Implemented Interfaces : Serializable 
+Direct Known Subclasses : AtomicInteger , AtomicLong , BigDecimal , BigInteger , Byte , Double , DoubleAccumulator , DoubleAdder , Float , Integer , Long , LongAccumulator , LongAdder , Short 
+<pre> public abstract class Number extends Object implements Serializable </pre> The abstract class <code> Number </code> is the superclass of platform classes representing numeric values that are convertible to the primitive types <code> byte </code> , <code> double </code> , <code> float </code> , <code> int </code> , <code> long </code> , and <code> short </code> . 
+The specific semantics of the conversion from the numeric value of a particular <code> Number </code> implementation to a given primitive type is defined by the <code> Number </code> implementation in question . 
+For platform classes , the conversion is often analogous to a narrowing primitive conversion or a widening primitive conversion as defining in The Java™ Language Specification for converting between primitive types . 
+Therefore , conversions may lose information about the overall magnitude of a numeric value , may lose precision , and may even return a result of a different sign than the input . 
+See the documentation of a given <code> Number </code> implementation for conversion details . 
+Since : JDK1 . 0 See Also : Serialized Form See The Java™ Language Specification : 5 . 1 . 2 Widening Primitive Conversions , 5 . 1 . 3 Narrowing Primitive Conversions 
+Constructor Summary 
+Constructors 
+Constructor and Description 
+<code> Number ( ) </code> 
+Method Summary 
+All Methods Instance Methods Abstract Methods Concrete Methods 
+Modifier and Type Method and Description 
+<code> byte </code> <code> byteValue ( ) </code> Returns the value of the specified number as a <code> byte </code> , which may involve rounding or truncation . 
+<code> abstract double </code> <code> doubleValue ( ) </code> Returns the value of the specified number as a <code> double </code> , which may involve rounding . 
+<code> abstract float </code> <code> floatValue ( ) </code> Returns the value of the specified number as a <code> float </code> , which may involve rounding . 
+<code> abstract int </code> <code> intValue ( ) </code> Returns the value of the specified number as an <code> int </code> , which may involve rounding or truncation . 
+<code> abstract long </code> <code> longValue ( ) </code> Returns the value of the specified number as a <code> long </code> , which may involve rounding or truncation . 
+<code> short </code> <code> shortValue ( ) </code> Returns the value of the specified number as a <code> short </code> , which may involve rounding or truncation . 
+Methods inherited from class java . lang . 
+Object <code> clone , equals , finalize , getClass , hashCode , notify , notifyAll , toString , wait , wait , wait </code> 
+Constructor Detail 
+Number <pre> public Number ( ) </pre> 
+Method Detail 
+intValue <pre> public abstract int intValue ( ) </pre> Returns the value of the specified number as an <code> int </code> , which may involve rounding or truncation . 
+Returns : the numeric value represented by this object after conversion to type <code> int </code> . 
+longValue <pre> public abstract long longValue ( ) </pre> Returns the value of the specified number as a <code> long </code> , which may involve rounding or truncation . 
+Returns : the numeric value represented by this object after conversion to type <code> long </code> . 
+floatValue <pre> public abstract float floatValue ( ) </pre> Returns the value of the specified number as a <code> float </code> , which may involve rounding . 
+Returns : the numeric value represented by this object after conversion to type <code> float </code> . 
+doubleValue <pre> public abstract double doubleValue ( ) </pre> Returns the value of the specified number as a <code> double </code> , which may involve rounding . 
+Returns : the numeric value represented by this object after conversion to type <code> double </code> . 
+byteValue <pre> public byte byteValue ( ) </pre> Returns the value of the specified number as a <code> byte </code> , which may involve rounding or truncation . 
+<p> This implementation returns the result of <code> intValue ( ) </code> cast to a <code> byte </code> . 
+Returns : the numeric value represented by this object after conversion to type <code> byte </code> . Since : JDK1 . 1 
+shortValue <pre> public short shortValue ( ) </pre> Returns the value of the specified number as a <code> short </code> , which may involve rounding or truncation . 
+<p> This implementation returns the result of <code> intValue ( ) </code> cast to a <code> short </code> . 
+Returns : the numeric value represented by this object after conversion to type <code> short </code> . Since : JDK1 . 1 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

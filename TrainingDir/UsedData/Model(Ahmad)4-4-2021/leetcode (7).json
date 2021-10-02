@@ -1,0 +1,569 @@
+{
+  "tokens": [
+    {
+      "tag": "VBN",
+      "token": "Given"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "VBN",
+      "token": "signed"
+    },
+    {
+      "tag": "CD",
+      "token": "32"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NN",
+      "token": "bit"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "x"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NN",
+      "token": "return"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "x"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "PRP$",
+      "token": "its"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "VBD",
+      "token": "reversed"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "If"
+    },
+    {
+      "tag": "VBG",
+      "token": "reversing"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "x"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "causes"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "value"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "go"
+    },
+    {
+      "tag": "IN",
+      "token": "outside"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBN",
+      "token": "signed"
+    },
+    {
+      "tag": "CD",
+      "token": "32"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NN",
+      "token": "bit"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "NN",
+      "token": "range"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<value>",
+      "token": "-2"
+    },
+    {
+      "tag": "<value>",
+      "token": "31"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<value>",
+      "token": "2"
+    },
+    {
+      "tag": "<value>",
+      "token": "31"
+    },
+    {
+      "tag": "<value>",
+      "token": "-1"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "RB",
+      "token": "then"
+    },
+    {
+      "tag": "VB",
+      "token": "return"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<value>",
+      "token": "0"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VB",
+      "token": "Assume"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "environment"
+    },
+    {
+      "tag": "VBZ",
+      "token": "does"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "allow"
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "store"
+    },
+    {
+      "tag": "CD",
+      "token": "64"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NN",
+      "token": "bit"
+    },
+    {
+      "tag": "NNS",
+      "token": "integers"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "VBN",
+      "token": "signed"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "JJ",
+      "token": "unsigned"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Input"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<var>",
+      "token": "x"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<value>",
+      "token": "123"
+    },
+    {
+      "tag": "NN",
+      "token": "Output"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<value>",
+      "token": "321"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "2"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Input"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<var>",
+      "token": "x"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<value>",
+      "token": "-123"
+    },
+    {
+      "tag": "NN",
+      "token": "Output"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<value>",
+      "token": "-321"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "3"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Input"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<var>",
+      "token": "x"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<value>",
+      "token": "120"
+    },
+    {
+      "tag": "NN",
+      "token": "Output"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<value>",
+      "token": "21"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "4"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Input"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<var>",
+      "token": "x"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<value>",
+      "token": "0"
+    },
+    {
+      "tag": "NN",
+      "token": "Output"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<value>",
+      "token": "0"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "Constraints"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<value>",
+      "token": "-2"
+    },
+    {
+      "tag": "<value>",
+      "token": "31"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "x"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<value>",
+      "token": "2"
+    },
+    {
+      "tag": "<value>",
+      "token": "31"
+    },
+    {
+      "tag": "<op_mat>",
+      "token": "-"
+    },
+    {
+      "tag": "<value>",
+      "token": "1"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    }
+  ],
+  "type": "autotagged"
+}

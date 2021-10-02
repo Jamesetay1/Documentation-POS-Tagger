@@ -1,0 +1,269 @@
+Float ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . lang Class Float 
+java . lang . 
+Object 
+java . lang . 
+Number 
+java . lang . 
+Float 
+All Implemented Interfaces : Serializable , Comparable <Float> 
+<pre> public final class Float extends Number implements Comparable The <code> Float </code> class wraps a value of primitive type <code> float </code> in an object . 
+An object of type <code> Float </code> contains a single field whose type is <code> float </code> . 
+<p> In addition , this class provides several methods for converting a <code> float </code> to a <code> String </code> and a <code> String </code> to a <code> float </code> , as well as other constants and methods useful when dealing with a <code> float </code> . 
+Since : JDK1 . 0 See Also : Serialized Form 
+Field Summary 
+Fields 
+Modifier and Type Field and Description 
+<code> static int </code> <code> BYTES </code> The number of bytes used to represent a <code> float </code> value . 
+<code> static int </code> <code> MAX _ EXPONENT </code> Maximum exponent a finite <code> float </code> variable may have . 
+<code> static float </code> <code> MAX _ VALUE </code> A constant holding the largest positive finite value of type <code> float </code> , ( 2 - 2 - 23 ) ·2127 . 
+<code> static int </code> <code> MIN _ EXPONENT </code> Minimum exponent a normalized <code> float </code> variable may have . 
+<code> static float </code> <code> MIN _ NORMAL </code> A constant holding the smallest positive normal value of type <code> float </code> , 2 - 126 . 
+<code> static float </code> <code> MIN _ VALUE </code> A constant holding the smallest positive nonzero value of type <code> float </code> , 2 - 149 . 
+<code> static float </code> <code> NaN </code> A constant holding a Not - a - Number ( NaN ) value of type <code> float </code> . 
+<code> static float </code> <code> NEGATIVE _ INFINITY </code> A constant holding the negative infinity of type <code> float </code> . 
+<code> static float </code> <code> POSITIVE _ INFINITY </code> A constant holding the positive infinity of type <code> float </code> . 
+<code> static int </code> <code> SIZE </code> The number of bits used to represent a <code> float </code> value . 
+<code> static Class <code> TYPE </code> The <code> Class </code> instance representing the primitive type <code> float </code> . 
+Constructor Summary 
+Constructors 
+Constructor and Description 
+<code> Float ( double value ) </code> Constructs a newly allocated <code> Float </code> object that represents the argument converted to type <code> float </code> . 
+<code> Float ( float value ) </code> Constructs a newly allocated <code> Float </code> object that represents the primitive <code> float </code> argument . 
+<code> Float ( String s ) </code> Constructs a newly allocated <code> Float </code> object that represents the floating - point value of type <code> float </code> represented by the string . 
+Method Summary 
+All Methods Static Methods Instance Methods Concrete Methods 
+Modifier and Type Method and Description 
+<code> byte </code> <code> byteValue ( ) </code> Returns the value of this <code> Float </code> as a <code> byte </code> after a narrowing primitive conversion . 
+<code> static int </code> <code> compare ( float f1 , float f2 ) </code> Compares the two specified <code> float </code> values . 
+<code> int </code> <code> compareTo ( Float anotherFloat ) </code> Compares two <code> Float </code> objects numerically . 
+<code> double </code> <code> doubleValue ( ) </code> Returns the value of this <code> Float </code> as a <code> double </code> after a widening primitive conversion . 
+<code> boolean </code> <code> equals ( Object obj ) </code> Compares this object against the specified object . 
+<code> static int </code> <code> floatToIntBits ( float value ) </code> Returns a representation of the specified floating - point value according to the IEEE 754 floating - point " single format " bit layout . 
+<code> static int </code> <code> floatToRawIntBits ( float value ) </code> Returns a representation of the specified floating - point value according to the IEEE 754 floating - point " single format " bit layout , preserving Not - a - Number ( NaN ) values . 
+<code> float </code> <code> floatValue ( ) </code> Returns the <code> float </code> value of this <code> Float </code> object . 
+<code> int </code> <code> hashCode ( ) </code> Returns a hash code for this <code> Float </code> object . 
+<code> static int </code> <code> hashCode ( float value ) </code> Returns a hash code for a <code> float </code> value ; compatible with <code> Float . hashCode ( ) </code> . 
+<code> static float </code> <code> intBitsToFloat ( int bits ) </code> Returns the <code> float </code> value corresponding to a given bit representation . 
+<code> int </code> <code> intValue ( ) </code> Returns the value of this <code> Float </code> as an <code> int </code> after a narrowing primitive conversion . 
+<code> static boolean </code> <code> isFinite ( float f ) </code> Returns <code> true </code> if the argument is a finite floating - point value ; returns <code> false </code> otherwise ( for NaN and infinity arguments ) . 
+<code> boolean </code> <code> isInfinite ( ) </code> Returns <code> true </code> if this <code> Float </code> value is infinitely large in magnitude , <code> false </code> otherwise . 
+<code> static boolean </code> <code> isInfinite ( float v ) </code> Returns <code> true </code> if the specified number is infinitely large in magnitude , <code> false </code> otherwise . 
+<code> boolean </code> <code> isNaN ( ) </code> Returns <code> true </code> if this <code> Float </code> value is a Not - a - Number ( NaN ) , <code> false </code> otherwise . 
+<code> static boolean </code> <code> isNaN ( float v ) </code> Returns <code> true </code> if the specified number is a Not - a - Number ( NaN ) value , <code> false </code> otherwise . 
+<code> long </code> <code> longValue ( ) </code> Returns value of this <code> Float </code> as a <code> long </code> after a narrowing primitive conversion . 
+<code> static float </code> <code> max ( float a , float b ) </code> Returns the greater of two <code> float </code> values as if by calling <code> Math . max </code> . 
+<code> static float </code> <code> min ( float a , float b ) </code> Returns the smaller of two <code> float </code> values as if by calling <code> Math . min </code> . 
+<code> static float </code> <code> parseFloat ( String s ) </code> Returns a new <code> float </code> initialized to the value represented by the specified <code> String </code> , as performed by the <code> valueOf </code> method of class <code> Float </code> . 
+<code> short </code> <code> shortValue ( ) </code> Returns the value of this <code> Float </code> as a <code> short </code> after a narrowing primitive conversion . 
+<code> static float </code> <code> sum ( float a , float b ) </code> Adds two <code> float </code> values together as per the + operator . 
+<code> static String </code> <code> toHexString ( float f ) </code> Returns a hexadecimal string representation of the <code> float </code> argument . 
+<code> String </code> <code> toString ( ) </code> Returns a string representation of this <code> Float </code> object . 
+<code> static String </code> <code> toString ( float f ) </code> Returns a string representation of the <code> float </code> argument . 
+<code> static Float </code> <code> valueOf ( float f ) </code> Returns a <code> Float </code> instance representing the specified <code> float </code> value . 
+<code> static Float </code> <code> valueOf ( String s ) </code> Returns a <code> Float </code> object holding the <code> float </code> value represented by the argument string <code> s </code> . 
+Methods inherited from class java . lang . 
+Object <code> clone , finalize , getClass , notify , notifyAll , wait , wait , wait </code> 
+Field Detail 
+POSITIVE _ INFINITY <pre> public static final float POSITIVE _ INFINITY </pre> A constant holding the positive infinity of type <code> float </code> . 
+It is equal to the value returned by <code> Float . intBitsToFloat ( 0x7f800000 ) </code> . 
+See Also : Constant Field Values 
+NEGATIVE _ INFINITY <pre> public static final float NEGATIVE _ INFINITY </pre> A constant holding the negative infinity of type <code> float </code> . 
+It is equal to the value returned by <code> Float . intBitsToFloat ( 0xff800000 ) </code> . 
+See Also : Constant Field Values 
+NaN <pre> public static final float NaN </pre> A constant holding a Not - a - Number ( NaN ) value of type <code> float </code> . 
+It is equivalent to the value returned by <code> Float . intBitsToFloat ( 0x7fc00000 ) </code> . 
+See Also : Constant Field Values 
+MAX _ VALUE <pre> public static final float MAX _ VALUE </pre> A constant holding the largest positive finite value of type <code> float </code> , ( 2 - 2 - 23 ) ·2127 . It is equal to the hexadecimal floating - point literal <code> 0x1 . fffffeP + 127f </code> and also equal to <code> Float . intBitsToFloat ( 0x7f7fffff ) </code> . 
+See Also : Constant Field Values 
+MIN _ NORMAL <pre> public static final float MIN _ NORMAL </pre> A constant holding the smallest positive normal value of type <code> float </code> , 2 - 126 . 
+It is equal to the hexadecimal floating - point literal <code> 0x1 . 0p - 126f </code> and also equal to <code> Float . intBitsToFloat ( 0x00800000 ) </code> . 
+Since : 1 . 6 See Also : Constant Field Values 
+MIN _ VALUE <pre> public static final float MIN _ VALUE </pre> A constant holding the smallest positive nonzero value of type <code> float </code> , 2 - 149 . 
+It is equal to the hexadecimal floating - point literal <code> 0x0 . 000002P - 126f </code> and also equal to <code> Float . intBitsToFloat ( 0x1 ) </code> . 
+See Also : Constant Field Values 
+MAX _ EXPONENT <pre> public static final int MAX _ EXPONENT </pre> Maximum exponent a finite <code> float </code> variable may have . 
+It is equal to the value returned by <code> Math . getExponent ( Float . MAX _ VALUE ) </code> . 
+Since : 1 . 6 See Also : Constant Field Values 
+MIN _ EXPONENT <pre> public static final int MIN _ EXPONENT </pre> Minimum exponent a normalized <code> float </code> variable may have . It is equal to the value returned by <code> Math . getExponent ( Float . MIN _ NORMAL ) </code> . 
+Since : 1 . 6 See Also : Constant Field Values 
+SIZE <pre> public static final int SIZE </pre> The number of bits used to represent a <code> float </code> value . 
+Since : 1 . 5 See Also : Constant Field Values 
+BYTES <pre> public static final int BYTES </pre> The number of bytes used to represent a <code> float </code> value . 
+Since : 1 . 8 See Also : Constant Field Values 
+TYPE <pre> public static final Class <Float> TYPE </pre> The <code> Class </code> instance representing the primitive type <code> float </code> . 
+Since : JDK1 . 1 
+Constructor Detail 
+Float <pre> public Float ( float value ) </pre> Constructs a newly allocated <code> Float </code> object that represents the primitive <code> float </code> argument . 
+Parameters : <code> value </code> - the value to be represented by the <code> Float </code> . 
+Float <pre> public Float ( double value ) </pre> Constructs a newly allocated <code> Float </code> object that represents the argument converted to type <code> float </code> . 
+Parameters : <code> value </code> - the value to be represented by the <code> Float </code> . 
+Float <pre> public Float ( String s ) throws NumberFormatException </pre> Constructs a newly allocated <code> Float </code> object that represents the floating - point value of type <code> float </code> represented by the string . 
+The string is converted to a <code> float </code> value as if by the <code> valueOf </code> method . 
+Parameters : <code> s </code> - a string to be converted to a <code> Float </code> . Throws : <code> NumberFormatException </code> - if the string does not contain a parsable number . See Also : <code> valueOf ( java . lang . String ) </code> 
+Method Detail 
+toString <pre> public static String toString ( float f ) </pre> Returns a string representation of the <code> float </code> argument . 
+All characters mentioned below are ASCII characters . 
+If the argument is NaN , the result is the string " <code> NaN </code> " . Otherwise , the result is a string that represents the sign and magnitude ( absolute value ) of the argument . 
+If the sign is negative , the first character of the result is ' <code> - </code> ' ( <code> ' \ u002D ' </code> ) ; if the sign is positive , no sign character appears in the result . 
+As for the magnitude m : 
+If m is infinity , it is represented by the characters <code> " Infinity " </code> ; thus , positive infinity produces the result <code> " Infinity " </code> and negative infinity produces the result <code> " - Infinity " </code> . If m is zero , it is represented by the characters <code> " 0 . 0 " </code> ; thus , negative zero produces the result <code> " - 0 . 0 " </code> and positive zero produces the result <code> " 0 . 0 " </code> . If m is greater than or equal to 10 - 3 but less than 107 , then it is represented as the integer part of m , in decimal form with no leading zeroes , followed by ' <code> . </code> ' ( <code> ' \ u002E ' </code> ) , followed by one or more decimal digits representing the fractional part of m . If m is less than 10 - 3 or greater than or equal to 107 , then it is represented in so - called " computerized scientific notation . " Let n be the unique integer such that 10n ≤ m < 10n + 1 ; then let a be the mathematically exact quotient of m and 10n so that 1 ≤ a < 10 . The magnitude is then represented as the integer part of a , as a single decimal digit , followed by ' <code> . </code> ' ( <code> ' \ u002E ' </code> ) , followed by decimal digits representing the fractional part of a , followed by the letter ' <code> E </code> ' ( <code> ' \ u0045 ' </code> ) , followed by a representation of n as a decimal integer , as produced by the method <code> Integer . toString ( int ) </code> . 
+How many digits must be printed for the fractional part of m or a ? 
+There must be at least one digit to represent the fractional part , and beyond that as many , but only as many , more digits as are needed to uniquely distinguish the argument value from adjacent values of type <code> float </code> . 
+That is , suppose that x is the exact mathematical value represented by the decimal representation produced by this method for a finite nonzero argument f . 
+Then f must be the <code> float </code> value nearest to x ; or , if two <code> float </code> values are equally close to x , then f must be one of them and the least significant bit of the significand of f must be <code> 0 </code> . 
+<p> To create localized string representations of a floating - point value , use subclasses of <code> NumberFormat </code> . 
+Parameters : <code> f </code> - the float to be converted . Returns : a string representation of the argument . 
+toHexString <pre> public static String toHexString ( float f ) </pre> Returns a hexadecimal string representation of the <code> float </code> argument . 
+All characters mentioned below are ASCII characters . 
+If the argument is NaN , the result is the string " <code> NaN </code> " . Otherwise , the result is a string that represents the sign and magnitude ( absolute value ) of the argument . 
+If the sign is negative , the first character of the result is ' <code> - </code> ' ( <code> ' \ u002D ' </code> ) ; if the sign is positive , no sign character appears in the result . 
+As for the magnitude m : 
+If m is infinity , it is represented by the string <code> " Infinity " </code> ; thus , positive infinity produces the result <code> " Infinity " </code> and negative infinity produces the result <code> " - Infinity " </code> . 
+If m is zero , it is represented by the string <code> " 0x0 . 0p0 " </code> ; thus , negative zero produces the result <code> " - 0x0 . 0p0 " </code> and positive zero produces the result <code> " 0x0 . 0p0 " </code> . 
+If m is a <code> float </code> value with a normalized representation , substrings are used to represent the significand and exponent fields . 
+The significand is represented by the characters <code> " 0x1 . " </code> followed by a lowercase hexadecimal representation of the rest of the significand as a fraction . 
+Trailing zeros in the hexadecimal representation are removed unless all the digits are zero , in which case a single zero is used . 
+Next , the exponent is represented by <code> " p " </code> followed by a decimal string of the unbiased exponent as if produced by a call to <code> Integer . toString </code> on the exponent value . 
+If m is a <code> float </code> value with a subnormal representation , the significand is represented by the characters <code> " 0x0 . " </code> followed by a hexadecimal representation of the rest of the significand as a fraction . 
+Trailing zeros in the hexadecimal representation are removed . 
+Next , the exponent is represented by <code> " p - 126 " </code> . 
+Note that there must be at least one nonzero digit in a subnormal significand . 
+Examples Floating - point ValueHexadecimal String <code> 1 . 0 </code> <code> 0x1 . 0p0 </code> <code> - 1 . 0 </code> <code> - 0x1 . 0p0 </code> <code> 2 . 0 </code> <code> 0x1 . 0p1 </code> <code> 3 . 0 </code> <code> 0x1 . 8p1 </code> <code> 0 . 5 </code> <code> 0x1 . 0p - 1 </code> <code> 0 . 25 </code> <code> 0x1 . 0p - 2 </code> <code> Float . MAX _ VALUE </code> <code> 0x1 . fffffep127 </code> <code> Minimum Normal Value </code> <code> 0x1 . 0p - 126 </code> <code> Maximum Subnormal Value </code> <code> 0x0 . fffffep - 126 </code> <code> Float . MIN _ VALUE </code> <code> 0x0 . 000002p - 126 </code> 
+Parameters : <code> f </code> - the <code> float </code> to be converted . Returns : a hex string representation of the argument . Since : 1 . 5 
+valueOf <pre> public static Float valueOf ( String s ) throws NumberFormatException </pre> Returns a <code> Float </code> object holding the <code> float </code> value represented by the argument string <code> s </code> . 
+<p> If <code> s </code> is <code> null </code> , then a <code> NullPointerException </code> is thrown . 
+<p> Leading and trailing whitespace characters in <code> s </code> are ignored . 
+Whitespace is removed as if by the <code> String . trim ( ) </code> method ; that is , both ASCII space and control characters are removed . 
+The rest of <code> s </code> should constitute a FloatValue as described by the lexical syntax rules : 
+FloatValue : Signopt <code> NaN </code> Signopt <code> Infinity </code> Signopt FloatingPointLiteral Signopt HexFloatingPointLiteral SignedInteger 
+HexFloatingPointLiteral : HexSignificand BinaryExponent FloatTypeSuffixopt 
+HexSignificand : HexNumeral HexNumeral <code> . </code> <code> 0x </code> HexDigitsopt <code> . </code> HexDigits <code> 0X </code> HexDigitsopt <code> . </code> HexDigits 
+BinaryExponent : BinaryExponentIndicator SignedInteger 
+BinaryExponentIndicator : <code> p </code> <code> P </code> 
+where Sign , FloatingPointLiteral , HexNumeral , HexDigits , SignedInteger and FloatTypeSuffix are as defined in the lexical structure sections of The Java™ Language Specification , except that underscores are not accepted between digits . If <code> s </code> does not have the form of a FloatValue , then a <code> NumberFormatException </code> is thrown . 
+Otherwise , <code> s </code> is regarded as representing an exact decimal value in the usual " computerized scientific notation " or as an exact hexadecimal value ; this exact numerical value is then conceptually converted to an " infinitely precise " binary value that is then rounded to type <code> float </code> by the usual round - to - nearest rule of IEEE 754 floating - point arithmetic , which includes preserving the sign of a zero value . 
+Note that the round - to - nearest rule also implies overflow and underflow behaviour ; if the exact value of <code> s </code> is large enough in magnitude ( greater than or equal to ( <code> MAX _ VALUE </code> + <code> ulp ( MAX _ VALUE ) </code> / 2 ) , rounding to <code> float </code> will result in an infinity and if the exact value of <code> s </code> is small enough in magnitude ( less than or equal to <code> MIN _ VALUE </code> / 2 ) , rounding to float will result in a zero . 
+Finally , after rounding a <code> Float </code> object representing this <code> float </code> value is returned . 
+<p> To interpret localized string representations of a floating - point value , use subclasses of <code> NumberFormat </code> . 
+<p> Note that trailing format specifiers , specifiers that determine the type of a floating - point literal ( <code> 1 . 0f </code> is a <code> float </code> value ; <code> 1 . 0d </code> is a <code> double </code> value ) , do <em> not </em> influence the results of this method . 
+In other words , the numerical value of the input string is converted directly to the target floating - point type . 
+In general , the two - step sequence of conversions , string to <code> double </code> followed by <code> double </code> to <code> float </code> , is <em> not </em> equivalent to converting a string directly to <code> float </code> . 
+For example , if first converted to an intermediate <code> double </code> and then to <code> float </code> , the string <code> " 1 . 00000017881393421514957253748434595763683319091796875001d " </code> results in the <code> float </code> value <code> 1 . 0000002f </code> ; if the string is converted directly to <code> float </code> , <code> 1 . 0000001f </code> results . 
+<p> To avoid calling this method on an invalid string and having a <code> NumberFormatException </code> be thrown , the documentation for <code> Double . valueOf </code> lists a regular expression which can be used to screen the input . 
+Parameters : <code> s </code> - the string to be parsed . Returns : a <code> Float </code> object holding the value represented by the <code> String </code> argument . Throws : <code> NumberFormatException </code> - if the string does not contain a parsable number . 
+valueOf <pre> public static Float valueOf ( float f ) </pre> Returns a <code> Float </code> instance representing the specified <code> float </code> value . If a new <code> Float </code> instance is not required , this method should generally be used in preference to the constructor <code> Float ( float ) </code> , as this method is likely to yield significantly better space and time performance by caching frequently requested values . 
+Parameters : <code> f </code> - a float value . Returns : a <code> Float </code> instance representing <code> f </code> . Since : 1 . 5 
+parseFloat <pre> public static float parseFloat ( String s ) throws NumberFormatException </pre> Returns a new <code> float </code> initialized to the value represented by the specified <code> String </code> , as performed by the <code> valueOf </code> method of class <code> Float </code> . 
+Parameters : <code> s </code> - the string to be parsed . Returns : the <code> float </code> value represented by the string argument . Throws : <code> NullPointerException </code> - if the string is null <code> NumberFormatException </code> - if the string does not contain a parsable <code> float </code> . Since : 1 . 2 See Also : <code> valueOf ( String ) </code> 
+isNaN <pre> public static boolean isNaN ( float v ) </pre> Returns <code> true </code> if the specified number is a Not - a - Number ( NaN ) value , <code> false </code> otherwise . 
+Parameters : <code> v </code> - the value to be tested . Returns : <code> true </code> if the argument is NaN ; <code> false </code> otherwise . 
+isInfinite <pre> public static boolean isInfinite ( float v ) </pre> Returns <code> true </code> if the specified number is infinitely large in magnitude , <code> false </code> otherwise . 
+Parameters : <code> v </code> - the value to be tested . Returns : <code> true </code> if the argument is positive infinity or negative infinity ; <code> false </code> otherwise . 
+isFinite <pre> public static boolean isFinite ( float f ) </pre> Returns <code> true </code> if the argument is a finite floating - point value ; returns <code> false </code> otherwise ( for NaN and infinity arguments ) . 
+Parameters : <code> f </code> - the <code> float </code> value to be tested Returns : <code> true </code> if the argument is a finite floating - point value , <code> false </code> otherwise . Since : 1 . 8 
+isNaN <pre> public boolean isNaN ( ) </pre> Returns <code> true </code> if this <code> Float </code> value is a Not - a - Number ( NaN ) , <code> false </code> otherwise . 
+Returns : <code> true </code> if the value represented by this object is NaN ; <code> false </code> otherwise . 
+isInfinite <pre> public boolean isInfinite ( ) </pre> Returns <code> true </code> if this <code> Float </code> value is infinitely large in magnitude , <code> false </code> otherwise . 
+Returns : <code> true </code> if the value represented by this object is positive infinity or negative infinity ; <code> false </code> otherwise . 
+toString <pre> public String toString ( ) </pre> Returns a string representation of this <code> Float </code> object . The primitive <code> float </code> value represented by this object is converted to a <code> String </code> exactly as if by the method <code> toString </code> of one argument . 
+Overrides : <code> toString </code> in class <code> Object </code> Returns : a <code> String </code> representation of this object . See Also : <code> toString ( float ) </code> 
+byteValue <pre> public byte byteValue ( ) </pre> Returns the value of this <code> Float </code> as a <code> byte </code> after a narrowing primitive conversion . 
+Overrides : <code> byteValue </code> in class <code> Number </code> Returns : the <code> float </code> value represented by this object converted to type <code> byte </code> See The Java™ Language Specification : 5 . 1 . 3 Narrowing Primitive Conversions 
+shortValue <pre> public short shortValue ( ) </pre> Returns the value of this <code> Float </code> as a <code> short </code> after a narrowing primitive conversion . 
+Overrides : <code> shortValue </code> in class <code> Number </code> Returns : the <code> float </code> value represented by this object converted to type <code> short </code> Since : JDK1 . 1 See The Java™ Language Specification : 5 . 1 . 3 Narrowing Primitive Conversions 
+intValue <pre> public int intValue ( ) </pre> Returns the value of this <code> Float </code> as an <code> int </code> after a narrowing primitive conversion . 
+Specified by : <code> intValue </code> in class <code> Number </code> Returns : the <code> float </code> value represented by this object converted to type <code> int </code> See The Java™ Language Specification : 5 . 1 . 3 Narrowing Primitive Conversions 
+longValue <pre> public long longValue ( ) </pre> Returns value of this <code> Float </code> as a <code> long </code> after a narrowing primitive conversion . 
+Specified by : <code> longValue </code> in class <code> Number </code> Returns : the <code> float </code> value represented by this object converted to type <code> long </code> See The Java™ Language Specification : 5 . 1 . 3 Narrowing Primitive Conversions 
+floatValue <pre> public float floatValue ( ) </pre> Returns the <code> float </code> value of this <code> Float </code> object . 
+Specified by : <code> floatValue </code> in class <code> Number </code> Returns : the <code> float </code> value represented by this object 
+doubleValue <pre> public double doubleValue ( ) </pre> Returns the value of this <code> Float </code> as a <code> double </code> after a widening primitive conversion . 
+Specified by : <code> doubleValue </code> in class <code> Number </code> Returns : the <code> float </code> value represented by this object converted to type <code> double </code> See The Java™ Language Specification : 5 . 1 . 2 Widening Primitive Conversions 
+hashCode <pre> public int hashCode ( ) </pre> Returns a hash code for this <code> Float </code> object . 
+The result is the integer bit representation , exactly as produced by the method <code> floatToIntBits ( float ) </code> , of the primitive <code> float </code> value represented by this <code> Float </code> object . 
+Overrides : <code> hashCode </code> in class <code> Object </code> Returns : a hash code value for this object . See Also : <code> Object . equals ( java . lang . Object ) </code> , <code> System . identityHashCode ( java . lang . Object ) </code> 
+hashCode <pre> public static int hashCode ( float value ) </pre> Returns a hash code for a <code> float </code> value ; compatible with <code> Float . hashCode ( ) </code> . 
+Parameters : <code> value </code> - the value to hash Returns : a hash code value for a <code> float </code> value . Since : 1 . 8 
+equals <pre> public boolean equals ( Object obj ) </pre> Compares this object against the specified object . 
+The result is <code> true </code> if and only if the argument is not <code> null </code> and is a <code> Float </code> object that represents a <code> float </code> with the same value as the <code> float </code> represented by this object . 
+For this purpose , two <code> float </code> values are considered to be the same if and only if the method <code> floatToIntBits ( float ) </code> returns the identical <code> int </code> value when applied to each . 
+<p> Note that in most cases , for two instances of class <code> Float </code> , <code> f1 </code> and <code> f2 </code> , the value of <code> f1 . equals ( f2 ) </code> is <code> true </code> if and only if 
+<pre> f1 . floatValue ( ) = = f2 . floatValue ( ) </pre> 
+<p> also has the value <code> true </code> . 
+However , there are two exceptions : 
+If <code> f1 </code> and <code> f2 </code> both represent <code> Float . NaN </code> , then the <code> equals </code> method returns <code> true </code> , even though <code> Float . NaN = = Float . NaN </code> has the value <code> false </code> . If <code> f1 </code> represents <code> + 0 . 0f </code> while <code> f2 </code> represents <code> - 0 . 0f </code> , or vice versa , the <code> equal </code> test has the value <code> false </code> , even though <code> 0 . 0f = = - 0 . 0f </code> has the value <code> true </code> . 
+This definition allows hash tables to operate properly . 
+Overrides : <code> equals </code> in class <code> Object </code> Parameters : <code> obj </code> - the object to be compared Returns : <code> true </code> if the objects are the same ; <code> false </code> otherwise . See Also : <code> floatToIntBits ( float ) </code> 
+floatToIntBits <pre> public static int floatToIntBits ( float value ) </pre> Returns a representation of the specified floating - point value according to the IEEE 754 floating - point " single format " bit layout . 
+<p> Bit 31 ( the bit that is selected by the mask <code> 0x80000000 </code> ) represents the sign of the floating - point number . Bits 30 - 23 ( the bits that are selected by the mask <code> 0x7f800000 </code> ) represent the exponent . Bits 22 - 0 ( the bits that are selected by the mask <code> 0x007fffff </code> ) represent the significand ( sometimes called the mantissa ) of the floating - point number . 
+<p> If the argument is positive infinity , the result is <code> 0x7f800000 </code> . 
+<p> If the argument is negative infinity , the result is <code> 0xff800000 </code> . 
+<p> If the argument is NaN , the result is <code> 0x7fc00000 </code> . 
+<p> In all cases , the result is an integer that , when given to the <code> intBitsToFloat ( int ) </code> method , will produce a floating - point value the same as the argument to <code> floatToIntBits </code> ( except all NaN values are collapsed to a single " canonical " NaN value ) . 
+Parameters : <code> value </code> - a floating - point number . Returns : the bits that represent the floating - point number . 
+floatToRawIntBits <pre> public static int floatToRawIntBits ( float value ) </pre> Returns a representation of the specified floating - point value according to the IEEE 754 floating - point " single format " bit layout , preserving Not - a - Number ( NaN ) values . 
+<p> Bit 31 ( the bit that is selected by the mask <code> 0x80000000 </code> ) represents the sign of the floating - point number . Bits 30 - 23 ( the bits that are selected by the mask <code> 0x7f800000 </code> ) represent the exponent . Bits 22 - 0 ( the bits that are selected by the mask <code> 0x007fffff </code> ) represent the significand ( sometimes called the mantissa ) of the floating - point number . 
+<p> If the argument is positive infinity , the result is <code> 0x7f800000 </code> . 
+<p> If the argument is negative infinity , the result is <code> 0xff800000 </code> . 
+<p> If the argument is NaN , the result is the integer representing the actual NaN value . 
+Unlike the <code> floatToIntBits </code> method , <code> floatToRawIntBits </code> does not collapse all the bit patterns encoding a NaN to a single " canonical " NaN value . 
+<p> In all cases , the result is an integer that , when given to the <code> intBitsToFloat ( int ) </code> method , will produce a floating - point value the same as the argument to <code> floatToRawIntBits </code> . 
+Parameters : <code> value </code> - a floating - point number . Returns : the bits that represent the floating - point number . Since : 1 . 3 
+intBitsToFloat <pre> public static float intBitsToFloat ( int bits ) </pre> Returns the <code> float </code> value corresponding to a given bit representation . The argument is considered to be a representation of a floating - point value according to the IEEE 754 floating - point " single format " bit layout . 
+<p> If the argument is <code> 0x7f800000 </code> , the result is positive infinity . 
+<p> If the argument is <code> 0xff800000 </code> , the result is negative infinity . 
+<p> If the argument is any value in the range <code> 0x7f800001 </code> through <code> 0x7fffffff </code> or in the range <code> 0xff800001 </code> through <code> 0xffffffff </code> , the result is a NaN . 
+No IEEE 754 floating - point operation provided by Java can distinguish between two NaN values of the same type with different bit patterns . 
+Distinct values of NaN are only distinguishable by use of the <code> Float . floatToRawIntBits </code> method . 
+<p> In all other cases , let s , e , and m be three values that can be computed from the argument : 
+<pre> <code> int s = ( ( bits > > 31 ) = = 0 ) ? 1 : - 1 ; int e = ( ( bits > > 23 ) & 0xff ) ; int m = ( e = = 0 ) ? ( bits & 0x7fffff ) < < 1 : ( bits & 0x7fffff ) | 0x800000 ; 
+Then the floating - point result equals the value of the mathematical expression s·m·2e - 150 . 
+<p> Note that this method may not be able to return a <code> float </code> NaN with exactly same bit pattern as the <code> int </code> argument . 
+IEEE 754 distinguishes between two kinds of NaNs , quiet NaNs and signaling NaNs . 
+The differences between the two kinds of NaN are generally not visible in Java . 
+Arithmetic operations on signaling NaNs turn them into quiet NaNs with a different , but often similar , bit pattern . 
+However , on some processors merely copying a signaling NaN also performs that conversion . 
+In particular , copying a signaling NaN to return it to the calling method may perform this conversion . 
+So <code> intBitsToFloat </code> may not be able to return a <code> float </code> with a signaling NaN bit pattern . 
+Consequently , for some <code> int </code> values , <code> floatToRawIntBits ( intBitsToFloat ( start ) ) </code> may not equal <code> start </code> . 
+Moreover , which particular bit patterns represent signaling NaNs is platform dependent ; although all NaN bit patterns , quiet or signaling , must be in the NaN range identified above . 
+Parameters : <code> bits </code> - an integer . Returns : the <code> float </code> floating - point value with the same bit pattern . 
+compareTo <pre> public int compareTo ( Float anotherFloat ) </pre> Compares two <code> Float </code> objects numerically . 
+There are two ways in which comparisons performed by this method differ from those performed by the Java language numerical comparison operators ( <code> < , < = , = = , > = , > </code> ) when applied to primitive <code> float </code> values : 
+<code> Float . NaN </code> is considered by this method to be equal to itself and greater than all other <code> float </code> values ( including <code> Float . POSITIVE _ INFINITY </code> ) . 
+<code> 0 . 0f </code> is considered by this method to be greater than <code> - 0 . 0f </code> . 
+This ensures that the natural ordering of <code> Float </code> objects imposed by this method is consistent with equals . 
+Specified by : <code> compareTo </code> in interface <code> Comparable Parameters : <code> anotherFloat </code> - the <code> Float </code> to be compared . Returns : the value <code> 0 </code> if <code> anotherFloat </code> is numerically equal to this <code> Float </code> ; a value less than <code> 0 </code> if this <code> Float </code> is numerically less than <code> anotherFloat </code> ; and a value greater than <code> 0 </code> if this <code> Float </code> is numerically greater than <code> anotherFloat </code> . Since : 1 . 2 See Also : <code> Comparable . compareTo ( Object ) </code> 
+compare <pre> public static int compare ( float f1 , float f2 ) </pre> Compares the two specified <code> float </code> values . 
+The sign of the integer value returned is the same as that of the integer that would be returned by the call : <pre> new Float ( f1 ) . compareTo ( new Float ( f2 ) ) </pre> 
+Parameters : <code> f1 </code> - the first <code> float </code> to compare . <code> f2 </code> - the second <code> float </code> to compare . Returns : the value <code> 0 </code> if <code> f1 </code> is numerically equal to <code> f2 </code> ; a value less than <code> 0 </code> if <code> f1 </code> is numerically less than <code> f2 </code> ; and a value greater than <code> 0 </code> if <code> f1 </code> is numerically greater than <code> f2 </code> . Since : 1 . 4 
+sum <pre> public static float sum ( float a , float b ) </pre> Adds two <code> float </code> values together as per the + operator . 
+Parameters : <code> a </code> - the first operand <code> b </code> - the second operand Returns : the sum of <code> a </code> and <code> b </code> Since : 1 . 8 See Also : <code> BinaryOperator </code> See The Java™ Language Specification : 4 . 2 . 4 Floating - Point Operations 
+max <pre> public static float max ( float a , float b ) </pre> Returns the greater of two <code> float </code> values as if by calling <code> Math . max </code> . 
+Parameters : <code> a </code> - the first operand <code> b </code> - the second operand Returns : the greater of <code> a </code> and <code> b </code> Since : 1 . 8 See Also : <code> BinaryOperator </code> 
+min <pre> public static float min ( float a , float b ) </pre> Returns the smaller of two <code> float </code> values as if by calling <code> Math . min </code> . 
+Parameters : <code> a </code> - the first operand <code> b </code> - the second operand Returns : the smaller of <code> a </code> and <code> b </code> Since : 1 . 8 See Also : <code> BinaryOperator </code> 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

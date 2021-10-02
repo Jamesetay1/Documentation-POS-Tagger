@@ -1,0 +1,73 @@
+{
+  "tokens": [
+    {
+      "tag": "VBN",
+      "token": "Checked"
+    },
+    {
+      "tag": "NN",
+      "token": "exception"
+    },
+    {
+      "tag": "VBN",
+      "token": "thrown"
+    },
+    {
+      "tag": "WRB",
+      "token": "when"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "attempt"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "made"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "access"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "file"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBZ",
+      "token": "does"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "exist"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

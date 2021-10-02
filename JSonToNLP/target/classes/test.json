@@ -1,0 +1,205 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "documentation"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "In"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NNP",
+      "token": "Java"
+    },
+    {
+      "tag": "NNP",
+      "token": "Program"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "PRP",
+      "token": "we"
+    },
+    {
+      "tag": "VBP",
+      "token": "start"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "NN",
+      "token": "program"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<am>",
+      "token": "public"
+    },
+    {
+      "tag": "<am>",
+      "token": "static"
+    },
+    {
+      "tag": "<am>",
+      "token": "void"
+    },
+    {
+      "tag": "<func>",
+      "token": "main"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<typen>",
+      "token": "String"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<par>",
+      "token": "args"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "VBZ",
+      "token": "tells"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "runtime"
+    },
+    {
+      "tag": "WRB",
+      "token": "where"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "start"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "program"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "RB",
+      "token": "Namely"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "code"
+    },
+    {
+      "tag": "IN",
+      "token": "inside"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<func>",
+      "token": "main"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

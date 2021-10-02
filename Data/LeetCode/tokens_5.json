@@ -1,0 +1,681 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "string"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "PAYPALISHIRING"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "written"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "zigzag"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": "IN",
+      "token": "on"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "VBN",
+      "token": "given"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "rows"
+    },
+    {
+      "tag": "IN",
+      "token": "like"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "VB",
+      "token": "want"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "display"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "NN",
+      "token": "pattern"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "VBN",
+      "token": "fixed"
+    },
+    {
+      "tag": "NN",
+      "token": "font"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "JJR",
+      "token": "better"
+    },
+    {
+      "tag": "NN",
+      "token": "legibility"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "P"},
+    {"token": "A"},
+    {"token": "H"},
+    {"token": "N"},
+    {"token": "A"},
+    {"token": "P"},
+    {"token": "L"},
+    {"token": "S"},
+    {"token": "I"},
+    {"token": "I"},
+    {"token": "G"},
+    {"token": "Y"},
+    {"token": "I"},
+    {"token": "R"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "CC",
+      "token": "And"
+    },
+    {
+      "tag": "RB",
+      "token": "then"
+    },
+    {
+      "tag": "VBD",
+      "token": "read"
+    },
+    {
+      "tag": "NN",
+      "token": "line"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "NN",
+      "token": "line"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "\""},
+    {"token": "PAHNAPLSIIGYIR"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VB",
+      "token": "Write"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "code"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "MD",
+      "token": "will"
+    },
+    {
+      "tag": "VB",
+      "token": "take"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "string"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VB",
+      "token": "make"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "NN",
+      "token": "conversion"
+    },
+    {
+      "tag": "VBN",
+      "token": "given"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "rows"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "string"},
+    {"token": "convert"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "string"},
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<typen>",
+      "token": "int"
+    },
+    {
+      "tag": "<var>",
+      "token": "numRows"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "\""},
+    {"token": "PAYPALISHIRING"},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<var>",
+      "token": "numRows"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {"token": "\""},
+    {"token": "PAHNAPLSIIGYIR"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "2"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "\""},
+    {"token": "PAYPALISHIRING"},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<var>",
+      "token": "numRows"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {"token": "\""},
+    {"token": "PINALSIGYAHRPI"},
+    {"token": "\""},
+    {"token": "Explanation"},
+    {"token": ":"},
+    {"token": "P"},
+    {"token": "I"},
+    {"token": "N"},
+    {"token": "A"},
+    {"token": "L"},
+    {"token": "S"},
+    {"token": "I"},
+    {"token": "G"},
+    {"token": "Y"},
+    {"token": "A"},
+    {"token": "H"},
+    {"token": "R"},
+    {"token": "P"},
+    {"token": "I"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "3"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "\""},
+    {"token": "A"},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<var>",
+      "token": "numRows"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {"token": "\""},
+    {"token": "A"},
+    {"token": "\""},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "Constraints"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {"token": "."},
+    {"token": "length"},
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "1000"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "consists"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNP",
+      "token": "English"
+    },
+    {
+      "tag": "NNS",
+      "token": "letters"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "JJR",
+      "token": "lower"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NN",
+      "token": "case"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "upper"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NN",
+      "token": "case"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "'"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "'"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "'"},
+    {"token": "."},
+    {"token": "'"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "numRows"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "1000"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    }
+  ],
+  "type": "autotagged"
+}

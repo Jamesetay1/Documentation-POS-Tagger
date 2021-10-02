@@ -1,0 +1,645 @@
+{
+  "tokens": [
+    {
+      "tag": "VBN",
+      "token": "Given"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "NN",
+      "token": "head"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "VBN",
+      "token": "linked"
+    },
+    {
+      "tag": "NN",
+      "token": "list"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VB",
+      "token": "remove"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "IN",
+      "token": "th"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "node"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "end"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "list"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VB",
+      "token": "return"
+    },
+    {
+      "tag": "PRP$",
+      "token": "its"
+    },
+    {
+      "tag": "NN",
+      "token": "head"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VB",
+      "token": "Follow"
+    },
+    {
+      "tag": "RP",
+      "token": "up"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "MD",
+      "token": "Could"
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "VB",
+      "token": "do"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "CD",
+      "token": "one"
+    },
+    {
+      "tag": "NN",
+      "token": "pass"
+    },
+    {
+      "tag": ".",
+      "token": "?"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Input"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<var>",
+      "token": "head"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "value",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "value",
+      "token": "2"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "value",
+      "token": "3"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "value",
+      "token": "4"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "value",
+      "token": "5"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "=",
+      "token": "="
+    },
+    {
+      "tag": "value",
+      "token": "2"
+    },
+    {
+      "tag": "NN",
+      "token": "Output"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "[",
+      "token": "["
+    },
+    {
+      "tag": "value",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "value",
+      "token": "2"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "value",
+      "token": "3"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "value",
+      "token": "5"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "2"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Input"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<var>",
+      "token": "head"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "value",
+      "token": "1"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "value",
+      "token": "1"
+    },
+    {
+      "tag": "NN",
+      "token": "Output"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "3"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Input"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<var>",
+      "token": "head"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "value",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "value",
+      "token": "2"
+    },
+    {
+      "tag": "]",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "=",
+      "token": "="
+    },
+    {
+      "tag": "value",
+      "token": "1"
+    },
+    {
+      "tag": "NN",
+      "token": "Output"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "[",
+      "token": "["
+    },
+    {
+      "tag": "NN",
+      "token": "1"
+    },
+    {
+      "tag": "]",
+      "token": "]"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "Constraints"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "number"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "nodes"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "list"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "NNP",
+      "token": "sz"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "value",
+      "token": "1"
+    },
+    {
+      "tag": "<",
+      "token": "<"
+    },
+    {
+      "tag": "=",
+      "token": "="
+    },
+    {
+      "tag": "NNP",
+      "token": "sz"
+    },
+    {
+      "tag": "<",
+      "token": "<"
+    },
+    {
+      "tag": "=",
+      "token": "="
+    },
+    {
+      "tag": "value",
+      "token": "30"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "value",
+      "token": "0"
+    },
+    {
+      "tag": "<",
+      "token": "<"
+    },
+    {
+      "tag": "=",
+      "token": "="
+    },
+    {
+      "tag": "NN",
+      "token": "Node"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "val"
+    },
+    {
+      "tag": "<",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "value",
+      "token": "100"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "value",
+      "token": "1"
+    },
+    {
+      "tag": "<",
+      "token": "<"
+    },
+    {
+      "tag": "=",
+      "token": "="
+    },
+    {
+      "tag": "NN",
+      "token": "n"
+    },
+    {
+      "tag": "<",
+      "token": "<"
+    },
+    {
+      "tag": "=",
+      "token": "="
+    },
+    {
+      "tag": "NNP",
+      "token": "sz"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    }
+  ],
+  "type": "autotagged"
+}

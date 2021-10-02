@@ -1,0 +1,62 @@
+IllegalStateException ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . lang Class IllegalStateException 
+java . lang . 
+Object 
+java . lang . 
+Throwable 
+java . lang . 
+Exception 
+java . lang . 
+RuntimeException 
+java . lang . 
+IllegalStateException 
+All Implemented Interfaces : Serializable 
+Direct Known Subclasses : AcceptPendingException , AlreadyBoundException , AlreadyConnectedException , CancellationException , CancelledKeyException , ClosedDirectoryStreamException , ClosedFileSystemException , ClosedSelectorException , ClosedWatchServiceException , ConnectionPendingException , FormatterClosedException , IllegalBlockingModeException , IllegalComponentStateException , InvalidDnDOperationException , InvalidMarkException , NoConnectionPendingException , NonReadableChannelException , NonWritableChannelException , NotYetBoundException , NotYetConnectedException , OverlappingFileLockException , ReadPendingException , ShutdownChannelGroupException , WritePendingException 
+<pre> public class IllegalStateException extends RuntimeException </pre> Signals that a method has been invoked at an illegal or inappropriate time . 
+In other words , the Java environment or Java application is not in an appropriate state for the requested operation . 
+Since : JDK1 . 1 See Also : Serialized Form 
+Constructor Summary 
+Constructors 
+Constructor and Description 
+<code> IllegalStateException ( ) </code> Constructs an IllegalStateException with no detail message . 
+<code> IllegalStateException ( String s ) </code> Constructs an IllegalStateException with the specified detail message . 
+<code> IllegalStateException ( String message , Throwable cause ) </code> Constructs a new exception with the specified detail message and cause . 
+<code> IllegalStateException ( Throwable cause ) </code> Constructs a new exception with the specified cause and a detail message of ( cause = = null ? null : cause . toString ( ) ) ( which typically contains the class and detail message of cause ) . 
+Method Summary 
+Methods inherited from class java . lang . 
+Throwable <code> addSuppressed , fillInStackTrace , getCause , getLocalizedMessage , getMessage , getStackTrace , getSuppressed , initCause , printStackTrace , printStackTrace , printStackTrace , setStackTrace , toString </code> 
+Methods inherited from class java . lang . 
+Object <code> clone , equals , finalize , getClass , hashCode , notify , notifyAll , wait , wait , wait </code> 
+Constructor Detail 
+IllegalStateException <pre> public IllegalStateException ( ) </pre> Constructs an IllegalStateException with no detail message . A detail message is a String that describes this particular exception . 
+IllegalStateException <pre> public IllegalStateException ( String s ) </pre> Constructs an IllegalStateException with the specified detail message . 
+A detail message is a String that describes this particular exception . 
+Parameters : <code> s </code> - the String that contains a detailed message 
+IllegalStateException <pre> public IllegalStateException ( String message , Throwable cause ) </pre> Constructs a new exception with the specified detail message and cause . 
+<p> Note that the detail message associated with <code> cause </code> is not automatically incorporated in this exception ' s detail message . 
+Parameters : <code> message </code> - the detail message ( which is saved for later retrieval by the <code> Throwable . getMessage ( ) </code> method ) . <code> cause </code> - the cause ( which is saved for later retrieval by the <code> Throwable . getCause ( ) </code> method ) . ( A null value is permitted , and indicates that the cause is nonexistent or unknown . ) Since : 1 . 5 
+IllegalStateException <pre> public IllegalStateException ( Throwable cause ) </pre> Constructs a new exception with the specified cause and a detail message of ( cause = = null ? null : cause . toString ( ) ) ( which typically contains the class and detail message of cause ) . This constructor is useful for exceptions that are little more than wrappers for other throwables ( for example , <code> PrivilegedActionException </code> ) . 
+Parameters : <code> cause </code> - the cause ( which is saved for later retrieval by the <code> Throwable . getCause ( ) </code> method ) . ( A null value is permitted , and indicates that the cause is nonexistent or unknown . ) Since : 1 . 5 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

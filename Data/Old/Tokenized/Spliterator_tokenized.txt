@@ -1,0 +1,192 @@
+Spliterator ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . util Interface Spliterator <T> 
+Type Parameters : <code> T </code> - the type of elements returned by this Spliterator 
+All Known Subinterfaces : Spliterator . 
+OfDouble , Spliterator . 
+OfInt , Spliterator . 
+OfLong , Spliterator . 
+OfPrimitive < T , T _ CONS , T _ SPLITR > 
+All Known Implementing Classes : Spliterators . 
+AbstractDoubleSpliterator , Spliterators . 
+AbstractIntSpliterator , Spliterators . 
+AbstractLongSpliterator , Spliterators . 
+AbstractSpliterator 
+<pre> public interface Spliterator An object for traversing and partitioning elements of a source . 
+The source of elements covered by a Spliterator could be , for example , an array , a <code> Collection </code> , an IO channel , or a generator function . 
+<p> A Spliterator may traverse elements individually ( <code> tryAdvance ( ) </code> ) or sequentially in bulk ( <code> forEachRemaining ( ) </code> ) . 
+<p> A Spliterator may also partition off some of its elements ( using <code> trySplit ( ) </code> ) as another Spliterator , to be used in possibly - parallel operations . 
+Operations using a Spliterator that cannot split , or does so in a highly imbalanced or inefficient manner , are unlikely to benefit from parallelism . 
+Traversal and splitting exhaust elements ; each Spliterator is useful for only a single bulk computation . 
+<p> A Spliterator also reports a set of <code> characteristics ( ) </code> of its structure , source , and elements from among <code> ORDERED </code> , <code> DISTINCT </code> , <code> SORTED </code> , <code> SIZED </code> , <code> NONNULL </code> , <code> IMMUTABLE </code> , <code> CONCURRENT </code> , and <code> SUBSIZED </code> . 
+These may be employed by Spliterator clients to control , specialize or simplify computation . 
+For example , a Spliterator for a <code> Collection </code> would report <code> SIZED </code> , a Spliterator for a <code> Set </code> would report <code> DISTINCT </code> , and a Spliterator for a <code> SortedSet </code> would also report <code> SORTED </code> . 
+Characteristics are reported as a simple unioned bit set . 
+Some characteristics additionally constrain method behavior ; for example if <code> ORDERED </code> , traversal methods must conform to their documented ordering . New characteristics may be defined in the future , so implementors should not assign meanings to unlisted values . 
+<p> A Spliterator that does not report <code> IMMUTABLE </code> or <code> CONCURRENT </code> is expected to have a documented policy concerning : when the spliterator <em> binds </em> to the element source ; and detection of structural interference of the element source detected after binding . 
+A <em> late - binding </em> Spliterator binds to the source of elements at the point of first traversal , first split , or first query for estimated size , rather than at the time the Spliterator is created . 
+A Spliterator that is not <em> late - binding </em> binds to the source of elements at the point of construction or first invocation of any method . 
+Modifications made to the source prior to binding are reflected when the Spliterator is traversed . After binding a Spliterator should , on a best - effort basis , throw <code> ConcurrentModificationException </code> if structural interference is detected . 
+Spliterators that do this are called <em> fail - fast </em> . 
+The bulk traversal method ( <code> forEachRemaining ( ) </code> ) of a Spliterator may optimize traversal and check for structural interference after all elements have been traversed , rather than checking per - element and failing immediately . 
+<p> Spliterators can provide an estimate of the number of remaining elements via the <code> estimateSize ( ) </code> method . 
+Ideally , as reflected in characteristic <code> SIZED </code> , this value corresponds exactly to the number of elements that would be encountered in a successful traversal . 
+However , even when not exactly known , an estimated value value may still be useful to operations being performed on the source , such as helping to determine whether it is preferable to split further or traverse the remaining elements sequentially . 
+<p> Despite their obvious utility in parallel algorithms , spliterators are not expected to be thread - safe ; instead , implementations of parallel algorithms using spliterators should ensure that the spliterator is only used by one thread at a time . 
+This is generally easy to attain via <em> serial thread - confinement </em> , which often is a natural consequence of typical parallel algorithms that work by recursive decomposition . 
+A thread calling <code> trySplit ( ) </code> may hand over the returned Spliterator to another thread , which in turn may traverse or further split that Spliterator . 
+The behaviour of splitting and traversal is undefined if two or more threads operate concurrently on the same spliterator . 
+If the original thread hands a spliterator off to another thread for processing , it is best if that handoff occurs before any elements are consumed with <code> tryAdvance ( ) </code> , as certain guarantees ( such as the accuracy of <code> estimateSize ( ) </code> for <code> SIZED </code> spliterators ) are only valid before traversal has begun . 
+<p> Primitive subtype specializations of <code> Spliterator </code> are provided for <code> int </code> , <code> long </code> , and <code> double </code> values . The subtype default implementations of <code> tryAdvance ( java . util . function . Consumer ) </code> and <code> forEachRemaining ( java . util . function . Consumer ) </code> box primitive values to instances of their corresponding wrapper class . 
+Such boxing may undermine any performance advantages gained by using the primitive specializations . 
+To avoid boxing , the corresponding primitive - based methods should be used . 
+For example , <code> Spliterator . OfInt . tryAdvance ( java . util . function . IntConsumer ) </code> and <code> Spliterator . OfInt . forEachRemaining ( java . util . function . IntConsumer ) </code> should be used in preference to <code> Spliterator . OfInt . tryAdvance ( java . util . function . Consumer ) </code> and <code> Spliterator . OfInt . forEachRemaining ( java . util . function . Consumer ) </code> . Traversal of primitive values using boxing - based methods <code> tryAdvance ( ) </code> and <code> forEachRemaining ( ) </code> does not affect the order in which the values , transformed to boxed values , are encountered . 
+API Note : 
+<p> Spliterators , like <code> Iterator </code> s , are for traversing the elements of a source . 
+The <code> Spliterator </code> API was designed to support efficient parallel traversal in addition to sequential traversal , by supporting decomposition as well as single - element iteration . 
+In addition , the protocol for accessing elements via a Spliterator is designed to impose smaller per - element overhead than <code> Iterator </code> , and to avoid the inherent race involved in having separate methods for <code> hasNext ( ) </code> and <code> next ( ) </code> . 
+<p> For mutable sources , arbitrary and non - deterministic behavior may occur if the source is structurally interfered with ( elements added , replaced , or removed ) between the time that the Spliterator binds to its data source and the end of traversal . 
+For example , such interference will produce arbitrary , non - deterministic results when using the <code> java . util . stream </code> framework . 
+<p> Structural interference of a source can be managed in the following ways ( in approximate order of decreasing desirability ) : 
+The source cannot be structurally interfered with . For example , an instance of <code> CopyOnWriteArrayList </code> is an immutable source . A Spliterator created from the source reports a characteristic of <code> IMMUTABLE </code> . The source manages concurrent modifications . For example , a key set of a <code> ConcurrentHashMap </code> is a concurrent source . 
+A Spliterator created from the source reports a characteristic of <code> CONCURRENT </code> . The mutable source provides a late - binding and fail - fast Spliterator . Late binding narrows the window during which interference can affect the calculation ; fail - fast detects , on a best - effort basis , that structural interference has occurred after traversal has commenced and throws <code> ConcurrentModificationException </code> . 
+For example , <code> ArrayList </code> , and many other non - concurrent <code> Collection </code> classes in the JDK , provide a late - binding , fail - fast spliterator . The mutable source provides a non - late - binding but fail - fast Spliterator . The source increases the likelihood of throwing <code> ConcurrentModificationException </code> since the window of potential interference is larger . The mutable source provides a late - binding and non - fail - fast Spliterator . The source risks arbitrary , non - deterministic behavior after traversal has commenced since interference is not detected . 
+The mutable source provides a non - late - binding and non - fail - fast Spliterator . The source increases the risk of arbitrary , non - deterministic behavior since non - detected interference may occur after construction . 
+<p> Example . 
+Here is a class ( not a very useful one , except for illustration ) that maintains an array in which the actual data are held in even locations , and unrelated tag data are held in odd locations . 
+Its Spliterator ignores the tags . 
+<pre> <code> class TaggedArray <T> { private final Object [ ] elements ; / / immutable after construction TaggedArray ( T [ ] data , Object [ ] tags ) { int size = data . length ; if ( tags . length ! = size ) throw new IllegalArgumentException ( ) ; this . elements = new Object [ 2 * size ] ; for ( int i = 0 , j = 0 ; i < size ; + + i ) { elements [ j + + ] = data [ i ] ; elements [ j + + ] = tags [ i ] ; } } 
+public Spliterator <T> spliterator ( ) { return new TaggedArraySpliterator < > ( elements , 0 , elements . length ) ; } 
+static class TaggedArraySpliterator <T> implements Spliterator <T> { private final Object [ ] array ; private int origin ; / / current index , advanced on split or traversal private final int fence ; / / one past the greatest index 
+TaggedArraySpliterator ( Object [ ] array , int origin , int fence ) { this . array = array ; this . origin = origin ; this . fence = fence ; } 
+public void forEachRemaining ( Consumer < ? super T > action ) { for ( ; origin < fence ; origin + = 2 ) action . accept ( ( T ) array [ origin ] ) ; } 
+public boolean tryAdvance ( Consumer < ? super T > action ) { if ( origin < fence ) { action . accept ( ( T ) array [ origin ] ) ; origin + = 2 ; return true ; } else / / cannot advance return false ; } 
+public Spliterator <T> trySplit ( ) { int lo = origin ; / / divide range in half int mid = ( ( lo + fence ) > > > 1 ) & ~ 1 ; / / force midpoint to be even if ( lo < mid ) { / / split out left half origin = mid ; / / reset this Spliterator ' s origin return new TaggedArraySpliterator < > ( array , lo , mid ) ; } else / / too small to split return null ; } 
+public long estimateSize ( ) { return ( long ) ( ( fence - origin ) / 2 ) ; } 
+public int characteristics ( ) { return ORDERED | SIZED | IMMUTABLE | SUBSIZED ; } } } 
+<p> As an example how a parallel computation framework , such as the <code> java . util . stream </code> package , would use Spliterator in a parallel computation , here is one way to implement an associated parallel forEach , that illustrates the primary usage idiom of splitting off subtasks until the estimated amount of work is small enough to perform sequentially . 
+Here we assume that the order of processing across subtasks doesn ' t matter ; different ( forked ) tasks may further split and process elements concurrently in undetermined order . 
+This example uses a <code> CountedCompleter </code> ; similar usages apply to other parallel task constructions . 
+<pre> <code> static <T> void parEach ( TaggedArray <T> a , Consumer <T> action ) { Spliterator <T> s = a . spliterator ( ) ; long targetBatchSize = s . estimateSize ( ) / ( ForkJoinPool . getCommonPoolParallelism ( ) * 8 ) ; new ParEach ( null , s , action , targetBatchSize ) . invoke ( ) ; } 
+static class ParEach <T> extends CountedCompleter <Void> { final Spliterator <T> spliterator ; final Consumer <T> action ; final long targetBatchSize ; 
+ParEach ( ParEach <T> parent , Spliterator <T> spliterator , Consumer <T> action , long targetBatchSize ) { super ( parent ) ; this . spliterator = spliterator ; this . action = action ; this . targetBatchSize = targetBatchSize ; } 
+public void compute ( ) { Spliterator <T> sub ; while ( spliterator . estimateSize ( ) > targetBatchSize & & ( sub = spliterator . trySplit ( ) ) ! = null ) { addToPendingCount ( 1 ) ; new ParEach < > ( this , sub , action , targetBatchSize ) . fork ( ) ; } spliterator . forEachRemaining ( action ) ; propagateCompletion ( ) ; } } Implementation Note : If the boolean system property <code> org . openjdk . java . util . stream . tripwire </code> is set to <code> true </code> then diagnostic warnings are reported if boxing of primitive values occur when operating on primitive subtype specializations . Since : 1 . 8 See Also : <code> Collection </code> 
+Nested Class Summary 
+Nested Classes 
+Modifier and Type Interface and Description 
+<code> static interface </code> <code> Spliterator . OfDouble </code> A Spliterator specialized for <code> double </code> values . 
+<code> static interface </code> <code> Spliterator . OfInt </code> A Spliterator specialized for <code> int </code> values . 
+<code> static interface </code> <code> Spliterator . OfLong </code> A Spliterator specialized for <code> long </code> values . 
+<code> static interface </code> <code> Spliterator . OfPrimitive < T , T _ CONS , T _ SPLITR extends Spliterator . OfPrimitive < T , T _ CONS , T _ SPLITR > > </code> A Spliterator specialized for primitive values . 
+Field Summary 
+Fields 
+Modifier and Type Field and Description 
+<code> static int </code> <code> CONCURRENT </code> Characteristic value signifying that the element source may be safely concurrently modified ( allowing additions , replacements , and / or removals ) by multiple threads without external synchronization . 
+<code> static int </code> <code> DISTINCT </code> Characteristic value signifying that , for each pair of encountered elements <code> x , y </code> , <code> ! x . equals ( y ) </code> . 
+<code> static int </code> <code> IMMUTABLE </code> Characteristic value signifying that the element source cannot be structurally modified ; that is , elements cannot be added , replaced , or removed , so such changes cannot occur during traversal . 
+<code> static int </code> <code> NONNULL </code> Characteristic value signifying that the source guarantees that encountered elements will not be <code> null </code> . 
+<code> static int </code> <code> ORDERED </code> Characteristic value signifying that an encounter order is defined for elements . 
+<code> static int </code> <code> SIZED </code> Characteristic value signifying that the value returned from <code> estimateSize ( ) </code> prior to traversal or splitting represents a finite size that , in the absence of structural source modification , represents an exact count of the number of elements that would be encountered by a complete traversal . 
+<code> static int </code> <code> SORTED </code> Characteristic value signifying that encounter order follows a defined sort order . 
+<code> static int </code> <code> SUBSIZED </code> Characteristic value signifying that all Spliterators resulting from <code> trySplit ( ) </code> will be both <code> SIZED </code> and <code> SUBSIZED </code> . 
+Method Summary 
+All Methods Instance Methods Abstract Methods Default Methods 
+Modifier and Type Method and Description 
+<code> int </code> <code> characteristics ( ) </code> Returns a set of characteristics of this Spliterator and its elements . 
+<code> long </code> <code> estimateSize ( ) </code> Returns an estimate of the number of elements that would be encountered by a <code> forEachRemaining ( java . util . function . Consumer < ? super T > ) </code> traversal , or returns <code> Long . MAX _ VALUE </code> if infinite , unknown , or too expensive to compute . 
+<code> default void </code> <code> forEachRemaining ( Consumer < ? super T > action ) </code> Performs the given action for each remaining element , sequentially in the current thread , until all elements have been processed or the action throws an exception . 
+<code> default Comparator < ? super T > </code> <code> getComparator ( ) </code> If this Spliterator ' s source is <code> SORTED </code> by a <code> Comparator </code> , returns that <code> Comparator </code> . 
+<code> default long </code> <code> getExactSizeIfKnown ( ) </code> Convenience method that returns <code> estimateSize ( ) </code> if this Spliterator is <code> SIZED </code> , else <code> - 1 </code> . 
+<code> default boolean </code> <code> hasCharacteristics ( int characteristics ) </code> Returns <code> true </code> if this Spliterator ' s <code> characteristics ( ) </code> contain all of the given characteristics . 
+<code> boolean </code> <code> tryAdvance ( Consumer < ? super T > action ) </code> If a remaining element exists , performs the given action on it , returning <code> true </code> ; else returns <code> false </code> . 
+<code> Spliterator <code> trySplit ( ) </code> If this spliterator can be partitioned , returns a Spliterator covering elements , that will , upon return from this method , not be covered by this Spliterator . 
+Field Detail 
+ORDERED <pre> static final int ORDERED </pre> Characteristic value signifying that an encounter order is defined for elements . 
+If so , this Spliterator guarantees that method <code> trySplit ( ) </code> splits a strict prefix of elements , that method <code> tryAdvance ( java . util . function . Consumer < ? super T > ) </code> steps by one element in prefix order , and that <code> forEachRemaining ( java . util . function . Consumer < ? super T > ) </code> performs actions in encounter order . 
+<p> A <code> Collection </code> has an encounter order if the corresponding <code> Collection . iterator ( ) </code> documents an order . 
+If so , the encounter order is the same as the documented order . 
+Otherwise , a collection does not have an encounter order . 
+API Note : Encounter order is guaranteed to be ascending index order for any <code> List </code> . 
+But no order is guaranteed for hash - based collections such as <code> HashSet </code> . 
+Clients of a Spliterator that reports <code> ORDERED </code> are expected to preserve ordering constraints in non - commutative parallel computations . See Also : Constant Field Values 
+DISTINCT <pre> static final int DISTINCT </pre> Characteristic value signifying that , for each pair of encountered elements <code> x , y </code> , <code> ! x . equals ( y ) </code> . 
+This applies for example , to a Spliterator based on a <code> Set </code> . 
+See Also : Constant Field Values 
+SORTED <pre> static final int SORTED </pre> Characteristic value signifying that encounter order follows a defined sort order . 
+If so , method <code> getComparator ( ) </code> returns the associated Comparator , or <code> null </code> if all elements are <code> Comparable </code> and are sorted by their natural ordering . 
+<p> A Spliterator that reports <code> SORTED </code> must also report <code> ORDERED </code> . 
+API Note : The spliterators for <code> Collection </code> classes in the JDK that implement <code> NavigableSet </code> or <code> SortedSet </code> report <code> SORTED </code> . See Also : Constant Field Values 
+SIZED <pre> static final int SIZED </pre> Characteristic value signifying that the value returned from <code> estimateSize ( ) </code> prior to traversal or splitting represents a finite size that , in the absence of structural source modification , represents an exact count of the number of elements that would be encountered by a complete traversal . 
+API Note : Most Spliterators for Collections , that cover all elements of a <code> Collection </code> report this characteristic . 
+Sub - spliterators , such as those for <code> HashSet </code> , that cover a sub - set of elements and approximate their reported size do not . See Also : Constant Field Values 
+NONNULL <pre> static final int NONNULL </pre> Characteristic value signifying that the source guarantees that encountered elements will not be <code> null </code> . ( This applies , for example , to most concurrent collections , queues , and maps . ) 
+See Also : Constant Field Values 
+IMMUTABLE <pre> static final int IMMUTABLE </pre> Characteristic value signifying that the element source cannot be structurally modified ; that is , elements cannot be added , replaced , or removed , so such changes cannot occur during traversal . 
+A Spliterator that does not report <code> IMMUTABLE </code> or <code> CONCURRENT </code> is expected to have a documented policy ( for example throwing <code> ConcurrentModificationException </code> ) concerning structural interference detected during traversal . 
+See Also : Constant Field Values 
+CONCURRENT <pre> static final int CONCURRENT </pre> Characteristic value signifying that the element source may be safely concurrently modified ( allowing additions , replacements , and / or removals ) by multiple threads without external synchronization . 
+If so , the Spliterator is expected to have a documented policy concerning the impact of modifications during traversal . 
+<p> A top - level Spliterator should not report both <code> CONCURRENT </code> and <code> SIZED </code> , since the finite size , if known , may change if the source is concurrently modified during traversal . 
+Such a Spliterator is inconsistent and no guarantees can be made about any computation using that Spliterator . 
+Sub - spliterators may report <code> SIZED </code> if the sub - split size is known and additions or removals to the source are not reflected when traversing . 
+API Note : Most concurrent collections maintain a consistency policy guaranteeing accuracy with respect to elements present at the point of Spliterator construction , but possibly not reflecting subsequent additions or removals . See Also : Constant Field Values 
+SUBSIZED <pre> static final int SUBSIZED </pre> Characteristic value signifying that all Spliterators resulting from <code> trySplit ( ) </code> will be both <code> SIZED </code> and <code> SUBSIZED </code> . ( This means that all child Spliterators , whether direct or indirect , will be <code> SIZED </code> . ) 
+<p> A Spliterator that does not report <code> SIZED </code> as required by <code> SUBSIZED </code> is inconsistent and no guarantees can be made about any computation using that Spliterator . 
+API Note : Some spliterators , such as the top - level spliterator for an approximately balanced binary tree , will report <code> SIZED </code> but not <code> SUBSIZED </code> , since it is common to know the size of the entire tree but not the exact sizes of subtrees . See Also : Constant Field Values 
+Method Detail 
+tryAdvance <pre> boolean tryAdvance ( Consumer < ? super T > action ) </pre> If a remaining element exists , performs the given action on it , returning <code> true </code> ; else returns <code> false </code> . 
+If this Spliterator is <code> ORDERED </code> the action is performed on the next element in encounter order . 
+Exceptions thrown by the action are relayed to the caller . 
+Parameters : <code> action </code> - The action Returns : <code> false </code> if no remaining elements existed upon entry to this method , else <code> true </code> . Throws : <code> NullPointerException </code> - if the specified action is null 
+forEachRemaining <pre> default void forEachRemaining ( Consumer < ? super T > action ) </pre> Performs the given action for each remaining element , sequentially in the current thread , until all elements have been processed or the action throws an exception . 
+If this Spliterator is <code> ORDERED </code> , actions are performed in encounter order . 
+Exceptions thrown by the action are relayed to the caller . 
+Implementation Requirements : The default implementation repeatedly invokes <code> tryAdvance ( java . util . function . Consumer < ? super T > ) </code> until it returns <code> false </code> . 
+It should be overridden whenever possible . Parameters : <code> action </code> - The action Throws : <code> NullPointerException </code> - if the specified action is null 
+trySplit <pre> Spliterator <T> trySplit ( ) </pre> If this spliterator can be partitioned , returns a Spliterator covering elements , that will , upon return from this method , not be covered by this Spliterator . 
+<p> If this Spliterator is <code> ORDERED </code> , the returned Spliterator must cover a strict prefix of the elements . 
+<p> Unless this Spliterator covers an infinite number of elements , repeated calls to <code> trySplit ( ) </code> must eventually return <code> null </code> . Upon non - null return : 
+the value reported for <code> estimateSize ( ) </code> before splitting , must , after splitting , be greater than or equal to <code> estimateSize ( ) </code> for this and the returned Spliterator ; and if this Spliterator is <code> SUBSIZED </code> , then <code> estimateSize ( ) </code> for this spliterator before splitting must be equal to the sum of <code> estimateSize ( ) </code> for this and the returned Spliterator after splitting . 
+<p> This method may return <code> null </code> for any reason , including emptiness , inability to split after traversal has commenced , data structure constraints , and efficiency considerations . 
+API Note : An ideal <code> trySplit </code> method efficiently ( without traversal ) divides its elements exactly in half , allowing balanced parallel computation . 
+Many departures from this ideal remain highly effective ; for example , only approximately splitting an approximately balanced tree , or for a tree in which leaf nodes may contain either one or two elements , failing to further split these nodes . 
+However , large deviations in balance and / or overly inefficient <code> trySplit </code> mechanics typically result in poor parallel performance . Returns : a <code> Spliterator </code> covering some portion of the elements , or <code> null </code> if this spliterator cannot be split 
+estimateSize <pre> long estimateSize ( ) </pre> Returns an estimate of the number of elements that would be encountered by a <code> forEachRemaining ( java . util . function . Consumer < ? super T > ) </code> traversal , or returns <code> Long . MAX _ VALUE </code> if infinite , unknown , or too expensive to compute . 
+<p> If this Spliterator is <code> SIZED </code> and has not yet been partially traversed or split , or this Spliterator is <code> SUBSIZED </code> and has not yet been partially traversed , this estimate must be an accurate count of elements that would be encountered by a complete traversal . Otherwise , this estimate may be arbitrarily inaccurate , but must decrease as specified across invocations of <code> trySplit ( ) </code> . 
+API Note : Even an inexact estimate is often useful and inexpensive to compute . For example , a sub - spliterator of an approximately balanced binary tree may return a value that estimates the number of elements to be half of that of its parent ; if the root Spliterator does not maintain an accurate count , it could estimate size to be the power of two corresponding to its maximum depth . Returns : the estimated size , or <code> Long . MAX _ VALUE </code> if infinite , unknown , or too expensive to compute . 
+getExactSizeIfKnown <pre> default long getExactSizeIfKnown ( ) </pre> Convenience method that returns <code> estimateSize ( ) </code> if this Spliterator is <code> SIZED </code> , else <code> - 1 </code> . 
+Implementation Requirements : The default implementation returns the result of <code> estimateSize ( ) </code> if the Spliterator reports a characteristic of <code> SIZED </code> , and <code> - 1 </code> otherwise . Returns : the exact size , if known , else <code> - 1 </code> . 
+characteristics <pre> int characteristics ( ) </pre> Returns a set of characteristics of this Spliterator and its elements . 
+The result is represented as ORed values from <code> ORDERED </code> , <code> DISTINCT </code> , <code> SORTED </code> , <code> SIZED </code> , <code> NONNULL </code> , <code> IMMUTABLE </code> , <code> CONCURRENT </code> , <code> SUBSIZED </code> . 
+Repeated calls to <code> characteristics ( ) </code> on a given spliterator , prior to or in - between calls to <code> trySplit </code> , should always return the same result . 
+<p> If a Spliterator reports an inconsistent set of characteristics ( either those returned from a single invocation or across multiple invocations ) , no guarantees can be made about any computation using this Spliterator . 
+API Note : The characteristics of a given spliterator before splitting may differ from the characteristics after splitting . 
+For specific examples see the characteristic values <code> SIZED </code> , <code> SUBSIZED </code> and <code> CONCURRENT </code> . Returns : a representation of characteristics 
+hasCharacteristics <pre> default boolean hasCharacteristics ( int characteristics ) </pre> Returns <code> true </code> if this Spliterator ' s <code> characteristics ( ) </code> contain all of the given characteristics . 
+Implementation Requirements : The default implementation returns true if the corresponding bits of the given characteristics are set . Parameters : <code> characteristics </code> - the characteristics to check for Returns : <code> true </code> if all the specified characteristics are present , else <code> false </code> 
+getComparator <pre> default Comparator < ? super T > getComparator ( ) </pre> If this Spliterator ' s source is <code> SORTED </code> by a <code> Comparator </code> , returns that <code> Comparator </code> . 
+If the source is <code> SORTED </code> in natural order , returns <code> null </code> . 
+Otherwise , if the source is not <code> SORTED </code> , throws <code> IllegalStateException </code> . 
+Implementation Requirements : The default implementation always throws <code> IllegalStateException </code> . Returns : a Comparator , or <code> null </code> if the elements are sorted in the natural order . Throws : <code> IllegalStateException </code> - if the spliterator does not report a characteristic of <code> SORTED </code> . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

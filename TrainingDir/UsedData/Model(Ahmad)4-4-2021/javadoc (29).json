@@ -1,0 +1,143 @@
+{
+  "tokens": [
+    {
+      "tag": "NN",
+      "token": "Exception"
+    },
+    {
+      "tag": "VBN",
+      "token": "thrown"
+    },
+    {
+      "tag": "WRB",
+      "token": "when"
+    },
+    {
+      "tag": "VBG",
+      "token": "attempting"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "retrieve"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "result"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "task"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBN",
+      "token": "aborted"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "VBG",
+      "token": "throwing"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "exception"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "NN",
+      "token": "exception"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "inspected"
+    },
+    {
+      "tag": "VBG",
+      "token": "using"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<typen>",
+      "token": "Throwable"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<func>",
+      "token": "getCause"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+},
+  "type": "autotagged"
+}

@@ -1,0 +1,15 @@
+<p> Given a string containing digits from <code> 2 - 9 </code> inclusive , return all possible letter combinations that the number could represent . 
+Return the answer in any order . </p> 
+<p> A mapping of digit to letters ( just like on the telephone buttons ) is given below . 
+Note that 1 does not map to any letters . </p> 
+<p> </p> 
+<p> </p> 
+<p> Example 1 : </p> 
+<pre> Input : digits = " 23 " Output : [ " ad " , " ae " , " af " , " bd " , " be " , " bf " , " cd " , " ce " , " cf " ] </pre> 
+<p> Example 2 : </p> 
+<pre> Input : digits = " " Output : [ ] </pre> 
+<p> Example 3 : </p> 
+<pre> Input : digits = " 2 " Output : [ " a " , " b " , " c " ] </pre> 
+<p> </p> 
+<p> Constraints : </p> 
+<code> 0 < = digits . length < = 4 </code> <code> digits [ i ] </code> is a digit in the range <code> [ ' 2 ' , ' 9 ' ] </code> . 

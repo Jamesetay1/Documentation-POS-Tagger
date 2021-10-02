@@ -1,0 +1,758 @@
+
+
+TimeZone (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.util
+Class TimeZone
+
+java.lang.Object
+
+java.util.TimeZone
+
+All Implemented Interfaces:
+Serializable, Cloneable
+
+Direct Known Subclasses:
+SimpleTimeZone
+
+<pre>public abstract class TimeZone
+extends Object
+implements Serializable, Cloneable</pre>
+<code>TimeZone</code> represents a time zone offset, and also figures out daylight
+ savings.
+
+ <p>
+ Typically, you get a <code>TimeZone</code> using <code>getDefault</code>
+ which creates a <code>TimeZone</code> based on the time zone where the program
+ is running. For example, for a program running in Japan, <code>getDefault</code>
+ creates a <code>TimeZone</code> object based on Japanese Standard Time.
+
+ <p>
+ You can also get a <code>TimeZone</code> using <code>getTimeZone</code>
+ along with a time zone ID. For instance, the time zone ID for the
+ U.S. Pacific Time zone is "America/Los_Angeles". So, you can get a
+ U.S. Pacific Time <code>TimeZone</code> object with:
+ <pre>
+ TimeZone tz = TimeZone.getTimeZone("America/Los_Angeles");
+ </pre>
+ You can use the <code>getAvailableIDs</code> method to iterate through
+ all the supported time zone IDs. You can then choose a
+ supported ID to get a <code>TimeZone</code>.
+ If the time zone you want is not represented by one of the
+ supported IDs, then a custom time zone ID can be specified to
+ produce a TimeZone. The syntax of a custom time zone ID is:
+
+ <pre>
+ CustomID:
+         <code>GMT</code> Sign Hours <code>:</code> Minutes
+         <code>GMT</code> Sign Hours Minutes
+         <code>GMT</code> Sign Hours
+Sign: one of
+         <code>+ -</code>
+ Hours:
+Digit
+Digit Digit
+Minutes:
+Digit Digit
+Digit: one of
+         <code>0 1 2 3 4 5 6 7 8 9</code>
+ </pre>
+Hours must be between 0 to 23 and Minutes must be
+ between 00 to 59.  For example, "GMT+10" and "GMT+0010" mean ten
+ hours and ten minutes ahead of GMT, respectively.
+ <p>
+ The format is locale independent and digits must be taken from the
+ Basic Latin block of the Unicode standard. No daylight saving time
+ transition schedule can be specified with a custom time zone ID. If
+ the specified string doesn't match the syntax, <code>"GMT"</code>
+ is used.
+ <p>
+ When creating a <code>TimeZone</code>, the specified custom time
+ zone ID is normalized in the following syntax:
+ <pre>
+ NormalizedCustomID:
+         <code>GMT</code> Sign TwoDigitHours <code>:</code> Minutes
+Sign: one of
+         <code>+ -</code>
+ TwoDigitHours:
+Digit Digit
+Minutes:
+Digit Digit
+Digit: one of
+         <code>0 1 2 3 4 5 6 7 8 9</code>
+ </pre>
+ For example, TimeZone.getTimeZone("GMT-8").getID() returns "GMT-08:00".
+
+ Three-letter time zone IDs
+
+ For compatibility with JDK 1.1.x, some other three-letter time zone IDs
+ (such as "PST", "CTT", "AST") are also supported. However, their
+ use is deprecated because the same abbreviation is often used
+ for multiple time zones (for example, "CST" could be U.S. "Central Standard
+ Time" and "China Standard Time"), and the Java platform can then only
+ recognize one of them.
+
+Since:
+JDK1.1
+See Also:
+<code>Calendar</code>, 
+<code>GregorianCalendar</code>, 
+<code>SimpleTimeZone</code>, 
+Serialized Form
+
+Field Summary
+
+Fields 
+
+Modifier and Type
+Field and Description
+
+<code>static int</code>
+<code>LONG</code>
+A style specifier for <code>getDisplayName()</code> indicating
+ a long name, such as "Pacific Standard Time."
+
+<code>static int</code>
+<code>SHORT</code>
+A style specifier for <code>getDisplayName()</code> indicating
+ a short name, such as "PST."
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>TimeZone()</code>
+Sole constructor.
+
+Method Summary
+
+All Methods Static Methods Instance Methods Abstract Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>Object</code>
+<code>clone()</code>
+Creates a copy of this <code>TimeZone</code>.
+
+<code>static String[]</code>
+<code>getAvailableIDs()</code>
+Gets all the available IDs supported.
+
+<code>static String[]</code>
+<code>getAvailableIDs(int rawOffset)</code>
+Gets the available IDs according to the given time zone offset in milliseconds.
+
+<code>static TimeZone</code>
+<code>getDefault()</code>
+Gets the default <code>TimeZone</code> of the Java virtual machine.
+
+<code>String</code>
+<code>getDisplayName()</code>
+Returns a long standard time name of this <code>TimeZone</code> suitable for
+ presentation to the user in the default locale.
+
+<code>String</code>
+<code>getDisplayName(boolean daylight,
+              int style)</code>
+Returns a name in the specified <code>style</code> of this <code>TimeZone</code>
+ suitable for presentation to the user in the default locale.
+
+<code>String</code>
+<code>getDisplayName(boolean daylight,
+              int style,
+              Locale locale)</code>
+Returns a name in the specified <code>style</code> of this <code>TimeZone</code>
+ suitable for presentation to the user in the specified <code>locale</code>.
+
+<code>String</code>
+<code>getDisplayName(Locale locale)</code>
+Returns a long standard time name of this <code>TimeZone</code> suitable for
+ presentation to the user in the specified <code>locale</code>.
+
+<code>int</code>
+<code>getDSTSavings()</code>
+Returns the amount of time to be added to local standard time
+ to get local wall clock time.
+
+<code>String</code>
+<code>getID()</code>
+Gets the ID of this time zone.
+
+<code>abstract int</code>
+<code>getOffset(int era,
+         int year,
+         int month,
+         int day,
+         int dayOfWeek,
+         int milliseconds)</code>
+Gets the time zone offset, for current date, modified in case of
+ daylight savings.
+
+<code>int</code>
+<code>getOffset(long date)</code>
+Returns the offset of this time zone from UTC at the specified
+ date.
+
+<code>abstract int</code>
+<code>getRawOffset()</code>
+Returns the amount of time in milliseconds to add to UTC to get
+ standard time in this time zone.
+
+<code>static TimeZone</code>
+<code>getTimeZone(String ID)</code>
+Gets the <code>TimeZone</code> for the given ID.
+
+<code>static TimeZone</code>
+<code>getTimeZone(ZoneId zoneId)</code>
+Gets the <code>TimeZone</code> for the given <code>zoneId</code>.
+
+<code>boolean</code>
+<code>hasSameRules(TimeZone other)</code>
+Returns true if this zone has the same rule and offset as another zone.
+
+<code>abstract boolean</code>
+<code>inDaylightTime(Date date)</code>
+Queries if the given <code>date</code> is in Daylight Saving Time in
+ this time zone.
+
+<code>boolean</code>
+<code>observesDaylightTime()</code>
+Returns <code>true</code> if this <code>TimeZone</code> is currently in
+ Daylight Saving Time, or if a transition from Standard Time to
+ Daylight Saving Time occurs at any future time.
+
+<code>static void</code>
+<code>setDefault(TimeZone zone)</code>
+Sets the <code>TimeZone</code> that is returned by the <code>getDefault</code>
+ method.
+
+<code>void</code>
+<code>setID(String ID)</code>
+Sets the time zone ID.
+
+<code>abstract void</code>
+<code>setRawOffset(int offsetMillis)</code>
+Sets the base time zone offset to GMT.
+
+<code>ZoneId</code>
+<code>toZoneId()</code>
+Converts this <code>TimeZone</code> object to a <code>ZoneId</code>.
+
+<code>abstract boolean</code>
+<code>useDaylightTime()</code>
+Queries if this <code>TimeZone</code> uses Daylight Saving Time.
+
+Methods inherited from class java.lang.Object
+<code>equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code>
+
+Field Detail
+
+SHORT
+<pre>public static final int SHORT</pre>
+A style specifier for <code>getDisplayName()</code> indicating
+ a short name, such as "PST."
+
+Since:
+1.2
+See Also:
+<code>LONG</code>, 
+Constant Field Values
+
+LONG
+<pre>public static final int LONG</pre>
+A style specifier for <code>getDisplayName()</code> indicating
+ a long name, such as "Pacific Standard Time."
+
+Since:
+1.2
+See Also:
+<code>SHORT</code>, 
+Constant Field Values
+
+Constructor Detail
+
+TimeZone
+<pre>public TimeZone()</pre>
+Sole constructor.  (For invocation by subclass constructors, typically
+ implicit.)
+
+Method Detail
+
+getOffset
+<pre>public abstract int getOffset(int era,
+                              int year,
+                              int month,
+                              int day,
+                              int dayOfWeek,
+                              int milliseconds)</pre>
+Gets the time zone offset, for current date, modified in case of
+ daylight savings. This is the offset to add to UTC to get local time.
+ <p>
+ This method returns a historically correct offset if an
+ underlying <code>TimeZone</code> implementation subclass
+ supports historical Daylight Saving Time schedule and GMT
+ offset changes.
+
+Parameters:
+<code>era</code> - the era of the given date.
+<code>year</code> - the year in the given date.
+<code>month</code> - the month in the given date.
+ Month is 0-based. e.g., 0 for January.
+<code>day</code> - the day-in-month of the given date.
+<code>dayOfWeek</code> - the day-of-week of the given date.
+<code>milliseconds</code> - the milliseconds in day in <em>standard</em>
+ local time.
+Returns:
+the offset in milliseconds to add to GMT to get local time.
+See Also:
+<code>Calendar.ZONE_OFFSET</code>, 
+<code>Calendar.DST_OFFSET</code>
+
+getOffset
+<pre>public int getOffset(long date)</pre>
+Returns the offset of this time zone from UTC at the specified
+ date. If Daylight Saving Time is in effect at the specified
+ date, the offset value is adjusted with the amount of daylight
+ saving.
+ <p>
+ This method returns a historically correct offset value if an
+ underlying TimeZone implementation subclass supports historical
+ Daylight Saving Time schedule and GMT offset changes.
+
+Parameters:
+<code>date</code> - the date represented in milliseconds since January 1, 1970 00:00:00 GMT
+Returns:
+the amount of time in milliseconds to add to UTC to get local time.
+Since:
+1.4
+See Also:
+<code>Calendar.ZONE_OFFSET</code>, 
+<code>Calendar.DST_OFFSET</code>
+
+setRawOffset
+<pre>public abstract void setRawOffset(int offsetMillis)</pre>
+Sets the base time zone offset to GMT.
+ This is the offset to add to UTC to get local time.
+ <p>
+ If an underlying <code>TimeZone</code> implementation subclass
+ supports historical GMT offset changes, the specified GMT
+ offset is set as the latest GMT offset and the difference from
+ the known latest GMT offset value is used to adjust all
+ historical GMT offset values.
+
+Parameters:
+<code>offsetMillis</code> - the given base time zone offset to GMT.
+
+getRawOffset
+<pre>public abstract int getRawOffset()</pre>
+Returns the amount of time in milliseconds to add to UTC to get
+ standard time in this time zone. Because this value is not
+ affected by daylight saving time, it is called raw
+ offset.
+ <p>
+ If an underlying <code>TimeZone</code> implementation subclass
+ supports historical GMT offset changes, the method returns the
+ raw offset value of the current date. In Honolulu, for example,
+ its raw offset changed from GMT-10:30 to GMT-10:00 in 1947, and
+ this method always returns -36000000 milliseconds (i.e., -10
+ hours).
+
+Returns:
+the amount of raw offset time in milliseconds to add to UTC.
+See Also:
+<code>Calendar.ZONE_OFFSET</code>
+
+getID
+<pre>public String getID()</pre>
+Gets the ID of this time zone.
+
+Returns:
+the ID of this time zone.
+
+setID
+<pre>public void setID(String ID)</pre>
+Sets the time zone ID. This does not change any other data in
+ the time zone object.
+
+Parameters:
+<code>ID</code> - the new time zone ID.
+
+getDisplayName
+<pre>public final String getDisplayName()</pre>
+Returns a long standard time name of this <code>TimeZone</code> suitable for
+ presentation to the user in the default locale.
+
+ <p>This method is equivalent to:
+ <pre>
+ getDisplayName(false, <code>LONG</code>,
+                Locale.getDefault(<code>Locale.Category.DISPLAY</code>))
+ </pre>
+
+Returns:
+the human-readable name of this time zone in the default locale.
+Since:
+1.2
+See Also:
+<code>getDisplayName(boolean, int, Locale)</code>, 
+<code>Locale.getDefault(Locale.Category)</code>, 
+<code>Locale.Category</code>
+
+getDisplayName
+<pre>public final String getDisplayName(Locale locale)</pre>
+Returns a long standard time name of this <code>TimeZone</code> suitable for
+ presentation to the user in the specified <code>locale</code>.
+
+ <p>This method is equivalent to:
+ <pre>
+ getDisplayName(false, <code>LONG</code>, locale)
+ </pre>
+
+Parameters:
+<code>locale</code> - the locale in which to supply the display name.
+Returns:
+the human-readable name of this time zone in the given locale.
+Throws:
+<code>NullPointerException</code> - if <code>locale</code> is <code>null</code>.
+Since:
+1.2
+See Also:
+<code>getDisplayName(boolean, int, Locale)</code>
+
+getDisplayName
+<pre>public final String getDisplayName(boolean daylight,
+                                   int style)</pre>
+Returns a name in the specified <code>style</code> of this <code>TimeZone</code>
+ suitable for presentation to the user in the default locale. If the
+ specified <code>daylight</code> is <code>true</code>, a Daylight Saving Time name
+ is returned (even if this <code>TimeZone</code> doesn't observe Daylight Saving
+ Time). Otherwise, a Standard Time name is returned.
+
+ <p>This method is equivalent to:
+ <pre>
+ getDisplayName(daylight, style,
+                Locale.getDefault(<code>Locale.Category.DISPLAY</code>))
+ </pre>
+
+Parameters:
+<code>daylight</code> - <code>true</code> specifying a Daylight Saving Time name, or
+                 <code>false</code> specifying a Standard Time name
+<code>style</code> - either <code>LONG</code> or <code>SHORT</code>
+Returns:
+the human-readable name of this time zone in the default locale.
+Throws:
+<code>IllegalArgumentException</code> - if <code>style</code> is invalid.
+Since:
+1.2
+See Also:
+<code>getDisplayName(boolean, int, Locale)</code>, 
+<code>Locale.getDefault(Locale.Category)</code>, 
+<code>Locale.Category</code>, 
+<code>DateFormatSymbols.getZoneStrings()</code>
+
+getDisplayName
+<pre>public String getDisplayName(boolean daylight,
+                             int style,
+                             Locale locale)</pre>
+Returns a name in the specified <code>style</code> of this <code>TimeZone</code>
+ suitable for presentation to the user in the specified <code>locale</code>. If the specified <code>daylight</code> is <code>true</code>, a Daylight
+ Saving Time name is returned (even if this <code>TimeZone</code> doesn't
+ observe Daylight Saving Time). Otherwise, a Standard Time name is
+ returned.
+
+ <p>When looking up a time zone name, the default
+ <code>Locale</code> search path of <code>ResourceBundle</code> derived
+ from the specified <code>locale</code> is used. (No fallback
+ <code>Locale</code> search is performed.) If a time zone name in any
+ <code>Locale</code> of the search path, including <code>Locale.ROOT</code>, is
+ found, the name is returned. Otherwise, a string in the
+ normalized custom ID format is returned.
+
+Parameters:
+<code>daylight</code> - <code>true</code> specifying a Daylight Saving Time name, or
+                 <code>false</code> specifying a Standard Time name
+<code>style</code> - either <code>LONG</code> or <code>SHORT</code>
+<code>locale</code> - the locale in which to supply the display name.
+Returns:
+the human-readable name of this time zone in the given locale.
+Throws:
+<code>IllegalArgumentException</code> - if <code>style</code> is invalid.
+<code>NullPointerException</code> - if <code>locale</code> is <code>null</code>.
+Since:
+1.2
+See Also:
+<code>DateFormatSymbols.getZoneStrings()</code>
+
+getDSTSavings
+<pre>public int getDSTSavings()</pre>
+Returns the amount of time to be added to local standard time
+ to get local wall clock time.
+
+ <p>The default implementation returns 3600000 milliseconds
+ (i.e., one hour) if a call to <code>useDaylightTime()</code>
+ returns <code>true</code>. Otherwise, 0 (zero) is returned.
+
+ <p>If an underlying <code>TimeZone</code> implementation subclass
+ supports historical and future Daylight Saving Time schedule
+ changes, this method returns the amount of saving time of the
+ last known Daylight Saving Time rule that can be a future
+ prediction.
+
+ <p>If the amount of saving time at any given time stamp is
+ required, construct a <code>Calendar</code> with this <code>TimeZone</code> and the time stamp, and call <code>Calendar.get</code><code>(</code><code>Calendar.DST_OFFSET</code><code>)</code>.
+
+Returns:
+the amount of saving time in milliseconds
+Since:
+1.4
+See Also:
+<code>inDaylightTime(Date)</code>, 
+<code>getOffset(long)</code>, 
+<code>getOffset(int,int,int,int,int,int)</code>, 
+<code>Calendar.ZONE_OFFSET</code>
+
+useDaylightTime
+<pre>public abstract boolean useDaylightTime()</pre>
+Queries if this <code>TimeZone</code> uses Daylight Saving Time.
+
+ <p>If an underlying <code>TimeZone</code> implementation subclass
+ supports historical and future Daylight Saving Time schedule
+ changes, this method refers to the last known Daylight Saving Time
+ rule that can be a future prediction and may not be the same as
+ the current rule. Consider calling <code>observesDaylightTime()</code>
+ if the current rule should also be taken into account.
+
+Returns:
+<code>true</code> if this <code>TimeZone</code> uses Daylight Saving Time,
+         <code>false</code>, otherwise.
+See Also:
+<code>inDaylightTime(Date)</code>, 
+<code>Calendar.DST_OFFSET</code>
+
+observesDaylightTime
+<pre>public boolean observesDaylightTime()</pre>
+Returns <code>true</code> if this <code>TimeZone</code> is currently in
+ Daylight Saving Time, or if a transition from Standard Time to
+ Daylight Saving Time occurs at any future time.
+
+ <p>The default implementation returns <code>true</code> if
+ <code>useDaylightTime()</code> or <code>inDaylightTime(new Date())</code>
+ returns <code>true</code>.
+
+Returns:
+<code>true</code> if this <code>TimeZone</code> is currently in
+ Daylight Saving Time, or if a transition from Standard Time to
+ Daylight Saving Time occurs at any future time; <code>false</code>
+ otherwise.
+Since:
+1.7
+See Also:
+<code>useDaylightTime()</code>, 
+<code>inDaylightTime(Date)</code>, 
+<code>Calendar.DST_OFFSET</code>
+
+inDaylightTime
+<pre>public abstract boolean inDaylightTime(Date date)</pre>
+Queries if the given <code>date</code> is in Daylight Saving Time in
+ this time zone.
+
+Parameters:
+<code>date</code> - the given Date.
+Returns:
+<code>true</code> if the given date is in Daylight Saving Time,
+         <code>false</code>, otherwise.
+
+getTimeZone
+<pre>public static TimeZone getTimeZone(String ID)</pre>
+Gets the <code>TimeZone</code> for the given ID.
+
+Parameters:
+<code>ID</code> - the ID for a <code>TimeZone</code>, either an abbreviation
+ such as "PST", a full name such as "America/Los_Angeles", or a custom
+ ID such as "GMT-8:00". Note that the support of abbreviations is
+ for JDK 1.1.x compatibility only and full names should be used.
+Returns:
+the specified <code>TimeZone</code>, or the GMT zone if the given ID
+ cannot be understood.
+
+getTimeZone
+<pre>public static TimeZone getTimeZone(ZoneId zoneId)</pre>
+Gets the <code>TimeZone</code> for the given <code>zoneId</code>.
+
+Parameters:
+<code>zoneId</code> - a <code>ZoneId</code> from which the time zone ID is obtained
+Returns:
+the specified <code>TimeZone</code>, or the GMT zone if the given ID
+         cannot be understood.
+Throws:
+<code>NullPointerException</code> - if <code>zoneId</code> is <code>null</code>
+Since:
+1.8
+
+toZoneId
+<pre>public ZoneId toZoneId()</pre>
+Converts this <code>TimeZone</code> object to a <code>ZoneId</code>.
+
+Returns:
+a <code>ZoneId</code> representing the same time zone as this
+         <code>TimeZone</code>
+Since:
+1.8
+
+getAvailableIDs
+<pre>public static String[] getAvailableIDs(int rawOffset)</pre>
+Gets the available IDs according to the given time zone offset in milliseconds.
+
+Parameters:
+<code>rawOffset</code> - the given time zone GMT offset in milliseconds.
+Returns:
+an array of IDs, where the time zone for that ID has
+ the specified GMT offset. For example, "America/Phoenix" and "America/Denver"
+ both have GMT-07:00, but differ in daylight saving behavior.
+See Also:
+<code>getRawOffset()</code>
+
+getAvailableIDs
+<pre>public static String[] getAvailableIDs()</pre>
+Gets all the available IDs supported.
+
+Returns:
+an array of IDs.
+
+getDefault
+<pre>public static TimeZone getDefault()</pre>
+Gets the default <code>TimeZone</code> of the Java virtual machine. If the
+ cached default <code>TimeZone</code> is available, its clone is returned.
+ Otherwise, the method takes the following steps to determine the default
+ time zone.
+
+ 
+Use the <code>user.timezone</code> property value as the default
+ time zone ID if it's available.
+Detect the platform time zone ID. The source of the
+ platform time zone and ID mapping may vary with implementation.
+Use <code>GMT</code> as the last resort if the given or detected
+ time zone ID is unknown.
+
+ <p>The default <code>TimeZone</code> created from the ID is cached,
+ and its clone is returned. The <code>user.timezone</code> property
+ value is set to the ID upon return.
+
+Returns:
+the default <code>TimeZone</code>
+See Also:
+<code>setDefault(TimeZone)</code>
+
+setDefault
+<pre>public static void setDefault(TimeZone zone)</pre>
+Sets the <code>TimeZone</code> that is returned by the <code>getDefault</code>
+ method. <code>zone</code> is cached. If <code>zone</code> is null, the cached
+ default <code>TimeZone</code> is cleared. This method doesn't change the value
+ of the <code>user.timezone</code> property.
+
+Parameters:
+<code>zone</code> - the new default <code>TimeZone</code>, or null
+Throws:
+<code>SecurityException</code> - if the security manager's <code>checkPermission</code>
+                           denies <code>PropertyPermission("user.timezone",
+                           "write")</code>
+See Also:
+<code>getDefault()</code>, 
+<code>PropertyPermission</code>
+
+hasSameRules
+<pre>public boolean hasSameRules(TimeZone other)</pre>
+Returns true if this zone has the same rule and offset as another zone.
+ That is, if this zone differs only in ID, if at all.  Returns false
+ if the other zone is null.
+
+Parameters:
+<code>other</code> - the <code>TimeZone</code> object to be compared with
+Returns:
+true if the other zone is not null and is the same as this one,
+ with the possible exception of the ID
+Since:
+1.2
+
+clone
+<pre>public Object clone()</pre>
+Creates a copy of this <code>TimeZone</code>.
+
+Overrides:
+<code>clone</code> in class <code>Object</code>
+Returns:
+a clone of this <code>TimeZone</code>
+See Also:
+<code>Cloneable</code>
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

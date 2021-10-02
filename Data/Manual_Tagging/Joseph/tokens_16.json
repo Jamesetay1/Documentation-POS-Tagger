@@ -1,0 +1,913 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "An"
+    },
+    {
+      "tag": "NN",
+      "token": "Annotation"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "wrapper"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "text"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": "NN",
+      "token": "value"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "NN",
+      "token": "annotation"
+    },
+    {
+      "tag": "NNS",
+      "token": "characteristics"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "These"
+    },
+    {
+      "tag": "NNS",
+      "token": "characteristics"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "text"
+    },
+    {
+      "tag": "NN",
+      "token": "range"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "applied"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "critical"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "semantics"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "range"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "That"
+    },
+    {
+      "tag": "VBZ",
+      "token": "means"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "applied"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "NNS",
+      "token": "subranges"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "text"
+    },
+    {
+      "tag": "NN",
+      "token": "range"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "VBZ",
+      "token": "applies"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "CD",
+      "token": "two"
+    },
+    {
+      "tag": "JJ",
+      "token": "adjacent"
+    },
+    {
+      "tag": "NN",
+      "token": "text"
+    },
+    {
+      "tag": "NNS",
+      "token": "ranges"
+    },
+    {
+      "tag": "VBP",
+      "token": "have"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "same"
+    },
+    {
+      "tag": "NN",
+      "token": "value"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": "RB",
+      "token": "still"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "applied"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "combined"
+    },
+    {
+      "tag": "NN",
+      "token": "range"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "whole"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "NN",
+      "token": "value"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "PRP$",
+      "token": "its"
+    },
+    {
+      "tag": "NN",
+      "token": "value"
+    },
+    {
+      "tag": "RB",
+      "token": "usually"
+    },
+    {
+      "tag": "VBP",
+      "token": "do"
+    },
+    {
+      "tag": "RB",
+      "token": "no"
+    },
+    {
+      "tag": "RB",
+      "token": "longer"
+    },
+    {
+      "tag": "VB",
+      "token": "apply"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBG",
+      "token": "underlying"
+    },
+    {
+      "tag": "NN",
+      "token": "text"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "changed"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "An"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "grammatical"
+    },
+    {
+      "tag": "NN",
+      "token": "information"
+    },
+    {
+      "tag": "VBN",
+      "token": "attached"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "sentence"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "IN",
+      "token": "For"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "previous"
+    },
+    {
+      "tag": "NN",
+      "token": "sentence"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "VB",
+      "token": "say"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "subject"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "but"
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "say"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "same"
+    },
+    {
+      "tag": "IN",
+      "token": "about"
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": "''",
+      "token": "\""
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": "NN",
+      "token": "exam"
+    },
+    {
+      "tag": "''",
+      "token": "\""
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "WRB",
+      "token": "When"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "text"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "changed"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "grammatical"
+    },
+    {
+      "tag": "NN",
+      "token": "information"
+    },
+    {
+      "tag": "RB",
+      "token": "typically"
+    },
+    {
+      "tag": "VBZ",
+      "token": "becomes"
+    },
+    {
+      "tag": "JJ",
+      "token": "invalid"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "Another"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "Japanese"
+    },
+    {
+      "tag": "VBG",
+      "token": "reading"
+    },
+    {
+      "tag": "NN",
+      "token": "information"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "NN",
+      "token": "yomi"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VBG",
+      "token": "Wrapping"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": "NN",
+      "token": "value"
+    },
+    {
+      "tag": "IN",
+      "token": "into"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "Annotation"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": "VBZ",
+      "token": "guarantees"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "JJ",
+      "token": "adjacent"
+    },
+    {
+      "tag": "NN",
+      "token": "text"
+    },
+    {
+      "tag": "NNS",
+      "token": "runs"
+    },
+    {
+      "tag": "VBP",
+      "token": "don"
+    },
+    {
+      "tag": "''",
+      "token": "'"
+    },
+    {
+      "tag": "NN",
+      "token": "t"
+    },
+    {
+      "tag": "VBP",
+      "token": "get"
+    },
+    {
+      "tag": "VBN",
+      "token": "merged"
+    },
+    {
+      "tag": "RB",
+      "token": "even"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": "NNS",
+      "token": "values"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "JJ",
+      "token": "equal"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VBZ",
+      "token": "indicates"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "NN",
+      "token": "text"
+    },
+    {
+      "tag": "NNS",
+      "token": "containers"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "attribute"
+    },
+    {
+      "tag": "MD",
+      "token": "should"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "discarded"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBG",
+      "token": "underlying"
+    },
+    {
+      "tag": "NN",
+      "token": "text"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "modified"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

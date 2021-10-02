@@ -1,0 +1,233 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "This"
+    },
+    {
+      "tag": "NN",
+      "token": "class"
+    },
+    {
+      "tag": "VBZ",
+      "token": "centralizes"
+    },
+    {
+      "tag": "DT",
+      "token": "all"
+    },
+    {
+      "tag": "NN",
+      "token": "security"
+    },
+    {
+      "tag": "NNS",
+      "token": "properties"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "JJ",
+      "token": "common"
+    },
+    {
+      "tag": "NN",
+      "token": "security"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "CD",
+      "token": "One"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "PRP$",
+      "token": "its"
+    },
+    {
+      "tag": "JJ",
+      "token": "primary"
+    },
+    {
+      "tag": "NNS",
+      "token": "uses"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "manage"
+    },
+    {
+      "tag": "NNS",
+      "token": "providers"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "default"
+    },
+    {
+      "tag": "NNS",
+      "token": "values"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NN",
+      "token": "security"
+    },
+    {
+      "tag": "NNS",
+      "token": "properties"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "read"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "implementation"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "JJ",
+      "token": "specific"
+    },
+    {
+      "tag": "NN",
+      "token": "location"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "RB",
+      "token": "typically"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "properties"
+    },
+    {
+      "tag": "NN",
+      "token": "file"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "conf"
+    },
+    {
+      "tag": "<\/>",
+      "token": "/"
+    },
+    {
+      "tag": "<var>",
+      "token": "security"
+    },
+    {
+      "tag": "<\/>",
+      "token": "/"
+    },
+    {
+      "tag": "<typen>",
+      "token": "java"
+    },
+    {
+      "tag": "<.>",
+      "token": "."
+    },
+    {
+      "tag": "<typen>",
+      "token": "security"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNP",
+      "token": "Java"
+    },
+    {
+      "tag": "NN",
+      "token": "installation"
+    },
+    {
+      "tag": "NN",
+      "token": "directory"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

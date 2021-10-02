@@ -1,0 +1,957 @@
+{
+  "tokens": [
+    {
+      "tag": "VBN",
+      "token": "Given"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "AFX",
+      "token": "non"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "JJ",
+      "token": "negative"
+    },
+    {
+      "tag": "NNS",
+      "token": "integers"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "a"},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "a"},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "a"},
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "WRB",
+      "token": "where"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "VBZ",
+      "token": "represents"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "point"
+    },
+    {
+      "tag": "IN",
+      "token": "at"
+    },
+    {
+      "tag": "NN",
+      "token": "coordinate"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "i"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "a"},
+    {"token": "i"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "JJ",
+      "token": "vertical"
+    },
+    {
+      "tag": "NNS",
+      "token": "lines"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "drawn"
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "CD",
+      "token": "two"
+    },
+    {
+      "tag": "NNS",
+      "token": "endpoints"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "line"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "i"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "IN",
+      "token": "at"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "i"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "a"},
+    {"token": "i"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "i"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VB",
+      "token": "Find"
+    },
+    {
+      "tag": "CD",
+      "token": "two"
+    },
+    {
+      "tag": "NNS",
+      "token": "lines"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "RB",
+      "token": "together"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "x"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NN",
+      "token": "axis"
+    },
+    {
+      "tag": "VBZ",
+      "token": "forms"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "container"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "container"
+    },
+    {
+      "tag": "VBZ",
+      "token": "contains"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "RBS",
+      "token": "most"
+    },
+    {
+      "tag": "NN",
+      "token": "water"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Notice"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "JJ",
+      "token": "slant"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "container"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "height"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "49"
+    },
+    {"token": "Explanation"},
+    {"token": ":"},
+    {"token": "The"},
+    {"token": "above"},
+    {"token": "vertical"},
+    {"token": "lines"},
+    {"token": "are"},
+    {"token": "represented"},
+    {"token": "by"},
+    {"token": "array"},
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "."},
+    {"token": "In"},
+    {"token": "this"},
+    {"token": "case"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "the"},
+    {"token": "max"},
+    {"token": "area"},
+    {"token": "of"},
+    {"token": "water"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "blue"},
+    {"token": "section"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {"token": "the"},
+    {"token": "container"},
+    {"token": "can"},
+    {"token": "contain"},
+    {"token": "is"},
+    {
+      "tag": "<num>",
+      "token": "49"
+    },
+    {"token": "."},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "2"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "height"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "3"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "height"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "16"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "4"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "height"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "Constraints"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "height"
+    },
+    {"token": "."},
+    {"token": "length"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "10"
+    },
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "height"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "i"},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "10"
+    },
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    }
+  ],
+  "type": "autotagged"
+}

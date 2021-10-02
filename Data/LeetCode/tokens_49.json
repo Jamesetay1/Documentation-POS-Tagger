@@ -1,0 +1,586 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NN",
+      "token": "n"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NNS",
+      "token": "queens"
+    },
+    {
+      "tag": "NN",
+      "token": "puzzle"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "problem"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "VBG",
+      "token": "placing"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "queens"
+    },
+    {
+      "tag": "IN",
+      "token": "on"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {"token": "x"},
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "chessboard"
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "DT",
+      "token": "no"
+    },
+    {
+      "tag": "CD",
+      "token": "two"
+    },
+    {
+      "tag": "NNS",
+      "token": "queens"
+    },
+    {
+      "tag": "VBP",
+      "token": "attack"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "JJ",
+      "token": "other"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "VBN",
+      "token": "Given"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "integer"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VB",
+      "token": "return"
+    },
+    {
+      "tag": "DT",
+      "token": "all"
+    },
+    {
+      "tag": "JJ",
+      "token": "distinct"
+    },
+    {
+      "tag": "NNS",
+      "token": "solutions"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "n"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NNS",
+      "token": "queens"
+    },
+    {
+      "tag": "NN",
+      "token": "puzzle"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "Each"
+    },
+    {
+      "tag": "NN",
+      "token": "solution"
+    },
+    {
+      "tag": "VBZ",
+      "token": "contains"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "distinct"
+    },
+    {
+      "tag": "NN",
+      "token": "board"
+    },
+    {
+      "tag": "NN",
+      "token": "configuration"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "n"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NNS",
+      "token": "queens"
+    },
+    {
+      "tag": "POS",
+      "token": "'"
+    },
+    {
+      "tag": "NN",
+      "token": "placement"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "WRB",
+      "token": "where"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "'"},
+    {"token": "Q"},
+    {"token": "'"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "'"},
+    {"token": "."},
+    {"token": "'"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "DT",
+      "token": "both"
+    },
+    {
+      "tag": "VBP",
+      "token": "indicate"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "queen"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "JJ",
+      "token": "empty"
+    },
+    {
+      "tag": "NN",
+      "token": "space"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "RB",
+      "token": "respectively"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "Q"},
+    {"token": "."},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {"token": "Q"},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "Q"},
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "."},
+    {"token": "Q"},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "."},
+    {"token": "Q"},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "Q"},
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {"token": "Q"},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "Q"},
+    {"token": "."},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "Explanation"},
+    {"token": ":"},
+    {"token": "There"},
+    {"token": "exist"},
+    {"token": "two"},
+    {"token": "distinct"},
+    {"token": "solutions"},
+    {"token": "to"},
+    {"token": "the"},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "-"},
+    {"token": "queens"},
+    {"token": "puzzle"},
+    {"token": "as"},
+    {"token": "shown"},
+    {"token": "above"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "2"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {"token": "Q"},
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "Constraints"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "n"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    }
+  ],
+  "type": "autotagged"
+}

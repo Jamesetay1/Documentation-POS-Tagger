@@ -1,0 +1,225 @@
+
+
+Exception (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.lang
+Class Exception
+
+java.lang.Object
+
+java.lang.Throwable
+
+java.lang.Exception
+
+All Implemented Interfaces:
+Serializable
+
+Direct Known Subclasses:
+AclNotFoundException, ActivationException, AlreadyBoundException, ApplicationException, AWTException, BackingStoreException, BadAttributeValueExpException, BadBinaryOpValueExpException, BadLocationException, BadStringOperationException, BrokenBarrierException, CertificateException, CloneNotSupportedException, DataFormatException, DatatypeConfigurationException, DestroyFailedException, ExecutionException, ExpandVetoException, FontFormatException, GeneralSecurityException, GSSException, IllegalClassFormatException, InterruptedException, IntrospectionException, InvalidApplicationException, InvalidMidiDataException, InvalidPreferencesFormatException, InvalidTargetObjectTypeException, IOException, JAXBException, JMException, KeySelectorException, LambdaConversionException, LastOwnerException, LineUnavailableException, MarshalException, MidiUnavailableException, MimeTypeParseException, MimeTypeParseException, NamingException, NoninvertibleTransformException, NotBoundException, NotOwnerException, ParseException, ParserConfigurationException, PrinterException, PrintException, PrivilegedActionException, PropertyVetoException, ReflectiveOperationException, RefreshFailedException, RemarshalException, RuntimeException, SAXException, ScriptException, ServerNotActiveException, SOAPException, SQLException, TimeoutException, TooManyListenersException, TransformerException, TransformException, UnmodifiableClassException, UnsupportedAudioFileException, UnsupportedCallbackException, UnsupportedFlavorException, UnsupportedLookAndFeelException, URIReferenceException, URISyntaxException, UserException, XAException, XMLParseException, XMLSignatureException, XMLStreamException, XPathException
+
+<pre>public class Exception
+extends Throwable</pre>
+The class <code>Exception</code> and its subclasses are a form of
+ <code>Throwable</code> that indicates conditions that a reasonable
+ application might want to catch.
+
+ <p>The class <code>Exception</code> and any subclasses that are not also
+ subclasses of <code>RuntimeException</code> are <em>checked
+ exceptions</em>.  Checked exceptions need to be declared in a
+ method or constructor's <code>throws</code> clause if they can be thrown
+ by the execution of the method or constructor and propagate outside
+ the method or constructor boundary.
+
+Since:
+JDK1.0
+See Also:
+<code>Error</code>, 
+Serialized Form
+See  The Java™ Language Specification:
+11.2 Compile-Time Checking of Exceptions
+
+Constructor Summary
+
+Constructors 
+
+Modifier
+Constructor and Description
+
+<code> </code>
+<code>Exception()</code>
+Constructs a new exception with <code>null</code> as its detail message.
+
+<code> </code>
+<code>Exception(String message)</code>
+Constructs a new exception with the specified detail message.
+
+<code> </code>
+<code>Exception(String message,
+         Throwable cause)</code>
+Constructs a new exception with the specified detail message and
+ cause.
+
+<code>protected </code>
+<code>Exception(String message,
+         Throwable cause,
+         boolean enableSuppression,
+         boolean writableStackTrace)</code>
+Constructs a new exception with the specified detail message,
+ cause, suppression enabled or disabled, and writable stack
+ trace enabled or disabled.
+
+<code> </code>
+<code>Exception(Throwable cause)</code>
+Constructs a new exception with the specified cause and a detail
+ message of (cause==null ? null : cause.toString()) (which
+ typically contains the class and detail message of cause).
+
+Method Summary
+
+Methods inherited from class java.lang.Throwable
+<code>addSuppressed, fillInStackTrace, getCause, getLocalizedMessage, getMessage, getStackTrace, getSuppressed, initCause, printStackTrace, printStackTrace, printStackTrace, setStackTrace, toString</code>
+
+Methods inherited from class java.lang.Object
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code>
+
+Constructor Detail
+
+Exception
+<pre>public Exception()</pre>
+Constructs a new exception with <code>null</code> as its detail message.
+ The cause is not initialized, and may subsequently be initialized by a
+ call to <code>Throwable.initCause(java.lang.Throwable)</code>.
+
+Exception
+<pre>public Exception(String message)</pre>
+Constructs a new exception with the specified detail message.  The
+ cause is not initialized, and may subsequently be initialized by
+ a call to <code>Throwable.initCause(java.lang.Throwable)</code>.
+
+Parameters:
+<code>message</code> - the detail message. The detail message is saved for
+          later retrieval by the <code>Throwable.getMessage()</code> method.
+
+Exception
+<pre>public Exception(String message,
+                 Throwable cause)</pre>
+Constructs a new exception with the specified detail message and
+ cause.  <p>Note that the detail message associated with
+ <code>cause</code> is not automatically incorporated in
+ this exception's detail message.
+
+Parameters:
+<code>message</code> - the detail message (which is saved for later retrieval
+         by the <code>Throwable.getMessage()</code> method).
+<code>cause</code> - the cause (which is saved for later retrieval by the
+         <code>Throwable.getCause()</code> method).  (A null value is
+         permitted, and indicates that the cause is nonexistent or
+         unknown.)
+Since:
+1.4
+
+Exception
+<pre>public Exception(Throwable cause)</pre>
+Constructs a new exception with the specified cause and a detail
+ message of (cause==null ? null : cause.toString()) (which
+ typically contains the class and detail message of cause).
+ This constructor is useful for exceptions that are little more than
+ wrappers for other throwables (for example, <code>PrivilegedActionException</code>).
+
+Parameters:
+<code>cause</code> - the cause (which is saved for later retrieval by the
+         <code>Throwable.getCause()</code> method).  (A null value is
+         permitted, and indicates that the cause is nonexistent or
+         unknown.)
+Since:
+1.4
+
+Exception
+<pre>protected Exception(String message,
+                    Throwable cause,
+                    boolean enableSuppression,
+                    boolean writableStackTrace)</pre>
+Constructs a new exception with the specified detail message,
+ cause, suppression enabled or disabled, and writable stack
+ trace enabled or disabled.
+
+Parameters:
+<code>message</code> - the detail message.
+<code>cause</code> - the cause.  (A <code>null</code> value is permitted,
+ and indicates that the cause is nonexistent or unknown.)
+<code>enableSuppression</code> - whether or not suppression is enabled
+                          or disabled
+<code>writableStackTrace</code> - whether or not the stack trace should
+                           be writable
+Since:
+1.7
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

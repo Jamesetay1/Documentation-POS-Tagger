@@ -1,0 +1,429 @@
+{
+  "tokens": [
+    {
+      "tag": "VBN",
+      "token": "Given"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "string"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VB",
+      "token": "find"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "length"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJS",
+      "token": "longest"
+    },
+    {
+      "tag": "NN",
+      "token": "substring"
+    },
+    {
+      "tag": "IN",
+      "token": "without"
+    },
+    {
+      "tag": "VBG",
+      "token": "repeating"
+    },
+    {
+      "tag": "NNS",
+      "token": "characters"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "\""},
+    {"token": "abcabcbb"},
+    {"token": "\""},
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "Explanation"},
+    {"token": ":"},
+    {"token": "The"},
+    {"token": "answer"},
+    {"token": "is"},
+    {"token": "\""},
+    {"token": "abc"},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "with"},
+    {"token": "the"},
+    {"token": "length"},
+    {"token": "of"},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "."},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "2"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "\""},
+    {"token": "bbbbb"},
+    {"token": "\""},
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "Explanation"},
+    {"token": ":"},
+    {"token": "The"},
+    {"token": "answer"},
+    {"token": "is"},
+    {"token": "\""},
+    {"token": "b"},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "with"},
+    {"token": "the"},
+    {"token": "length"},
+    {"token": "of"},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "."},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "3"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "\""},
+    {"token": "pwwkew"},
+    {"token": "\""},
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "Explanation"},
+    {"token": ":"},
+    {"token": "The"},
+    {"token": "answer"},
+    {"token": "is"},
+    {"token": "\""},
+    {"token": "wke"},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "with"},
+    {"token": "the"},
+    {"token": "length"},
+    {"token": "of"},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "."},
+    {"token": "Notice"},
+    {"token": "that"},
+    {"token": "the"},
+    {"token": "answer"},
+    {"token": "must"},
+    {"token": "be"},
+    {"token": "a"},
+    {"token": "substring"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "pwke"},
+    {"token": "\""},
+    {"token": "is"},
+    {"token": "a"},
+    {"token": "subsequence"},
+    {"token": "and"},
+    {"token": "not"},
+    {"token": "a"},
+    {"token": "substring"},
+    {"token": "."},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "4"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "\""},
+    {"token": "\""},
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "Constraints"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "0"
+    },
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {"token": "."},
+    {"token": "length"},
+    {
+      "tag": "<var>",
+      "token": "<"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "*"},
+    {
+      "tag": "<num>",
+      "token": "10"
+    },
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "s"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "consists"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNP",
+      "token": "English"
+    },
+    {
+      "tag": "NNS",
+      "token": "letters"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NNS",
+      "token": "symbols"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NNS",
+      "token": "spaces"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

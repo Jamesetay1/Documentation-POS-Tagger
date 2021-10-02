@@ -1,0 +1,13 @@
+<p> Given an array of non - negative integers <code> nums </code> , you are initially positioned at the first index of the array . </p> 
+<p> Each element in the array represents your maximum jump length at that position . </p> 
+<p> Your goal is to reach the last index in the minimum number of jumps . </p> 
+<p> You can assume that you can always reach the last index . </p> 
+<p> </p> 
+<p> Example 1 : </p> 
+<pre> Input : nums = [ 2 , 3 , 1 , 1 , 4 ] Output : 2 Explanation : The minimum number of jumps to reach the last index is 2 . 
+Jump 1 step from index 0 to 1 , then 3 steps to the last index . </pre> 
+<p> Example 2 : </p> 
+<pre> Input : nums = [ 2 , 3 , 0 , 1 , 4 ] Output : 2 </pre> 
+<p> </p> 
+<p> Constraints : </p> 
+<code> 1 < = nums . length < = 3 * 104 </code> <code> 0 < = nums [ i ] < = 105 </code> 

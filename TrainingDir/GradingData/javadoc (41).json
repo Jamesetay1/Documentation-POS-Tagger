@@ -1,0 +1,65 @@
+{
+  "tokens": [
+    {
+      "tag": "NN",
+      "token": "Runtime"
+    },
+    {
+      "tag": "NN",
+      "token": "exception"
+    },
+    {
+      "tag": "VBN",
+      "token": "thrown"
+    },
+    {
+      "tag": "WRB",
+      "token": "when"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "provider"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBN",
+      "token": "required"
+    },
+    {
+      "tag": "NN",
+      "token": "type"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "found"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

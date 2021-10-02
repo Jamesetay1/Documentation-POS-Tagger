@@ -1,0 +1,206 @@
+
+
+Timestamp (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.security
+Class Timestamp
+
+java.lang.Object
+
+java.security.Timestamp
+
+All Implemented Interfaces:
+Serializable
+
+<pre>public final class Timestamp
+extends Object
+implements Serializable</pre>
+This class encapsulates information about a signed timestamp.
+ It is immutable.
+ It includes the timestamp's date and time as well as information about the
+ Timestamping Authority (TSA) which generated and signed the timestamp.
+
+Since:
+1.5
+See Also:
+Serialized Form
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>Timestamp(Date timestamp,
+         CertPath signerCertPath)</code>
+Constructs a Timestamp.
+
+Method Summary
+
+All Methods Instance Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>boolean</code>
+<code>equals(Object obj)</code>
+Tests for equality between the specified object and this
+ timestamp.
+
+<code>CertPath</code>
+<code>getSignerCertPath()</code>
+Returns the certificate path for the Timestamping Authority.
+
+<code>Date</code>
+<code>getTimestamp()</code>
+Returns the date and time when the timestamp was generated.
+
+<code>int</code>
+<code>hashCode()</code>
+Returns the hash code value for this timestamp.
+
+<code>String</code>
+<code>toString()</code>
+Returns a string describing this timestamp.
+
+Methods inherited from class java.lang.Object
+<code>clone, finalize, getClass, notify, notifyAll, wait, wait, wait</code>
+
+Constructor Detail
+
+Timestamp
+<pre>public Timestamp(Date timestamp,
+                 CertPath signerCertPath)</pre>
+Constructs a Timestamp.
+
+Parameters:
+<code>timestamp</code> - is the timestamp's date and time. It must not be null.
+<code>signerCertPath</code> - is the TSA's certificate path. It must not be null.
+Throws:
+<code>NullPointerException</code> - if timestamp or signerCertPath is null.
+
+Method Detail
+
+getTimestamp
+<pre>public Date getTimestamp()</pre>
+Returns the date and time when the timestamp was generated.
+
+Returns:
+The timestamp's date and time.
+
+getSignerCertPath
+<pre>public CertPath getSignerCertPath()</pre>
+Returns the certificate path for the Timestamping Authority.
+
+Returns:
+The TSA's certificate path.
+
+hashCode
+<pre>public int hashCode()</pre>
+Returns the hash code value for this timestamp.
+ The hash code is generated using the date and time of the timestamp
+ and the TSA's certificate path.
+
+Overrides:
+<code>hashCode</code> in class <code>Object</code>
+Returns:
+a hash code value for this timestamp.
+See Also:
+<code>Object.equals(java.lang.Object)</code>, 
+<code>System.identityHashCode(java.lang.Object)</code>
+
+equals
+<pre>public boolean equals(Object obj)</pre>
+Tests for equality between the specified object and this
+ timestamp. Two timestamps are considered equal if the date and time of
+ their timestamp's and their signer's certificate paths are equal.
+
+Overrides:
+<code>equals</code> in class <code>Object</code>
+Parameters:
+<code>obj</code> - the object to test for equality with this timestamp.
+Returns:
+true if the timestamp are considered equal, false otherwise.
+See Also:
+<code>Object.hashCode()</code>, 
+<code>HashMap</code>
+
+toString
+<pre>public String toString()</pre>
+Returns a string describing this timestamp.
+
+Overrides:
+<code>toString</code> in class <code>Object</code>
+Returns:
+A string comprising the date and time of the timestamp and
+         its signer's certificate.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

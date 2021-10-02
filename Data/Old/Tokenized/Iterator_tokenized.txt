@@ -1,0 +1,59 @@
+Iterator ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . util Interface Iterator <E> 
+Type Parameters : <code> E </code> - the type of elements returned by this iterator 
+All Known Subinterfaces : ListIterator <E> , PrimitiveIterator < T , T _ CONS > , PrimitiveIterator . 
+OfDouble , PrimitiveIterator . 
+OfInt , PrimitiveIterator . 
+OfLong , XMLEventReader 
+All Known Implementing Classes : BeanContextSupport . 
+BCSIterator , EventReaderDelegate , Scanner 
+<pre> public interface Iterator An iterator over a collection . <code> Iterator </code> takes the place of <code> Enumeration </code> in the Java Collections Framework . 
+Iterators differ from enumerations in two ways : 
+Iterators allow the caller to remove elements from the underlying collection during the iteration with well - defined semantics . Method names have been improved . 
+<p> This interface is a member of the 
+Java Collections Framework . 
+Since : 1 . 2 See Also : <code> Collection </code> , <code> ListIterator </code> , <code> Iterable </code> 
+Method Summary 
+All Methods Instance Methods Abstract Methods Default Methods 
+Modifier and Type Method and Description 
+<code> default void </code> <code> forEachRemaining ( Consumer < ? super E > action ) </code> Performs the given action for each remaining element until all elements have been processed or the action throws an exception . 
+<code> boolean </code> <code> hasNext ( ) </code> Returns <code> true </code> if the iteration has more elements . 
+<code> E </code> <code> next ( ) </code> Returns the next element in the iteration . 
+<code> default void </code> <code> remove ( ) </code> Removes from the underlying collection the last element returned by this iterator ( optional operation ) . 
+Method Detail 
+hasNext <pre> boolean hasNext ( ) </pre> Returns <code> true </code> if the iteration has more elements . ( In other words , returns <code> true </code> if <code> next ( ) </code> would return an element rather than throwing an exception . ) 
+Returns : <code> true </code> if the iteration has more elements 
+next <pre> E next ( ) </pre> Returns the next element in the iteration . 
+Returns : the next element in the iteration Throws : <code> NoSuchElementException </code> - if the iteration has no more elements 
+remove <pre> default void remove ( ) </pre> Removes from the underlying collection the last element returned by this iterator ( optional operation ) . 
+This method can be called only once per call to <code> next ( ) </code> . 
+The behavior of an iterator is unspecified if the underlying collection is modified while the iteration is in progress in any way other than by calling this method . 
+Implementation Requirements : The default implementation throws an instance of <code> UnsupportedOperationException </code> and performs no other action . Throws : <code> UnsupportedOperationException </code> - if the <code> remove </code> operation is not supported by this iterator <code> IllegalStateException </code> - if the <code> next </code> method has not yet been called , or the <code> remove </code> method has already been called after the last call to the <code> next </code> method 
+forEachRemaining <pre> default void forEachRemaining ( Consumer < ? super E > action ) </pre> Performs the given action for each remaining element until all elements have been processed or the action throws an exception . 
+Actions are performed in the order of iteration , if that order is specified . Exceptions thrown by the action are relayed to the caller . 
+Implementation Requirements : 
+<p> The default implementation behaves as if : <pre> <code> while ( hasNext ( ) ) action . accept ( next ( ) ) ; 
+Parameters : <code> action </code> - The action to be performed for each element Throws : <code> NullPointerException </code> - if the specified action is null Since : 1 . 8 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

@@ -1,0 +1,1014 @@
+
+
+TreeSet (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.util
+Class TreeSet<E>
+
+java.lang.Object
+
+java.util.AbstractCollection<E>
+
+java.util.AbstractSet<E>
+
+java.util.TreeSet<E>
+
+Type Parameters:
+<code>E</code> - the type of elements maintained by this set
+
+All Implemented Interfaces:
+Serializable, Cloneable, Iterable<E>, Collection<E>, NavigableSet<E>, Set<E>, SortedSet<E>
+
+<pre>public class TreeSet<E>
+extends AbstractSet<E>
+implements NavigableSet<E>, Cloneable, Serializable</pre>
+A <code>NavigableSet</code> implementation based on a <code>TreeMap</code>.
+ The elements are ordered using their natural
+ ordering, or by a <code>Comparator</code> provided at set creation
+ time, depending on which constructor is used.
+
+ <p>This implementation provides guaranteed log(n) time cost for the basic
+ operations (<code>add</code>, <code>remove</code> and <code>contains</code>).
+
+ <p>Note that the ordering maintained by a set (whether or not an explicit
+ comparator is provided) must be consistent with equals if it is to
+ correctly implement the <code>Set</code> interface.  (See <code>Comparable</code>
+ or <code>Comparator</code> for a precise definition of consistent with
+ equals.)  This is so because the <code>Set</code> interface is defined in
+ terms of the <code>equals</code> operation, but a <code>TreeSet</code> instance
+ performs all element comparisons using its <code>compareTo</code> (or
+ <code>compare</code>) method, so two elements that are deemed equal by this method
+ are, from the standpoint of the set, equal.  The behavior of a set
+ is well-defined even if its ordering is inconsistent with equals; it
+ just fails to obey the general contract of the <code>Set</code> interface.
+
+ <p>Note that this implementation is not synchronized.
+ If multiple threads access a tree set concurrently, and at least one
+ of the threads modifies the set, it must be synchronized
+ externally.  This is typically accomplished by synchronizing on some
+ object that naturally encapsulates the set.
+ If no such object exists, the set should be "wrapped" using the
+ <code>Collections.synchronizedSortedSet</code>
+ method.  This is best done at creation time, to prevent accidental
+ unsynchronized access to the set: <pre>
+   SortedSet s = Collections.synchronizedSortedSet(new TreeSet(...));</pre>
+
+ <p>The iterators returned by this class's <code>iterator</code> method are
+ fail-fast: if the set is modified at any time after the iterator is
+ created, in any way except through the iterator's own <code>remove</code>
+ method, the iterator will throw a <code>ConcurrentModificationException</code>.
+ Thus, in the face of concurrent modification, the iterator fails quickly
+ and cleanly, rather than risking arbitrary, non-deterministic behavior at
+ an undetermined time in the future.
+
+ <p>Note that the fail-fast behavior of an iterator cannot be guaranteed
+ as it is, generally speaking, impossible to make any hard guarantees in the
+ presence of unsynchronized concurrent modification.  Fail-fast iterators
+ throw <code>ConcurrentModificationException</code> on a best-effort basis.
+ Therefore, it would be wrong to write a program that depended on this
+ exception for its correctness:   the fail-fast behavior of iterators
+ should be used only to detect bugs.
+
+ <p>This class is a member of the
+ 
+ Java Collections Framework.
+
+Since:
+1.2
+See Also:
+<code>Collection</code>, 
+<code>Set</code>, 
+<code>HashSet</code>, 
+<code>Comparable</code>, 
+<code>Comparator</code>, 
+<code>TreeMap</code>, 
+Serialized Form
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>TreeSet()</code>
+Constructs a new, empty tree set, sorted according to the
+ natural ordering of its elements.
+
+<code>TreeSet(Collection<? extends E> c)</code>
+Constructs a new tree set containing the elements in the specified
+ collection, sorted according to the natural ordering of its
+ elements.
+
+<code>TreeSet(Comparator<? super E> comparator)</code>
+Constructs a new, empty tree set, sorted according to the specified
+ comparator.
+
+<code>TreeSet(SortedSet<E> s)</code>
+Constructs a new tree set containing the same elements and
+ using the same ordering as the specified sorted set.
+
+Method Summary
+
+All Methods Instance Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>boolean</code>
+<code>add(E e)</code>
+Adds the specified element to this set if it is not already present.
+
+<code>boolean</code>
+<code>addAll(Collection<? extends E> c)</code>
+Adds all of the elements in the specified collection to this set.
+
+<code>E</code>
+<code>ceiling(E e)</code>
+Returns the least element in this set greater than or equal to
+ the given element, or <code>null</code> if there is no such element.
+
+<code>void</code>
+<code>clear()</code>
+Removes all of the elements from this set.
+
+<code>Object</code>
+<code>clone()</code>
+Returns a shallow copy of this <code>TreeSet</code> instance.
+
+<code>Comparator<? super E></code>
+<code>comparator()</code>
+Returns the comparator used to order the elements in this set,
+ or null if this set uses the natural ordering of its elements.
+
+<code>boolean</code>
+<code>contains(Object o)</code>
+Returns <code>true</code> if this set contains the specified element.
+
+<code>Iterator<E></code>
+<code>descendingIterator()</code>
+Returns an iterator over the elements in this set in descending order.
+
+<code>NavigableSet<E></code>
+<code>descendingSet()</code>
+Returns a reverse order view of the elements contained in this set.
+
+<code>E</code>
+<code>first()</code>
+Returns the first (lowest) element currently in this set.
+
+<code>E</code>
+<code>floor(E e)</code>
+Returns the greatest element in this set less than or equal to
+ the given element, or <code>null</code> if there is no such element.
+
+<code>SortedSet<E></code>
+<code>headSet(E toElement)</code>
+Returns a view of the portion of this set whose elements are
+ strictly less than toElement.
+
+<code>NavigableSet<E></code>
+<code>headSet(E toElement,
+       boolean inclusive)</code>
+Returns a view of the portion of this set whose elements are less than
+ (or equal to, if <code>inclusive</code> is true) <code>toElement</code>.
+
+<code>E</code>
+<code>higher(E e)</code>
+Returns the least element in this set strictly greater than the
+ given element, or <code>null</code> if there is no such element.
+
+<code>boolean</code>
+<code>isEmpty()</code>
+Returns <code>true</code> if this set contains no elements.
+
+<code>Iterator<E></code>
+<code>iterator()</code>
+Returns an iterator over the elements in this set in ascending order.
+
+<code>E</code>
+<code>last()</code>
+Returns the last (highest) element currently in this set.
+
+<code>E</code>
+<code>lower(E e)</code>
+Returns the greatest element in this set strictly less than the
+ given element, or <code>null</code> if there is no such element.
+
+<code>E</code>
+<code>pollFirst()</code>
+Retrieves and removes the first (lowest) element,
+ or returns <code>null</code> if this set is empty.
+
+<code>E</code>
+<code>pollLast()</code>
+Retrieves and removes the last (highest) element,
+ or returns <code>null</code> if this set is empty.
+
+<code>boolean</code>
+<code>remove(Object o)</code>
+Removes the specified element from this set if it is present.
+
+<code>int</code>
+<code>size()</code>
+Returns the number of elements in this set (its cardinality).
+
+<code>Spliterator<E></code>
+<code>spliterator()</code>
+Creates a <em>late-binding</em>
+ and <em>fail-fast</em> <code>Spliterator</code> over the elements in this
+ set.
+
+<code>NavigableSet<E></code>
+<code>subSet(E fromElement,
+      boolean fromInclusive,
+      E toElement,
+      boolean toInclusive)</code>
+Returns a view of the portion of this set whose elements range from
+ <code>fromElement</code> to <code>toElement</code>.
+
+<code>SortedSet<E></code>
+<code>subSet(E fromElement,
+      E toElement)</code>
+Returns a view of the portion of this set whose elements range
+ from fromElement, inclusive, to toElement,
+ exclusive.
+
+<code>SortedSet<E></code>
+<code>tailSet(E fromElement)</code>
+Returns a view of the portion of this set whose elements are
+ greater than or equal to fromElement.
+
+<code>NavigableSet<E></code>
+<code>tailSet(E fromElement,
+       boolean inclusive)</code>
+Returns a view of the portion of this set whose elements are greater
+ than (or equal to, if <code>inclusive</code> is true) <code>fromElement</code>.
+
+Methods inherited from class java.util.AbstractSet
+<code>equals, hashCode, removeAll</code>
+
+Methods inherited from class java.util.AbstractCollection
+<code>containsAll, retainAll, toArray, toArray, toString</code>
+
+Methods inherited from class java.lang.Object
+<code>finalize, getClass, notify, notifyAll, wait, wait, wait</code>
+
+Methods inherited from interface java.util.Set
+<code>containsAll, equals, hashCode, removeAll, retainAll, toArray, toArray</code>
+
+Methods inherited from interface java.util.Collection
+<code>parallelStream, removeIf, stream</code>
+
+Methods inherited from interface java.lang.Iterable
+<code>forEach</code>
+
+Constructor Detail
+
+TreeSet
+<pre>public TreeSet()</pre>
+Constructs a new, empty tree set, sorted according to the
+ natural ordering of its elements.  All elements inserted into
+ the set must implement the <code>Comparable</code> interface.
+ Furthermore, all such elements must be mutually
+ comparable: <code>e1.compareTo(e2)</code> must not throw a
+ <code>ClassCastException</code> for any elements <code>e1</code> and
+ <code>e2</code> in the set.  If the user attempts to add an element
+ to the set that violates this constraint (for example, the user
+ attempts to add a string element to a set whose elements are
+ integers), the <code>add</code> call will throw a
+ <code>ClassCastException</code>.
+
+TreeSet
+<pre>public TreeSet(Comparator<? super E> comparator)</pre>
+Constructs a new, empty tree set, sorted according to the specified
+ comparator.  All elements inserted into the set must be mutually
+ comparable by the specified comparator: <code>comparator.compare(e1,
+ e2)</code> must not throw a <code>ClassCastException</code> for any elements
+ <code>e1</code> and <code>e2</code> in the set.  If the user attempts to add
+ an element to the set that violates this constraint, the
+ <code>add</code> call will throw a <code>ClassCastException</code>.
+
+Parameters:
+<code>comparator</code> - the comparator that will be used to order this set.
+        If <code>null</code>, the natural
+        ordering of the elements will be used.
+
+TreeSet
+<pre>public TreeSet(Collection<? extends E> c)</pre>
+Constructs a new tree set containing the elements in the specified
+ collection, sorted according to the natural ordering of its
+ elements.  All elements inserted into the set must implement the
+ <code>Comparable</code> interface.  Furthermore, all such elements must be
+ mutually comparable: <code>e1.compareTo(e2)</code> must not throw a
+ <code>ClassCastException</code> for any elements <code>e1</code> and
+ <code>e2</code> in the set.
+
+Parameters:
+<code>c</code> - collection whose elements will comprise the new set
+Throws:
+<code>ClassCastException</code> - if the elements in <code>c</code> are
+         not <code>Comparable</code>, or are not mutually comparable
+<code>NullPointerException</code> - if the specified collection is null
+
+TreeSet
+<pre>public TreeSet(SortedSet<E> s)</pre>
+Constructs a new tree set containing the same elements and
+ using the same ordering as the specified sorted set.
+
+Parameters:
+<code>s</code> - sorted set whose elements will comprise the new set
+Throws:
+<code>NullPointerException</code> - if the specified sorted set is null
+
+Method Detail
+
+iterator
+<pre>public Iterator<E> iterator()</pre>
+Returns an iterator over the elements in this set in ascending order.
+
+Specified by:
+<code>iterator</code> in interface <code>Iterable<E></code>
+Specified by:
+<code>iterator</code> in interface <code>Collection<E></code>
+Specified by:
+<code>iterator</code> in interface <code>NavigableSet<E></code>
+Specified by:
+<code>iterator</code> in interface <code>Set<E></code>
+Specified by:
+<code>iterator</code> in class <code>AbstractCollection<E></code>
+Returns:
+an iterator over the elements in this set in ascending order
+
+descendingIterator
+<pre>public Iterator<E> descendingIterator()</pre>
+Returns an iterator over the elements in this set in descending order.
+
+Specified by:
+<code>descendingIterator</code> in interface <code>NavigableSet<E></code>
+Returns:
+an iterator over the elements in this set in descending order
+Since:
+1.6
+
+descendingSet
+<pre>public NavigableSet<E> descendingSet()</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns a reverse order view of the elements contained in this set.
+ The descending set is backed by this set, so changes to the set are
+ reflected in the descending set, and vice-versa.  If either set is
+ modified while an iteration over either set is in progress (except
+ through the iterator's own <code>remove</code> operation), the results of
+ the iteration are undefined.
+
+ <p>The returned set has an ordering equivalent to
+ <code>Collections.reverseOrder</code>(comparator()).
+ The expression <code>s.descendingSet().descendingSet()</code> returns a
+ view of <code>s</code> essentially equivalent to <code>s</code>.
+
+Specified by:
+<code>descendingSet</code> in interface <code>NavigableSet<E></code>
+Returns:
+a reverse order view of this set
+Since:
+1.6
+
+size
+<pre>public int size()</pre>
+Returns the number of elements in this set (its cardinality).
+
+Specified by:
+<code>size</code> in interface <code>Collection<E></code>
+Specified by:
+<code>size</code> in interface <code>Set<E></code>
+Specified by:
+<code>size</code> in class <code>AbstractCollection<E></code>
+Returns:
+the number of elements in this set (its cardinality)
+
+isEmpty
+<pre>public boolean isEmpty()</pre>
+Returns <code>true</code> if this set contains no elements.
+
+Specified by:
+<code>isEmpty</code> in interface <code>Collection<E></code>
+Specified by:
+<code>isEmpty</code> in interface <code>Set<E></code>
+Overrides:
+<code>isEmpty</code> in class <code>AbstractCollection<E></code>
+Returns:
+<code>true</code> if this set contains no elements
+
+contains
+<pre>public boolean contains(Object o)</pre>
+Returns <code>true</code> if this set contains the specified element.
+ More formally, returns <code>true</code> if and only if this set
+ contains an element <code>e</code> such that
+ (o==null ? e==null : o.equals(e)).
+
+Specified by:
+<code>contains</code> in interface <code>Collection<E></code>
+Specified by:
+<code>contains</code> in interface <code>Set<E></code>
+Overrides:
+<code>contains</code> in class <code>AbstractCollection<E></code>
+Parameters:
+<code>o</code> - object to be checked for containment in this set
+Returns:
+<code>true</code> if this set contains the specified element
+Throws:
+<code>ClassCastException</code> - if the specified object cannot be compared
+         with the elements currently in the set
+<code>NullPointerException</code> - if the specified element is null
+         and this set uses natural ordering, or its comparator
+         does not permit null elements
+
+add
+<pre>public boolean add(E e)</pre>
+Adds the specified element to this set if it is not already present.
+ More formally, adds the specified element <code>e</code> to this set if
+ the set contains no element <code>e2</code> such that
+ (e==null ? e2==null : e.equals(e2)).
+ If this set already contains the element, the call leaves the set
+ unchanged and returns <code>false</code>.
+
+Specified by:
+<code>add</code> in interface <code>Collection<E></code>
+Specified by:
+<code>add</code> in interface <code>Set<E></code>
+Overrides:
+<code>add</code> in class <code>AbstractCollection<E></code>
+Parameters:
+<code>e</code> - element to be added to this set
+Returns:
+<code>true</code> if this set did not already contain the specified
+         element
+Throws:
+<code>ClassCastException</code> - if the specified object cannot be compared
+         with the elements currently in this set
+<code>NullPointerException</code> - if the specified element is null
+         and this set uses natural ordering, or its comparator
+         does not permit null elements
+
+remove
+<pre>public boolean remove(Object o)</pre>
+Removes the specified element from this set if it is present.
+ More formally, removes an element <code>e</code> such that
+ (o==null ? e==null : o.equals(e)),
+ if this set contains such an element.  Returns <code>true</code> if
+ this set contained the element (or equivalently, if this set
+ changed as a result of the call).  (This set will not contain the
+ element once the call returns.)
+
+Specified by:
+<code>remove</code> in interface <code>Collection<E></code>
+Specified by:
+<code>remove</code> in interface <code>Set<E></code>
+Overrides:
+<code>remove</code> in class <code>AbstractCollection<E></code>
+Parameters:
+<code>o</code> - object to be removed from this set, if present
+Returns:
+<code>true</code> if this set contained the specified element
+Throws:
+<code>ClassCastException</code> - if the specified object cannot be compared
+         with the elements currently in this set
+<code>NullPointerException</code> - if the specified element is null
+         and this set uses natural ordering, or its comparator
+         does not permit null elements
+
+clear
+<pre>public void clear()</pre>
+Removes all of the elements from this set.
+ The set will be empty after this call returns.
+
+Specified by:
+<code>clear</code> in interface <code>Collection<E></code>
+Specified by:
+<code>clear</code> in interface <code>Set<E></code>
+Overrides:
+<code>clear</code> in class <code>AbstractCollection<E></code>
+
+addAll
+<pre>public boolean addAll(Collection<? extends E> c)</pre>
+Adds all of the elements in the specified collection to this set.
+
+Specified by:
+<code>addAll</code> in interface <code>Collection<E></code>
+Specified by:
+<code>addAll</code> in interface <code>Set<E></code>
+Overrides:
+<code>addAll</code> in class <code>AbstractCollection<E></code>
+Parameters:
+<code>c</code> - collection containing elements to be added to this set
+Returns:
+<code>true</code> if this set changed as a result of the call
+Throws:
+<code>ClassCastException</code> - if the elements provided cannot be compared
+         with the elements currently in the set
+<code>NullPointerException</code> - if the specified collection is null or
+         if any element is null and this set uses natural ordering, or
+         its comparator does not permit null elements
+See Also:
+<code>AbstractCollection.add(Object)</code>
+
+subSet
+<pre>public NavigableSet<E> subSet(E fromElement,
+                              boolean fromInclusive,
+                              E toElement,
+                              boolean toInclusive)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns a view of the portion of this set whose elements range from
+ <code>fromElement</code> to <code>toElement</code>.  If <code>fromElement</code> and
+ <code>toElement</code> are equal, the returned set is empty unless <code>fromInclusive</code> and <code>toInclusive</code> are both true.  The returned set
+ is backed by this set, so changes in the returned set are reflected in
+ this set, and vice-versa.  The returned set supports all optional set
+ operations that this set supports.
+
+ <p>The returned set will throw an <code>IllegalArgumentException</code>
+ on an attempt to insert an element outside its range.
+
+Specified by:
+<code>subSet</code> in interface <code>NavigableSet<E></code>
+Parameters:
+<code>fromElement</code> - low endpoint of the returned set
+<code>fromInclusive</code> - <code>true</code> if the low endpoint
+        is to be included in the returned view
+<code>toElement</code> - high endpoint of the returned set
+<code>toInclusive</code> - <code>true</code> if the high endpoint
+        is to be included in the returned view
+Returns:
+a view of the portion of this set whose elements range from
+         <code>fromElement</code>, inclusive, to <code>toElement</code>, exclusive
+Throws:
+<code>ClassCastException</code> - if <code>fromElement</code> and
+         <code>toElement</code> cannot be compared to one another using this
+         set's comparator (or, if the set has no comparator, using
+         natural ordering).  Implementations may, but are not required
+         to, throw this exception if <code>fromElement</code> or
+         <code>toElement</code> cannot be compared to elements currently in
+         the set.
+<code>NullPointerException</code> - if <code>fromElement</code> or <code>toElement</code>
+         is null and this set uses natural ordering, or its comparator
+         does not permit null elements
+<code>IllegalArgumentException</code> - if <code>fromElement</code> is
+         greater than <code>toElement</code>; or if this set itself
+         has a restricted range, and <code>fromElement</code> or
+         <code>toElement</code> lies outside the bounds of the range.
+Since:
+1.6
+
+headSet
+<pre>public NavigableSet<E> headSet(E toElement,
+                               boolean inclusive)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns a view of the portion of this set whose elements are less than
+ (or equal to, if <code>inclusive</code> is true) <code>toElement</code>.  The
+ returned set is backed by this set, so changes in the returned set are
+ reflected in this set, and vice-versa.  The returned set supports all
+ optional set operations that this set supports.
+
+ <p>The returned set will throw an <code>IllegalArgumentException</code>
+ on an attempt to insert an element outside its range.
+
+Specified by:
+<code>headSet</code> in interface <code>NavigableSet<E></code>
+Parameters:
+<code>toElement</code> - high endpoint of the returned set
+<code>inclusive</code> - <code>true</code> if the high endpoint
+        is to be included in the returned view
+Returns:
+a view of the portion of this set whose elements are less than
+         (or equal to, if <code>inclusive</code> is true) <code>toElement</code>
+Throws:
+<code>ClassCastException</code> - if <code>toElement</code> is not compatible
+         with this set's comparator (or, if the set has no comparator,
+         if <code>toElement</code> does not implement <code>Comparable</code>).
+         Implementations may, but are not required to, throw this
+         exception if <code>toElement</code> cannot be compared to elements
+         currently in the set.
+<code>NullPointerException</code> - if <code>toElement</code> is null and
+         this set uses natural ordering, or its comparator does
+         not permit null elements
+<code>IllegalArgumentException</code> - if this set itself has a
+         restricted range, and <code>toElement</code> lies outside the
+         bounds of the range
+Since:
+1.6
+
+tailSet
+<pre>public NavigableSet<E> tailSet(E fromElement,
+                               boolean inclusive)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns a view of the portion of this set whose elements are greater
+ than (or equal to, if <code>inclusive</code> is true) <code>fromElement</code>.
+ The returned set is backed by this set, so changes in the returned set
+ are reflected in this set, and vice-versa.  The returned set supports
+ all optional set operations that this set supports.
+
+ <p>The returned set will throw an <code>IllegalArgumentException</code>
+ on an attempt to insert an element outside its range.
+
+Specified by:
+<code>tailSet</code> in interface <code>NavigableSet<E></code>
+Parameters:
+<code>fromElement</code> - low endpoint of the returned set
+<code>inclusive</code> - <code>true</code> if the low endpoint
+        is to be included in the returned view
+Returns:
+a view of the portion of this set whose elements are greater
+         than or equal to <code>fromElement</code>
+Throws:
+<code>ClassCastException</code> - if <code>fromElement</code> is not compatible
+         with this set's comparator (or, if the set has no comparator,
+         if <code>fromElement</code> does not implement <code>Comparable</code>).
+         Implementations may, but are not required to, throw this
+         exception if <code>fromElement</code> cannot be compared to elements
+         currently in the set.
+<code>NullPointerException</code> - if <code>fromElement</code> is null and
+         this set uses natural ordering, or its comparator does
+         not permit null elements
+<code>IllegalArgumentException</code> - if this set itself has a
+         restricted range, and <code>fromElement</code> lies outside the
+         bounds of the range
+Since:
+1.6
+
+subSet
+<pre>public SortedSet<E> subSet(E fromElement,
+                           E toElement)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns a view of the portion of this set whose elements range
+ from fromElement, inclusive, to toElement,
+ exclusive.  (If fromElement and toElement are
+ equal, the returned set is empty.)  The returned set is backed
+ by this set, so changes in the returned set are reflected in
+ this set, and vice-versa.  The returned set supports all
+ optional set operations that this set supports.
+
+ <p>The returned set will throw an IllegalArgumentException
+ on an attempt to insert an element outside its range.
+
+ <p>Equivalent to <code>subSet(fromElement, true, toElement, false)</code>.
+
+Specified by:
+<code>subSet</code> in interface <code>NavigableSet<E></code>
+Specified by:
+<code>subSet</code> in interface <code>SortedSet<E></code>
+Parameters:
+<code>fromElement</code> - low endpoint (inclusive) of the returned set
+<code>toElement</code> - high endpoint (exclusive) of the returned set
+Returns:
+a view of the portion of this set whose elements range from
+         fromElement, inclusive, to toElement, exclusive
+Throws:
+<code>ClassCastException</code> - if fromElement and
+         toElement cannot be compared to one another using this
+         set's comparator (or, if the set has no comparator, using
+         natural ordering).  Implementations may, but are not required
+         to, throw this exception if fromElement or
+         toElement cannot be compared to elements currently in
+         the set.
+<code>NullPointerException</code> - if <code>fromElement</code> or
+         <code>toElement</code> is null and this set uses natural ordering,
+         or its comparator does not permit null elements
+<code>IllegalArgumentException</code> - if fromElement is
+         greater than toElement; or if this set itself
+         has a restricted range, and fromElement or
+         toElement lies outside the bounds of the range
+
+headSet
+<pre>public SortedSet<E> headSet(E toElement)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns a view of the portion of this set whose elements are
+ strictly less than toElement.  The returned set is
+ backed by this set, so changes in the returned set are
+ reflected in this set, and vice-versa.  The returned set
+ supports all optional set operations that this set supports.
+
+ <p>The returned set will throw an IllegalArgumentException
+ on an attempt to insert an element outside its range.
+
+ <p>Equivalent to <code>headSet(toElement, false)</code>.
+
+Specified by:
+<code>headSet</code> in interface <code>NavigableSet<E></code>
+Specified by:
+<code>headSet</code> in interface <code>SortedSet<E></code>
+Parameters:
+<code>toElement</code> - high endpoint (exclusive) of the returned set
+Returns:
+a view of the portion of this set whose elements are strictly
+         less than toElement
+Throws:
+<code>ClassCastException</code> - if toElement is not compatible
+         with this set's comparator (or, if the set has no comparator,
+         if toElement does not implement <code>Comparable</code>).
+         Implementations may, but are not required to, throw this
+         exception if toElement cannot be compared to elements
+         currently in the set.
+<code>NullPointerException</code> - if <code>toElement</code> is null
+         and this set uses natural ordering, or its comparator does
+         not permit null elements
+<code>IllegalArgumentException</code> - if this set itself has a
+         restricted range, and toElement lies outside the
+         bounds of the range
+
+tailSet
+<pre>public SortedSet<E> tailSet(E fromElement)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns a view of the portion of this set whose elements are
+ greater than or equal to fromElement.  The returned
+ set is backed by this set, so changes in the returned set are
+ reflected in this set, and vice-versa.  The returned set
+ supports all optional set operations that this set supports.
+
+ <p>The returned set will throw an IllegalArgumentException
+ on an attempt to insert an element outside its range.
+
+ <p>Equivalent to <code>tailSet(fromElement, true)</code>.
+
+Specified by:
+<code>tailSet</code> in interface <code>NavigableSet<E></code>
+Specified by:
+<code>tailSet</code> in interface <code>SortedSet<E></code>
+Parameters:
+<code>fromElement</code> - low endpoint (inclusive) of the returned set
+Returns:
+a view of the portion of this set whose elements are greater
+         than or equal to fromElement
+Throws:
+<code>ClassCastException</code> - if fromElement is not compatible
+         with this set's comparator (or, if the set has no comparator,
+         if fromElement does not implement <code>Comparable</code>).
+         Implementations may, but are not required to, throw this
+         exception if fromElement cannot be compared to elements
+         currently in the set.
+<code>NullPointerException</code> - if <code>fromElement</code> is null
+         and this set uses natural ordering, or its comparator does
+         not permit null elements
+<code>IllegalArgumentException</code> - if this set itself has a
+         restricted range, and fromElement lies outside the
+         bounds of the range
+
+comparator
+<pre>public Comparator<? super E> comparator()</pre>
+Description copied from interface: <code>SortedSet</code>
+Returns the comparator used to order the elements in this set,
+ or null if this set uses the natural ordering of its elements.
+
+Specified by:
+<code>comparator</code> in interface <code>SortedSet<E></code>
+Returns:
+the comparator used to order the elements in this set,
+         or null if this set uses the natural ordering
+         of its elements
+
+first
+<pre>public E first()</pre>
+Description copied from interface: <code>SortedSet</code>
+Returns the first (lowest) element currently in this set.
+
+Specified by:
+<code>first</code> in interface <code>SortedSet<E></code>
+Returns:
+the first (lowest) element currently in this set
+Throws:
+<code>NoSuchElementException</code> - if this set is empty
+
+last
+<pre>public E last()</pre>
+Description copied from interface: <code>SortedSet</code>
+Returns the last (highest) element currently in this set.
+
+Specified by:
+<code>last</code> in interface <code>SortedSet<E></code>
+Returns:
+the last (highest) element currently in this set
+Throws:
+<code>NoSuchElementException</code> - if this set is empty
+
+lower
+<pre>public E lower(E e)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns the greatest element in this set strictly less than the
+ given element, or <code>null</code> if there is no such element.
+
+Specified by:
+<code>lower</code> in interface <code>NavigableSet<E></code>
+Parameters:
+<code>e</code> - the value to match
+Returns:
+the greatest element less than <code>e</code>,
+         or <code>null</code> if there is no such element
+Throws:
+<code>ClassCastException</code> - if the specified element cannot be
+         compared with the elements currently in the set
+<code>NullPointerException</code> - if the specified element is null
+         and this set uses natural ordering, or its comparator
+         does not permit null elements
+Since:
+1.6
+
+floor
+<pre>public E floor(E e)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns the greatest element in this set less than or equal to
+ the given element, or <code>null</code> if there is no such element.
+
+Specified by:
+<code>floor</code> in interface <code>NavigableSet<E></code>
+Parameters:
+<code>e</code> - the value to match
+Returns:
+the greatest element less than or equal to <code>e</code>,
+         or <code>null</code> if there is no such element
+Throws:
+<code>ClassCastException</code> - if the specified element cannot be
+         compared with the elements currently in the set
+<code>NullPointerException</code> - if the specified element is null
+         and this set uses natural ordering, or its comparator
+         does not permit null elements
+Since:
+1.6
+
+ceiling
+<pre>public E ceiling(E e)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns the least element in this set greater than or equal to
+ the given element, or <code>null</code> if there is no such element.
+
+Specified by:
+<code>ceiling</code> in interface <code>NavigableSet<E></code>
+Parameters:
+<code>e</code> - the value to match
+Returns:
+the least element greater than or equal to <code>e</code>,
+         or <code>null</code> if there is no such element
+Throws:
+<code>ClassCastException</code> - if the specified element cannot be
+         compared with the elements currently in the set
+<code>NullPointerException</code> - if the specified element is null
+         and this set uses natural ordering, or its comparator
+         does not permit null elements
+Since:
+1.6
+
+higher
+<pre>public E higher(E e)</pre>
+Description copied from interface: <code>NavigableSet</code>
+Returns the least element in this set strictly greater than the
+ given element, or <code>null</code> if there is no such element.
+
+Specified by:
+<code>higher</code> in interface <code>NavigableSet<E></code>
+Parameters:
+<code>e</code> - the value to match
+Returns:
+the least element greater than <code>e</code>,
+         or <code>null</code> if there is no such element
+Throws:
+<code>ClassCastException</code> - if the specified element cannot be
+         compared with the elements currently in the set
+<code>NullPointerException</code> - if the specified element is null
+         and this set uses natural ordering, or its comparator
+         does not permit null elements
+Since:
+1.6
+
+pollFirst
+<pre>public E pollFirst()</pre>
+Description copied from interface: <code>NavigableSet</code>
+Retrieves and removes the first (lowest) element,
+ or returns <code>null</code> if this set is empty.
+
+Specified by:
+<code>pollFirst</code> in interface <code>NavigableSet<E></code>
+Returns:
+the first element, or <code>null</code> if this set is empty
+Since:
+1.6
+
+pollLast
+<pre>public E pollLast()</pre>
+Description copied from interface: <code>NavigableSet</code>
+Retrieves and removes the last (highest) element,
+ or returns <code>null</code> if this set is empty.
+
+Specified by:
+<code>pollLast</code> in interface <code>NavigableSet<E></code>
+Returns:
+the last element, or <code>null</code> if this set is empty
+Since:
+1.6
+
+clone
+<pre>public Object clone()</pre>
+Returns a shallow copy of this <code>TreeSet</code> instance. (The elements
+ themselves are not cloned.)
+
+Overrides:
+<code>clone</code> in class <code>Object</code>
+Returns:
+a shallow copy of this set
+See Also:
+<code>Cloneable</code>
+
+spliterator
+<pre>public Spliterator<E> spliterator()</pre>
+Creates a <em>late-binding</em>
+ and <em>fail-fast</em> <code>Spliterator</code> over the elements in this
+ set.
+
+ <p>The <code>Spliterator</code> reports <code>Spliterator.SIZED</code>,
+ <code>Spliterator.DISTINCT</code>, <code>Spliterator.SORTED</code>, and
+ <code>Spliterator.ORDERED</code>.  Overriding implementations should document
+ the reporting of additional characteristic values.
+
+ <p>The spliterator's comparator (see
+ <code>Spliterator.getComparator()</code>) is <code>null</code> if
+ the tree set's comparator (see <code>comparator()</code>) is <code>null</code>.
+ Otherwise, the spliterator's comparator is the same as or imposes the
+ same total ordering as the tree set's comparator.
+
+Specified by:
+<code>spliterator</code> in interface <code>Iterable<E></code>
+Specified by:
+<code>spliterator</code> in interface <code>Collection<E></code>
+Specified by:
+<code>spliterator</code> in interface <code>Set<E></code>
+Specified by:
+<code>spliterator</code> in interface <code>SortedSet<E></code>
+Returns:
+a <code>Spliterator</code> over the elements in this set
+Since:
+1.8
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

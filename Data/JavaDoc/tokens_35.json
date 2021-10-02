@@ -1,0 +1,281 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "An"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBZ",
+      "token": "configures"
+    },
+    {
+      "tag": "WRB",
+      "token": "how"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "copy"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "VB",
+      "token": "move"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "file"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNS",
+      "token": "Objects"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "NN",
+      "token": "type"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "used"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Files"},
+    {"token": "."},
+    {"token": "copy"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "Path"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "Path"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "CopyOption"},
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Files"},
+    {"token": "."},
+    {"token": "copy"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "InputStream"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "Path"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "CopyOption"},
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Files"},
+    {"token": "."},
+    {"token": "move"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "Path"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "Path"},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "CopyOption"},
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "configure"
+    },
+    {
+      "tag": "WRB",
+      "token": "how"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "file"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "copied"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "VBN",
+      "token": "moved"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "StandardCopyOption"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "enumeration"
+    },
+    {
+      "tag": "NN",
+      "token": "type"
+    },
+    {
+      "tag": "VBZ",
+      "token": "defines"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "standard"
+    },
+    {
+      "tag": "NNS",
+      "token": "options"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

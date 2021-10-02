@@ -1,0 +1,1256 @@
+{
+  "tokens": [
+    {
+      "tag": "DT",
+      "token": "A"
+    },
+    {
+      "tag": "NN",
+      "token": "synchronization"
+    },
+    {
+      "tag": "NN",
+      "token": "point"
+    },
+    {
+      "tag": "IN",
+      "token": "at"
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": "NNS",
+      "token": "threads"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "VB",
+      "token": "pair"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VB",
+      "token": "swap"
+    },
+    {
+      "tag": "NNS",
+      "token": "elements"
+    },
+    {
+      "tag": "IN",
+      "token": "within"
+    },
+    {
+      "tag": "NNS",
+      "token": "pairs"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "Each"
+    },
+    {
+      "tag": "NN",
+      "token": "thread"
+    },
+    {
+      "tag": "VBZ",
+      "token": "presents"
+    },
+    {
+      "tag": "DT",
+      "token": "some"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": "IN",
+      "token": "on"
+    },
+    {
+      "tag": "NN",
+      "token": "entry"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "exchange"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBZ",
+      "token": "matches"
+    },
+    {
+      "tag": "IN",
+      "token": "with"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "partner"
+    },
+    {
+      "tag": "NN",
+      "token": "thread"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "VBZ",
+      "token": "receives"
+    },
+    {
+      "tag": "PRP$",
+      "token": "its"
+    },
+    {
+      "tag": "NN",
+      "token": "partner"
+    },
+    {
+      "tag": "''",
+      "token": "'"
+    },
+    {
+      "tag": "POS",
+      "token": "s"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": "IN",
+      "token": "on"
+    },
+    {
+      "tag": "NN",
+      "token": "return"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "An"
+    },
+    {
+      "tag": "NN",
+      "token": "Exchanger"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "viewed"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "JJ",
+      "token": "bidirectional"
+    },
+    {
+      "tag": "NN",
+      "token": "form"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "SynchronousQueue"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNS",
+      "token": "Exchangers"
+    },
+    {
+      "tag": "MD",
+      "token": "may"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "JJ",
+      "token": "useful"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "NNS",
+      "token": "applications"
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "JJ",
+      "token": "genetic"
+    },
+    {
+      "tag": "NNS",
+      "token": "algorithms"
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "NN",
+      "token": "pipeline"
+    },
+    {
+      "tag": "NNS",
+      "token": "designs"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Sample"
+    },
+    {
+      "tag": "NN",
+      "token": "Usage"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "RB",
+      "token": "Here"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "highlights"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "class"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBZ",
+      "token": "uses"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Exchanger"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "swap"
+    },
+    {
+      "tag": "NNS",
+      "token": "buffers"
+    },
+    {
+      "tag": "IN",
+      "token": "between"
+    },
+    {
+      "tag": "NNS",
+      "token": "threads"
+    },
+    {
+      "tag": "IN",
+      "token": "so"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "thread"
+    },
+    {
+      "tag": "VBG",
+      "token": "filling"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "buffer"
+    },
+    {
+      "tag": "VBZ",
+      "token": "gets"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "RB",
+      "token": "freshly"
+    },
+    {
+      "tag": "VBN",
+      "token": "emptied"
+    },
+    {
+      "tag": "CD",
+      "token": "one"
+    },
+    {
+      "tag": "WRB",
+      "token": "when"
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "VBZ",
+      "token": "needs"
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VBG",
+      "token": "handing"
+    },
+    {
+      "tag": "RP",
+      "token": "off"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBN",
+      "token": "filled"
+    },
+    {
+      "tag": "CD",
+      "token": "one"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "thread"
+    },
+    {
+      "tag": "VBG",
+      "token": "emptying"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "buffer"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<type>",
+      "token": "class"
+    },
+    {
+      "tag": "<var>",
+      "token": "FillAndEmpty"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "Exchanger"},
+    {"token": "<DataBuffer>"},
+    {
+      "tag": "<var>",
+      "token": "exchanger"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "new"},
+    {"token": "Exchanger"},
+    {"token": "<"},
+    {"token": ">"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "DataBuffer"},
+    {
+      "tag": "<var>",
+      "token": "initialEmptyBuffer"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {"token": "a"},
+    {"token": "made"},
+    {"token": "-"},
+    {"token": "up"},
+    {"token": "type"},
+    {"token": "DataBuffer"},
+    {
+      "tag": "<var>",
+      "token": "initialFullBuffer"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {
+      "tag": "<type>",
+      "token": "class"
+    },
+    {
+      "tag": "<var>",
+      "token": "FillingLoop"
+    },
+    {"token": "implements"},
+    {"token": "Runnable"},
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {
+      "tag": "<am>",
+      "token": "public"
+    },
+    {"token": "void"},
+    {"token": "run"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "DataBuffer"},
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "initialEmptyBuffer"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "try"},
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "while"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<var>",
+      "token": "!"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "null"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "addToBuffer"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<?st>",
+      "token": "if"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {"token": "."},
+    {"token": "isFull"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "exchanger"
+    },
+    {"token": "."},
+    {"token": "exchange"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {"token": "catch"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "InterruptedException"},
+    {"token": "ex"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {"token": "handle"},
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<type>",
+      "token": "class"
+    },
+    {
+      "tag": "<var>",
+      "token": "EmptyingLoop"
+    },
+    {"token": "implements"},
+    {"token": "Runnable"},
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {
+      "tag": "<am>",
+      "token": "public"
+    },
+    {"token": "void"},
+    {"token": "run"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "DataBuffer"},
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "initialFullBuffer"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "try"},
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "while"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<var>",
+      "token": "!"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {"token": "null"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "takeFromBuffer"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<?st>",
+      "token": "if"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {"token": "."},
+    {"token": "isEmpty"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<var>",
+      "token": "exchanger"
+    },
+    {"token": "."},
+    {"token": "exchange"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<var>",
+      "token": "currentBuffer"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {"token": "catch"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "InterruptedException"},
+    {"token": "ex"},
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {"token": "handle"},
+    {"token": "."},
+    {"token": "."},
+    {"token": "."},
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {"token": "void"},
+    {"token": "start"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<{>",
+      "token": "{"
+    },
+    {"token": "new"},
+    {"token": "Thread"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "new"},
+    {
+      "tag": "<var>",
+      "token": "FillingLoop"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {"token": "."},
+    {"token": "start"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {"token": "new"},
+    {"token": "Thread"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {"token": "new"},
+    {
+      "tag": "<var>",
+      "token": "EmptyingLoop"
+    },
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {"token": "."},
+    {"token": "start"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<;>",
+      "token": ";"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<}>",
+      "token": "}"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "Memory"
+    },
+    {
+      "tag": "NN",
+      "token": "consistency"
+    },
+    {
+      "tag": "NNS",
+      "token": "effects"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "IN",
+      "token": "For"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "NN",
+      "token": "pair"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "NNS",
+      "token": "threads"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "RB",
+      "token": "successfully"
+    },
+    {
+      "tag": "VBP",
+      "token": "exchange"
+    },
+    {
+      "tag": "NNS",
+      "token": "objects"
+    },
+    {
+      "tag": "IN",
+      "token": "via"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Exchanger"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "NNS",
+      "token": "actions"
+    },
+    {
+      "tag": "JJ",
+      "token": "prior"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "exchange"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "NN",
+      "token": "thread"
+    },
+    {
+      "tag": "VB",
+      "token": "happen"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "IN",
+      "token": "before"
+    },
+    {
+      "tag": "DT",
+      "token": "those"
+    },
+    {
+      "tag": "JJ",
+      "token": "subsequent"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "return"
+    },
+    {
+      "tag": "IN",
+      "token": "from"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBG",
+      "token": "corresponding"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "exchange"},
+    {
+      "tag": "<(>",
+      "token": "("
+    },
+    {
+      "tag": "<)>",
+      "token": ")"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "other"
+    },
+    {
+      "tag": "NN",
+      "token": "thread"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

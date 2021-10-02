@@ -1,0 +1,361 @@
+
+
+Process (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.lang
+Class Process
+
+java.lang.Object
+
+java.lang.Process
+
+<pre>public abstract class Process
+extends Object</pre>
+The <code>ProcessBuilder.start()</code> and
+ <code>Runtime.exec</code>
+ methods create a native process and return an instance of a
+ subclass of <code>Process</code> that can be used to control the process
+ and obtain information about it.  The class <code>Process</code>
+ provides methods for performing input from the process, performing
+ output to the process, waiting for the process to complete,
+ checking the exit status of the process, and destroying (killing)
+ the process.
+
+ <p>The methods that create processes may not work well for special
+ processes on certain native platforms, such as native windowing
+ processes, daemon processes, Win16/DOS processes on Microsoft
+ Windows, or shell scripts.
+
+ <p>By default, the created subprocess does not have its own terminal
+ or console.  All its standard I/O (i.e. stdin, stdout, stderr)
+ operations will be redirected to the parent process, where they can
+ be accessed via the streams obtained using the methods
+ <code>getOutputStream()</code>,
+ <code>getInputStream()</code>, and
+ <code>getErrorStream()</code>.
+ The parent process uses these streams to feed input to and get output
+ from the subprocess.  Because some native platforms only provide
+ limited buffer size for standard input and output streams, failure
+ to promptly write the input stream or read the output stream of
+ the subprocess may cause the subprocess to block, or even deadlock.
+
+ <p>Where desired, 
+ subprocess I/O can also be redirected
+ using methods of the <code>ProcessBuilder</code> class.
+
+ <p>The subprocess is not killed when there are no more references to
+ the <code>Process</code> object, but rather the subprocess
+ continues executing asynchronously.
+
+ <p>There is no requirement that a process represented by a <code>Process</code> object execute asynchronously or concurrently with respect
+ to the Java process that owns the <code>Process</code> object.
+
+ <p>As of 1.5, <code>ProcessBuilder.start()</code> is the preferred way
+ to create a <code>Process</code>.
+
+Since:
+JDK1.0
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>Process()</code> 
+
+Method Summary
+
+All Methods Instance Methods Abstract Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>abstract void</code>
+<code>destroy()</code>
+Kills the subprocess.
+
+<code>Process</code>
+<code>destroyForcibly()</code>
+Kills the subprocess.
+
+<code>abstract int</code>
+<code>exitValue()</code>
+Returns the exit value for the subprocess.
+
+<code>abstract InputStream</code>
+<code>getErrorStream()</code>
+Returns the input stream connected to the error output of the
+ subprocess.
+
+<code>abstract InputStream</code>
+<code>getInputStream()</code>
+Returns the input stream connected to the normal output of the
+ subprocess.
+
+<code>abstract OutputStream</code>
+<code>getOutputStream()</code>
+Returns the output stream connected to the normal input of the
+ subprocess.
+
+<code>boolean</code>
+<code>isAlive()</code>
+Tests whether the subprocess represented by this <code>Process</code> is
+ alive.
+
+<code>abstract int</code>
+<code>waitFor()</code>
+Causes the current thread to wait, if necessary, until the
+ process represented by this <code>Process</code> object has
+ terminated.
+
+<code>boolean</code>
+<code>waitFor(long timeout,
+       TimeUnit unit)</code>
+Causes the current thread to wait, if necessary, until the
+ subprocess represented by this <code>Process</code> object has
+ terminated, or the specified waiting time elapses.
+
+Methods inherited from class java.lang.Object
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code>
+
+Constructor Detail
+
+Process
+<pre>public Process()</pre>
+
+Method Detail
+
+getOutputStream
+<pre>public abstract OutputStream getOutputStream()</pre>
+Returns the output stream connected to the normal input of the
+ subprocess.  Output to the stream is piped into the standard
+ input of the process represented by this <code>Process</code> object.
+
+ <p>If the standard input of the subprocess has been redirected using
+ <code>ProcessBuilder.redirectInput</code>
+ then this method will return a
+ null output stream.
+
+ <p>Implementation note: It is a good idea for the returned
+ output stream to be buffered.
+
+Returns:
+the output stream connected to the normal input of the
+         subprocess
+
+getInputStream
+<pre>public abstract InputStream getInputStream()</pre>
+Returns the input stream connected to the normal output of the
+ subprocess.  The stream obtains data piped from the standard
+ output of the process represented by this <code>Process</code> object.
+
+ <p>If the standard output of the subprocess has been redirected using
+ <code>ProcessBuilder.redirectOutput</code>
+ then this method will return a
+ null input stream.
+
+ <p>Otherwise, if the standard error of the subprocess has been
+ redirected using
+ <code>ProcessBuilder.redirectErrorStream</code>
+ then the input stream returned by this method will receive the
+ merged standard output and the standard error of the subprocess.
+
+ <p>Implementation note: It is a good idea for the returned
+ input stream to be buffered.
+
+Returns:
+the input stream connected to the normal output of the
+         subprocess
+
+getErrorStream
+<pre>public abstract InputStream getErrorStream()</pre>
+Returns the input stream connected to the error output of the
+ subprocess.  The stream obtains data piped from the error output
+ of the process represented by this <code>Process</code> object.
+
+ <p>If the standard error of the subprocess has been redirected using
+ <code>ProcessBuilder.redirectError</code> or
+ <code>ProcessBuilder.redirectErrorStream</code>
+ then this method will return a
+ null input stream.
+
+ <p>Implementation note: It is a good idea for the returned
+ input stream to be buffered.
+
+Returns:
+the input stream connected to the error output of
+         the subprocess
+
+waitFor
+<pre>public abstract int waitFor()
+                     throws InterruptedException</pre>
+Causes the current thread to wait, if necessary, until the
+ process represented by this <code>Process</code> object has
+ terminated.  This method returns immediately if the subprocess
+ has already terminated.  If the subprocess has not yet
+ terminated, the calling thread will be blocked until the
+ subprocess exits.
+
+Returns:
+the exit value of the subprocess represented by this
+         <code>Process</code> object.  By convention, the value
+         <code>0</code> indicates normal termination.
+Throws:
+<code>InterruptedException</code> - if the current thread is
+         interrupted by another
+         thread while it is waiting, then the wait is ended and
+         an <code>InterruptedException</code> is thrown.
+
+waitFor
+<pre>public boolean waitFor(long timeout,
+                       TimeUnit unit)
+                throws InterruptedException</pre>
+Causes the current thread to wait, if necessary, until the
+ subprocess represented by this <code>Process</code> object has
+ terminated, or the specified waiting time elapses.
+
+ <p>If the subprocess has already terminated then this method returns
+ immediately with the value <code>true</code>.  If the process has not
+ terminated and the timeout value is less than, or equal to, zero, then
+ this method returns immediately with the value <code>false</code>.
+
+ <p>The default implementation of this methods polls the <code>exitValue</code>
+ to check if the process has terminated. Concrete implementations of this
+ class are strongly encouraged to override this method with a more
+ efficient implementation.
+
+Parameters:
+<code>timeout</code> - the maximum time to wait
+<code>unit</code> - the time unit of the <code>timeout</code> argument
+Returns:
+<code>true</code> if the subprocess has exited and <code>false</code> if
+         the waiting time elapsed before the subprocess has exited.
+Throws:
+<code>InterruptedException</code> - if the current thread is interrupted
+         while waiting.
+<code>NullPointerException</code> - if unit is null
+Since:
+1.8
+
+exitValue
+<pre>public abstract int exitValue()</pre>
+Returns the exit value for the subprocess.
+
+Returns:
+the exit value of the subprocess represented by this
+         <code>Process</code> object.  By convention, the value
+         <code>0</code> indicates normal termination.
+Throws:
+<code>IllegalThreadStateException</code> - if the subprocess represented
+         by this <code>Process</code> object has not yet terminated
+
+destroy
+<pre>public abstract void destroy()</pre>
+Kills the subprocess. Whether the subprocess represented by this
+ <code>Process</code> object is forcibly terminated or not is
+ implementation dependent.
+
+destroyForcibly
+<pre>public Process destroyForcibly()</pre>
+Kills the subprocess. The subprocess represented by this
+ <code>Process</code> object is forcibly terminated.
+
+ <p>The default implementation of this method invokes <code>destroy()</code>
+ and so may not forcibly terminate the process. Concrete implementations
+ of this class are strongly encouraged to override this method with a
+ compliant implementation.  Invoking this method on <code>Process</code>
+ objects returned by <code>ProcessBuilder.start()</code> and
+ <code>Runtime.exec(java.lang.String)</code> will forcibly terminate the process.
+
+ <p>Note: The subprocess may not terminate immediately.
+ i.e. <code>isAlive()</code> may return true for a brief period
+ after <code>destroyForcibly()</code> is called. This method
+ may be chained to <code>waitFor()</code> if needed.
+
+Returns:
+the <code>Process</code> object representing the
+         subprocess to be forcibly destroyed.
+Since:
+1.8
+
+isAlive
+<pre>public boolean isAlive()</pre>
+Tests whether the subprocess represented by this <code>Process</code> is
+ alive.
+
+Returns:
+<code>true</code> if the subprocess represented by this
+         <code>Process</code> object has not yet terminated.
+Since:
+1.8
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

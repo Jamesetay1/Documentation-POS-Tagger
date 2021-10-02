@@ -1,0 +1,56 @@
+<p>Given an input string (<code>s</code>) and a pattern (<code>p</code>), implement regular expression matching with support for <code>'.'</code> and <code>'*'</code> where:<code> </code></p>
+
+<code>'.'</code> Matches any single character.â€‹â€‹â€‹â€‹
+<code>'*'</code> Matches zero or more of the preceding element.
+
+<p>The matching should cover the entire input string (not partial).</p>
+
+<p> </p>
+<p>Example 1:</p>
+
+<pre>
+Input: s = "aa", p = "a"
+Output: false
+Explanation: "a" does not match the entire string "aa".
+</pre>
+
+<p>Example 2:</p>
+
+<pre>
+Input: s = "aa", p = "a*"
+Output: true
+Explanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
+</pre>
+
+<p>Example 3:</p>
+
+<pre>
+Input: s = "ab", p = ".*"
+Output: true
+Explanation: ".*" means "zero or more (*) of any character (.)".
+</pre>
+
+<p>Example 4:</p>
+
+<pre>
+Input: s = "aab", p = "c*a*b"
+Output: true
+Explanation: c can be repeated 0 times, a can be repeated 1 time. Therefore, it matches "aab".
+</pre>
+
+<p>Example 5:</p>
+
+<pre>
+Input: s = "mississippi", p = "mis*is*p*."
+Output: false
+</pre>
+
+<p> </p>
+<p>Constraints:</p>
+
+<code>0 <= s.length <= 20</code>
+<code>0 <= p.length <= 30</code>
+<code>s</code> contains only lowercase English letters.
+<code>p</code> contains only lowercase English letters, <code>'.'</code>, and <code>'*'</code>.
+It is guaranteed for each appearance of the character <code>'*'</code>, there will be a previous valid character to match.
+

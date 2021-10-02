@@ -1,0 +1,1044 @@
+{
+  "tokens": [
+    {
+      "tag": "NNP",
+      "token": "Abstract"
+    },
+    {
+      "tag": "NN",
+      "token": "class"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "VBG",
+      "token": "representing"
+    },
+    {
+      "tag": "NN",
+      "token": "access"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "system"
+    },
+    {
+      "tag": "NN",
+      "token": "resource"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "All"
+    },
+    {
+      "tag": "NNS",
+      "token": "permissions"
+    },
+    {
+      "tag": "VBP",
+      "token": "have"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "name"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "WP$",
+      "token": "whose"
+    },
+    {
+      "tag": "NN",
+      "token": "interpretation"
+    },
+    {
+      "tag": "VBZ",
+      "token": "depends"
+    },
+    {
+      "tag": "IN",
+      "token": "on"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "subclass"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "RB",
+      "token": "as"
+    },
+    {
+      "tag": "RB",
+      "token": "well"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "JJ",
+      "token": "abstract"
+    },
+    {
+      "tag": "NNS",
+      "token": "functions"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "VBG",
+      "token": "defining"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "semantics"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "particular"
+    },
+    {
+      "tag": "NN",
+      "token": "Permission"
+    },
+    {
+      "tag": "NN",
+      "token": "subclass"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "JJS",
+      "token": "Most"
+    },
+    {
+      "tag": "NN",
+      "token": "Permission"
+    },
+    {
+      "tag": "NNS",
+      "token": "objects"
+    },
+    {
+      "tag": "RB",
+      "token": "also"
+    },
+    {
+      "tag": "VBP",
+      "token": "include"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": "NNS",
+      "token": "actions"
+    },
+    {
+      "tag": "''",
+      "token": "\""
+    },
+    {
+      "tag": "NN",
+      "token": "list"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBZ",
+      "token": "tells"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "actions"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "permitted"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "IN",
+      "token": "For"
+    },
+    {
+      "tag": "NN",
+      "token": "example"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "java"},
+    {"token": "."},
+    {"token": "io"},
+    {"token": "."},
+    {"token": "FilePermission"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "object"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "permission"
+    },
+    {
+      "tag": "NN",
+      "token": "name"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "pathname"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "file"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "NN",
+      "token": "directory"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "and"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "actions"
+    },
+    {
+      "tag": "NN",
+      "token": "list"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": "VB",
+      "token": "read"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "VB",
+      "token": "write"
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "VBZ",
+      "token": "specifies"
+    },
+    {
+      "tag": "WDT",
+      "token": "which"
+    },
+    {
+      "tag": "NNS",
+      "token": "actions"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "VBN",
+      "token": "granted"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBN",
+      "token": "specified"
+    },
+    {
+      "tag": "NN",
+      "token": "file"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "NNS",
+      "token": "files"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBN",
+      "token": "specified"
+    },
+    {
+      "tag": "NN",
+      "token": "directory"
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "NNS",
+      "token": "actions"
+    },
+    {
+      "tag": "NN",
+      "token": "list"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "JJ",
+      "token": "optional"
+    },
+    {
+      "tag": "IN",
+      "token": "for"
+    },
+    {
+      "tag": "NN",
+      "token": "Permission"
+    },
+    {
+      "tag": "NNS",
+      "token": "objects"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "java"},
+    {"token": "."},
+    {"token": "lang"},
+    {"token": "."},
+    {"token": "RuntimePermission"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "VBP",
+      "token": "don"
+    },
+    {
+      "tag": "''",
+      "token": "'"
+    },
+    {
+      "tag": "NN",
+      "token": "t"
+    },
+    {
+      "tag": "VBP",
+      "token": "need"
+    },
+    {
+      "tag": "PDT",
+      "token": "such"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "list"
+    },
+    {
+      "tag": ":",
+      "token": ";"
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "CC",
+      "token": "either"
+    },
+    {
+      "tag": "VBP",
+      "token": "have"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "VBN",
+      "token": "named"
+    },
+    {
+      "tag": "NN",
+      "token": "permission"
+    },
+    {
+      "tag": "-LRB-",
+      "token": "("
+    },
+    {
+      "tag": "JJ",
+      "token": "such"
+    },
+    {
+      "tag": "IN",
+      "token": "as"
+    },
+    {
+      "tag": "``",
+      "token": "\""
+    },
+    {
+      "tag": "NN",
+      "token": "system"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "exit"
+    },
+    {
+      "tag": "''",
+      "token": "\""
+    },
+    {
+      "tag": "-RRB-",
+      "token": ")"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "PRP",
+      "token": "you"
+    },
+    {
+      "tag": "VBP",
+      "token": "don"
+    },
+    {
+      "tag": "''",
+      "token": "'"
+    },
+    {
+      "tag": "NN",
+      "token": "t"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "An"
+    },
+    {
+      "tag": "JJ",
+      "token": "important"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "MD",
+      "token": "must"
+    },
+    {
+      "tag": "VB",
+      "token": "be"
+    },
+    {
+      "tag": "VBN",
+      "token": "implemented"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "NN",
+      "token": "subclass"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "implies"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "method"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "compare"
+    },
+    {
+      "tag": "NNS",
+      "token": "Permissions"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "RB",
+      "token": "Basically"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "''",
+      "token": "\""
+    },
+    {
+      "tag": "NN",
+      "token": "permission"
+    },
+    {
+      "tag": "NN",
+      "token": "p1"
+    },
+    {
+      "tag": "VBZ",
+      "token": "implies"
+    },
+    {
+      "tag": "NN",
+      "token": "permission"
+    },
+    {
+      "tag": "NN",
+      "token": "p2"
+    },
+    {
+      "tag": "''",
+      "token": "\""
+    },
+    {
+      "tag": "VBZ",
+      "token": "means"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "IN",
+      "token": "if"
+    },
+    {
+      "tag": "CD",
+      "token": "one"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "granted"
+    },
+    {
+      "tag": "NN",
+      "token": "permission"
+    },
+    {
+      "tag": "NN",
+      "token": "p1"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CD",
+      "token": "one"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "RB",
+      "token": "naturally"
+    },
+    {
+      "tag": "VBN",
+      "token": "granted"
+    },
+    {
+      "tag": "NN",
+      "token": "permission"
+    },
+    {
+      "tag": "NN",
+      "token": "p2"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "RB",
+      "token": "Thus"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "DT",
+      "token": "this"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "DT",
+      "token": "an"
+    },
+    {
+      "tag": "NN",
+      "token": "equality"
+    },
+    {
+      "tag": "NN",
+      "token": "test"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "CC",
+      "token": "but"
+    },
+    {
+      "tag": "RB",
+      "token": "rather"
+    },
+    {
+      "tag": "JJR",
+      "token": "more"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "subset"
+    },
+    {
+      "tag": "NN",
+      "token": "test"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Permission"
+    },
+    {
+      "tag": "NNS",
+      "token": "objects"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "JJ",
+      "token": "similar"
+    },
+    {
+      "tag": "IN",
+      "token": "to"
+    },
+    {
+      "tag": "NN",
+      "token": "String"
+    },
+    {
+      "tag": "NNS",
+      "token": "objects"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "PRP",
+      "token": "they"
+    },
+    {
+      "tag": "VBP",
+      "token": "are"
+    },
+    {
+      "tag": "JJ",
+      "token": "immutable"
+    },
+    {
+      "tag": "IN",
+      "token": "once"
+    },
+    {
+      "tag": "PRP",
+      "token": "they"
+    },
+    {
+      "tag": "VBP",
+      "token": "have"
+    },
+    {
+      "tag": "VBN",
+      "token": "been"
+    },
+    {
+      "tag": "VBN",
+      "token": "created"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NNS",
+      "token": "Subclasses"
+    },
+    {
+      "tag": "MD",
+      "token": "should"
+    },
+    {
+      "tag": "RB",
+      "token": "not"
+    },
+    {
+      "tag": "VB",
+      "token": "provide"
+    },
+    {
+      "tag": "NNS",
+      "token": "methods"
+    },
+    {
+      "tag": "WDT",
+      "token": "that"
+    },
+    {
+      "tag": "MD",
+      "token": "can"
+    },
+    {
+      "tag": "VB",
+      "token": "change"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "state"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "permission"
+    },
+    {
+      "tag": "IN",
+      "token": "once"
+    },
+    {
+      "tag": "PRP",
+      "token": "it"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "VBN",
+      "token": "been"
+    },
+    {
+      "tag": "VBN",
+      "token": "created"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

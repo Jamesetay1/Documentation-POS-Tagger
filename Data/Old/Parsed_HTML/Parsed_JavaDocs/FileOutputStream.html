@@ -1,0 +1,450 @@
+
+
+FileOutputStream (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.io
+Class FileOutputStream
+
+java.lang.Object
+
+java.io.OutputStream
+
+java.io.FileOutputStream
+
+All Implemented Interfaces:
+Closeable, Flushable, AutoCloseable
+
+<pre>public class FileOutputStream
+extends OutputStream</pre>
+A file output stream is an output stream for writing data to a
+ <code>File</code> or to a <code>FileDescriptor</code>. Whether or not
+ a file is available or may be created depends upon the underlying
+ platform.  Some platforms, in particular, allow a file to be opened
+ for writing by only one FileOutputStream (or other
+ file-writing object) at a time.  In such situations the constructors in
+ this class will fail if the file involved is already open.
+
+ <p><code>FileOutputStream</code> is meant for writing streams of raw bytes
+ such as image data. For writing streams of characters, consider using
+ <code>FileWriter</code>.
+
+Since:
+JDK1.0
+See Also:
+<code>File</code>, 
+<code>FileDescriptor</code>, 
+<code>FileInputStream</code>, 
+<code>Files.newOutputStream(java.nio.file.Path, java.nio.file.OpenOption...)</code>
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>FileOutputStream(File file)</code>
+Creates a file output stream to write to the file represented by
+ the specified <code>File</code> object.
+
+<code>FileOutputStream(File file,
+                boolean append)</code>
+Creates a file output stream to write to the file represented by
+ the specified <code>File</code> object.
+
+<code>FileOutputStream(FileDescriptor fdObj)</code>
+Creates a file output stream to write to the specified file
+ descriptor, which represents an existing connection to an actual
+ file in the file system.
+
+<code>FileOutputStream(String name)</code>
+Creates a file output stream to write to the file with the
+ specified name.
+
+<code>FileOutputStream(String name,
+                boolean append)</code>
+Creates a file output stream to write to the file with the specified
+ name.
+
+Method Summary
+
+All Methods Instance Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>void</code>
+<code>close()</code>
+Closes this file output stream and releases any system resources
+ associated with this stream.
+
+<code>protected void</code>
+<code>finalize()</code>
+Cleans up the connection to the file, and ensures that the
+ <code>close</code> method of this file output stream is
+ called when there are no more references to this stream.
+
+<code>FileChannel</code>
+<code>getChannel()</code>
+Returns the unique <code>FileChannel</code>
+ object associated with this file output stream.
+
+<code>FileDescriptor</code>
+<code>getFD()</code>
+Returns the file descriptor associated with this stream.
+
+<code>void</code>
+<code>write(byte[] b)</code>
+Writes <code>b.length</code> bytes from the specified byte array
+ to this file output stream.
+
+<code>void</code>
+<code>write(byte[] b,
+     int off,
+     int len)</code>
+Writes <code>len</code> bytes from the specified byte array
+ starting at offset <code>off</code> to this file output stream.
+
+<code>void</code>
+<code>write(int b)</code>
+Writes the specified byte to this file output stream.
+
+Methods inherited from class java.io.OutputStream
+<code>flush</code>
+
+Methods inherited from class java.lang.Object
+<code>clone, equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code>
+
+Constructor Detail
+
+FileOutputStream
+<pre>public FileOutputStream(String name)
+                 throws FileNotFoundException</pre>
+Creates a file output stream to write to the file with the
+ specified name. A new <code>FileDescriptor</code> object is
+ created to represent this file connection.
+ <p>
+ First, if there is a security manager, its <code>checkWrite</code>
+ method is called with <code>name</code> as its argument.
+ <p>
+ If the file exists but is a directory rather than a regular file, does
+ not exist but cannot be created, or cannot be opened for any other
+ reason then a <code>FileNotFoundException</code> is thrown.
+
+Parameters:
+<code>name</code> - the system-dependent filename
+Throws:
+<code>FileNotFoundException</code> - if the file exists but is a directory
+                   rather than a regular file, does not exist but cannot
+                   be created, or cannot be opened for any other reason
+<code>SecurityException</code> - if a security manager exists and its
+               <code>checkWrite</code> method denies write access
+               to the file.
+See Also:
+<code>SecurityManager.checkWrite(java.lang.String)</code>
+
+FileOutputStream
+<pre>public FileOutputStream(String name,
+                        boolean append)
+                 throws FileNotFoundException</pre>
+Creates a file output stream to write to the file with the specified
+ name.  If the second argument is <code>true</code>, then
+ bytes will be written to the end of the file rather than the beginning.
+ A new <code>FileDescriptor</code> object is created to represent this
+ file connection.
+ <p>
+ First, if there is a security manager, its <code>checkWrite</code>
+ method is called with <code>name</code> as its argument.
+ <p>
+ If the file exists but is a directory rather than a regular file, does
+ not exist but cannot be created, or cannot be opened for any other
+ reason then a <code>FileNotFoundException</code> is thrown.
+
+Parameters:
+<code>name</code> - the system-dependent file name
+<code>append</code> - if <code>true</code>, then bytes will be written
+                   to the end of the file rather than the beginning
+Throws:
+<code>FileNotFoundException</code> - if the file exists but is a directory
+                   rather than a regular file, does not exist but cannot
+                   be created, or cannot be opened for any other reason.
+<code>SecurityException</code> - if a security manager exists and its
+               <code>checkWrite</code> method denies write access
+               to the file.
+Since:
+JDK1.1
+See Also:
+<code>SecurityManager.checkWrite(java.lang.String)</code>
+
+FileOutputStream
+<pre>public FileOutputStream(File file)
+                 throws FileNotFoundException</pre>
+Creates a file output stream to write to the file represented by
+ the specified <code>File</code> object. A new
+ <code>FileDescriptor</code> object is created to represent this
+ file connection.
+ <p>
+ First, if there is a security manager, its <code>checkWrite</code>
+ method is called with the path represented by the <code>file</code>
+ argument as its argument.
+ <p>
+ If the file exists but is a directory rather than a regular file, does
+ not exist but cannot be created, or cannot be opened for any other
+ reason then a <code>FileNotFoundException</code> is thrown.
+
+Parameters:
+<code>file</code> - the file to be opened for writing.
+Throws:
+<code>FileNotFoundException</code> - if the file exists but is a directory
+                   rather than a regular file, does not exist but cannot
+                   be created, or cannot be opened for any other reason
+<code>SecurityException</code> - if a security manager exists and its
+               <code>checkWrite</code> method denies write access
+               to the file.
+See Also:
+<code>File.getPath()</code>, 
+<code>SecurityException</code>, 
+<code>SecurityManager.checkWrite(java.lang.String)</code>
+
+FileOutputStream
+<pre>public FileOutputStream(File file,
+                        boolean append)
+                 throws FileNotFoundException</pre>
+Creates a file output stream to write to the file represented by
+ the specified <code>File</code> object. If the second argument is
+ <code>true</code>, then bytes will be written to the end of the file
+ rather than the beginning. A new <code>FileDescriptor</code> object is
+ created to represent this file connection.
+ <p>
+ First, if there is a security manager, its <code>checkWrite</code>
+ method is called with the path represented by the <code>file</code>
+ argument as its argument.
+ <p>
+ If the file exists but is a directory rather than a regular file, does
+ not exist but cannot be created, or cannot be opened for any other
+ reason then a <code>FileNotFoundException</code> is thrown.
+
+Parameters:
+<code>file</code> - the file to be opened for writing.
+<code>append</code> - if <code>true</code>, then bytes will be written
+                   to the end of the file rather than the beginning
+Throws:
+<code>FileNotFoundException</code> - if the file exists but is a directory
+                   rather than a regular file, does not exist but cannot
+                   be created, or cannot be opened for any other reason
+<code>SecurityException</code> - if a security manager exists and its
+               <code>checkWrite</code> method denies write access
+               to the file.
+Since:
+1.4
+See Also:
+<code>File.getPath()</code>, 
+<code>SecurityException</code>, 
+<code>SecurityManager.checkWrite(java.lang.String)</code>
+
+FileOutputStream
+<pre>public FileOutputStream(FileDescriptor fdObj)</pre>
+Creates a file output stream to write to the specified file
+ descriptor, which represents an existing connection to an actual
+ file in the file system.
+ <p>
+ First, if there is a security manager, its <code>checkWrite</code>
+ method is called with the file descriptor <code>fdObj</code>
+ argument as its argument.
+ <p>
+ If <code>fdObj</code> is null then a <code>NullPointerException</code>
+ is thrown.
+ <p>
+ This constructor does not throw an exception if <code>fdObj</code>
+ is <code>invalid</code>.
+ However, if the methods are invoked on the resulting stream to attempt
+ I/O on the stream, an <code>IOException</code> is thrown.
+
+Parameters:
+<code>fdObj</code> - the file descriptor to be opened for writing
+Throws:
+<code>SecurityException</code> - if a security manager exists and its
+               <code>checkWrite</code> method denies
+               write access to the file descriptor
+See Also:
+<code>SecurityManager.checkWrite(java.io.FileDescriptor)</code>
+
+Method Detail
+
+write
+<pre>public void write(int b)
+           throws IOException</pre>
+Writes the specified byte to this file output stream. Implements
+ the <code>write</code> method of <code>OutputStream</code>.
+
+Specified by:
+<code>write</code> in class <code>OutputStream</code>
+Parameters:
+<code>b</code> - the byte to be written.
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+
+write
+<pre>public void write(byte[] b)
+           throws IOException</pre>
+Writes <code>b.length</code> bytes from the specified byte array
+ to this file output stream.
+
+Overrides:
+<code>write</code> in class <code>OutputStream</code>
+Parameters:
+<code>b</code> - the data.
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+See Also:
+<code>OutputStream.write(byte[], int, int)</code>
+
+write
+<pre>public void write(byte[] b,
+                  int off,
+                  int len)
+           throws IOException</pre>
+Writes <code>len</code> bytes from the specified byte array
+ starting at offset <code>off</code> to this file output stream.
+
+Overrides:
+<code>write</code> in class <code>OutputStream</code>
+Parameters:
+<code>b</code> - the data.
+<code>off</code> - the start offset in the data.
+<code>len</code> - the number of bytes to write.
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+
+close
+<pre>public void close()
+           throws IOException</pre>
+Closes this file output stream and releases any system resources
+ associated with this stream. This file output stream may no longer
+ be used for writing bytes.
+
+ <p> If this stream has an associated channel then the channel is closed
+ as well.
+
+Specified by:
+<code>close</code> in interface <code>Closeable</code>
+Specified by:
+<code>close</code> in interface <code>AutoCloseable</code>
+Overrides:
+<code>close</code> in class <code>OutputStream</code>
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+
+getFD
+<pre>public final FileDescriptor getFD()
+                           throws IOException</pre>
+Returns the file descriptor associated with this stream.
+
+Returns:
+the <code>FileDescriptor</code> object that represents
+          the connection to the file in the file system being used
+          by this <code>FileOutputStream</code> object.
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+See Also:
+<code>FileDescriptor</code>
+
+getChannel
+<pre>public FileChannel getChannel()</pre>
+Returns the unique <code>FileChannel</code>
+ object associated with this file output stream.
+
+ <p> The initial <code>position</code> of the returned channel will be equal to the
+ number of bytes written to the file so far unless this stream is in
+ append mode, in which case it will be equal to the size of the file.
+ Writing bytes to this stream will increment the channel's position
+ accordingly.  Changing the channel's position, either explicitly or by
+ writing, will change this stream's file position.
+
+Returns:
+the file channel associated with this file output stream
+Since:
+1.4
+
+finalize
+<pre>protected void finalize()
+                 throws IOException</pre>
+Cleans up the connection to the file, and ensures that the
+ <code>close</code> method of this file output stream is
+ called when there are no more references to this stream.
+
+Overrides:
+<code>finalize</code> in class <code>Object</code>
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+See Also:
+<code>FileInputStream.close()</code>
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

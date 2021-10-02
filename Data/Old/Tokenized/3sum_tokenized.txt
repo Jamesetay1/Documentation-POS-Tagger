@@ -1,0 +1,10 @@
+<p> Given an array <code> nums </code> of <em> n </em> integers , are there elements <em> a </em> , <em> b </em> , <em> c </em> in <code> nums </code> such that <em> a </em> + <em> b </em> + <em> c </em> = 0 ? 
+Find all unique triplets in the array which gives the sum of zero . </p> 
+<p> Notice that the solution set must not contain duplicate triplets . </p> 
+<p> </p> 
+<p> Example 1 : </p> <pre> Input : nums = [ - 1 , 0 , 1 , 2 , - 1 , - 4 ] Output : [ [ - 1 , - 1 , 2 ] , [ - 1 , 0 , 1 ] ] </pre> 
+<p> Example 2 : </p> <pre> Input : nums = [ ] Output : [ ] </pre> 
+<p> Example 3 : </p> <pre> Input : nums = [ 0 ] Output : [ ] </pre> 
+<p> </p> 
+<p> Constraints : </p> 
+<code> 0 < = nums . length < = 3000 </code> <code> - 105 < = nums [ i ] < = 105 </code> 

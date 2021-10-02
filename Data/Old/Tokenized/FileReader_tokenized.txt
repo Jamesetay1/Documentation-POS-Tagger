@@ -1,0 +1,62 @@
+FileReader ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . io Class FileReader 
+java . lang . 
+Object 
+java . io . 
+Reader 
+java . io . 
+InputStreamReader 
+java . io . 
+FileReader 
+All Implemented Interfaces : Closeable , AutoCloseable , Readable 
+<pre> public class FileReader extends InputStreamReader </pre> Convenience class for reading character files . 
+The constructors of this class assume that the default character encoding and the default byte - buffer size are appropriate . 
+To specify these values yourself , construct an InputStreamReader on a FileInputStream . 
+<p> <code> FileReader </code> is meant for reading streams of characters . For reading streams of raw bytes , consider using a <code> FileInputStream </code> . 
+Since : JDK1 . 1 See Also : <code> InputStreamReader </code> , <code> FileInputStream </code> 
+Field Summary 
+Fields inherited from class java . io . 
+Reader <code> lock </code> 
+Constructor Summary 
+Constructors 
+Constructor and Description 
+<code> FileReader ( File file ) </code> Creates a new FileReader , given the File to read from . 
+<code> FileReader ( FileDescriptor fd ) </code> Creates a new FileReader , given the FileDescriptor to read from . 
+<code> FileReader ( String fileName ) </code> Creates a new FileReader , given the name of the file to read from . 
+Method Summary 
+Methods inherited from class java . io . 
+InputStreamReader <code> close , getEncoding , read , read , ready </code> 
+Methods inherited from class java . io . 
+Reader <code> mark , markSupported , read , read , reset , skip </code> 
+Methods inherited from class java . lang . 
+Object <code> clone , equals , finalize , getClass , hashCode , notify , notifyAll , toString , wait , wait , wait </code> 
+Constructor Detail 
+FileReader <pre> public FileReader ( String fileName ) throws FileNotFoundException </pre> Creates a new FileReader , given the name of the file to read from . 
+Parameters : <code> fileName </code> - the name of the file to read from Throws : <code> FileNotFoundException </code> - if the named file does not exist , is a directory rather than a regular file , or for some other reason cannot be opened for reading . 
+FileReader <pre> public FileReader ( File file ) throws FileNotFoundException </pre> Creates a new FileReader , given the File to read from . 
+Parameters : <code> file </code> - the File to read from Throws : <code> FileNotFoundException </code> - if the file does not exist , is a directory rather than a regular file , or for some other reason cannot be opened for reading . 
+FileReader <pre> public FileReader ( FileDescriptor fd ) </pre> Creates a new FileReader , given the FileDescriptor to read from . 
+Parameters : <code> fd </code> - the FileDescriptor to read from 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

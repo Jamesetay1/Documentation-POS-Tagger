@@ -1,0 +1,278 @@
+
+
+PropertyPermission (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.util
+Class PropertyPermission
+
+java.lang.Object
+
+java.security.Permission
+
+java.security.BasicPermission
+
+java.util.PropertyPermission
+
+All Implemented Interfaces:
+Serializable, Guard
+
+<pre>public final class PropertyPermission
+extends BasicPermission</pre>
+This class is for property permissions.
+
+ 
+ The name is the name of the property ("java.home",
+ "os.name", etc). The naming
+ convention follows the  hierarchical property naming convention.
+ Also, an asterisk
+ may appear at the end of the name, following a ".", or by itself, to
+ signify a wildcard match. For example: "java.*" and "*" signify a wildcard
+ match, while "*java" and "a*b" do not.
+ 
+ The actions to be granted are passed to the constructor in a string containing
+ a list of one or more comma-separated keywords. The possible keywords are
+ "read" and "write". Their meaning is defined as follows:
+
+ 
+ read
+     read permission. Allows <code>System.getProperty</code> to
+         be called.
+     write
+     write permission. Allows <code>System.setProperty</code> to
+         be called.
+ 
+
+ The actions string is converted to lowercase before processing.
+ 
+ Care should be taken before granting code permission to access
+ certain system properties.  For example, granting permission to
+ access the "java.home" system property gives potentially malevolent
+ code sensitive information about the system environment (the Java
+ installation directory).  Also, granting permission to access
+ the "user.name" and "user.home" system properties gives potentially
+ malevolent code sensitive information about the user environment
+ (the user's account name and home directory).
+
+Since:
+1.2
+See Also:
+<code>BasicPermission</code>, 
+<code>Permission</code>, 
+<code>Permissions</code>, 
+<code>PermissionCollection</code>, 
+<code>SecurityManager</code>
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>PropertyPermission(String name,
+                  String actions)</code>
+Creates a new PropertyPermission object with the specified name.
+
+Method Summary
+
+All Methods Instance Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>boolean</code>
+<code>equals(Object obj)</code>
+Checks two PropertyPermission objects for equality.
+
+<code>String</code>
+<code>getActions()</code>
+Returns the "canonical string representation" of the actions.
+
+<code>int</code>
+<code>hashCode()</code>
+Returns the hash code value for this object.
+
+<code>boolean</code>
+<code>implies(Permission p)</code>
+Checks if this PropertyPermission object "implies" the specified
+ permission.
+
+<code>PermissionCollection</code>
+<code>newPermissionCollection()</code>
+Returns a new PermissionCollection object for storing
+ PropertyPermission objects.
+
+Methods inherited from class java.security.Permission
+<code>checkGuard, getName, toString</code>
+
+Methods inherited from class java.lang.Object
+<code>clone, finalize, getClass, notify, notifyAll, wait, wait, wait</code>
+
+Constructor Detail
+
+PropertyPermission
+<pre>public PropertyPermission(String name,
+                          String actions)</pre>
+Creates a new PropertyPermission object with the specified name.
+ The name is the name of the system property, and
+ actions contains a comma-separated list of the
+ desired actions granted on the property. Possible actions are
+ "read" and "write".
+
+Parameters:
+<code>name</code> - the name of the PropertyPermission.
+<code>actions</code> - the actions string.
+Throws:
+<code>NullPointerException</code> - if <code>name</code> is <code>null</code>.
+<code>IllegalArgumentException</code> - if <code>name</code> is empty or if
+ <code>actions</code> is invalid.
+
+Method Detail
+
+implies
+<pre>public boolean implies(Permission p)</pre>
+Checks if this PropertyPermission object "implies" the specified
+ permission.
+ 
+ More specifically, this method returns true if:
+ 
+ p is an instanceof PropertyPermission,
+  p's actions are a subset of this
+ object's actions, and
+  p's name is implied by this object's
+      name. For example, "java.*" implies "java.home".
+ 
+
+Overrides:
+<code>implies</code> in class <code>BasicPermission</code>
+Parameters:
+<code>p</code> - the permission to check against.
+Returns:
+true if the specified permission is implied by this object,
+ false if not.
+
+equals
+<pre>public boolean equals(Object obj)</pre>
+Checks two PropertyPermission objects for equality. Checks that obj is
+ a PropertyPermission, and has the same name and actions as this object.
+ 
+
+Overrides:
+<code>equals</code> in class <code>BasicPermission</code>
+Parameters:
+<code>obj</code> - the object we are testing for equality with this object.
+Returns:
+true if obj is a PropertyPermission, and has the same name and
+ actions as this PropertyPermission object.
+See Also:
+<code>Object.hashCode()</code>, 
+<code>HashMap</code>
+
+hashCode
+<pre>public int hashCode()</pre>
+Returns the hash code value for this object.
+ The hash code used is the hash code of this permissions name, that is,
+ <code>getName().hashCode()</code>, where <code>getName</code> is
+ from the Permission superclass.
+
+Overrides:
+<code>hashCode</code> in class <code>BasicPermission</code>
+Returns:
+a hash code value for this object.
+See Also:
+<code>Object.equals(java.lang.Object)</code>, 
+<code>System.identityHashCode(java.lang.Object)</code>
+
+getActions
+<pre>public String getActions()</pre>
+Returns the "canonical string representation" of the actions.
+ That is, this method always returns present actions in the following order:
+ read, write. For example, if this PropertyPermission object
+ allows both write and read actions, a call to <code>getActions</code>
+ will return the string "read,write".
+
+Overrides:
+<code>getActions</code> in class <code>BasicPermission</code>
+Returns:
+the canonical string representation of the actions.
+
+newPermissionCollection
+<pre>public PermissionCollection newPermissionCollection()</pre>
+Returns a new PermissionCollection object for storing
+ PropertyPermission objects.
+ <p>
+
+Overrides:
+<code>newPermissionCollection</code> in class <code>BasicPermission</code>
+Returns:
+a new PermissionCollection object suitable for storing
+ PropertyPermissions.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

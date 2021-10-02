@@ -1,0 +1,1012 @@
+
+
+PrintWriter (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.io
+Class PrintWriter
+
+java.lang.Object
+
+java.io.Writer
+
+java.io.PrintWriter
+
+All Implemented Interfaces:
+Closeable, Flushable, Appendable, AutoCloseable
+
+<pre>public class PrintWriter
+extends Writer</pre>
+Prints formatted representations of objects to a text-output stream.  This
+ class implements all of the print methods found in <code>PrintStream</code>.  It does not contain methods for writing raw bytes, for which
+ a program should use unencoded byte streams.
+
+ <p> Unlike the <code>PrintStream</code> class, if automatic flushing is enabled
+ it will be done only when one of the println, printf, or
+ format methods is invoked, rather than whenever a newline character
+ happens to be output.  These methods use the platform's own notion of line
+ separator rather than the newline character.
+
+ <p> Methods in this class never throw I/O exceptions, although some of its
+ constructors may.  The client may inquire as to whether any errors have
+ occurred by invoking <code>checkError()</code>.
+
+Since:
+JDK1.1
+
+Field Summary
+
+Fields 
+
+Modifier and Type
+Field and Description
+
+<code>protected Writer</code>
+<code>out</code>
+The underlying character-output stream of this
+ <code>PrintWriter</code>.
+
+Fields inherited from class java.io.Writer
+<code>lock</code>
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>PrintWriter(File file)</code>
+Creates a new PrintWriter, without automatic line flushing, with the
+ specified file.
+
+<code>PrintWriter(File file,
+           String csn)</code>
+Creates a new PrintWriter, without automatic line flushing, with the
+ specified file and charset.
+
+<code>PrintWriter(OutputStream out)</code>
+Creates a new PrintWriter, without automatic line flushing, from an
+ existing OutputStream.
+
+<code>PrintWriter(OutputStream out,
+           boolean autoFlush)</code>
+Creates a new PrintWriter from an existing OutputStream.
+
+<code>PrintWriter(String fileName)</code>
+Creates a new PrintWriter, without automatic line flushing, with the
+ specified file name.
+
+<code>PrintWriter(String fileName,
+           String csn)</code>
+Creates a new PrintWriter, without automatic line flushing, with the
+ specified file name and charset.
+
+<code>PrintWriter(Writer out)</code>
+Creates a new PrintWriter, without automatic line flushing.
+
+<code>PrintWriter(Writer out,
+           boolean autoFlush)</code>
+Creates a new PrintWriter.
+
+Method Summary
+
+All Methods Instance Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>PrintWriter</code>
+<code>append(char c)</code>
+Appends the specified character to this writer.
+
+<code>PrintWriter</code>
+<code>append(CharSequence csq)</code>
+Appends the specified character sequence to this writer.
+
+<code>PrintWriter</code>
+<code>append(CharSequence csq,
+      int start,
+      int end)</code>
+Appends a subsequence of the specified character sequence to this writer.
+
+<code>boolean</code>
+<code>checkError()</code>
+Flushes the stream if it's not closed and checks its error state.
+
+<code>protected void</code>
+<code>clearError()</code>
+Clears the error state of this stream.
+
+<code>void</code>
+<code>close()</code>
+Closes the stream and releases any system resources associated
+ with it.
+
+<code>void</code>
+<code>flush()</code>
+Flushes the stream.
+
+<code>PrintWriter</code>
+<code>format(Locale l,
+      String format,
+      Object... args)</code>
+Writes a formatted string to this writer using the specified format
+ string and arguments.
+
+<code>PrintWriter</code>
+<code>format(String format,
+      Object... args)</code>
+Writes a formatted string to this writer using the specified format
+ string and arguments.
+
+<code>void</code>
+<code>print(boolean b)</code>
+Prints a boolean value.
+
+<code>void</code>
+<code>print(char c)</code>
+Prints a character.
+
+<code>void</code>
+<code>print(char[] s)</code>
+Prints an array of characters.
+
+<code>void</code>
+<code>print(double d)</code>
+Prints a double-precision floating-point number.
+
+<code>void</code>
+<code>print(float f)</code>
+Prints a floating-point number.
+
+<code>void</code>
+<code>print(int i)</code>
+Prints an integer.
+
+<code>void</code>
+<code>print(long l)</code>
+Prints a long integer.
+
+<code>void</code>
+<code>print(Object obj)</code>
+Prints an object.
+
+<code>void</code>
+<code>print(String s)</code>
+Prints a string.
+
+<code>PrintWriter</code>
+<code>printf(Locale l,
+      String format,
+      Object... args)</code>
+A convenience method to write a formatted string to this writer using
+ the specified format string and arguments.
+
+<code>PrintWriter</code>
+<code>printf(String format,
+      Object... args)</code>
+A convenience method to write a formatted string to this writer using
+ the specified format string and arguments.
+
+<code>void</code>
+<code>println()</code>
+Terminates the current line by writing the line separator string.
+
+<code>void</code>
+<code>println(boolean x)</code>
+Prints a boolean value and then terminates the line.
+
+<code>void</code>
+<code>println(char x)</code>
+Prints a character and then terminates the line.
+
+<code>void</code>
+<code>println(char[] x)</code>
+Prints an array of characters and then terminates the line.
+
+<code>void</code>
+<code>println(double x)</code>
+Prints a double-precision floating-point number and then terminates the
+ line.
+
+<code>void</code>
+<code>println(float x)</code>
+Prints a floating-point number and then terminates the line.
+
+<code>void</code>
+<code>println(int x)</code>
+Prints an integer and then terminates the line.
+
+<code>void</code>
+<code>println(long x)</code>
+Prints a long integer and then terminates the line.
+
+<code>void</code>
+<code>println(Object x)</code>
+Prints an Object and then terminates the line.
+
+<code>void</code>
+<code>println(String x)</code>
+Prints a String and then terminates the line.
+
+<code>protected void</code>
+<code>setError()</code>
+Indicates that an error has occurred.
+
+<code>void</code>
+<code>write(char[] buf)</code>
+Writes an array of characters.
+
+<code>void</code>
+<code>write(char[] buf,
+     int off,
+     int len)</code>
+Writes A Portion of an array of characters.
+
+<code>void</code>
+<code>write(int c)</code>
+Writes a single character.
+
+<code>void</code>
+<code>write(String s)</code>
+Writes a string.
+
+<code>void</code>
+<code>write(String s,
+     int off,
+     int len)</code>
+Writes a portion of a string.
+
+Methods inherited from class java.lang.Object
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code>
+
+Field Detail
+
+out
+<pre>protected Writer out</pre>
+The underlying character-output stream of this
+ <code>PrintWriter</code>.
+
+Since:
+1.2
+
+Constructor Detail
+
+PrintWriter
+<pre>public PrintWriter(Writer out)</pre>
+Creates a new PrintWriter, without automatic line flushing.
+
+Parameters:
+<code>out</code> - A character-output stream
+
+PrintWriter
+<pre>public PrintWriter(Writer out,
+                   boolean autoFlush)</pre>
+Creates a new PrintWriter.
+
+Parameters:
+<code>out</code> - A character-output stream
+<code>autoFlush</code> - A boolean; if true, the println,
+                    printf, or format methods will
+                    flush the output buffer
+
+PrintWriter
+<pre>public PrintWriter(OutputStream out)</pre>
+Creates a new PrintWriter, without automatic line flushing, from an
+ existing OutputStream.  This convenience constructor creates the
+ necessary intermediate OutputStreamWriter, which will convert characters
+ into bytes using the default character encoding.
+
+Parameters:
+<code>out</code> - An output stream
+See Also:
+<code>OutputStreamWriter.OutputStreamWriter(java.io.OutputStream)</code>
+
+PrintWriter
+<pre>public PrintWriter(OutputStream out,
+                   boolean autoFlush)</pre>
+Creates a new PrintWriter from an existing OutputStream.  This
+ convenience constructor creates the necessary intermediate
+ OutputStreamWriter, which will convert characters into bytes using the
+ default character encoding.
+
+Parameters:
+<code>out</code> - An output stream
+<code>autoFlush</code> - A boolean; if true, the println,
+                    printf, or format methods will
+                    flush the output buffer
+See Also:
+<code>OutputStreamWriter.OutputStreamWriter(java.io.OutputStream)</code>
+
+PrintWriter
+<pre>public PrintWriter(String fileName)
+            throws FileNotFoundException</pre>
+Creates a new PrintWriter, without automatic line flushing, with the
+ specified file name.  This convenience constructor creates the necessary
+ intermediate <code>OutputStreamWriter</code>,
+ which will encode characters using the default charset for this
+ instance of the Java virtual machine.
+
+Parameters:
+<code>fileName</code> - The name of the file to use as the destination of this writer.
+         If the file exists then it will be truncated to zero size;
+         otherwise, a new file will be created.  The output will be
+         written to the file and is buffered.
+Throws:
+<code>FileNotFoundException</code> - If the given string does not denote an existing, writable
+          regular file and a new regular file of that name cannot be
+          created, or if some other error occurs while opening or
+          creating the file
+<code>SecurityException</code> - If a security manager is present and <code>checkWrite(fileName)</code> denies write
+          access to the file
+Since:
+1.5
+
+PrintWriter
+<pre>public PrintWriter(String fileName,
+                   String csn)
+            throws FileNotFoundException,
+                   UnsupportedEncodingException</pre>
+Creates a new PrintWriter, without automatic line flushing, with the
+ specified file name and charset.  This convenience constructor creates
+ the necessary intermediate <code>OutputStreamWriter</code>, which will encode characters using the provided
+ charset.
+
+Parameters:
+<code>fileName</code> - The name of the file to use as the destination of this writer.
+         If the file exists then it will be truncated to zero size;
+         otherwise, a new file will be created.  The output will be
+         written to the file and is buffered.
+<code>csn</code> - The name of a supported charset
+Throws:
+<code>FileNotFoundException</code> - If the given string does not denote an existing, writable
+          regular file and a new regular file of that name cannot be
+          created, or if some other error occurs while opening or
+          creating the file
+<code>SecurityException</code> - If a security manager is present and <code>checkWrite(fileName)</code> denies write
+          access to the file
+<code>UnsupportedEncodingException</code> - If the named charset is not supported
+Since:
+1.5
+
+PrintWriter
+<pre>public PrintWriter(File file)
+            throws FileNotFoundException</pre>
+Creates a new PrintWriter, without automatic line flushing, with the
+ specified file.  This convenience constructor creates the necessary
+ intermediate <code>OutputStreamWriter</code>,
+ which will encode characters using the default charset for this
+ instance of the Java virtual machine.
+
+Parameters:
+<code>file</code> - The file to use as the destination of this writer.  If the file
+         exists then it will be truncated to zero size; otherwise, a new
+         file will be created.  The output will be written to the file
+         and is buffered.
+Throws:
+<code>FileNotFoundException</code> - If the given file object does not denote an existing, writable
+          regular file and a new regular file of that name cannot be
+          created, or if some other error occurs while opening or
+          creating the file
+<code>SecurityException</code> - If a security manager is present and <code>checkWrite(file.getPath())</code>
+          denies write access to the file
+Since:
+1.5
+
+PrintWriter
+<pre>public PrintWriter(File file,
+                   String csn)
+            throws FileNotFoundException,
+                   UnsupportedEncodingException</pre>
+Creates a new PrintWriter, without automatic line flushing, with the
+ specified file and charset.  This convenience constructor creates the
+ necessary intermediate <code>OutputStreamWriter</code>, which will encode characters using the provided
+ charset.
+
+Parameters:
+<code>file</code> - The file to use as the destination of this writer.  If the file
+         exists then it will be truncated to zero size; otherwise, a new
+         file will be created.  The output will be written to the file
+         and is buffered.
+<code>csn</code> - The name of a supported charset
+Throws:
+<code>FileNotFoundException</code> - If the given file object does not denote an existing, writable
+          regular file and a new regular file of that name cannot be
+          created, or if some other error occurs while opening or
+          creating the file
+<code>SecurityException</code> - If a security manager is present and <code>checkWrite(file.getPath())</code>
+          denies write access to the file
+<code>UnsupportedEncodingException</code> - If the named charset is not supported
+Since:
+1.5
+
+Method Detail
+
+flush
+<pre>public void flush()</pre>
+Flushes the stream.
+
+Specified by:
+<code>flush</code> in interface <code>Flushable</code>
+Specified by:
+<code>flush</code> in class <code>Writer</code>
+See Also:
+<code>checkError()</code>
+
+close
+<pre>public void close()</pre>
+Closes the stream and releases any system resources associated
+ with it. Closing a previously closed stream has no effect.
+
+Specified by:
+<code>close</code> in interface <code>Closeable</code>
+Specified by:
+<code>close</code> in interface <code>AutoCloseable</code>
+Specified by:
+<code>close</code> in class <code>Writer</code>
+See Also:
+<code>checkError()</code>
+
+checkError
+<pre>public boolean checkError()</pre>
+Flushes the stream if it's not closed and checks its error state.
+
+Returns:
+<code>true</code> if the print stream has encountered an error,
+          either on the underlying output stream or during a format
+          conversion.
+
+setError
+<pre>protected void setError()</pre>
+Indicates that an error has occurred.
+
+ <p> This method will cause subsequent invocations of <code>checkError()</code> to return true until <code>clearError()</code> is invoked.
+
+clearError
+<pre>protected void clearError()</pre>
+Clears the error state of this stream.
+
+ <p> This method will cause subsequent invocations of <code>checkError()</code> to return false until another write
+ operation fails and invokes <code>setError()</code>.
+
+Since:
+1.6
+
+write
+<pre>public void write(int c)</pre>
+Writes a single character.
+
+Overrides:
+<code>write</code> in class <code>Writer</code>
+Parameters:
+<code>c</code> - int specifying a character to be written.
+
+write
+<pre>public void write(char[] buf,
+                  int off,
+                  int len)</pre>
+Writes A Portion of an array of characters.
+
+Specified by:
+<code>write</code> in class <code>Writer</code>
+Parameters:
+<code>buf</code> - Array of characters
+<code>off</code> - Offset from which to start writing characters
+<code>len</code> - Number of characters to write
+
+write
+<pre>public void write(char[] buf)</pre>
+Writes an array of characters.  This method cannot be inherited from the
+ Writer class because it must suppress I/O exceptions.
+
+Overrides:
+<code>write</code> in class <code>Writer</code>
+Parameters:
+<code>buf</code> - Array of characters to be written
+
+write
+<pre>public void write(String s,
+                  int off,
+                  int len)</pre>
+Writes a portion of a string.
+
+Overrides:
+<code>write</code> in class <code>Writer</code>
+Parameters:
+<code>s</code> - A String
+<code>off</code> - Offset from which to start writing characters
+<code>len</code> - Number of characters to write
+
+write
+<pre>public void write(String s)</pre>
+Writes a string.  This method cannot be inherited from the Writer class
+ because it must suppress I/O exceptions.
+
+Overrides:
+<code>write</code> in class <code>Writer</code>
+Parameters:
+<code>s</code> - String to be written
+
+print
+<pre>public void print(boolean b)</pre>
+Prints a boolean value.  The string produced by <code><code>String.valueOf(boolean)</code></code> is translated into bytes
+ according to the platform's default character encoding, and these bytes
+ are written in exactly the manner of the <code><code>write(int)</code></code> method.
+
+Parameters:
+<code>b</code> - The <code>boolean</code> to be printed
+
+print
+<pre>public void print(char c)</pre>
+Prints a character.  The character is translated into one or more bytes
+ according to the platform's default character encoding, and these bytes
+ are written in exactly the manner of the <code><code>write(int)</code></code> method.
+
+Parameters:
+<code>c</code> - The <code>char</code> to be printed
+
+print
+<pre>public void print(int i)</pre>
+Prints an integer.  The string produced by <code><code>String.valueOf(int)</code></code> is translated into bytes according
+ to the platform's default character encoding, and these bytes are
+ written in exactly the manner of the <code><code>write(int)</code></code>
+ method.
+
+Parameters:
+<code>i</code> - The <code>int</code> to be printed
+See Also:
+<code>Integer.toString(int)</code>
+
+print
+<pre>public void print(long l)</pre>
+Prints a long integer.  The string produced by <code><code>String.valueOf(long)</code></code> is translated into bytes
+ according to the platform's default character encoding, and these bytes
+ are written in exactly the manner of the <code><code>write(int)</code></code>
+ method.
+
+Parameters:
+<code>l</code> - The <code>long</code> to be printed
+See Also:
+<code>Long.toString(long)</code>
+
+print
+<pre>public void print(float f)</pre>
+Prints a floating-point number.  The string produced by <code><code>String.valueOf(float)</code></code> is translated into bytes
+ according to the platform's default character encoding, and these bytes
+ are written in exactly the manner of the <code><code>write(int)</code></code>
+ method.
+
+Parameters:
+<code>f</code> - The <code>float</code> to be printed
+See Also:
+<code>Float.toString(float)</code>
+
+print
+<pre>public void print(double d)</pre>
+Prints a double-precision floating-point number.  The string produced by
+ <code><code>String.valueOf(double)</code></code> is translated into
+ bytes according to the platform's default character encoding, and these
+ bytes are written in exactly the manner of the <code><code>write(int)</code></code> method.
+
+Parameters:
+<code>d</code> - The <code>double</code> to be printed
+See Also:
+<code>Double.toString(double)</code>
+
+print
+<pre>public void print(char[] s)</pre>
+Prints an array of characters.  The characters are converted into bytes
+ according to the platform's default character encoding, and these bytes
+ are written in exactly the manner of the <code><code>write(int)</code></code>
+ method.
+
+Parameters:
+<code>s</code> - The array of chars to be printed
+Throws:
+<code>NullPointerException</code> - If <code>s</code> is <code>null</code>
+
+print
+<pre>public void print(String s)</pre>
+Prints a string.  If the argument is <code>null</code> then the string
+ <code>"null"</code> is printed.  Otherwise, the string's characters are
+ converted into bytes according to the platform's default character
+ encoding, and these bytes are written in exactly the manner of the
+ <code><code>write(int)</code></code> method.
+
+Parameters:
+<code>s</code> - The <code>String</code> to be printed
+
+print
+<pre>public void print(Object obj)</pre>
+Prints an object.  The string produced by the <code><code>String.valueOf(Object)</code></code> method is translated into bytes
+ according to the platform's default character encoding, and these bytes
+ are written in exactly the manner of the <code><code>write(int)</code></code>
+ method.
+
+Parameters:
+<code>obj</code> - The <code>Object</code> to be printed
+See Also:
+<code>Object.toString()</code>
+
+println
+<pre>public void println()</pre>
+Terminates the current line by writing the line separator string.  The
+ line separator string is defined by the system property
+ <code>line.separator</code>, and is not necessarily a single newline
+ character (<code>'\n'</code>).
+
+println
+<pre>public void println(boolean x)</pre>
+Prints a boolean value and then terminates the line.  This method behaves
+ as though it invokes <code><code>print(boolean)</code></code> and then
+ <code><code>println()</code></code>.
+
+Parameters:
+<code>x</code> - the <code>boolean</code> value to be printed
+
+println
+<pre>public void println(char x)</pre>
+Prints a character and then terminates the line.  This method behaves as
+ though it invokes <code><code>print(char)</code></code> and then <code><code>println()</code></code>.
+
+Parameters:
+<code>x</code> - the <code>char</code> value to be printed
+
+println
+<pre>public void println(int x)</pre>
+Prints an integer and then terminates the line.  This method behaves as
+ though it invokes <code><code>print(int)</code></code> and then <code><code>println()</code></code>.
+
+Parameters:
+<code>x</code> - the <code>int</code> value to be printed
+
+println
+<pre>public void println(long x)</pre>
+Prints a long integer and then terminates the line.  This method behaves
+ as though it invokes <code><code>print(long)</code></code> and then
+ <code><code>println()</code></code>.
+
+Parameters:
+<code>x</code> - the <code>long</code> value to be printed
+
+println
+<pre>public void println(float x)</pre>
+Prints a floating-point number and then terminates the line.  This method
+ behaves as though it invokes <code><code>print(float)</code></code> and then
+ <code><code>println()</code></code>.
+
+Parameters:
+<code>x</code> - the <code>float</code> value to be printed
+
+println
+<pre>public void println(double x)</pre>
+Prints a double-precision floating-point number and then terminates the
+ line.  This method behaves as though it invokes <code><code>print(double)</code></code> and then <code><code>println()</code></code>.
+
+Parameters:
+<code>x</code> - the <code>double</code> value to be printed
+
+println
+<pre>public void println(char[] x)</pre>
+Prints an array of characters and then terminates the line.  This method
+ behaves as though it invokes <code><code>print(char[])</code></code> and then
+ <code><code>println()</code></code>.
+
+Parameters:
+<code>x</code> - the array of <code>char</code> values to be printed
+
+println
+<pre>public void println(String x)</pre>
+Prints a String and then terminates the line.  This method behaves as
+ though it invokes <code><code>print(String)</code></code> and then
+ <code><code>println()</code></code>.
+
+Parameters:
+<code>x</code> - the <code>String</code> value to be printed
+
+println
+<pre>public void println(Object x)</pre>
+Prints an Object and then terminates the line.  This method calls
+ at first String.valueOf(x) to get the printed object's string value,
+ then behaves as
+ though it invokes <code><code>print(String)</code></code> and then
+ <code><code>println()</code></code>.
+
+Parameters:
+<code>x</code> - The <code>Object</code> to be printed.
+
+printf
+<pre>public PrintWriter printf(String format,
+                          Object... args)</pre>
+A convenience method to write a formatted string to this writer using
+ the specified format string and arguments.  If automatic flushing is
+ enabled, calls to this method will flush the output buffer.
+
+ <p> An invocation of this method of the form out.printf(format,
+ args) behaves in exactly the same way as the invocation
+
+ <pre>
+     out.format(format, args) </pre>
+
+Parameters:
+<code>format</code> - A format string as described in Format string syntax.
+<code>args</code> - Arguments referenced by the format specifiers in the format
+         string.  If there are more arguments than format specifiers, the
+         extra arguments are ignored.  The number of arguments is
+         variable and may be zero.  The maximum number of arguments is
+         limited by the maximum dimension of a Java array as defined by
+         The Java™ Virtual Machine Specification.
+         The behaviour on a
+         null argument depends on the conversion.
+Returns:
+This writer
+Throws:
+<code>IllegalFormatException</code> - If a format string contains an illegal syntax, a format
+          specifier that is incompatible with the given arguments,
+          insufficient arguments given the format string, or other
+          illegal conditions.  For specification of all possible
+          formatting errors, see the Details section of the
+          formatter class specification.
+<code>NullPointerException</code> - If the format is null
+Since:
+1.5
+
+printf
+<pre>public PrintWriter printf(Locale l,
+                          String format,
+                          Object... args)</pre>
+A convenience method to write a formatted string to this writer using
+ the specified format string and arguments.  If automatic flushing is
+ enabled, calls to this method will flush the output buffer.
+
+ <p> An invocation of this method of the form out.printf(l, format,
+ args) behaves in exactly the same way as the invocation
+
+ <pre>
+     out.format(l, format, args) </pre>
+
+Parameters:
+<code>l</code> - The locale to apply during
+         formatting.  If l is null then no localization
+         is applied.
+<code>format</code> - A format string as described in Format string syntax.
+<code>args</code> - Arguments referenced by the format specifiers in the format
+         string.  If there are more arguments than format specifiers, the
+         extra arguments are ignored.  The number of arguments is
+         variable and may be zero.  The maximum number of arguments is
+         limited by the maximum dimension of a Java array as defined by
+         The Java™ Virtual Machine Specification.
+         The behaviour on a
+         null argument depends on the conversion.
+Returns:
+This writer
+Throws:
+<code>IllegalFormatException</code> - If a format string contains an illegal syntax, a format
+          specifier that is incompatible with the given arguments,
+          insufficient arguments given the format string, or other
+          illegal conditions.  For specification of all possible
+          formatting errors, see the Details section of the
+          formatter class specification.
+<code>NullPointerException</code> - If the format is null
+Since:
+1.5
+
+format
+<pre>public PrintWriter format(String format,
+                          Object... args)</pre>
+Writes a formatted string to this writer using the specified format
+ string and arguments.  If automatic flushing is enabled, calls to this
+ method will flush the output buffer.
+
+ <p> The locale always used is the one returned by <code>Locale.getDefault()</code>, regardless of any
+ previous invocations of other formatting methods on this object.
+
+Parameters:
+<code>format</code> - A format string as described in Format string syntax.
+<code>args</code> - Arguments referenced by the format specifiers in the format
+         string.  If there are more arguments than format specifiers, the
+         extra arguments are ignored.  The number of arguments is
+         variable and may be zero.  The maximum number of arguments is
+         limited by the maximum dimension of a Java array as defined by
+         The Java™ Virtual Machine Specification.
+         The behaviour on a
+         null argument depends on the conversion.
+Returns:
+This writer
+Throws:
+<code>IllegalFormatException</code> - If a format string contains an illegal syntax, a format
+          specifier that is incompatible with the given arguments,
+          insufficient arguments given the format string, or other
+          illegal conditions.  For specification of all possible
+          formatting errors, see the Details section of the
+          Formatter class specification.
+<code>NullPointerException</code> - If the format is null
+Since:
+1.5
+
+format
+<pre>public PrintWriter format(Locale l,
+                          String format,
+                          Object... args)</pre>
+Writes a formatted string to this writer using the specified format
+ string and arguments.  If automatic flushing is enabled, calls to this
+ method will flush the output buffer.
+
+Parameters:
+<code>l</code> - The locale to apply during
+         formatting.  If l is null then no localization
+         is applied.
+<code>format</code> - A format string as described in Format string syntax.
+<code>args</code> - Arguments referenced by the format specifiers in the format
+         string.  If there are more arguments than format specifiers, the
+         extra arguments are ignored.  The number of arguments is
+         variable and may be zero.  The maximum number of arguments is
+         limited by the maximum dimension of a Java array as defined by
+         The Java™ Virtual Machine Specification.
+         The behaviour on a
+         null argument depends on the conversion.
+Returns:
+This writer
+Throws:
+<code>IllegalFormatException</code> - If a format string contains an illegal syntax, a format
+          specifier that is incompatible with the given arguments,
+          insufficient arguments given the format string, or other
+          illegal conditions.  For specification of all possible
+          formatting errors, see the Details section of the
+          formatter class specification.
+<code>NullPointerException</code> - If the format is null
+Since:
+1.5
+
+append
+<pre>public PrintWriter append(CharSequence csq)</pre>
+Appends the specified character sequence to this writer.
+
+ <p> An invocation of this method of the form out.append(csq)
+ behaves in exactly the same way as the invocation
+
+ <pre>
+     out.write(csq.toString()) </pre>
+
+ <p> Depending on the specification of toString for the
+ character sequence csq, the entire sequence may not be
+ appended. For instance, invoking the toString method of a
+ character buffer will return a subsequence whose content depends upon
+ the buffer's position and limit.
+
+Specified by:
+<code>append</code> in interface <code>Appendable</code>
+Overrides:
+<code>append</code> in class <code>Writer</code>
+Parameters:
+<code>csq</code> - The character sequence to append.  If csq is
+         null, then the four characters "null" are
+         appended to this writer.
+Returns:
+This writer
+Since:
+1.5
+
+append
+<pre>public PrintWriter append(CharSequence csq,
+                          int start,
+                          int end)</pre>
+Appends a subsequence of the specified character sequence to this writer.
+
+ <p> An invocation of this method of the form out.append(csq, start,
+ end) when csq is not null, behaves in
+ exactly the same way as the invocation
+
+ <pre>
+     out.write(csq.subSequence(start, end).toString()) </pre>
+
+Specified by:
+<code>append</code> in interface <code>Appendable</code>
+Overrides:
+<code>append</code> in class <code>Writer</code>
+Parameters:
+<code>csq</code> - The character sequence from which a subsequence will be
+         appended.  If csq is null, then characters
+         will be appended as if csq contained the four
+         characters "null".
+<code>start</code> - The index of the first character in the subsequence
+<code>end</code> - The index of the character following the last character in the
+         subsequence
+Returns:
+This writer
+Throws:
+<code>IndexOutOfBoundsException</code> - If start or end are negative, start
+          is greater than end, or end is greater than
+          csq.length()
+Since:
+1.5
+
+append
+<pre>public PrintWriter append(char c)</pre>
+Appends the specified character to this writer.
+
+ <p> An invocation of this method of the form out.append(c)
+ behaves in exactly the same way as the invocation
+
+ <pre>
+     out.write(c) </pre>
+
+Specified by:
+<code>append</code> in interface <code>Appendable</code>
+Overrides:
+<code>append</code> in class <code>Writer</code>
+Parameters:
+<code>c</code> - The 16-bit character to append
+Returns:
+This writer
+Since:
+1.5
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

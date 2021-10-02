@@ -1,0 +1,804 @@
+Character ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . lang Class Character 
+java . lang . 
+Object 
+java . lang . 
+Character 
+All Implemented Interfaces : Serializable , Comparable <Character> 
+<pre> public final class Character extends Object implements Serializable , Comparable The <code> Character </code> class wraps a value of the primitive type <code> char </code> in an object . 
+An object of class <code> Character </code> contains a single field whose type is <code> char </code> . 
+<p> In addition , this class provides a large number of static methods for determining a character ' s category ( lowercase letter , digit , etc . ) and for converting characters from uppercase to lowercase and vice versa . 
+Unicode Conformance 
+<p> The fields and methods of class <code> Character </code> are defined in terms of character information from the Unicode Standard , specifically the UnicodeData file that is part of the Unicode Character Database . This file specifies properties including name and category for every assigned Unicode code point or character range . 
+The file is available from the Unicode Consortium at http : / / www . unicode . org . 
+<p> The Java SE 8 Platform uses character information from version 6 . 2 of the Unicode Standard , with two extensions . 
+First , the Java SE 8 Platform allows an implementation of class <code> Character </code> to use the Japanese Era code point , <code> U + 32FF </code> , from the first version of the Unicode Standard after 6 . 2 that assigns the code point . 
+Second , in recognition of the fact that new currencies appear frequently , the Java SE 8 Platform allows an implementation of class <code> Character </code> to use the Currency Symbols block from version 10 . 0 of the Unicode Standard . 
+Consequently , the behavior of fields and methods of class <code> Character </code> may vary across implementations of the Java SE 8 Platform when processing the aforementioned code points ( outside of version 6 . 2 ) , except for the following methods that define Java identifiers : <code> isJavaIdentifierStart ( int ) </code> , <code> isJavaIdentifierStart ( char ) </code> , <code> isJavaIdentifierPart ( int ) </code> , and <code> isJavaIdentifierPart ( char ) </code> . Code points in Java identifiers must be drawn from version 6 . 2 of the Unicode Standard . 
+Unicode Character Representations 
+<p> The <code> char </code> data type ( and therefore the value that a <code> Character </code> object encapsulates ) are based on the original Unicode specification , which defined characters as fixed - width 16 - bit entities . 
+The Unicode Standard has since been changed to allow for characters whose representation requires more than 16 bits . 
+The range of legal <em> code point </em> s is now U + 0000 to U + 10FFFF , known as <em> Unicode scalar value </em> . ( Refer to the definition of the U + n notation in the Unicode Standard . ) 
+<p> The set of characters from U + 0000 to U + FFFF is sometimes referred to as the <em> Basic Multilingual Plane ( BMP ) </em> . Characters whose code points are greater than U + FFFF are called <em> supplementary character </em> s . 
+The Java platform uses the UTF - 16 representation in <code> char </code> arrays and in the <code> String </code> and <code> StringBuffer </code> classes . 
+In this representation , supplementary characters are represented as a pair of <code> char </code> values , the first from the <em> high - surrogates </em> range , ( \ uD800 - \ uDBFF ) , the second from the <em> low - surrogates </em> range ( \ uDC00 - \ uDFFF ) . 
+<p> A <code> char </code> value , therefore , represents Basic Multilingual Plane ( BMP ) code points , including the surrogate code points , or code units of the UTF - 16 encoding . 
+An <code> int </code> value represents all Unicode code points , including supplementary code points . 
+The lower ( least significant ) 21 bits of <code> int </code> are used to represent Unicode code points and the upper ( most significant ) 11 bits must be zero . Unless otherwise specified , the behavior with respect to supplementary characters and surrogate <code> char </code> values is as follows : 
+The methods that only accept a <code> char </code> value cannot support supplementary characters . 
+They treat <code> char </code> values from the surrogate ranges as undefined characters . 
+For example , <code> Character . isLetter ( ' \ uD840 ' ) </code> returns <code> false </code> , even though this specific value if followed by any low - surrogate value in a string would represent a letter . 
+The methods that accept an <code> int </code> value support all Unicode characters , including supplementary characters . 
+For example , <code> Character . isLetter ( 0x2F81A ) </code> returns <code> true </code> because the code point value represents a letter ( a CJK ideograph ) . 
+<p> In the Java SE API documentation , <em> Unicode code point </em> is used for character values in the range between U + 0000 and U + 10FFFF , and <em> Unicode code unit </em> is used for 16 - bit <code> char </code> values that are code units of the <em> UTF - 16 </em> encoding . 
+For more information on Unicode terminology , refer to the Unicode Glossary . 
+Since : 1 . 0 See Also : Serialized Form 
+Nested Class Summary 
+Nested Classes 
+Modifier and Type Class and Description 
+<code> static class </code> <code> Character . Subset </code> Instances of this class represent particular subsets of the Unicode character set . 
+<code> static class </code> <code> Character . UnicodeBlock </code> A family of character subsets representing the character blocks in the Unicode specification . 
+<code> static class </code> <code> Character . UnicodeScript </code> A family of character subsets representing the character scripts defined in the Unicode Standard Annex # 24 : Script Names . 
+Field Summary 
+Fields 
+Modifier and Type Field and Description 
+<code> static int </code> <code> BYTES </code> The number of bytes used to represent a <code> char </code> value in unsigned binary form . 
+<code> static byte </code> <code> COMBINING _ SPACING _ MARK </code> General category " Mc " in the Unicode specification . 
+<code> static byte </code> <code> CONNECTOR _ PUNCTUATION </code> General category " Pc " in the Unicode specification . 
+<code> static byte </code> <code> CONTROL </code> General category " Cc " in the Unicode specification . 
+<code> static byte </code> <code> CURRENCY _ SYMBOL </code> General category " Sc " in the Unicode specification . 
+<code> static byte </code> <code> DASH _ PUNCTUATION </code> General category " Pd " in the Unicode specification . 
+<code> static byte </code> <code> DECIMAL _ DIGIT _ NUMBER </code> General category " Nd " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ ARABIC _ NUMBER </code> Weak bidirectional character type " AN " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ BOUNDARY _ NEUTRAL </code> Weak bidirectional character type " BN " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ COMMON _ NUMBER _ SEPARATOR </code> Weak bidirectional character type " CS " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ EUROPEAN _ NUMBER </code> Weak bidirectional character type " EN " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ EUROPEAN _ NUMBER _ SEPARATOR </code> Weak bidirectional character type " ES " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ EUROPEAN _ NUMBER _ TERMINATOR </code> Weak bidirectional character type " ET " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ LEFT _ TO _ RIGHT </code> Strong bidirectional character type " L " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ LEFT _ TO _ RIGHT _ EMBEDDING </code> Strong bidirectional character type " LRE " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ LEFT _ TO _ RIGHT _ OVERRIDE </code> Strong bidirectional character type " LRO " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ NONSPACING _ MARK </code> Weak bidirectional character type " NSM " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ OTHER _ NEUTRALS </code> Neutral bidirectional character type " ON " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ PARAGRAPH _ SEPARATOR </code> Neutral bidirectional character type " B " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ POP _ DIRECTIONAL _ FORMAT </code> Weak bidirectional character type " PDF " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT </code> Strong bidirectional character type " R " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT _ ARABIC </code> Strong bidirectional character type " AL " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT _ EMBEDDING </code> Strong bidirectional character type " RLE " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT _ OVERRIDE </code> Strong bidirectional character type " RLO " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ SEGMENT _ SEPARATOR </code> Neutral bidirectional character type " S " in the Unicode specification . 
+<code> static byte </code> <code> DIRECTIONALITY _ UNDEFINED </code> Undefined bidirectional character type . 
+<code> static byte </code> <code> DIRECTIONALITY _ WHITESPACE </code> Neutral bidirectional character type " WS " in the Unicode specification . 
+<code> static byte </code> <code> ENCLOSING _ MARK </code> General category " Me " in the Unicode specification . 
+<code> static byte </code> <code> END _ PUNCTUATION </code> General category " Pe " in the Unicode specification . 
+<code> static byte </code> <code> FINAL _ QUOTE _ PUNCTUATION </code> General category " Pf " in the Unicode specification . 
+<code> static byte </code> <code> FORMAT </code> General category " Cf " in the Unicode specification . 
+<code> static byte </code> <code> INITIAL _ QUOTE _ PUNCTUATION </code> General category " Pi " in the Unicode specification . 
+<code> static byte </code> <code> LETTER _ NUMBER </code> General category " Nl " in the Unicode specification . 
+<code> static byte </code> <code> LINE _ SEPARATOR </code> General category " Zl " in the Unicode specification . 
+<code> static byte </code> <code> LOWERCASE _ LETTER </code> General category " Ll " in the Unicode specification . 
+<code> static byte </code> <code> MATH _ SYMBOL </code> General category " Sm " in the Unicode specification . 
+<code> static int </code> <code> MAX _ CODE _ POINT </code> The maximum value of a 
+Unicode code point , constant <code> U + 10FFFF </code> . 
+<code> static char </code> <code> MAX _ HIGH _ SURROGATE </code> The maximum value of a 
+Unicode high - surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uDBFF ' </code> . 
+<code> static char </code> <code> MAX _ LOW _ SURROGATE </code> The maximum value of a 
+Unicode low - surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uDFFF ' </code> . 
+<code> static int </code> <code> MAX _ RADIX </code> The maximum radix available for conversion to and from strings . 
+<code> static char </code> <code> MAX _ SURROGATE </code> The maximum value of a Unicode surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uDFFF ' </code> . 
+<code> static char </code> <code> MAX _ VALUE </code> The constant value of this field is the largest value of type <code> char </code> , <code> ' \ uFFFF ' </code> . 
+<code> static int </code> <code> MIN _ CODE _ POINT </code> The minimum value of a 
+Unicode code point , constant <code> U + 0000 </code> . 
+<code> static char </code> <code> MIN _ HIGH _ SURROGATE </code> The minimum value of a 
+Unicode high - surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uD800 ' </code> . 
+<code> static char </code> <code> MIN _ LOW _ SURROGATE </code> The minimum value of a 
+Unicode low - surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uDC00 ' </code> . 
+<code> static int </code> <code> MIN _ RADIX </code> The minimum radix available for conversion to and from strings . 
+<code> static int </code> <code> MIN _ SUPPLEMENTARY _ CODE _ POINT </code> The minimum value of a 
+Unicode supplementary code point , constant <code> U + 10000 </code> . 
+<code> static char </code> <code> MIN _ SURROGATE </code> The minimum value of a Unicode surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uD800 ' </code> . 
+<code> static char </code> <code> MIN _ VALUE </code> The constant value of this field is the smallest value of type <code> char </code> , <code> ' \ u0000 ' </code> . 
+<code> static byte </code> <code> MODIFIER _ LETTER </code> General category " Lm " in the Unicode specification . 
+<code> static byte </code> <code> MODIFIER _ SYMBOL </code> General category " Sk " in the Unicode specification . 
+<code> static byte </code> <code> NON _ SPACING _ MARK </code> General category " Mn " in the Unicode specification . 
+<code> static byte </code> <code> OTHER _ LETTER </code> General category " Lo " in the Unicode specification . 
+<code> static byte </code> <code> OTHER _ NUMBER </code> General category " No " in the Unicode specification . 
+<code> static byte </code> <code> OTHER _ PUNCTUATION </code> General category " Po " in the Unicode specification . 
+<code> static byte </code> <code> OTHER _ SYMBOL </code> General category " So " in the Unicode specification . 
+<code> static byte </code> <code> PARAGRAPH _ SEPARATOR </code> General category " Zp " in the Unicode specification . 
+<code> static byte </code> <code> PRIVATE _ USE </code> General category " Co " in the Unicode specification . 
+<code> static int </code> <code> SIZE </code> The number of bits used to represent a char value in unsigned binary form , constant <code> 16 </code> . 
+<code> static byte </code> <code> SPACE _ SEPARATOR </code> General category " Zs " in the Unicode specification . 
+<code> static byte </code> <code> START _ PUNCTUATION </code> General category " Ps " in the Unicode specification . 
+<code> static byte </code> <code> SURROGATE </code> General category " Cs " in the Unicode specification . 
+<code> static byte </code> <code> TITLECASE _ LETTER </code> General category " Lt " in the Unicode specification . 
+<code> static Class <code> TYPE </code> The <code> Class </code> instance representing the primitive type <code> char </code> . 
+<code> static byte </code> <code> UNASSIGNED </code> General category " Cn " in the Unicode specification . 
+<code> static byte </code> <code> UPPERCASE _ LETTER </code> General category " Lu " in the Unicode specification . 
+Constructor Summary 
+Constructors 
+Constructor and Description 
+<code> Character ( char value ) </code> Constructs a newly allocated <code> Character </code> object that represents the specified <code> char </code> value . 
+Method Summary 
+All Methods Static Methods Instance Methods Concrete Methods Deprecated Methods 
+Modifier and Type Method and Description 
+<code> static int </code> <code> charCount ( int codePoint ) </code> Determines the number of <code> char </code> values needed to represent the specified character ( Unicode code point ) . 
+<code> char </code> <code> charValue ( ) </code> Returns the value of this <code> Character </code> object . 
+<code> static int </code> <code> codePointAt ( char [ ] a , int index ) </code> Returns the code point at the given index of the <code> char </code> array . 
+<code> static int </code> <code> codePointAt ( char [ ] a , int index , int limit ) </code> Returns the code point at the given index of the <code> char </code> array , where only array elements with <code> index </code> less than <code> limit </code> can be used . 
+<code> static int </code> <code> codePointAt ( CharSequence seq , int index ) </code> Returns the code point at the given index of the <code> CharSequence </code> . 
+<code> static int </code> <code> codePointBefore ( char [ ] a , int index ) </code> Returns the code point preceding the given index of the <code> char </code> array . 
+<code> static int </code> <code> codePointBefore ( char [ ] a , int index , int start ) </code> Returns the code point preceding the given index of the <code> char </code> array , where only array elements with <code> index </code> greater than or equal to <code> start </code> can be used . 
+<code> static int </code> <code> codePointBefore ( CharSequence seq , int index ) </code> Returns the code point preceding the given index of the <code> CharSequence </code> . 
+<code> static int </code> <code> codePointCount ( char [ ] a , int offset , int count ) </code> Returns the number of Unicode code points in a subarray of the <code> char </code> array argument . 
+<code> static int </code> <code> codePointCount ( CharSequence seq , int beginIndex , int endIndex ) </code> Returns the number of Unicode code points in the text range of the specified char sequence . 
+<code> static int </code> <code> compare ( char x , char y ) </code> Compares two <code> char </code> values numerically . 
+<code> int </code> <code> compareTo ( Character anotherCharacter ) </code> Compares two <code> Character </code> objects numerically . 
+<code> static int </code> <code> digit ( char ch , int radix ) </code> Returns the numeric value of the character <code> ch </code> in the specified radix . 
+<code> static int </code> <code> digit ( int codePoint , int radix ) </code> Returns the numeric value of the specified character ( Unicode code point ) in the specified radix . 
+<code> boolean </code> <code> equals ( Object obj ) </code> Compares this object against the specified object . 
+<code> static char </code> <code> forDigit ( int digit , int radix ) </code> Determines the character representation for a specific digit in the specified radix . 
+<code> static byte </code> <code> getDirectionality ( char ch ) </code> Returns the Unicode directionality property for the given character . 
+<code> static byte </code> <code> getDirectionality ( int codePoint ) </code> Returns the Unicode directionality property for the given character ( Unicode code point ) . 
+<code> static String </code> <code> getName ( int codePoint ) </code> Returns the Unicode name of the specified character <code> codePoint </code> , or null if the code point is <code> unassigned </code> . 
+<code> static int </code> <code> getNumericValue ( char ch ) </code> Returns the <code> int </code> value that the specified Unicode character represents . 
+<code> static int </code> <code> getNumericValue ( int codePoint ) </code> Returns the <code> int </code> value that the specified character ( Unicode code point ) represents . 
+<code> static int </code> <code> getType ( char ch ) </code> Returns a value indicating a character ' s general category . 
+<code> static int </code> <code> getType ( int codePoint ) </code> Returns a value indicating a character ' s general category . 
+<code> int </code> <code> hashCode ( ) </code> Returns a hash code for this <code> Character </code> ; equal to the result of invoking <code> charValue ( ) </code> . 
+<code> static int </code> <code> hashCode ( char value ) </code> Returns a hash code for a <code> char </code> value ; compatible with <code> Character . hashCode ( ) </code> . 
+<code> static char </code> <code> highSurrogate ( int codePoint ) </code> Returns the leading surrogate ( a 
+high surrogate code unit ) of the 
+surrogate pair representing the specified supplementary character ( Unicode code point ) in the UTF - 16 encoding . 
+<code> static boolean </code> <code> isAlphabetic ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is an alphabet . 
+<code> static boolean </code> <code> isBmpCodePoint ( int codePoint ) </code> Determines whether the specified character ( Unicode code point ) is in the Basic Multilingual Plane ( BMP ) . 
+<code> static boolean </code> <code> isDefined ( char ch ) </code> Determines if a character is defined in Unicode . 
+<code> static boolean </code> <code> isDefined ( int codePoint ) </code> Determines if a character ( Unicode code point ) is defined in Unicode . 
+<code> static boolean </code> <code> isDigit ( char ch ) </code> Determines if the specified character is a digit . 
+<code> static boolean </code> <code> isDigit ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is a digit . 
+<code> static boolean </code> <code> isHighSurrogate ( char ch ) </code> Determines if the given <code> char </code> value is a 
+Unicode high - surrogate code unit ( also known as leading - surrogate code unit ) . 
+<code> static boolean </code> <code> isIdentifierIgnorable ( char ch ) </code> Determines if the specified character should be regarded as an ignorable character in a Java identifier or a Unicode identifier . 
+<code> static boolean </code> <code> isIdentifierIgnorable ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) should be regarded as an ignorable character in a Java identifier or a Unicode identifier . 
+<code> static boolean </code> <code> isIdeographic ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is a CJKV ( Chinese , Japanese , Korean and Vietnamese ) ideograph , as defined by the Unicode Standard . 
+<code> static boolean </code> <code> isISOControl ( char ch ) </code> Determines if the specified character is an ISO control character . 
+<code> static boolean </code> <code> isISOControl ( int codePoint ) </code> Determines if the referenced character ( Unicode code point ) is an ISO control character . 
+<code> static boolean </code> <code> isJavaIdentifierPart ( char ch ) </code> Determines if the specified character may be part of a Java identifier as other than the first character . 
+<code> static boolean </code> <code> isJavaIdentifierPart ( int codePoint ) </code> Determines if the character ( Unicode code point ) may be part of a Java identifier as other than the first character . 
+<code> static boolean </code> <code> isJavaIdentifierStart ( char ch ) </code> Determines if the specified character is permissible as the first character in a Java identifier . 
+<code> static boolean </code> <code> isJavaIdentifierStart ( int codePoint ) </code> Determines if the character ( Unicode code point ) is permissible as the first character in a Java identifier . 
+<code> static boolean </code> <code> isJavaLetter ( char ch ) </code> Deprecated . Replaced by isJavaIdentifierStart ( char ) . 
+<code> static boolean </code> <code> isJavaLetterOrDigit ( char ch ) </code> Deprecated . Replaced by isJavaIdentifierPart ( char ) . 
+<code> static boolean </code> <code> isLetter ( char ch ) </code> Determines if the specified character is a letter . 
+<code> static boolean </code> <code> isLetter ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is a letter . 
+<code> static boolean </code> <code> isLetterOrDigit ( char ch ) </code> Determines if the specified character is a letter or digit . 
+<code> static boolean </code> <code> isLetterOrDigit ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is a letter or digit . 
+<code> static boolean </code> <code> isLowerCase ( char ch ) </code> Determines if the specified character is a lowercase character . 
+<code> static boolean </code> <code> isLowerCase ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is a lowercase character . 
+<code> static boolean </code> <code> isLowSurrogate ( char ch ) </code> Determines if the given <code> char </code> value is a 
+Unicode low - surrogate code unit ( also known as trailing - surrogate code unit ) . 
+<code> static boolean </code> <code> isMirrored ( char ch ) </code> Determines whether the character is mirrored according to the Unicode specification . 
+<code> static boolean </code> <code> isMirrored ( int codePoint ) </code> Determines whether the specified character ( Unicode code point ) is mirrored according to the Unicode specification . 
+<code> static boolean </code> <code> isSpace ( char ch ) </code> Deprecated . Replaced by isWhitespace ( char ) . 
+<code> static boolean </code> <code> isSpaceChar ( char ch ) </code> Determines if the specified character is a Unicode space character . 
+<code> static boolean </code> <code> isSpaceChar ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is a Unicode space character . 
+<code> static boolean </code> <code> isSupplementaryCodePoint ( int codePoint ) </code> Determines whether the specified character ( Unicode code point ) is in the supplementary character range . 
+<code> static boolean </code> <code> isSurrogate ( char ch ) </code> Determines if the given <code> char </code> value is a Unicode surrogate code unit . 
+<code> static boolean </code> <code> isSurrogatePair ( char high , char low ) </code> Determines whether the specified pair of <code> char </code> values is a valid 
+Unicode surrogate pair . 
+<code> static boolean </code> <code> isTitleCase ( char ch ) </code> Determines if the specified character is a titlecase character . 
+<code> static boolean </code> <code> isTitleCase ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is a titlecase character . 
+<code> static boolean </code> <code> isUnicodeIdentifierPart ( char ch ) </code> Determines if the specified character may be part of a Unicode identifier as other than the first character . 
+<code> static boolean </code> <code> isUnicodeIdentifierPart ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) may be part of a Unicode identifier as other than the first character . 
+<code> static boolean </code> <code> isUnicodeIdentifierStart ( char ch ) </code> Determines if the specified character is permissible as the first character in a Unicode identifier . 
+<code> static boolean </code> <code> isUnicodeIdentifierStart ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is permissible as the first character in a Unicode identifier . 
+<code> static boolean </code> <code> isUpperCase ( char ch ) </code> Determines if the specified character is an uppercase character . 
+<code> static boolean </code> <code> isUpperCase ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is an uppercase character . 
+<code> static boolean </code> <code> isValidCodePoint ( int codePoint ) </code> Determines whether the specified code point is a valid 
+Unicode code point value . 
+<code> static boolean </code> <code> isWhitespace ( char ch ) </code> Determines if the specified character is white space according to Java . 
+<code> static boolean </code> <code> isWhitespace ( int codePoint ) </code> Determines if the specified character ( Unicode code point ) is white space according to Java . 
+<code> static char </code> <code> lowSurrogate ( int codePoint ) </code> Returns the trailing surrogate ( a 
+low surrogate code unit ) of the 
+surrogate pair representing the specified supplementary character ( Unicode code point ) in the UTF - 16 encoding . 
+<code> static int </code> <code> offsetByCodePoints ( char [ ] a , int start , int count , int index , int codePointOffset ) </code> Returns the index within the given <code> char </code> subarray that is offset from the given <code> index </code> by <code> codePointOffset </code> code points . 
+<code> static int </code> <code> offsetByCodePoints ( CharSequence seq , int index , int codePointOffset ) </code> Returns the index within the given char sequence that is offset from the given <code> index </code> by <code> codePointOffset </code> code points . 
+<code> static char </code> <code> reverseBytes ( char ch ) </code> Returns the value obtained by reversing the order of the bytes in the specified char value . 
+<code> static char [ ] </code> <code> toChars ( int codePoint ) </code> Converts the specified character ( Unicode code point ) to its UTF - 16 representation stored in a <code> char </code> array . 
+<code> static int </code> <code> toChars ( int codePoint , char [ ] dst , int dstIndex ) </code> Converts the specified character ( Unicode code point ) to its UTF - 16 representation . 
+<code> static int </code> <code> toCodePoint ( char high , char low ) </code> Converts the specified surrogate pair to its supplementary code point value . 
+<code> static char </code> <code> toLowerCase ( char ch ) </code> Converts the character argument to lowercase using case mapping information from the UnicodeData file . 
+<code> static int </code> <code> toLowerCase ( int codePoint ) </code> Converts the character ( Unicode code point ) argument to lowercase using case mapping information from the UnicodeData file . 
+<code> String </code> <code> toString ( ) </code> Returns a <code> String </code> object representing this <code> Character </code> ' s value . 
+<code> static String </code> <code> toString ( char c ) </code> Returns a <code> String </code> object representing the specified <code> char </code> . 
+<code> static char </code> <code> toTitleCase ( char ch ) </code> Converts the character argument to titlecase using case mapping information from the UnicodeData file . 
+<code> static int </code> <code> toTitleCase ( int codePoint ) </code> Converts the character ( Unicode code point ) argument to titlecase using case mapping information from the UnicodeData file . 
+<code> static char </code> <code> toUpperCase ( char ch ) </code> Converts the character argument to uppercase using case mapping information from the UnicodeData file . 
+<code> static int </code> <code> toUpperCase ( int codePoint ) </code> Converts the character ( Unicode code point ) argument to uppercase using case mapping information from the UnicodeData file . 
+<code> static Character </code> <code> valueOf ( char c ) </code> Returns a Character instance representing the specified char value . 
+Methods inherited from class java . lang . 
+Object <code> clone , finalize , getClass , notify , notifyAll , wait , wait , wait </code> 
+Field Detail 
+MIN _ RADIX <pre> public static final int MIN _ RADIX </pre> The minimum radix available for conversion to and from strings . The constant value of this field is the smallest value permitted for the radix argument in radix - conversion methods such as the <code> digit </code> method , the <code> forDigit </code> method , and the <code> toString </code> method of class <code> Integer </code> . 
+See Also : <code> digit ( char , int ) </code> , <code> forDigit ( int , int ) </code> , <code> Integer . toString ( int , int ) </code> , <code> Integer . valueOf ( String ) </code> , Constant Field Values 
+MAX _ RADIX <pre> public static final int MAX _ RADIX </pre> The maximum radix available for conversion to and from strings . The constant value of this field is the largest value permitted for the radix argument in radix - conversion methods such as the <code> digit </code> method , the <code> forDigit </code> method , and the <code> toString </code> method of class <code> Integer </code> . 
+See Also : <code> digit ( char , int ) </code> , <code> forDigit ( int , int ) </code> , <code> Integer . toString ( int , int ) </code> , <code> Integer . valueOf ( String ) </code> , Constant Field Values 
+MIN _ VALUE <pre> public static final char MIN _ VALUE </pre> The constant value of this field is the smallest value of type <code> char </code> , <code> ' \ u0000 ' </code> . 
+Since : 1 . 0 . 2 See Also : Constant Field Values 
+MAX _ VALUE <pre> public static final char MAX _ VALUE </pre> The constant value of this field is the largest value of type <code> char </code> , <code> ' \ uFFFF ' </code> . 
+Since : 1 . 0 . 2 See Also : Constant Field Values 
+TYPE <pre> public static final Class <Character> TYPE </pre> The <code> Class </code> instance representing the primitive type <code> char </code> . 
+Since : 1 . 1 
+UNASSIGNED <pre> public static final byte UNASSIGNED </pre> General category " Cn " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+UPPERCASE _ LETTER <pre> public static final byte UPPERCASE _ LETTER </pre> General category " Lu " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+LOWERCASE _ LETTER <pre> public static final byte LOWERCASE _ LETTER </pre> General category " Ll " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+TITLECASE _ LETTER <pre> public static final byte TITLECASE _ LETTER </pre> General category " Lt " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+MODIFIER _ LETTER <pre> public static final byte MODIFIER _ LETTER </pre> General category " Lm " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+OTHER _ LETTER <pre> public static final byte OTHER _ LETTER </pre> General category " Lo " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+NON _ SPACING _ MARK <pre> public static final byte NON _ SPACING _ MARK </pre> General category " Mn " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+ENCLOSING _ MARK <pre> public static final byte ENCLOSING _ MARK </pre> General category " Me " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+COMBINING _ SPACING _ MARK <pre> public static final byte COMBINING _ SPACING _ MARK </pre> General category " Mc " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+DECIMAL _ DIGIT _ NUMBER <pre> public static final byte DECIMAL _ DIGIT _ NUMBER </pre> General category " Nd " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+LETTER _ NUMBER <pre> public static final byte LETTER _ NUMBER </pre> General category " Nl " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+OTHER _ NUMBER <pre> public static final byte OTHER _ NUMBER </pre> General category " No " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+SPACE _ SEPARATOR <pre> public static final byte SPACE _ SEPARATOR </pre> General category " Zs " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+LINE _ SEPARATOR <pre> public static final byte LINE _ SEPARATOR </pre> General category " Zl " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+PARAGRAPH _ SEPARATOR <pre> public static final byte PARAGRAPH _ SEPARATOR </pre> General category " Zp " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+CONTROL <pre> public static final byte CONTROL </pre> General category " Cc " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+FORMAT <pre> public static final byte FORMAT </pre> General category " Cf " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+PRIVATE _ USE <pre> public static final byte PRIVATE _ USE </pre> General category " Co " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+SURROGATE <pre> public static final byte SURROGATE </pre> General category " Cs " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+DASH _ PUNCTUATION <pre> public static final byte DASH _ PUNCTUATION </pre> General category " Pd " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+START _ PUNCTUATION <pre> public static final byte START _ PUNCTUATION </pre> General category " Ps " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+END _ PUNCTUATION <pre> public static final byte END _ PUNCTUATION </pre> General category " Pe " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+CONNECTOR _ PUNCTUATION <pre> public static final byte CONNECTOR _ PUNCTUATION </pre> General category " Pc " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+OTHER _ PUNCTUATION <pre> public static final byte OTHER _ PUNCTUATION </pre> General category " Po " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+MATH _ SYMBOL <pre> public static final byte MATH _ SYMBOL </pre> General category " Sm " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+CURRENCY _ SYMBOL <pre> public static final byte CURRENCY _ SYMBOL </pre> General category " Sc " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+MODIFIER _ SYMBOL <pre> public static final byte MODIFIER _ SYMBOL </pre> General category " Sk " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+OTHER _ SYMBOL <pre> public static final byte OTHER _ SYMBOL </pre> General category " So " in the Unicode specification . 
+Since : 1 . 1 See Also : Constant Field Values 
+INITIAL _ QUOTE _ PUNCTUATION <pre> public static final byte INITIAL _ QUOTE _ PUNCTUATION </pre> General category " Pi " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+FINAL _ QUOTE _ PUNCTUATION <pre> public static final byte FINAL _ QUOTE _ PUNCTUATION </pre> General category " Pf " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ UNDEFINED <pre> public static final byte DIRECTIONALITY _ UNDEFINED </pre> Undefined bidirectional character type . 
+Undefined <code> char </code> values have undefined directionality in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ LEFT _ TO _ RIGHT <pre> public static final byte DIRECTIONALITY _ LEFT _ TO _ RIGHT </pre> Strong bidirectional character type " L " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ RIGHT _ TO _ LEFT <pre> public static final byte DIRECTIONALITY _ RIGHT _ TO _ LEFT </pre> Strong bidirectional character type " R " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ RIGHT _ TO _ LEFT _ ARABIC <pre> public static final byte DIRECTIONALITY _ RIGHT _ TO _ LEFT _ ARABIC </pre> Strong bidirectional character type " AL " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ EUROPEAN _ NUMBER <pre> public static final byte DIRECTIONALITY _ EUROPEAN _ NUMBER </pre> Weak bidirectional character type " EN " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ EUROPEAN _ NUMBER _ SEPARATOR <pre> public static final byte DIRECTIONALITY _ EUROPEAN _ NUMBER _ SEPARATOR </pre> Weak bidirectional character type " ES " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ EUROPEAN _ NUMBER _ TERMINATOR <pre> public static final byte DIRECTIONALITY _ EUROPEAN _ NUMBER _ TERMINATOR </pre> Weak bidirectional character type " ET " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ ARABIC _ NUMBER <pre> public static final byte DIRECTIONALITY _ ARABIC _ NUMBER </pre> Weak bidirectional character type " AN " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ COMMON _ NUMBER _ SEPARATOR <pre> public static final byte DIRECTIONALITY _ COMMON _ NUMBER _ SEPARATOR </pre> Weak bidirectional character type " CS " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ NONSPACING _ MARK <pre> public static final byte DIRECTIONALITY _ NONSPACING _ MARK </pre> Weak bidirectional character type " NSM " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ BOUNDARY _ NEUTRAL <pre> public static final byte DIRECTIONALITY _ BOUNDARY _ NEUTRAL </pre> Weak bidirectional character type " BN " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ PARAGRAPH _ SEPARATOR <pre> public static final byte DIRECTIONALITY _ PARAGRAPH _ SEPARATOR </pre> Neutral bidirectional character type " B " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ SEGMENT _ SEPARATOR <pre> public static final byte DIRECTIONALITY _ SEGMENT _ SEPARATOR </pre> Neutral bidirectional character type " S " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ WHITESPACE <pre> public static final byte DIRECTIONALITY _ WHITESPACE </pre> Neutral bidirectional character type " WS " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ OTHER _ NEUTRALS <pre> public static final byte DIRECTIONALITY _ OTHER _ NEUTRALS </pre> Neutral bidirectional character type " ON " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ LEFT _ TO _ RIGHT _ EMBEDDING <pre> public static final byte DIRECTIONALITY _ LEFT _ TO _ RIGHT _ EMBEDDING </pre> Strong bidirectional character type " LRE " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ LEFT _ TO _ RIGHT _ OVERRIDE <pre> public static final byte DIRECTIONALITY _ LEFT _ TO _ RIGHT _ OVERRIDE </pre> Strong bidirectional character type " LRO " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ RIGHT _ TO _ LEFT _ EMBEDDING <pre> public static final byte DIRECTIONALITY _ RIGHT _ TO _ LEFT _ EMBEDDING </pre> Strong bidirectional character type " RLE " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ RIGHT _ TO _ LEFT _ OVERRIDE <pre> public static final byte DIRECTIONALITY _ RIGHT _ TO _ LEFT _ OVERRIDE </pre> Strong bidirectional character type " RLO " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+DIRECTIONALITY _ POP _ DIRECTIONAL _ FORMAT <pre> public static final byte DIRECTIONALITY _ POP _ DIRECTIONAL _ FORMAT </pre> Weak bidirectional character type " PDF " in the Unicode specification . 
+Since : 1 . 4 See Also : Constant Field Values 
+MIN _ HIGH _ SURROGATE <pre> public static final char MIN _ HIGH _ SURROGATE </pre> The minimum value of a 
+Unicode high - surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uD800 ' </code> . A high - surrogate is also known as a leading - surrogate . 
+Since : 1 . 5 See Also : Constant Field Values 
+MAX _ HIGH _ SURROGATE <pre> public static final char MAX _ HIGH _ SURROGATE </pre> The maximum value of a 
+Unicode high - surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uDBFF ' </code> . A high - surrogate is also known as a leading - surrogate . 
+Since : 1 . 5 See Also : Constant Field Values 
+MIN _ LOW _ SURROGATE <pre> public static final char MIN _ LOW _ SURROGATE </pre> The minimum value of a 
+Unicode low - surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uDC00 ' </code> . A low - surrogate is also known as a trailing - surrogate . 
+Since : 1 . 5 See Also : Constant Field Values 
+MAX _ LOW _ SURROGATE <pre> public static final char MAX _ LOW _ SURROGATE </pre> The maximum value of a 
+Unicode low - surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uDFFF ' </code> . A low - surrogate is also known as a trailing - surrogate . 
+Since : 1 . 5 See Also : Constant Field Values 
+MIN _ SURROGATE <pre> public static final char MIN _ SURROGATE </pre> The minimum value of a Unicode surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uD800 ' </code> . 
+Since : 1 . 5 See Also : Constant Field Values 
+MAX _ SURROGATE <pre> public static final char MAX _ SURROGATE </pre> The maximum value of a Unicode surrogate code unit in the UTF - 16 encoding , constant <code> ' \ uDFFF ' </code> . 
+Since : 1 . 5 See Also : Constant Field Values 
+MIN _ SUPPLEMENTARY _ CODE _ POINT <pre> public static final int MIN _ SUPPLEMENTARY _ CODE _ POINT </pre> The minimum value of a 
+Unicode supplementary code point , constant <code> U + 10000 </code> . 
+Since : 1 . 5 See Also : Constant Field Values 
+MIN _ CODE _ POINT <pre> public static final int MIN _ CODE _ POINT </pre> The minimum value of a 
+Unicode code point , constant <code> U + 0000 </code> . 
+Since : 1 . 5 See Also : Constant Field Values 
+MAX _ CODE _ POINT <pre> public static final int MAX _ CODE _ POINT </pre> The maximum value of a 
+Unicode code point , constant <code> U + 10FFFF </code> . 
+Since : 1 . 5 See Also : Constant Field Values 
+SIZE <pre> public static final int SIZE </pre> The number of bits used to represent a char value in unsigned binary form , constant <code> 16 </code> . 
+Since : 1 . 5 See Also : Constant Field Values 
+BYTES <pre> public static final int BYTES </pre> The number of bytes used to represent a <code> char </code> value in unsigned binary form . 
+Since : 1 . 8 See Also : Constant Field Values 
+Constructor Detail 
+Character <pre> public Character ( char value ) </pre> Constructs a newly allocated <code> Character </code> object that represents the specified <code> char </code> value . 
+Parameters : <code> value </code> - the value to be represented by the <code> Character </code> object . 
+Method Detail 
+valueOf <pre> public static Character valueOf ( char c ) </pre> Returns a Character instance representing the specified char value . If a new Character instance is not required , this method should generally be used in preference to the constructor <code> Character ( char ) </code> , as this method is likely to yield significantly better space and time performance by caching frequently requested values . 
+This method will always cache values in the range <code> ' \ u0000 ' </code> to <code> ' \ u007F ' </code> , inclusive , and may cache other values outside of this range . 
+Parameters : <code> c </code> - a char value . Returns : a Character instance representing c . Since : 1 . 5 
+charValue <pre> public char charValue ( ) </pre> Returns the value of this <code> Character </code> object . 
+Returns : the primitive <code> char </code> value represented by this object . 
+hashCode <pre> public int hashCode ( ) </pre> Returns a hash code for this <code> Character </code> ; equal to the result of invoking <code> charValue ( ) </code> . 
+Overrides : <code> hashCode </code> in class <code> Object </code> Returns : a hash code value for this <code> Character </code> See Also : <code> Object . equals ( java . lang . Object ) </code> , <code> System . identityHashCode ( java . lang . Object ) </code> 
+hashCode <pre> public static int hashCode ( char value ) </pre> Returns a hash code for a <code> char </code> value ; compatible with <code> Character . hashCode ( ) </code> . 
+Parameters : <code> value </code> - The <code> char </code> for which to return a hash code . Returns : a hash code value for a <code> char </code> value . Since : 1 . 8 
+equals <pre> public boolean equals ( Object obj ) </pre> Compares this object against the specified object . The result is <code> true </code> if and only if the argument is not <code> null </code> and is a <code> Character </code> object that represents the same <code> char </code> value as this object . 
+Overrides : <code> equals </code> in class <code> Object </code> Parameters : <code> obj </code> - the object to compare with . Returns : <code> true </code> if the objects are the same ; <code> false </code> otherwise . See Also : <code> Object . hashCode ( ) </code> , <code> HashMap </code> 
+toString <pre> public String toString ( ) </pre> Returns a <code> String </code> object representing this <code> Character </code> ' s value . 
+The result is a string of length 1 whose sole component is the primitive <code> char </code> value represented by this <code> Character </code> object . 
+Overrides : <code> toString </code> in class <code> Object </code> Returns : a string representation of this object . 
+toString <pre> public static String toString ( char c ) </pre> Returns a <code> String </code> object representing the specified <code> char </code> . 
+The result is a string of length 1 consisting solely of the specified <code> char </code> . 
+Parameters : <code> c </code> - the <code> char </code> to be converted Returns : the string representation of the specified <code> char </code> Since : 1 . 4 
+isValidCodePoint <pre> public static boolean isValidCodePoint ( int codePoint ) </pre> Determines whether the specified code point is a valid 
+Unicode code point value . 
+Parameters : <code> codePoint </code> - the Unicode code point to be tested Returns : <code> true </code> if the specified code point value is between <code> MIN _ CODE _ POINT </code> and <code> MAX _ CODE _ POINT </code> inclusive ; <code> false </code> otherwise . Since : 1 . 5 
+isBmpCodePoint <pre> public static boolean isBmpCodePoint ( int codePoint ) </pre> Determines whether the specified character ( Unicode code point ) is in the Basic Multilingual Plane ( BMP ) . Such code points can be represented using a single <code> char </code> . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested Returns : <code> true </code> if the specified code point is between <code> MIN _ VALUE </code> and <code> MAX _ VALUE </code> inclusive ; <code> false </code> otherwise . Since : 1 . 7 
+isSupplementaryCodePoint <pre> public static boolean isSupplementaryCodePoint ( int codePoint ) </pre> Determines whether the specified character ( Unicode code point ) is in the supplementary character range . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested Returns : <code> true </code> if the specified code point is between <code> MIN _ SUPPLEMENTARY _ CODE _ POINT </code> and <code> MAX _ CODE _ POINT </code> inclusive ; <code> false </code> otherwise . Since : 1 . 5 
+isHighSurrogate <pre> public static boolean isHighSurrogate ( char ch ) </pre> Determines if the given <code> char </code> value is a 
+Unicode high - surrogate code unit ( also known as leading - surrogate code unit ) . 
+<p> Such values do not represent characters by themselves , but are used in the representation of supplementary characters in the UTF - 16 encoding . 
+Parameters : <code> ch </code> - the <code> char </code> value to be tested . Returns : <code> true </code> if the <code> char </code> value is between <code> MIN _ HIGH _ SURROGATE </code> and <code> MAX _ HIGH _ SURROGATE </code> inclusive ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isLowSurrogate ( char ) </code> , <code> Character . UnicodeBlock . of ( int ) </code> 
+isLowSurrogate <pre> public static boolean isLowSurrogate ( char ch ) </pre> Determines if the given <code> char </code> value is a 
+Unicode low - surrogate code unit ( also known as trailing - surrogate code unit ) . 
+<p> Such values do not represent characters by themselves , but are used in the representation of supplementary characters in the UTF - 16 encoding . 
+Parameters : <code> ch </code> - the <code> char </code> value to be tested . Returns : <code> true </code> if the <code> char </code> value is between <code> MIN _ LOW _ SURROGATE </code> and <code> MAX _ LOW _ SURROGATE </code> inclusive ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isHighSurrogate ( char ) </code> 
+isSurrogate <pre> public static boolean isSurrogate ( char ch ) </pre> Determines if the given <code> char </code> value is a Unicode surrogate code unit . 
+<p> Such values do not represent characters by themselves , but are used in the representation of supplementary characters in the UTF - 16 encoding . 
+<p> A char value is a surrogate code unit if and only if it is either a low - surrogate code unit or a high - surrogate code unit . 
+Parameters : <code> ch </code> - the <code> char </code> value to be tested . Returns : <code> true </code> if the <code> char </code> value is between <code> MIN _ SURROGATE </code> and <code> MAX _ SURROGATE </code> inclusive ; <code> false </code> otherwise . Since : 1 . 7 
+isSurrogatePair <pre> public static boolean isSurrogatePair ( char high , char low ) </pre> Determines whether the specified pair of <code> char </code> values is a valid 
+Unicode surrogate pair . 
+<p> This method is equivalent to the expression : <pre> <code> isHighSurrogate ( high ) & & isLowSurrogate ( low ) 
+Parameters : <code> high </code> - the high - surrogate code value to be tested <code> low </code> - the low - surrogate code value to be tested Returns : <code> true </code> if the specified high and low - surrogate code values represent a valid surrogate pair ; <code> false </code> otherwise . Since : 1 . 5 
+charCount <pre> public static int charCount ( int codePoint ) </pre> Determines the number of <code> char </code> values needed to represent the specified character ( Unicode code point ) . 
+If the specified character is equal to or greater than 0x10000 , then the method returns 2 . 
+Otherwise , the method returns 1 . 
+<p> This method doesn ' t validate the specified character to be a valid Unicode code point . 
+The caller must validate the character value using <code> isValidCodePoint </code> if necessary . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : 2 if the character is a valid supplementary character ; 1 otherwise . Since : 1 . 5 See Also : <code> isSupplementaryCodePoint ( int ) </code> 
+toCodePoint <pre> public static int toCodePoint ( char high , char low ) </pre> Converts the specified surrogate pair to its supplementary code point value . 
+This method does not validate the specified surrogate pair . 
+The caller must validate it using <code> isSurrogatePair </code> if necessary . 
+Parameters : <code> high </code> - the high - surrogate code unit <code> low </code> - the low - surrogate code unit Returns : the supplementary code point composed from the specified surrogate pair . Since : 1 . 5 
+codePointAt <pre> public static int codePointAt ( CharSequence seq , int index ) </pre> Returns the code point at the given index of the <code> CharSequence </code> . 
+If the <code> char </code> value at the given index in the <code> CharSequence </code> is in the high - surrogate range , the following index is less than the length of the <code> CharSequence </code> , and the <code> char </code> value at the following index is in the low - surrogate range , then the supplementary code point corresponding to this surrogate pair is returned . 
+Otherwise , the <code> char </code> value at the given index is returned . 
+Parameters : <code> seq </code> - a sequence of <code> char </code> values ( Unicode code units ) <code> index </code> - the index to the <code> char </code> values ( Unicode code units ) in <code> seq </code> to be converted Returns : the Unicode code point at the given index Throws : <code> NullPointerException </code> - if <code> seq </code> is null . <code> IndexOutOfBoundsException </code> - if the value <code> index </code> is negative or not less than <code> seq . length ( ) </code> . Since : 1 . 5 
+codePointAt <pre> public static int codePointAt ( char [ ] a , int index ) </pre> Returns the code point at the given index of the <code> char </code> array . 
+If the <code> char </code> value at the given index in the <code> char </code> array is in the high - surrogate range , the following index is less than the length of the <code> char </code> array , and the <code> char </code> value at the following index is in the low - surrogate range , then the supplementary code point corresponding to this surrogate pair is returned . 
+Otherwise , the <code> char </code> value at the given index is returned . 
+Parameters : <code> a </code> - the <code> char </code> array <code> index </code> - the index to the <code> char </code> values ( Unicode code units ) in the <code> char </code> array to be converted Returns : the Unicode code point at the given index Throws : <code> NullPointerException </code> - if <code> a </code> is null . <code> IndexOutOfBoundsException </code> - if the value <code> index </code> is negative or not less than the length of the <code> char </code> array . Since : 1 . 5 
+codePointAt <pre> public static int codePointAt ( char [ ] a , int index , int limit ) </pre> Returns the code point at the given index of the <code> char </code> array , where only array elements with <code> index </code> less than <code> limit </code> can be used . 
+If the <code> char </code> value at the given index in the <code> char </code> array is in the high - surrogate range , the following index is less than the <code> limit </code> , and the <code> char </code> value at the following index is in the low - surrogate range , then the supplementary code point corresponding to this surrogate pair is returned . 
+Otherwise , the <code> char </code> value at the given index is returned . 
+Parameters : <code> a </code> - the <code> char </code> array <code> index </code> - the index to the <code> char </code> values ( Unicode code units ) in the <code> char </code> array to be converted <code> limit </code> - the index after the last array element that can be used in the <code> char </code> array Returns : the Unicode code point at the given index Throws : <code> NullPointerException </code> - if <code> a </code> is null . <code> IndexOutOfBoundsException </code> - if the <code> index </code> argument is negative or not less than the <code> limit </code> argument , or if the <code> limit </code> argument is negative or greater than the length of the <code> char </code> array . Since : 1 . 5 
+codePointBefore <pre> public static int codePointBefore ( CharSequence seq , int index ) </pre> Returns the code point preceding the given index of the <code> CharSequence </code> . 
+If the <code> char </code> value at <code> ( index - 1 ) </code> in the <code> CharSequence </code> is in the low - surrogate range , <code> ( index - 2 ) </code> is not negative , and the <code> char </code> value at <code> ( index - 2 ) </code> in the <code> CharSequence </code> is in the high - surrogate range , then the supplementary code point corresponding to this surrogate pair is returned . 
+Otherwise , the <code> char </code> value at <code> ( index - 1 ) </code> is returned . 
+Parameters : <code> seq </code> - the <code> CharSequence </code> instance <code> index </code> - the index following the code point that should be returned Returns : the Unicode code point value before the given index . Throws : <code> NullPointerException </code> - if <code> seq </code> is null . <code> IndexOutOfBoundsException </code> - if the <code> index </code> argument is less than 1 or greater than <code> seq . length ( ) </code> . Since : 1 . 5 
+codePointBefore <pre> public static int codePointBefore ( char [ ] a , int index ) </pre> Returns the code point preceding the given index of the <code> char </code> array . 
+If the <code> char </code> value at <code> ( index - 1 ) </code> in the <code> char </code> array is in the low - surrogate range , <code> ( index - 2 ) </code> is not negative , and the <code> char </code> value at <code> ( index - 2 ) </code> in the <code> char </code> array is in the high - surrogate range , then the supplementary code point corresponding to this surrogate pair is returned . 
+Otherwise , the <code> char </code> value at <code> ( index - 1 ) </code> is returned . 
+Parameters : <code> a </code> - the <code> char </code> array <code> index </code> - the index following the code point that should be returned Returns : the Unicode code point value before the given index . Throws : <code> NullPointerException </code> - if <code> a </code> is null . <code> IndexOutOfBoundsException </code> - if the <code> index </code> argument is less than 1 or greater than the length of the <code> char </code> array Since : 1 . 5 
+codePointBefore <pre> public static int codePointBefore ( char [ ] a , int index , int start ) </pre> Returns the code point preceding the given index of the <code> char </code> array , where only array elements with <code> index </code> greater than or equal to <code> start </code> can be used . 
+If the <code> char </code> value at <code> ( index - 1 ) </code> in the <code> char </code> array is in the low - surrogate range , <code> ( index - 2 ) </code> is not less than <code> start </code> , and the <code> char </code> value at <code> ( index - 2 ) </code> in the <code> char </code> array is in the high - surrogate range , then the supplementary code point corresponding to this surrogate pair is returned . 
+Otherwise , the <code> char </code> value at <code> ( index - 1 ) </code> is returned . 
+Parameters : <code> a </code> - the <code> char </code> array <code> index </code> - the index following the code point that should be returned <code> start </code> - the index of the first array element in the <code> char </code> array Returns : the Unicode code point value before the given index . Throws : <code> NullPointerException </code> - if <code> a </code> is null . <code> IndexOutOfBoundsException </code> - if the <code> index </code> argument is not greater than the <code> start </code> argument or is greater than the length of the <code> char </code> array , or if the <code> start </code> argument is negative or not less than the length of the <code> char </code> array . Since : 1 . 5 
+highSurrogate <pre> public static char highSurrogate ( int codePoint ) </pre> Returns the leading surrogate ( a 
+high surrogate code unit ) of the 
+surrogate pair representing the specified supplementary character ( Unicode code point ) in the UTF - 16 encoding . 
+If the specified character is not a supplementary character , an unspecified <code> char </code> is returned . 
+<p> If <code> isSupplementaryCodePoint ( x ) </code> is <code> true </code> , then <code> isHighSurrogate </code> <code> ( highSurrogate ( x ) ) </code> and <code> toCodePoint </code> <code> ( highSurrogate ( x ) , </code> <code> lowSurrogate </code> <code> ( x ) ) = = x </code> are also always <code> true </code> . 
+Parameters : <code> codePoint </code> - a supplementary character ( Unicode code point ) Returns : the leading surrogate code unit used to represent the character in the UTF - 16 encoding Since : 1 . 7 
+lowSurrogate <pre> public static char lowSurrogate ( int codePoint ) </pre> Returns the trailing surrogate ( a 
+low surrogate code unit ) of the 
+surrogate pair representing the specified supplementary character ( Unicode code point ) in the UTF - 16 encoding . 
+If the specified character is not a supplementary character , an unspecified <code> char </code> is returned . 
+<p> If <code> isSupplementaryCodePoint ( x ) </code> is <code> true </code> , then <code> isLowSurrogate </code> <code> ( lowSurrogate ( x ) ) </code> and <code> toCodePoint </code> <code> ( </code> <code> highSurrogate </code> <code> ( x ) , lowSurrogate ( x ) ) = = x </code> are also always <code> true </code> . 
+Parameters : <code> codePoint </code> - a supplementary character ( Unicode code point ) Returns : the trailing surrogate code unit used to represent the character in the UTF - 16 encoding Since : 1 . 7 
+toChars <pre> public static int toChars ( int codePoint , char [ ] dst , int dstIndex ) </pre> Converts the specified character ( Unicode code point ) to its UTF - 16 representation . 
+If the specified code point is a BMP ( Basic Multilingual Plane or Plane 0 ) value , the same value is stored in <code> dst [ dstIndex ] </code> , and 1 is returned . 
+If the specified code point is a supplementary character , its surrogate values are stored in <code> dst [ dstIndex ] </code> ( high - surrogate ) and <code> dst [ dstIndex + 1 ] </code> ( low - surrogate ) , and 2 is returned . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be converted . <code> dst </code> - an array of <code> char </code> in which the <code> codePoint </code> ' s UTF - 16 value is stored . <code> dstIndex </code> - the start index into the <code> dst </code> array where the converted value is stored . Returns : 1 if the code point is a BMP code point , 2 if the code point is a supplementary code point . Throws : <code> IllegalArgumentException </code> - if the specified <code> codePoint </code> is not a valid Unicode code point . <code> NullPointerException </code> - if the specified <code> dst </code> is null . <code> IndexOutOfBoundsException </code> - if <code> dstIndex </code> is negative or not less than <code> dst . length </code> , or if <code> dst </code> at <code> dstIndex </code> doesn ' t have enough array element ( s ) to store the resulting <code> char </code> value ( s ) . ( If <code> dstIndex </code> is equal to <code> dst . length - 1 </code> and the specified <code> codePoint </code> is a supplementary character , the high - surrogate value is not stored in <code> dst [ dstIndex ] </code> . ) Since : 1 . 5 
+toChars <pre> public static char [ ] toChars ( int codePoint ) </pre> Converts the specified character ( Unicode code point ) to its UTF - 16 representation stored in a <code> char </code> array . 
+If the specified code point is a BMP ( Basic Multilingual Plane or Plane 0 ) value , the resulting <code> char </code> array has the same value as <code> codePoint </code> . 
+If the specified code point is a supplementary code point , the resulting <code> char </code> array has the corresponding surrogate pair . 
+Parameters : <code> codePoint </code> - a Unicode code point Returns : a <code> char </code> array having <code> codePoint </code> ' s UTF - 16 representation . Throws : <code> IllegalArgumentException </code> - if the specified <code> codePoint </code> is not a valid Unicode code point . Since : 1 . 5 
+codePointCount <pre> public static int codePointCount ( CharSequence seq , int beginIndex , int endIndex ) </pre> Returns the number of Unicode code points in the text range of the specified char sequence . 
+The text range begins at the specified <code> beginIndex </code> and extends to the <code> char </code> at index <code> endIndex - 1 </code> . 
+Thus the length ( in <code> char </code> s ) of the text range is <code> endIndex - beginIndex </code> . 
+Unpaired surrogates within the text range count as one code point each . 
+Parameters : <code> seq </code> - the char sequence <code> beginIndex </code> - the index to the first <code> char </code> of the text range . <code> endIndex </code> - the index after the last <code> char </code> of the text range . Returns : the number of Unicode code points in the specified text range Throws : <code> NullPointerException </code> - if <code> seq </code> is null . <code> IndexOutOfBoundsException </code> - if the <code> beginIndex </code> is negative , or <code> endIndex </code> is larger than the length of the given sequence , or <code> beginIndex </code> is larger than <code> endIndex </code> . Since : 1 . 5 
+codePointCount <pre> public static int codePointCount ( char [ ] a , int offset , int count ) </pre> Returns the number of Unicode code points in a subarray of the <code> char </code> array argument . 
+The <code> offset </code> argument is the index of the first <code> char </code> of the subarray and the <code> count </code> argument specifies the length of the subarray in <code> char </code> s . 
+Unpaired surrogates within the subarray count as one code point each . 
+Parameters : <code> a </code> - the <code> char </code> array <code> offset </code> - the index of the first <code> char </code> in the given <code> char </code> array <code> count </code> - the length of the subarray in <code> char </code> s Returns : the number of Unicode code points in the specified subarray Throws : <code> NullPointerException </code> - if <code> a </code> is null . <code> IndexOutOfBoundsException </code> - if <code> offset </code> or <code> count </code> is negative , or if <code> offset + count </code> is larger than the length of the given array . Since : 1 . 5 
+offsetByCodePoints <pre> public static int offsetByCodePoints ( CharSequence seq , int index , int codePointOffset ) </pre> Returns the index within the given char sequence that is offset from the given <code> index </code> by <code> codePointOffset </code> code points . 
+Unpaired surrogates within the text range given by <code> index </code> and <code> codePointOffset </code> count as one code point each . 
+Parameters : <code> seq </code> - the char sequence <code> index </code> - the index to be offset <code> codePointOffset </code> - the offset in code points Returns : the index within the char sequence Throws : <code> NullPointerException </code> - if <code> seq </code> is null . <code> IndexOutOfBoundsException </code> - if <code> index </code> is negative or larger then the length of the char sequence , or if <code> codePointOffset </code> is positive and the subsequence starting with <code> index </code> has fewer than <code> codePointOffset </code> code points , or if <code> codePointOffset </code> is negative and the subsequence before <code> index </code> has fewer than the absolute value of <code> codePointOffset </code> code points . Since : 1 . 5 
+offsetByCodePoints <pre> public static int offsetByCodePoints ( char [ ] a , int start , int count , int index , int codePointOffset ) </pre> Returns the index within the given <code> char </code> subarray that is offset from the given <code> index </code> by <code> codePointOffset </code> code points . 
+The <code> start </code> and <code> count </code> arguments specify a subarray of the <code> char </code> array . 
+Unpaired surrogates within the text range given by <code> index </code> and <code> codePointOffset </code> count as one code point each . 
+Parameters : <code> a </code> - the <code> char </code> array <code> start </code> - the index of the first <code> char </code> of the subarray <code> count </code> - the length of the subarray in <code> char </code> s <code> index </code> - the index to be offset <code> codePointOffset </code> - the offset in code points Returns : the index within the subarray Throws : <code> NullPointerException </code> - if <code> a </code> is null . <code> IndexOutOfBoundsException </code> - if <code> start </code> or <code> count </code> is negative , or if <code> start + count </code> is larger than the length of the given array , or if <code> index </code> is less than <code> start </code> or larger then <code> start + count </code> , or if <code> codePointOffset </code> is positive and the text range starting with <code> index </code> and ending with <code> start + count - 1 </code> has fewer than <code> codePointOffset </code> code points , or if <code> codePointOffset </code> is negative and the text range starting with <code> start </code> and ending with <code> index - 1 </code> has fewer than the absolute value of <code> codePointOffset </code> code points . Since : 1 . 5 
+isLowerCase <pre> public static boolean isLowerCase ( char ch ) </pre> Determines if the specified character is a lowercase character . 
+<p> A character is lowercase if its general category type , provided by <code> Character . getType ( ch ) </code> , is <code> LOWERCASE _ LETTER </code> , or it has contributory property Other _ Lowercase as defined by the Unicode Standard . 
+<p> The following are examples of lowercase characters : <pre> a b c d e f g h i j k l m n o p q r s t u v w x y z ' \ u00DF ' ' \ u00E0 ' ' \ u00E1 ' ' \ u00E2 ' ' \ u00E3 ' ' \ u00E4 ' ' \ u00E5 ' ' \ u00E6 ' ' \ u00E7 ' ' \ u00E8 ' ' \ u00E9 ' ' \ u00EA ' ' \ u00EB ' ' \ u00EC ' ' \ u00ED ' ' \ u00EE ' ' \ u00EF ' ' \ u00F0 ' ' \ u00F1 ' ' \ u00F2 ' ' \ u00F3 ' ' \ u00F4 ' ' \ u00F5 ' ' \ u00F6 ' ' \ u00F8 ' ' \ u00F9 ' ' \ u00FA ' ' \ u00FB ' ' \ u00FC ' ' \ u00FD ' ' \ u00FE ' ' \ u00FF ' </pre> 
+<p> Many other Unicode characters are lowercase too . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isLowerCase ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is lowercase ; <code> false </code> otherwise . See Also : <code> isLowerCase ( char ) </code> , <code> isTitleCase ( char ) </code> , <code> toLowerCase ( char ) </code> , <code> getType ( char ) </code> 
+isLowerCase <pre> public static boolean isLowerCase ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is a lowercase character . 
+<p> A character is lowercase if its general category type , provided by <code> getType ( codePoint ) </code> , is <code> LOWERCASE _ LETTER </code> , or it has contributory property Other _ Lowercase as defined by the Unicode Standard . 
+<p> The following are examples of lowercase characters : <pre> a b c d e f g h i j k l m n o p q r s t u v w x y z ' \ u00DF ' ' \ u00E0 ' ' \ u00E1 ' ' \ u00E2 ' ' \ u00E3 ' ' \ u00E4 ' ' \ u00E5 ' ' \ u00E6 ' ' \ u00E7 ' ' \ u00E8 ' ' \ u00E9 ' ' \ u00EA ' ' \ u00EB ' ' \ u00EC ' ' \ u00ED ' ' \ u00EE ' ' \ u00EF ' ' \ u00F0 ' ' \ u00F1 ' ' \ u00F2 ' ' \ u00F3 ' ' \ u00F4 ' ' \ u00F5 ' ' \ u00F6 ' ' \ u00F8 ' ' \ u00F9 ' ' \ u00FA ' ' \ u00FB ' ' \ u00FC ' ' \ u00FD ' ' \ u00FE ' ' \ u00FF ' </pre> 
+<p> Many other Unicode characters are lowercase too . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is lowercase ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isLowerCase ( int ) </code> , <code> isTitleCase ( int ) </code> , <code> toLowerCase ( int ) </code> , <code> getType ( int ) </code> 
+isUpperCase <pre> public static boolean isUpperCase ( char ch ) </pre> Determines if the specified character is an uppercase character . 
+<p> A character is uppercase if its general category type , provided by <code> Character . getType ( ch ) </code> , is <code> UPPERCASE _ LETTER </code> . or it has contributory property Other _ Uppercase as defined by the Unicode Standard . 
+<p> The following are examples of uppercase characters : <pre> A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ' \ u00C0 ' ' \ u00C1 ' ' \ u00C2 ' ' \ u00C3 ' ' \ u00C4 ' ' \ u00C5 ' ' \ u00C6 ' ' \ u00C7 ' ' \ u00C8 ' ' \ u00C9 ' ' \ u00CA ' ' \ u00CB ' ' \ u00CC ' ' \ u00CD ' ' \ u00CE ' ' \ u00CF ' ' \ u00D0 ' ' \ u00D1 ' ' \ u00D2 ' ' \ u00D3 ' ' \ u00D4 ' ' \ u00D5 ' ' \ u00D6 ' ' \ u00D8 ' ' \ u00D9 ' ' \ u00DA ' ' \ u00DB ' ' \ u00DC ' ' \ u00DD ' ' \ u00DE ' </pre> 
+<p> Many other Unicode characters are uppercase too . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isUpperCase ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is uppercase ; <code> false </code> otherwise . Since : 1 . 0 See Also : <code> isLowerCase ( char ) </code> , <code> isTitleCase ( char ) </code> , <code> toUpperCase ( char ) </code> , <code> getType ( char ) </code> 
+isUpperCase <pre> public static boolean isUpperCase ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is an uppercase character . 
+<p> A character is uppercase if its general category type , provided by <code> getType ( codePoint ) </code> , is <code> UPPERCASE _ LETTER </code> , or it has contributory property Other _ Uppercase as defined by the Unicode Standard . 
+<p> The following are examples of uppercase characters : <pre> A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ' \ u00C0 ' ' \ u00C1 ' ' \ u00C2 ' ' \ u00C3 ' ' \ u00C4 ' ' \ u00C5 ' ' \ u00C6 ' ' \ u00C7 ' ' \ u00C8 ' ' \ u00C9 ' ' \ u00CA ' ' \ u00CB ' ' \ u00CC ' ' \ u00CD ' ' \ u00CE ' ' \ u00CF ' ' \ u00D0 ' ' \ u00D1 ' ' \ u00D2 ' ' \ u00D3 ' ' \ u00D4 ' ' \ u00D5 ' ' \ u00D6 ' ' \ u00D8 ' ' \ u00D9 ' ' \ u00DA ' ' \ u00DB ' ' \ u00DC ' ' \ u00DD ' ' \ u00DE ' </pre> 
+<p> Many other Unicode characters are uppercase too . 
+<p> 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is uppercase ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isLowerCase ( int ) </code> , <code> isTitleCase ( int ) </code> , <code> toUpperCase ( int ) </code> , <code> getType ( int ) </code> 
+isTitleCase <pre> public static boolean isTitleCase ( char ch ) </pre> Determines if the specified character is a titlecase character . 
+<p> A character is a titlecase character if its general category type , provided by <code> Character . getType ( ch ) </code> , is <code> TITLECASE _ LETTER </code> . 
+<p> Some characters look like pairs of Latin letters . 
+For example , there is an uppercase letter that looks like " LJ " and has a corresponding lowercase letter that looks like " lj " . 
+A third form , which looks like " Lj " , is the appropriate form to use when rendering a word in lowercase with initial capitals , as for a book title . 
+<p> These are some of the Unicode characters for which this method returns <code> true </code> : 
+<code> LATIN CAPITAL LETTER D WITH SMALL LETTER Z WITH CARON </code> <code> LATIN CAPITAL LETTER L WITH SMALL LETTER J </code> <code> LATIN CAPITAL LETTER N WITH SMALL LETTER J </code> <code> LATIN CAPITAL LETTER D WITH SMALL LETTER Z </code> 
+<p> Many other Unicode characters are titlecase too . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isTitleCase ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is titlecase ; <code> false </code> otherwise . Since : 1 . 0 . 2 See Also : <code> isLowerCase ( char ) </code> , <code> isUpperCase ( char ) </code> , <code> toTitleCase ( char ) </code> , <code> getType ( char ) </code> 
+isTitleCase <pre> public static boolean isTitleCase ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is a titlecase character . 
+<p> A character is a titlecase character if its general category type , provided by <code> getType ( codePoint ) </code> , is <code> TITLECASE _ LETTER </code> . 
+<p> Some characters look like pairs of Latin letters . 
+For example , there is an uppercase letter that looks like " LJ " and has a corresponding lowercase letter that looks like " lj " . 
+A third form , which looks like " Lj " , is the appropriate form to use when rendering a word in lowercase with initial capitals , as for a book title . 
+<p> These are some of the Unicode characters for which this method returns <code> true </code> : 
+<code> LATIN CAPITAL LETTER D WITH SMALL LETTER Z WITH CARON </code> <code> LATIN CAPITAL LETTER L WITH SMALL LETTER J </code> <code> LATIN CAPITAL LETTER N WITH SMALL LETTER J </code> <code> LATIN CAPITAL LETTER D WITH SMALL LETTER Z </code> 
+<p> Many other Unicode characters are titlecase too . 
+<p> 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is titlecase ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isLowerCase ( int ) </code> , <code> isUpperCase ( int ) </code> , <code> toTitleCase ( int ) </code> , <code> getType ( int ) </code> 
+isDigit <pre> public static boolean isDigit ( char ch ) </pre> Determines if the specified character is a digit . 
+<p> A character is a digit if its general category type , provided by <code> Character . getType ( ch ) </code> , is <code> DECIMAL _ DIGIT _ NUMBER </code> . 
+<p> Some Unicode character ranges that contain digits : 
+<code> ' \ u0030 ' </code> through <code> ' \ u0039 ' </code> , ISO - LATIN - 1 digits ( <code> ' 0 ' </code> through <code> ' 9 ' </code> ) <code> ' \ u0660 ' </code> through <code> ' \ u0669 ' </code> , Arabic - Indic digits <code> ' \ u06F0 ' </code> through <code> ' \ u06F9 ' </code> , Extended Arabic - Indic digits <code> ' \ u0966 ' </code> through <code> ' \ u096F ' </code> , Devanagari digits <code> ' \ uFF10 ' </code> through <code> ' \ uFF19 ' </code> , Fullwidth digits 
+Many other character ranges contain digits as well . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isDigit ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is a digit ; <code> false </code> otherwise . See Also : <code> digit ( char , int ) </code> , <code> forDigit ( int , int ) </code> , <code> getType ( char ) </code> 
+isDigit <pre> public static boolean isDigit ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is a digit . 
+<p> A character is a digit if its general category type , provided by <code> getType ( codePoint ) </code> , is <code> DECIMAL _ DIGIT _ NUMBER </code> . 
+<p> Some Unicode character ranges that contain digits : 
+<code> ' \ u0030 ' </code> through <code> ' \ u0039 ' </code> , ISO - LATIN - 1 digits ( <code> ' 0 ' </code> through <code> ' 9 ' </code> ) <code> ' \ u0660 ' </code> through <code> ' \ u0669 ' </code> , Arabic - Indic digits <code> ' \ u06F0 ' </code> through <code> ' \ u06F9 ' </code> , Extended Arabic - Indic digits <code> ' \ u0966 ' </code> through <code> ' \ u096F ' </code> , Devanagari digits <code> ' \ uFF10 ' </code> through <code> ' \ uFF19 ' </code> , Fullwidth digits 
+Many other character ranges contain digits as well . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is a digit ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> forDigit ( int , int ) </code> , <code> getType ( int ) </code> 
+isDefined <pre> public static boolean isDefined ( char ch ) </pre> Determines if a character is defined in Unicode . 
+<p> A character is defined if at least one of the following is true : 
+It has an entry in the UnicodeData file . It has a value in a range defined by the UnicodeData file . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isDefined ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested Returns : <code> true </code> if the character has a defined meaning in Unicode ; <code> false </code> otherwise . Since : 1 . 0 . 2 See Also : <code> isDigit ( char ) </code> , <code> isLetter ( char ) </code> , <code> isLetterOrDigit ( char ) </code> , <code> isLowerCase ( char ) </code> , <code> isTitleCase ( char ) </code> , <code> isUpperCase ( char ) </code> 
+isDefined <pre> public static boolean isDefined ( int codePoint ) </pre> Determines if a character ( Unicode code point ) is defined in Unicode . 
+<p> A character is defined if at least one of the following is true : 
+It has an entry in the UnicodeData file . It has a value in a range defined by the UnicodeData file . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character has a defined meaning in Unicode ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isDigit ( int ) </code> , <code> isLetter ( int ) </code> , <code> isLetterOrDigit ( int ) </code> , <code> isLowerCase ( int ) </code> , <code> isTitleCase ( int ) </code> , <code> isUpperCase ( int ) </code> 
+isLetter <pre> public static boolean isLetter ( char ch ) </pre> Determines if the specified character is a letter . 
+<p> A character is considered to be a letter if its general category type , provided by <code> Character . getType ( ch ) </code> , is any of the following : 
+<code> UPPERCASE _ LETTER </code> <code> LOWERCASE _ LETTER </code> <code> TITLECASE _ LETTER </code> <code> MODIFIER _ LETTER </code> <code> OTHER _ LETTER </code> 
+Not all letters have case . 
+Many characters are letters but are neither uppercase nor lowercase nor titlecase . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isLetter ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is a letter ; <code> false </code> otherwise . See Also : <code> isDigit ( char ) </code> , <code> isJavaIdentifierStart ( char ) </code> , <code> isJavaLetter ( char ) </code> , <code> isJavaLetterOrDigit ( char ) </code> , <code> isLetterOrDigit ( char ) </code> , <code> isLowerCase ( char ) </code> , <code> isTitleCase ( char ) </code> , <code> isUnicodeIdentifierStart ( char ) </code> , <code> isUpperCase ( char ) </code> 
+isLetter <pre> public static boolean isLetter ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is a letter . 
+<p> A character is considered to be a letter if its general category type , provided by <code> getType ( codePoint ) </code> , is any of the following : 
+<code> UPPERCASE _ LETTER </code> <code> LOWERCASE _ LETTER </code> <code> TITLECASE _ LETTER </code> <code> MODIFIER _ LETTER </code> <code> OTHER _ LETTER </code> 
+Not all letters have case . 
+Many characters are letters but are neither uppercase nor lowercase nor titlecase . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is a letter ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isDigit ( int ) </code> , <code> isJavaIdentifierStart ( int ) </code> , <code> isLetterOrDigit ( int ) </code> , <code> isLowerCase ( int ) </code> , <code> isTitleCase ( int ) </code> , <code> isUnicodeIdentifierStart ( int ) </code> , <code> isUpperCase ( int ) </code> 
+isLetterOrDigit <pre> public static boolean isLetterOrDigit ( char ch ) </pre> Determines if the specified character is a letter or digit . 
+<p> A character is considered to be a letter or digit if either <code> Character . isLetter ( char ch ) </code> or <code> Character . isDigit ( char ch ) </code> returns <code> true </code> for the character . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isLetterOrDigit ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is a letter or digit ; <code> false </code> otherwise . Since : 1 . 0 . 2 See Also : <code> isDigit ( char ) </code> , <code> isJavaIdentifierPart ( char ) </code> , <code> isJavaLetter ( char ) </code> , <code> isJavaLetterOrDigit ( char ) </code> , <code> isLetter ( char ) </code> , <code> isUnicodeIdentifierPart ( char ) </code> 
+isLetterOrDigit <pre> public static boolean isLetterOrDigit ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is a letter or digit . 
+<p> A character is considered to be a letter or digit if either <code> isLetter ( codePoint ) </code> or <code> isDigit ( codePoint ) </code> returns <code> true </code> for the character . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is a letter or digit ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isDigit ( int ) </code> , <code> isJavaIdentifierPart ( int ) </code> , <code> isLetter ( int ) </code> , <code> isUnicodeIdentifierPart ( int ) </code> 
+isJavaLetter <pre> @ Deprecated public static boolean isJavaLetter ( char ch ) </pre> Deprecated . 
+Replaced by isJavaIdentifierStart ( char ) . Determines if the specified character is permissible as the first character in a Java identifier . 
+<p> A character may start a Java identifier if and only if one of the following conditions is true : 
+<code> isLetter ( ch ) </code> returns <code> true </code> <code> getType ( ch ) </code> returns <code> LETTER _ NUMBER </code> <code> ch </code> is a currency symbol ( such as <code> ' $ ' </code> ) <code> ch </code> is a connecting punctuation character ( such as <code> ' _ ' </code> ) . 
+These conditions are tested against the character information from version 6 . 2 of the Unicode Standard . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character may start a Java identifier ; <code> false </code> otherwise . Since : 1 . 02 See Also : <code> isJavaLetterOrDigit ( char ) </code> , <code> isJavaIdentifierStart ( char ) </code> , <code> isJavaIdentifierPart ( char ) </code> , <code> isLetter ( char ) </code> , <code> isLetterOrDigit ( char ) </code> , <code> isUnicodeIdentifierStart ( char ) </code> 
+isJavaLetterOrDigit <pre> @ Deprecated public static boolean isJavaLetterOrDigit ( char ch ) </pre> Deprecated . 
+Replaced by isJavaIdentifierPart ( char ) . Determines if the specified character may be part of a Java identifier as other than the first character . 
+<p> A character may be part of a Java identifier if and only if any of the following conditions are true : 
+it is a letter it is a currency symbol ( such as <code> ' $ ' </code> ) it is a connecting punctuation character ( such as <code> ' _ ' </code> ) it is a digit it is a numeric letter ( such as a Roman numeral character ) it is a combining mark it is a non - spacing mark <code> isIdentifierIgnorable </code> returns <code> true </code> for the character . 
+These conditions are tested against the character information from version 6 . 2 of the Unicode Standard . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character may be part of a Java identifier ; <code> false </code> otherwise . Since : 1 . 02 See Also : <code> isJavaLetter ( char ) </code> , <code> isJavaIdentifierStart ( char ) </code> , <code> isJavaIdentifierPart ( char ) </code> , <code> isLetter ( char ) </code> , <code> isLetterOrDigit ( char ) </code> , <code> isUnicodeIdentifierPart ( char ) </code> , <code> isIdentifierIgnorable ( char ) </code> 
+isAlphabetic <pre> public static boolean isAlphabetic ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is an alphabet . 
+<p> A character is considered to be alphabetic if its general category type , provided by <code> getType ( codePoint ) </code> , is any of the following : 
+<code> UPPERCASE _ LETTER </code> <code> LOWERCASE _ LETTER </code> <code> TITLECASE _ LETTER </code> <code> MODIFIER _ LETTER </code> <code> OTHER _ LETTER </code> <code> LETTER _ NUMBER </code> 
+or it has contributory property Other _ Alphabetic as defined by the Unicode Standard . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is a Unicode alphabet character , <code> false </code> otherwise . Since : 1 . 7 
+isIdeographic <pre> public static boolean isIdeographic ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is a CJKV ( Chinese , Japanese , Korean and Vietnamese ) ideograph , as defined by the Unicode Standard . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is a Unicode ideograph character , <code> false </code> otherwise . Since : 1 . 7 
+isJavaIdentifierStart <pre> public static boolean isJavaIdentifierStart ( char ch ) </pre> Determines if the specified character is permissible as the first character in a Java identifier . 
+<p> A character may start a Java identifier if and only if one of the following conditions is true : 
+<code> isLetter ( ch ) </code> returns <code> true </code> <code> getType ( ch ) </code> returns <code> LETTER _ NUMBER </code> <code> ch </code> is a currency symbol ( such as <code> ' $ ' </code> ) <code> ch </code> is a connecting punctuation character ( such as <code> ' _ ' </code> ) . 
+These conditions are tested against the character information from version 6 . 2 of the Unicode Standard . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isJavaIdentifierStart ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character may start a Java identifier ; <code> false </code> otherwise . Since : 1 . 1 See Also : <code> isJavaIdentifierPart ( char ) </code> , <code> isLetter ( char ) </code> , <code> isUnicodeIdentifierStart ( char ) </code> , <code> SourceVersion . isIdentifier ( CharSequence ) </code> 
+isJavaIdentifierStart <pre> public static boolean isJavaIdentifierStart ( int codePoint ) </pre> Determines if the character ( Unicode code point ) is permissible as the first character in a Java identifier . 
+<p> A character may start a Java identifier if and only if one of the following conditions is true : 
+<code> isLetter ( codePoint ) </code> returns <code> true </code> <code> getType ( codePoint ) </code> returns <code> LETTER _ NUMBER </code> the referenced character is a currency symbol ( such as <code> ' $ ' </code> ) the referenced character is a connecting punctuation character ( such as <code> ' _ ' </code> ) . 
+These conditions are tested against the character information from version 6 . 2 of the Unicode Standard . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character may start a Java identifier ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isJavaIdentifierPart ( int ) </code> , <code> isLetter ( int ) </code> , <code> isUnicodeIdentifierStart ( int ) </code> , <code> SourceVersion . isIdentifier ( CharSequence ) </code> 
+isJavaIdentifierPart <pre> public static boolean isJavaIdentifierPart ( char ch ) </pre> Determines if the specified character may be part of a Java identifier as other than the first character . 
+<p> A character may be part of a Java identifier if any of the following conditions are true : 
+it is a letter it is a currency symbol ( such as <code> ' $ ' </code> ) it is a connecting punctuation character ( such as <code> ' _ ' </code> ) it is a digit it is a numeric letter ( such as a Roman numeral character ) it is a combining mark it is a non - spacing mark <code> isIdentifierIgnorable </code> returns <code> true </code> for the character 
+These conditions are tested against the character information from version 6 . 2 of the Unicode Standard . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isJavaIdentifierPart ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character may be part of a Java identifier ; <code> false </code> otherwise . Since : 1 . 1 See Also : <code> isIdentifierIgnorable ( char ) </code> , <code> isJavaIdentifierStart ( char ) </code> , <code> isLetterOrDigit ( char ) </code> , <code> isUnicodeIdentifierPart ( char ) </code> , <code> SourceVersion . isIdentifier ( CharSequence ) </code> 
+isJavaIdentifierPart <pre> public static boolean isJavaIdentifierPart ( int codePoint ) </pre> Determines if the character ( Unicode code point ) may be part of a Java identifier as other than the first character . 
+<p> A character may be part of a Java identifier if any of the following conditions are true : 
+it is a letter it is a currency symbol ( such as <code> ' $ ' </code> ) it is a connecting punctuation character ( such as <code> ' _ ' </code> ) it is a digit it is a numeric letter ( such as a Roman numeral character ) it is a combining mark it is a non - spacing mark <code> isIdentifierIgnorable ( codePoint ) </code> returns <code> true </code> for the code point 
+These conditions are tested against the character information from version 6 . 2 of the Unicode Standard . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character may be part of a Java identifier ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isIdentifierIgnorable ( int ) </code> , <code> isJavaIdentifierStart ( int ) </code> , <code> isLetterOrDigit ( int ) </code> , <code> isUnicodeIdentifierPart ( int ) </code> , <code> SourceVersion . isIdentifier ( CharSequence ) </code> 
+isUnicodeIdentifierStart <pre> public static boolean isUnicodeIdentifierStart ( char ch ) </pre> Determines if the specified character is permissible as the first character in a Unicode identifier . 
+<p> A character may start a Unicode identifier if and only if one of the following conditions is true : 
+<code> isLetter ( ch ) </code> returns <code> true </code> <code> getType ( ch ) </code> returns <code> LETTER _ NUMBER </code> . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isUnicodeIdentifierStart ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character may start a Unicode identifier ; <code> false </code> otherwise . Since : 1 . 1 See Also : <code> isJavaIdentifierStart ( char ) </code> , <code> isLetter ( char ) </code> , <code> isUnicodeIdentifierPart ( char ) </code> 
+isUnicodeIdentifierStart <pre> public static boolean isUnicodeIdentifierStart ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is permissible as the first character in a Unicode identifier . 
+<p> A character may start a Unicode identifier if and only if one of the following conditions is true : 
+<code> isLetter ( codePoint ) </code> returns <code> true </code> <code> getType ( codePoint ) </code> returns <code> LETTER _ NUMBER </code> . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character may start a Unicode identifier ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isJavaIdentifierStart ( int ) </code> , <code> isLetter ( int ) </code> , <code> isUnicodeIdentifierPart ( int ) </code> 
+isUnicodeIdentifierPart <pre> public static boolean isUnicodeIdentifierPart ( char ch ) </pre> Determines if the specified character may be part of a Unicode identifier as other than the first character . 
+<p> A character may be part of a Unicode identifier if and only if one of the following statements is true : 
+it is a letter it is a connecting punctuation character ( such as <code> ' _ ' </code> ) it is a digit it is a numeric letter ( such as a Roman numeral character ) it is a combining mark it is a non - spacing mark <code> isIdentifierIgnorable </code> returns <code> true </code> for this character . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isUnicodeIdentifierPart ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character may be part of a Unicode identifier ; <code> false </code> otherwise . Since : 1 . 1 See Also : <code> isIdentifierIgnorable ( char ) </code> , <code> isJavaIdentifierPart ( char ) </code> , <code> isLetterOrDigit ( char ) </code> , <code> isUnicodeIdentifierStart ( char ) </code> 
+isUnicodeIdentifierPart <pre> public static boolean isUnicodeIdentifierPart ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) may be part of a Unicode identifier as other than the first character . 
+<p> A character may be part of a Unicode identifier if and only if one of the following statements is true : 
+it is a letter it is a connecting punctuation character ( such as <code> ' _ ' </code> ) it is a digit it is a numeric letter ( such as a Roman numeral character ) it is a combining mark it is a non - spacing mark <code> isIdentifierIgnorable </code> returns <code> true </code> for this character . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character may be part of a Unicode identifier ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isIdentifierIgnorable ( int ) </code> , <code> isJavaIdentifierPart ( int ) </code> , <code> isLetterOrDigit ( int ) </code> , <code> isUnicodeIdentifierStart ( int ) </code> 
+isIdentifierIgnorable <pre> public static boolean isIdentifierIgnorable ( char ch ) </pre> Determines if the specified character should be regarded as an ignorable character in a Java identifier or a Unicode identifier . 
+<p> The following Unicode characters are ignorable in a Java identifier or a Unicode identifier : 
+ISO control characters that are not whitespace 
+<code> ' \ u0000 ' </code> through <code> ' \ u0008 ' </code> <code> ' \ u000E ' </code> through <code> ' \ u001B ' </code> <code> ' \ u007F ' </code> through <code> ' \ u009F ' </code> 
+all characters that have the <code> FORMAT </code> general category value 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isIdentifierIgnorable ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is an ignorable control character that may be part of a Java or Unicode identifier ; <code> false </code> otherwise . Since : 1 . 1 See Also : <code> isJavaIdentifierPart ( char ) </code> , <code> isUnicodeIdentifierPart ( char ) </code> 
+isIdentifierIgnorable <pre> public static boolean isIdentifierIgnorable ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) should be regarded as an ignorable character in a Java identifier or a Unicode identifier . 
+<p> The following Unicode characters are ignorable in a Java identifier or a Unicode identifier : 
+ISO control characters that are not whitespace 
+<code> ' \ u0000 ' </code> through <code> ' \ u0008 ' </code> <code> ' \ u000E ' </code> through <code> ' \ u001B ' </code> <code> ' \ u007F ' </code> through <code> ' \ u009F ' </code> 
+all characters that have the <code> FORMAT </code> general category value 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is an ignorable control character that may be part of a Java or Unicode identifier ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isJavaIdentifierPart ( int ) </code> , <code> isUnicodeIdentifierPart ( int ) </code> 
+toLowerCase <pre> public static char toLowerCase ( char ch ) </pre> Converts the character argument to lowercase using case mapping information from the UnicodeData file . 
+<p> Note that <code> Character . isLowerCase ( Character . toLowerCase ( ch ) ) </code> does not always return <code> true </code> for some ranges of characters , particularly those that are symbols or ideographs . 
+<p> In general , <code> String . toLowerCase ( ) </code> should be used to map characters to lowercase . <code> String </code> case mapping methods have several benefits over <code> Character </code> case mapping methods . <code> String </code> case mapping methods can perform locale - sensitive mappings , context - sensitive mappings , and 1 : M character mappings , whereas the <code> Character </code> case mapping methods cannot . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> toLowerCase ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be converted . Returns : the lowercase equivalent of the character , if any ; otherwise , the character itself . See Also : <code> isLowerCase ( char ) </code> , <code> String . toLowerCase ( ) </code> 
+toLowerCase <pre> public static int toLowerCase ( int codePoint ) </pre> Converts the character ( Unicode code point ) argument to lowercase using case mapping information from the UnicodeData file . 
+<p> Note that <code> Character . isLowerCase ( Character . toLowerCase ( codePoint ) ) </code> does not always return <code> true </code> for some ranges of characters , particularly those that are symbols or ideographs . 
+<p> In general , <code> String . toLowerCase ( ) </code> should be used to map characters to lowercase . <code> String </code> case mapping methods have several benefits over <code> Character </code> case mapping methods . <code> String </code> case mapping methods can perform locale - sensitive mappings , context - sensitive mappings , and 1 : M character mappings , whereas the <code> Character </code> case mapping methods cannot . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be converted . Returns : the lowercase equivalent of the character ( Unicode code point ) , if any ; otherwise , the character itself . Since : 1 . 5 See Also : <code> isLowerCase ( int ) </code> , <code> String . toLowerCase ( ) </code> 
+toUpperCase <pre> public static char toUpperCase ( char ch ) </pre> Converts the character argument to uppercase using case mapping information from the UnicodeData file . 
+<p> Note that <code> Character . isUpperCase ( Character . toUpperCase ( ch ) ) </code> does not always return <code> true </code> for some ranges of characters , particularly those that are symbols or ideographs . 
+<p> In general , <code> String . toUpperCase ( ) </code> should be used to map characters to uppercase . <code> String </code> case mapping methods have several benefits over <code> Character </code> case mapping methods . <code> String </code> case mapping methods can perform locale - sensitive mappings , context - sensitive mappings , and 1 : M character mappings , whereas the <code> Character </code> case mapping methods cannot . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> toUpperCase ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be converted . Returns : the uppercase equivalent of the character , if any ; otherwise , the character itself . See Also : <code> isUpperCase ( char ) </code> , <code> String . toUpperCase ( ) </code> 
+toUpperCase <pre> public static int toUpperCase ( int codePoint ) </pre> Converts the character ( Unicode code point ) argument to uppercase using case mapping information from the UnicodeData file . 
+<p> Note that <code> Character . isUpperCase ( Character . toUpperCase ( codePoint ) ) </code> does not always return <code> true </code> for some ranges of characters , particularly those that are symbols or ideographs . 
+<p> In general , <code> String . toUpperCase ( ) </code> should be used to map characters to uppercase . <code> String </code> case mapping methods have several benefits over <code> Character </code> case mapping methods . <code> String </code> case mapping methods can perform locale - sensitive mappings , context - sensitive mappings , and 1 : M character mappings , whereas the <code> Character </code> case mapping methods cannot . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be converted . Returns : the uppercase equivalent of the character , if any ; otherwise , the character itself . Since : 1 . 5 See Also : <code> isUpperCase ( int ) </code> , <code> String . toUpperCase ( ) </code> 
+toTitleCase <pre> public static char toTitleCase ( char ch ) </pre> Converts the character argument to titlecase using case mapping information from the UnicodeData file . 
+If a character has no explicit titlecase mapping and is not itself a titlecase char according to UnicodeData , then the uppercase mapping is returned as an equivalent titlecase mapping . 
+If the <code> char </code> argument is already a titlecase <code> char </code> , the same <code> char </code> value will be returned . 
+<p> Note that <code> Character . isTitleCase ( Character . toTitleCase ( ch ) ) </code> does not always return <code> true </code> for some ranges of characters . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> toTitleCase ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be converted . Returns : the titlecase equivalent of the character , if any ; otherwise , the character itself . Since : 1 . 0 . 2 See Also : <code> isTitleCase ( char ) </code> , <code> toLowerCase ( char ) </code> , <code> toUpperCase ( char ) </code> 
+toTitleCase <pre> public static int toTitleCase ( int codePoint ) </pre> Converts the character ( Unicode code point ) argument to titlecase using case mapping information from the UnicodeData file . 
+If a character has no explicit titlecase mapping and is not itself a titlecase char according to UnicodeData , then the uppercase mapping is returned as an equivalent titlecase mapping . 
+If the character argument is already a titlecase character , the same character value will be returned . 
+<p> Note that <code> Character . isTitleCase ( Character . toTitleCase ( codePoint ) ) </code> does not always return <code> true </code> for some ranges of characters . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be converted . Returns : the titlecase equivalent of the character , if any ; otherwise , the character itself . Since : 1 . 5 See Also : <code> isTitleCase ( int ) </code> , <code> toLowerCase ( int ) </code> , <code> toUpperCase ( int ) </code> 
+digit <pre> public static int digit ( char ch , int radix ) </pre> Returns the numeric value of the character <code> ch </code> in the specified radix . 
+<p> If the radix is not in the range <code> MIN _ RADIX </code> ≤ <code> radix </code> ≤ <code> MAX _ RADIX </code> or if the value of <code> ch </code> is not a valid digit in the specified radix , <code> - 1 </code> is returned . 
+A character is a valid digit if at least one of the following is true : 
+The method <code> isDigit </code> is <code> true </code> of the character and the Unicode decimal digit value of the character ( or its single - character decomposition ) is less than the specified radix . In this case the decimal digit value is returned . The character is one of the uppercase Latin letters <code> ' A ' </code> through <code> ' Z ' </code> and its code is less than <code> radix + ' A ' - 10 </code> . In this case , <code> ch - ' A ' + 10 </code> is returned . The character is one of the lowercase Latin letters <code> ' a ' </code> through <code> ' z ' </code> and its code is less than <code> radix + ' a ' - 10 </code> . In this case , <code> ch - ' a ' + 10 </code> is returned . The character is one of the fullwidth uppercase Latin letters A ( <code> ' \ uFF21 ' </code> ) through Z ( <code> ' \ uFF3A ' </code> ) and its code is less than <code> radix + ' \ uFF21 ' - 10 </code> . In this case , <code> ch - ' \ uFF21 ' + 10 </code> is returned . The character is one of the fullwidth lowercase Latin letters a ( <code> ' \ uFF41 ' </code> ) through z ( <code> ' \ uFF5A ' </code> ) and its code is less than <code> radix + ' \ uFF41 ' - 10 </code> . In this case , <code> ch - ' \ uFF41 ' + 10 </code> is returned . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> digit ( int , int ) </code> method . 
+Parameters : <code> ch </code> - the character to be converted . <code> radix </code> - the radix . Returns : the numeric value represented by the character in the specified radix . See Also : <code> forDigit ( int , int ) </code> , <code> isDigit ( char ) </code> 
+digit <pre> public static int digit ( int codePoint , int radix ) </pre> Returns the numeric value of the specified character ( Unicode code point ) in the specified radix . 
+<p> If the radix is not in the range <code> MIN _ RADIX </code> ≤ <code> radix </code> ≤ <code> MAX _ RADIX </code> or if the character is not a valid digit in the specified radix , <code> - 1 </code> is returned . 
+A character is a valid digit if at least one of the following is true : 
+The method <code> isDigit ( codePoint ) </code> is <code> true </code> of the character and the Unicode decimal digit value of the character ( or its single - character decomposition ) is less than the specified radix . In this case the decimal digit value is returned . The character is one of the uppercase Latin letters <code> ' A ' </code> through <code> ' Z ' </code> and its code is less than <code> radix + ' A ' - 10 </code> . In this case , <code> codePoint - ' A ' + 10 </code> is returned . The character is one of the lowercase Latin letters <code> ' a ' </code> through <code> ' z ' </code> and its code is less than <code> radix + ' a ' - 10 </code> . In this case , <code> codePoint - ' a ' + 10 </code> is returned . The character is one of the fullwidth uppercase Latin letters A ( <code> ' \ uFF21 ' </code> ) through Z ( <code> ' \ uFF3A ' </code> ) and its code is less than <code> radix + ' \ uFF21 ' - 10 </code> . In this case , <code> codePoint - ' \ uFF21 ' + 10 </code> is returned . The character is one of the fullwidth lowercase Latin letters a ( <code> ' \ uFF41 ' </code> ) through z ( <code> ' \ uFF5A ' </code> ) and its code is less than <code> radix + ' \ uFF41 ' - 10 </code> . In this case , <code> codePoint - ' \ uFF41 ' + 10 </code> is returned . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be converted . <code> radix </code> - the radix . Returns : the numeric value represented by the character in the specified radix . Since : 1 . 5 See Also : <code> forDigit ( int , int ) </code> , <code> isDigit ( int ) </code> 
+getNumericValue <pre> public static int getNumericValue ( char ch ) </pre> Returns the <code> int </code> value that the specified Unicode character represents . 
+For example , the character <code> ' \ u216C ' </code> ( the roman numeral fifty ) will return an int with a value of 50 . 
+<p> The letters A - Z in their uppercase ( <code> ' \ u0041 ' </code> through <code> ' \ u005A ' </code> ) , lowercase ( <code> ' \ u0061 ' </code> through <code> ' \ u007A ' </code> ) , and full width variant ( <code> ' \ uFF21 ' </code> through <code> ' \ uFF3A ' </code> and <code> ' \ uFF41 ' </code> through <code> ' \ uFF5A ' </code> ) forms have numeric values from 10 through 35 . 
+This is independent of the Unicode specification , which does not assign numeric values to these <code> char </code> values . 
+<p> If the character does not have a numeric value , then - 1 is returned . If the character has a numeric value that cannot be represented as a nonnegative integer ( for example , a fractional value ) , then - 2 is returned . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> getNumericValue ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be converted . Returns : the numeric value of the character , as a nonnegative <code> int </code> value ; - 2 if the character has a numeric value that is not a nonnegative integer ; - 1 if the character has no numeric value . Since : 1 . 1 See Also : <code> forDigit ( int , int ) </code> , <code> isDigit ( char ) </code> 
+getNumericValue <pre> public static int getNumericValue ( int codePoint ) </pre> Returns the <code> int </code> value that the specified character ( Unicode code point ) represents . 
+For example , the character <code> ' \ u216C ' </code> ( the Roman numeral fifty ) will return an <code> int </code> with a value of 50 . 
+<p> The letters A - Z in their uppercase ( <code> ' \ u0041 ' </code> through <code> ' \ u005A ' </code> ) , lowercase ( <code> ' \ u0061 ' </code> through <code> ' \ u007A ' </code> ) , and full width variant ( <code> ' \ uFF21 ' </code> through <code> ' \ uFF3A ' </code> and <code> ' \ uFF41 ' </code> through <code> ' \ uFF5A ' </code> ) forms have numeric values from 10 through 35 . 
+This is independent of the Unicode specification , which does not assign numeric values to these <code> char </code> values . 
+<p> If the character does not have a numeric value , then - 1 is returned . If the character has a numeric value that cannot be represented as a nonnegative integer ( for example , a fractional value ) , then - 2 is returned . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be converted . Returns : the numeric value of the character , as a nonnegative <code> int </code> value ; - 2 if the character has a numeric value that is not a nonnegative integer ; - 1 if the character has no numeric value . Since : 1 . 5 See Also : <code> forDigit ( int , int ) </code> , <code> isDigit ( int ) </code> 
+isSpace <pre> @ Deprecated public static boolean isSpace ( char ch ) </pre> Deprecated . 
+Replaced by isWhitespace ( char ) . Determines if the specified character is ISO - LATIN - 1 white space . This method returns <code> true </code> for the following five characters only : 
+<code> ' \ t ' </code> <code> U + 0009 </code> <code> HORIZONTAL TABULATION </code> <code> ' \ n ' </code> <code> U + 000A </code> <code> NEW LINE </code> <code> ' \ f ' </code> <code> U + 000C </code> <code> FORM FEED </code> <code> ' \ r ' </code> <code> U + 000D </code> <code> CARRIAGE RETURN </code> <code> ' ' </code> <code> U + 0020 </code> <code> SPACE </code> 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is ISO - LATIN - 1 white space ; <code> false </code> otherwise . See Also : <code> isSpaceChar ( char ) </code> , <code> isWhitespace ( char ) </code> 
+isSpaceChar <pre> public static boolean isSpaceChar ( char ch ) </pre> Determines if the specified character is a Unicode space character . A character is considered to be a space character if and only if it is specified to be a space character by the Unicode Standard . 
+This method returns true if the character ' s general category type is any of the following : 
+<code> SPACE _ SEPARATOR </code> <code> LINE _ SEPARATOR </code> <code> PARAGRAPH _ SEPARATOR </code> 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isSpaceChar ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is a space character ; <code> false </code> otherwise . Since : 1 . 1 See Also : <code> isWhitespace ( char ) </code> 
+isSpaceChar <pre> public static boolean isSpaceChar ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is a Unicode space character . 
+A character is considered to be a space character if and only if it is specified to be a space character by the Unicode Standard . 
+This method returns true if the character ' s general category type is any of the following : 
+<code> SPACE _ SEPARATOR </code> <code> LINE _ SEPARATOR </code> <code> PARAGRAPH _ SEPARATOR </code> 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is a space character ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isWhitespace ( int ) </code> 
+isWhitespace <pre> public static boolean isWhitespace ( char ch ) </pre> Determines if the specified character is white space according to Java . A character is a Java whitespace character if and only if it satisfies one of the following criteria : 
+It is a Unicode space character ( <code> SPACE _ SEPARATOR </code> , <code> LINE _ SEPARATOR </code> , or <code> PARAGRAPH _ SEPARATOR </code> ) but is not also a non - breaking space ( <code> ' \ u00A0 ' </code> , <code> ' \ u2007 ' </code> , <code> ' \ u202F ' </code> ) . It is <code> ' \ t ' </code> , U + 0009 HORIZONTAL TABULATION . It is <code> ' \ n ' </code> , U + 000A LINE FEED . It is <code> ' \ u000B ' </code> , U + 000B VERTICAL TABULATION . It is <code> ' \ f ' </code> , U + 000C FORM FEED . It is <code> ' \ r ' </code> , U + 000D CARRIAGE RETURN . It is <code> ' \ u001C ' </code> , U + 001C FILE SEPARATOR . It is <code> ' \ u001D ' </code> , U + 001D GROUP SEPARATOR . It is <code> ' \ u001E ' </code> , U + 001E RECORD SEPARATOR . It is <code> ' \ u001F ' </code> , U + 001F UNIT SEPARATOR . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isWhitespace ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is a Java whitespace character ; <code> false </code> otherwise . Since : 1 . 1 See Also : <code> isSpaceChar ( char ) </code> 
+isWhitespace <pre> public static boolean isWhitespace ( int codePoint ) </pre> Determines if the specified character ( Unicode code point ) is white space according to Java . 
+A character is a Java whitespace character if and only if it satisfies one of the following criteria : 
+It is a Unicode space character ( <code> SPACE _ SEPARATOR </code> , <code> LINE _ SEPARATOR </code> , or <code> PARAGRAPH _ SEPARATOR </code> ) but is not also a non - breaking space ( <code> ' \ u00A0 ' </code> , <code> ' \ u2007 ' </code> , <code> ' \ u202F ' </code> ) . It is <code> ' \ t ' </code> , U + 0009 HORIZONTAL TABULATION . It is <code> ' \ n ' </code> , U + 000A LINE FEED . It is <code> ' \ u000B ' </code> , U + 000B VERTICAL TABULATION . It is <code> ' \ f ' </code> , U + 000C FORM FEED . It is <code> ' \ r ' </code> , U + 000D CARRIAGE RETURN . It is <code> ' \ u001C ' </code> , U + 001C FILE SEPARATOR . It is <code> ' \ u001D ' </code> , U + 001D GROUP SEPARATOR . It is <code> ' \ u001E ' </code> , U + 001E RECORD SEPARATOR . It is <code> ' \ u001F ' </code> , U + 001F UNIT SEPARATOR . 
+<p> 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is a Java whitespace character ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isSpaceChar ( int ) </code> 
+isISOControl <pre> public static boolean isISOControl ( char ch ) </pre> Determines if the specified character is an ISO control character . 
+A character is considered to be an ISO control character if its code is in the range <code> ' \ u0000 ' </code> through <code> ' \ u001F ' </code> or in the range <code> ' \ u007F ' </code> through <code> ' \ u009F ' </code> . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isISOControl ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : <code> true </code> if the character is an ISO control character ; <code> false </code> otherwise . Since : 1 . 1 See Also : <code> isSpaceChar ( char ) </code> , <code> isWhitespace ( char ) </code> 
+isISOControl <pre> public static boolean isISOControl ( int codePoint ) </pre> Determines if the referenced character ( Unicode code point ) is an ISO control character . 
+A character is considered to be an ISO control character if its code is in the range <code> ' \ u0000 ' </code> through <code> ' \ u001F ' </code> or in the range <code> ' \ u007F ' </code> through <code> ' \ u009F ' </code> . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is an ISO control character ; <code> false </code> otherwise . Since : 1 . 5 See Also : <code> isSpaceChar ( int ) </code> , <code> isWhitespace ( int ) </code> 
+getType <pre> public static int getType ( char ch ) </pre> Returns a value indicating a character ' s general category . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> getType ( int ) </code> method . 
+Parameters : <code> ch </code> - the character to be tested . Returns : a value of type <code> int </code> representing the character ' s general category . Since : 1 . 1 See Also : <code> COMBINING _ SPACING _ MARK </code> , <code> CONNECTOR _ PUNCTUATION </code> , <code> CONTROL </code> , <code> CURRENCY _ SYMBOL </code> , <code> DASH _ PUNCTUATION </code> , <code> DECIMAL _ DIGIT _ NUMBER </code> , <code> ENCLOSING _ MARK </code> , <code> END _ PUNCTUATION </code> , <code> FINAL _ QUOTE _ PUNCTUATION </code> , <code> FORMAT </code> , <code> INITIAL _ QUOTE _ PUNCTUATION </code> , <code> LETTER _ NUMBER </code> , <code> LINE _ SEPARATOR </code> , <code> LOWERCASE _ LETTER </code> , <code> MATH _ SYMBOL </code> , <code> MODIFIER _ LETTER </code> , <code> MODIFIER _ SYMBOL </code> , <code> NON _ SPACING _ MARK </code> , <code> OTHER _ LETTER </code> , <code> OTHER _ NUMBER </code> , <code> OTHER _ PUNCTUATION </code> , <code> OTHER _ SYMBOL </code> , <code> PARAGRAPH _ SEPARATOR </code> , <code> PRIVATE _ USE </code> , <code> SPACE _ SEPARATOR </code> , <code> START _ PUNCTUATION </code> , <code> SURROGATE </code> , <code> TITLECASE _ LETTER </code> , <code> UNASSIGNED </code> , <code> UPPERCASE _ LETTER </code> 
+getType <pre> public static int getType ( int codePoint ) </pre> Returns a value indicating a character ' s general category . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : a value of type <code> int </code> representing the character ' s general category . Since : 1 . 5 See Also : <code> COMBINING _ SPACING _ MARK </code> , <code> CONNECTOR _ PUNCTUATION </code> , <code> CONTROL </code> , <code> CURRENCY _ SYMBOL </code> , <code> DASH _ PUNCTUATION </code> , <code> DECIMAL _ DIGIT _ NUMBER </code> , <code> ENCLOSING _ MARK </code> , <code> END _ PUNCTUATION </code> , <code> FINAL _ QUOTE _ PUNCTUATION </code> , <code> FORMAT </code> , <code> INITIAL _ QUOTE _ PUNCTUATION </code> , <code> LETTER _ NUMBER </code> , <code> LINE _ SEPARATOR </code> , <code> LOWERCASE _ LETTER </code> , <code> MATH _ SYMBOL </code> , <code> MODIFIER _ LETTER </code> , <code> MODIFIER _ SYMBOL </code> , <code> NON _ SPACING _ MARK </code> , <code> OTHER _ LETTER </code> , <code> OTHER _ NUMBER </code> , <code> OTHER _ PUNCTUATION </code> , <code> OTHER _ SYMBOL </code> , <code> PARAGRAPH _ SEPARATOR </code> , <code> PRIVATE _ USE </code> , <code> SPACE _ SEPARATOR </code> , <code> START _ PUNCTUATION </code> , <code> SURROGATE </code> , <code> TITLECASE _ LETTER </code> , <code> UNASSIGNED </code> , <code> UPPERCASE _ LETTER </code> 
+forDigit <pre> public static char forDigit ( int digit , int radix ) </pre> Determines the character representation for a specific digit in the specified radix . 
+If the value of <code> radix </code> is not a valid radix , or the value of <code> digit </code> is not a valid digit in the specified radix , the null character ( <code> ' \ u0000 ' </code> ) is returned . 
+<p> The <code> radix </code> argument is valid if it is greater than or equal to <code> MIN _ RADIX </code> and less than or equal to <code> MAX _ RADIX </code> . 
+The <code> digit </code> argument is valid if <code> 0 < = digit < radix </code> . 
+<p> If the digit is less than 10 , then <code> ' 0 ' + digit </code> is returned . 
+Otherwise , the value <code> ' a ' + digit - 10 </code> is returned . 
+Parameters : <code> digit </code> - the number to convert to a character . <code> radix </code> - the radix . Returns : the <code> char </code> representation of the specified digit in the specified radix . See Also : <code> MIN _ RADIX </code> , <code> MAX _ RADIX </code> , <code> digit ( char , int ) </code> 
+getDirectionality <pre> public static byte getDirectionality ( char ch ) </pre> Returns the Unicode directionality property for the given character . 
+Character directionality is used to calculate the visual ordering of text . 
+The directionality value of undefined <code> char </code> values is <code> DIRECTIONALITY _ UNDEFINED </code> . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> getDirectionality ( int ) </code> method . 
+Parameters : <code> ch </code> - <code> char </code> for which the directionality property is requested . Returns : the directionality property of the <code> char </code> value . Since : 1 . 4 See Also : <code> DIRECTIONALITY _ UNDEFINED </code> , <code> DIRECTIONALITY _ LEFT _ TO _ RIGHT </code> , <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT </code> , <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT _ ARABIC </code> , <code> DIRECTIONALITY _ EUROPEAN _ NUMBER </code> , <code> DIRECTIONALITY _ EUROPEAN _ NUMBER _ SEPARATOR </code> , <code> DIRECTIONALITY _ EUROPEAN _ NUMBER _ TERMINATOR </code> , <code> DIRECTIONALITY _ ARABIC _ NUMBER </code> , <code> DIRECTIONALITY _ COMMON _ NUMBER _ SEPARATOR </code> , <code> DIRECTIONALITY _ NONSPACING _ MARK </code> , <code> DIRECTIONALITY _ BOUNDARY _ NEUTRAL </code> , <code> DIRECTIONALITY _ PARAGRAPH _ SEPARATOR </code> , <code> DIRECTIONALITY _ SEGMENT _ SEPARATOR </code> , <code> DIRECTIONALITY _ WHITESPACE </code> , <code> DIRECTIONALITY _ OTHER _ NEUTRALS </code> , <code> DIRECTIONALITY _ LEFT _ TO _ RIGHT _ EMBEDDING </code> , <code> DIRECTIONALITY _ LEFT _ TO _ RIGHT _ OVERRIDE </code> , <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT _ EMBEDDING </code> , <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT _ OVERRIDE </code> , <code> DIRECTIONALITY _ POP _ DIRECTIONAL _ FORMAT </code> 
+getDirectionality <pre> public static byte getDirectionality ( int codePoint ) </pre> Returns the Unicode directionality property for the given character ( Unicode code point ) . 
+Character directionality is used to calculate the visual ordering of text . 
+The directionality value of undefined character is <code> DIRECTIONALITY _ UNDEFINED </code> . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) for which the directionality property is requested . Returns : the directionality property of the character . Since : 1 . 5 See Also : <code> DIRECTIONALITY _ UNDEFINED </code> , <code> DIRECTIONALITY _ LEFT _ TO _ RIGHT </code> , <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT </code> , <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT _ ARABIC </code> , <code> DIRECTIONALITY _ EUROPEAN _ NUMBER </code> , <code> DIRECTIONALITY _ EUROPEAN _ NUMBER _ SEPARATOR </code> , <code> DIRECTIONALITY _ EUROPEAN _ NUMBER _ TERMINATOR </code> , <code> DIRECTIONALITY _ ARABIC _ NUMBER </code> , <code> DIRECTIONALITY _ COMMON _ NUMBER _ SEPARATOR </code> , <code> DIRECTIONALITY _ NONSPACING _ MARK </code> , <code> DIRECTIONALITY _ BOUNDARY _ NEUTRAL </code> , <code> DIRECTIONALITY _ PARAGRAPH _ SEPARATOR </code> , <code> DIRECTIONALITY _ SEGMENT _ SEPARATOR </code> , <code> DIRECTIONALITY _ WHITESPACE </code> , <code> DIRECTIONALITY _ OTHER _ NEUTRALS </code> , <code> DIRECTIONALITY _ LEFT _ TO _ RIGHT _ EMBEDDING </code> , <code> DIRECTIONALITY _ LEFT _ TO _ RIGHT _ OVERRIDE </code> , <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT _ EMBEDDING </code> , <code> DIRECTIONALITY _ RIGHT _ TO _ LEFT _ OVERRIDE </code> , <code> DIRECTIONALITY _ POP _ DIRECTIONAL _ FORMAT </code> 
+isMirrored <pre> public static boolean isMirrored ( char ch ) </pre> Determines whether the character is mirrored according to the Unicode specification . 
+Mirrored characters should have their glyphs horizontally mirrored when displayed in text that is right - to - left . 
+For example , <code> ' \ u0028 ' </code> LEFT PARENTHESIS is semantically defined to be an opening parenthesis . 
+This will appear as a " ( " in text that is left - to - right but as a " ) " in text that is right - to - left . 
+<p> Note : This method cannot handle supplementary characters . 
+To support all Unicode characters , including supplementary characters , use the <code> isMirrored ( int ) </code> method . 
+Parameters : <code> ch </code> - <code> char </code> for which the mirrored property is requested Returns : <code> true </code> if the char is mirrored , <code> false </code> if the <code> char </code> is not mirrored or is not defined . Since : 1 . 4 
+isMirrored <pre> public static boolean isMirrored ( int codePoint ) </pre> Determines whether the specified character ( Unicode code point ) is mirrored according to the Unicode specification . 
+Mirrored characters should have their glyphs horizontally mirrored when displayed in text that is right - to - left . 
+For example , <code> ' \ u0028 ' </code> LEFT PARENTHESIS is semantically defined to be an opening parenthesis . 
+This will appear as a " ( " in text that is left - to - right but as a " ) " in text that is right - to - left . 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) to be tested . Returns : <code> true </code> if the character is mirrored , <code> false </code> if the character is not mirrored or is not defined . Since : 1 . 5 
+compareTo <pre> public int compareTo ( Character anotherCharacter ) </pre> Compares two <code> Character </code> objects numerically . 
+Specified by : <code> compareTo </code> in interface <code> Comparable Parameters : <code> anotherCharacter </code> - the <code> Character </code> to be compared . Returns : the value <code> 0 </code> if the argument <code> Character </code> is equal to this <code> Character </code> ; a value less than <code> 0 </code> if this <code> Character </code> is numerically less than the <code> Character </code> argument ; and a value greater than <code> 0 </code> if this <code> Character </code> is numerically greater than the <code> Character </code> argument ( unsigned comparison ) . Note that this is strictly a numerical comparison ; it is not locale - dependent . Since : 1 . 2 
+compare <pre> public static int compare ( char x , char y ) </pre> Compares two <code> char </code> values numerically . The value returned is identical to what would be returned by : <pre> Character . valueOf ( x ) . compareTo ( Character . valueOf ( y ) ) </pre> 
+Parameters : <code> x </code> - the first <code> char </code> to compare <code> y </code> - the second <code> char </code> to compare Returns : the value <code> 0 </code> if <code> x = = y </code> ; a value less than <code> 0 </code> if <code> x < y </code> ; and a value greater than <code> 0 </code> if <code> x > y </code> Since : 1 . 7 
+reverseBytes <pre> public static char reverseBytes ( char ch ) </pre> Returns the value obtained by reversing the order of the bytes in the specified char value . 
+Parameters : <code> ch </code> - The <code> char </code> of which to reverse the byte order . Returns : the value obtained by reversing ( or , equivalently , swapping ) the bytes in the specified char value . Since : 1 . 5 
+getName <pre> public static String getName ( int codePoint ) </pre> Returns the Unicode name of the specified character <code> codePoint </code> , or null if the code point is <code> unassigned </code> . 
+<p> Note : if the specified character is not assigned a name by the UnicodeData file ( part of the Unicode Character Database maintained by the Unicode Consortium ) , the returned name is the same as the result of expression . 
+<code> Character . UnicodeBlock . of ( codePoint ) . toString ( ) . replace ( ' _ ' , ' ' ) + " " + Integer . toHexString ( codePoint ) . toUpperCase ( Locale . ENGLISH ) ; 
+</code> 
+Parameters : <code> codePoint </code> - the character ( Unicode code point ) Returns : the Unicode name of the specified character , or null if the code point is unassigned . Throws : <code> IllegalArgumentException </code> - if the specified <code> codePoint </code> is not a valid Unicode code point . Since : 1 . 7 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

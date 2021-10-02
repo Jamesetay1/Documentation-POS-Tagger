@@ -1,0 +1,2231 @@
+{
+  "tokens": [
+    {
+      "tag": "VB",
+      "token": "Write"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "program"
+    },
+    {
+      "tag": "TO",
+      "token": "to"
+    },
+    {
+      "tag": "VB",
+      "token": "solve"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NNP",
+      "token": "Sudoku"
+    },
+    {
+      "tag": "NN",
+      "token": "puzzle"
+    },
+    {
+      "tag": "IN",
+      "token": "by"
+    },
+    {
+      "tag": "VBG",
+      "token": "filling"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "empty"
+    },
+    {
+      "tag": "NNS",
+      "token": "cells"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "A"
+    },
+    {
+      "tag": "NN",
+      "token": "sudoku"
+    },
+    {
+      "tag": "NN",
+      "token": "solution"
+    },
+    {
+      "tag": "MD",
+      "token": "must"
+    },
+    {
+      "tag": "VB",
+      "token": "satisfy"
+    },
+    {
+      "tag": "DT",
+      "token": "all"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "JJ",
+      "token": "following"
+    },
+    {
+      "tag": "NNS",
+      "token": "rules"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "DT",
+      "token": "Each"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "-"},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "MD",
+      "token": "must"
+    },
+    {
+      "tag": "VB",
+      "token": "occur"
+    },
+    {
+      "tag": "RB",
+      "token": "exactly"
+    },
+    {
+      "tag": "RB",
+      "token": "once"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "NN",
+      "token": "row"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "Each"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "-"},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "MD",
+      "token": "must"
+    },
+    {
+      "tag": "VB",
+      "token": "occur"
+    },
+    {
+      "tag": "RB",
+      "token": "exactly"
+    },
+    {
+      "tag": "RB",
+      "token": "once"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "NN",
+      "token": "column"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "Each"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NNS",
+      "token": "digits"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "-"},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "MD",
+      "token": "must"
+    },
+    {
+      "tag": "VB",
+      "token": "occur"
+    },
+    {
+      "tag": "RB",
+      "token": "exactly"
+    },
+    {
+      "tag": "RB",
+      "token": "once"
+    },
+    {
+      "tag": "IN",
+      "token": "in"
+    },
+    {
+      "tag": "DT",
+      "token": "each"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "CD",
+      "token": "9"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "3x3"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "sub"
+    },
+    {
+      "tag": "HYPH",
+      "token": "-"
+    },
+    {
+      "tag": "NNS",
+      "token": "boxes"
+    },
+    {
+      "tag": "IN",
+      "token": "of"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "grid"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "DT",
+      "token": "The"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "'"},
+    {"token": "."},
+    {"token": "'"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NN",
+      "token": "character"
+    },
+    {
+      "tag": "VBZ",
+      "token": "indicates"
+    },
+    {
+      "tag": "JJ",
+      "token": "empty"
+    },
+    {
+      "tag": "NNS",
+      "token": "cells"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "NN",
+      "token": "Example"
+    },
+    {
+      "tag": "CD",
+      "token": "1"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "Input"},
+    {"token": ":"},
+    {
+      "tag": "<var>",
+      "token": "board"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {"token": "."},
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "Output"},
+    {"token": ":"},
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "3"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "4"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "5"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "2"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "8"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "6"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "1"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "7"
+    },
+    {"token": "\""},
+    {
+      "tag": ",",
+      "token": ","
+    },
+    {"token": "\""},
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {"token": "\""},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "Explanation"},
+    {"token": ":"},
+    {"token": "The"},
+    {"token": "input"},
+    {
+      "tag": "<var>",
+      "token": "board"
+    },
+    {"token": "is"},
+    {"token": "shown"},
+    {"token": "above"},
+    {"token": "and"},
+    {"token": "the"},
+    {"token": "only"},
+    {"token": "valid"},
+    {"token": "solution"},
+    {"token": "is"},
+    {"token": "shown"},
+    {"token": "below"},
+    {"token": ":"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "NNS",
+      "token": "Constraints"
+    },
+    {
+      "tag": ":",
+      "token": ":"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "board"
+    },
+    {"token": "."},
+    {
+      "tag": "<var>",
+      "token": "length"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "board"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "i"},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {"token": "."},
+    {
+      "tag": "<var>",
+      "token": "length"
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<=>",
+      "token": "="
+    },
+    {
+      "tag": "<num>",
+      "token": "9"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {
+      "tag": "<var>",
+      "token": "board"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "i"},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<[>",
+      "token": "["
+    },
+    {"token": "j"},
+    {
+      "tag": "<]>",
+      "token": "]"
+    },
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "DT",
+      "token": "a"
+    },
+    {
+      "tag": "NN",
+      "token": "digit"
+    },
+    {
+      "tag": "CC",
+      "token": "or"
+    },
+    {
+      "tag": "<code>",
+      "token": "<code>"
+    },
+    {"token": "'"},
+    {"token": "."},
+    {"token": "'"},
+    {
+      "tag": "<code>",
+      "token": "<\/code>"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    },
+    {
+      "tag": "PRP",
+      "token": "It"
+    },
+    {
+      "tag": "VBZ",
+      "token": "is"
+    },
+    {
+      "tag": "VBN",
+      "token": "guaranteed"
+    },
+    {
+      "tag": "IN",
+      "token": "that"
+    },
+    {
+      "tag": "DT",
+      "token": "the"
+    },
+    {
+      "tag": "NN",
+      "token": "input"
+    },
+    {
+      "tag": "NN",
+      "token": "board"
+    },
+    {
+      "tag": "VBZ",
+      "token": "has"
+    },
+    {
+      "tag": "RB",
+      "token": "only"
+    },
+    {
+      "tag": "CD",
+      "token": "one"
+    },
+    {
+      "tag": "NN",
+      "token": "solution"
+    },
+    {
+      "tag": ".",
+      "token": "."
+    }
+  ],
+  "type": "autotagged"
+}

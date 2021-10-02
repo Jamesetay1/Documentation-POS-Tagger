@@ -1,0 +1,86 @@
+PropertyResourceBundle ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . util Class PropertyResourceBundle 
+java . lang . 
+Object 
+java . util . 
+ResourceBundle 
+java . util . 
+PropertyResourceBundle 
+<pre> public class PropertyResourceBundle extends ResourceBundle </pre> <code> PropertyResourceBundle </code> is a concrete subclass of <code> ResourceBundle </code> that manages resources for a locale using a set of static strings from a property file . 
+See <code> ResourceBundle </code> for more information about resource bundles . 
+<p> Unlike other types of resource bundle , you don ' t subclass <code> PropertyResourceBundle </code> . 
+Instead , you supply properties files containing the resource data . <code> ResourceBundle . getBundle </code> will automatically look for the appropriate properties file and create a <code> PropertyResourceBundle </code> that refers to it . 
+See <code> ResourceBundle . getBundle </code> for a complete description of the search and instantiation strategy . 
+<p> The following example shows a member of a resource bundle family with the base name " MyResources " . The text defines the bundle " MyResources _ de " , the German member of the bundle family . This member is based on <code> PropertyResourceBundle </code> , and the text therefore is the content of the file " MyResources _ de . properties " ( a related example shows how you can add bundles to this family that are implemented as subclasses of <code> ListResourceBundle </code> ) . The keys in this example are of the form " s1 " etc . 
+The actual keys are entirely up to your choice , so long as they are the same as the keys you use in your program to retrieve the objects from the bundle . Keys are case - sensitive . 
+<pre> # MessageFormat pattern s1 = Die Platte \ " { 1 } \ " enthält { 0 } . 
+# location of { 0 } in pattern s2 = 1 
+# sample disk name s3 = Meine Platte 
+# first ChoiceFormat choice s4 = keine Dateien 
+# second ChoiceFormat choice s5 = eine Datei 
+# third ChoiceFormat choice s6 = { 0 , number } Dateien 
+# sample date s7 = 3 . 
+März 1996 </pre> 
+<p> The implementation of a <code> PropertyResourceBundle </code> subclass must be thread - safe if it ' s simultaneously used by multiple threads . 
+The default implementations of the non - abstract methods in this class are thread - safe . 
+<p> Note : PropertyResourceBundle can be constructed either from an InputStream or a Reader , which represents a property file . Constructing a PropertyResourceBundle instance from an InputStream requires that the input stream be encoded in ISO - 8859 - 1 . 
+In that case , characters that cannot be represented in ISO - 8859 - 1 encoding must be represented by Unicode Escapes as defined in section 3 . 3 of The Java™ Language Specification whereas the other constructor which takes a Reader does not have that limitation . 
+Since : JDK1 . 1 See Also : <code> ResourceBundle </code> , <code> ListResourceBundle </code> , <code> Properties </code> 
+Nested Class Summary 
+Nested classes / interfaces inherited from class java . util . 
+ResourceBundle <code> ResourceBundle . Control </code> 
+Field Summary 
+Fields inherited from class java . util . 
+ResourceBundle <code> parent </code> 
+Constructor Summary 
+Constructors 
+Constructor and Description 
+<code> PropertyResourceBundle ( InputStream stream ) </code> Creates a property resource bundle from an <code> InputStream </code> . 
+<code> PropertyResourceBundle ( Reader reader ) </code> Creates a property resource bundle from a <code> Reader </code> . 
+Method Summary 
+All Methods Instance Methods Concrete Methods 
+Modifier and Type Method and Description 
+<code> Enumeration <code> getKeys ( ) </code> Returns an <code> Enumeration </code> of the keys contained in this <code> ResourceBundle </code> and its parent bundles . 
+<code> Object </code> <code> handleGetObject ( String key ) </code> Gets an object for the given key from this resource bundle . 
+<code> protected Set <code> handleKeySet ( ) </code> Returns a <code> Set </code> of the keys contained <em> only </em> in this <code> ResourceBundle </code> . 
+Methods inherited from class java . util . 
+ResourceBundle <code> clearCache , clearCache , containsKey , getBaseBundleName , getBundle , getBundle , getBundle , getBundle , getBundle , getBundle , getLocale , getObject , getString , getStringArray , keySet , setParent </code> 
+Methods inherited from class java . lang . 
+Object <code> clone , equals , finalize , getClass , hashCode , notify , notifyAll , toString , wait , wait , wait </code> 
+Constructor Detail 
+PropertyResourceBundle <pre> public PropertyResourceBundle ( InputStream stream ) throws IOException </pre> Creates a property resource bundle from an <code> InputStream </code> . 
+The property file read with this constructor must be encoded in ISO - 8859 - 1 . 
+Parameters : <code> stream </code> - an InputStream that represents a property file to read from . Throws : <code> IOException </code> - if an I / O error occurs <code> NullPointerException </code> - if <code> stream </code> is null <code> IllegalArgumentException </code> - if <code> stream </code> contains a malformed Unicode escape sequence . 
+PropertyResourceBundle <pre> public PropertyResourceBundle ( Reader reader ) throws IOException </pre> Creates a property resource bundle from a <code> Reader </code> . 
+Unlike the constructor <code> PropertyResourceBundle ( InputStream ) </code> , there is no limitation as to the encoding of the input property file . 
+Parameters : <code> reader </code> - a Reader that represents a property file to read from . Throws : <code> IOException </code> - if an I / O error occurs <code> NullPointerException </code> - if <code> reader </code> is null <code> IllegalArgumentException </code> - if a malformed Unicode escape sequence appears from <code> reader </code> . Since : 1 . 6 
+Method Detail 
+handleGetObject <pre> public Object handleGetObject ( String key ) </pre> Description copied from class : <code> ResourceBundle </code> Gets an object for the given key from this resource bundle . Returns null if this resource bundle does not contain an object for the given key . 
+Specified by : <code> handleGetObject </code> in class <code> ResourceBundle </code> Parameters : <code> key </code> - the key for the desired object Returns : the object for the given key , or null 
+getKeys <pre> public Enumeration <String> getKeys ( ) </pre> Returns an <code> Enumeration </code> of the keys contained in this <code> ResourceBundle </code> and its parent bundles . 
+Specified by : <code> getKeys </code> in class <code> ResourceBundle </code> Returns : an <code> Enumeration </code> of the keys contained in this <code> ResourceBundle </code> and its parent bundles . See Also : <code> ResourceBundle . keySet ( ) </code> 
+handleKeySet <pre> protected Set <String> handleKeySet ( ) </pre> Returns a <code> Set </code> of the keys contained <em> only </em> in this <code> ResourceBundle </code> . 
+Overrides : <code> handleKeySet </code> in class <code> ResourceBundle </code> Returns : a <code> Set </code> of the keys contained only in this <code> ResourceBundle </code> Since : 1 . 6 See Also : <code> ResourceBundle . keySet ( ) </code> 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

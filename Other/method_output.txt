@@ -1,0 +1,20 @@
+public static parseBoolean(String s)
+Parses the string argument as a boolean.
+The <code>boolean</code> returned represents the value <code>true</code> if the string argument is not <code>null</code> and is equal, ignoring case, to the string <code>"true"</code>.
+Example: <code>Boolean.parseBoolean("True")</code> returns <code>true</code>.
+Example: <code>Boolean.parseBoolean("yes")</code> returns <code>false</code>.
+Parameters:<code>s</code> - the <code>String</code> containing the boolean representation to be parsed
+Returns: the boolean represented by the string argument
+Since: 1.5
+
+public boolean booleanValue()
+Returns the value of this <code>Boolean</code> object as a boolean primitive.
+Returns: the primitive <code>boolean</code> value of this object.
+
+public static Boolean valueOf(boolean b)
+Returns a <code>Boolean</code> instance representing the specified <code>boolean</code> value.  
+If the specified <code>boolean</code> value is <code>true</code>, this method returns <code>Boolean.TRUE</code>; if it is <code>false</code>, this method returns <code>Boolean.FALSE</code>.
+If a new <code>Boolean</code> instance is not required, this method should generally be used in preference to the constructor <code>Boolean(boolean)</code>, as this method is likely to yield significantly better space and time performance.
+Parameters: <code>b</code> - a boolean value.
+Returns:a <code>Boolean</code> instance representing <code>b</code>.
+Since: 1.4

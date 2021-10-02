@@ -1,0 +1,73 @@
+CryptoPrimitive ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Enum Constants | Field | Method 
+Detail : Enum Constants | Field | Method 
+compact1 , compact2 , compact3 java . security Enum CryptoPrimitive 
+java . lang . 
+Object 
+java . lang . 
+Enum <CryptoPrimitive> 
+java . security . 
+CryptoPrimitive 
+All Implemented Interfaces : Serializable , Comparable <CryptoPrimitive> 
+<pre> public enum CryptoPrimitive extends Enum An enumeration of cryptographic primitives . 
+Since : 1 . 7 
+Enum Constant Summary 
+Enum Constants 
+Enum Constant and Description 
+<code> BLOCK _ CIPHER </code> Symmetric primitive : block cipher 
+<code> KEY _ AGREEMENT </code> Asymmetric primitive : key agreement and key distribution 
+<code> KEY _ ENCAPSULATION </code> Asymmetric primitive : key encapsulation mechanism 
+<code> KEY _ WRAP </code> Symmetric primitive : key wrap 
+<code> MAC </code> Symmetric primitive : message authentication code 
+<code> MESSAGE _ DIGEST </code> Hash function 
+<code> PUBLIC _ KEY _ ENCRYPTION </code> Asymmetric primitive : public key encryption 
+<code> SECURE _ RANDOM </code> Cryptographic random number generator 
+<code> SIGNATURE </code> Asymmetric primitive : signature scheme 
+<code> STREAM _ CIPHER </code> Symmetric primitive : stream cipher 
+Method Summary 
+All Methods Static Methods Concrete Methods 
+Modifier and Type Method and Description 
+<code> static CryptoPrimitive </code> <code> valueOf ( String name ) </code> Returns the enum constant of this type with the specified name . 
+<code> static CryptoPrimitive [ ] </code> <code> values ( ) </code> Returns an array containing the constants of this enum type , in the order they are declared . 
+Methods inherited from class java . lang . 
+Enum <code> clone , compareTo , equals , finalize , getDeclaringClass , hashCode , name , ordinal , toString , valueOf </code> 
+Methods inherited from class java . lang . 
+Object <code> getClass , notify , notifyAll , wait , wait , wait </code> 
+Enum Constant Detail 
+MESSAGE _ DIGEST <pre> public static final CryptoPrimitive MESSAGE _ DIGEST </pre> Hash function 
+SECURE _ RANDOM <pre> public static final CryptoPrimitive SECURE _ RANDOM </pre> Cryptographic random number generator 
+BLOCK _ CIPHER <pre> public static final CryptoPrimitive BLOCK _ CIPHER </pre> Symmetric primitive : block cipher 
+STREAM _ CIPHER <pre> public static final CryptoPrimitive STREAM _ CIPHER </pre> Symmetric primitive : stream cipher 
+MAC <pre> public static final CryptoPrimitive MAC </pre> Symmetric primitive : message authentication code 
+KEY _ WRAP <pre> public static final CryptoPrimitive KEY _ WRAP </pre> Symmetric primitive : key wrap 
+PUBLIC _ KEY _ ENCRYPTION <pre> public static final CryptoPrimitive PUBLIC _ KEY _ ENCRYPTION </pre> Asymmetric primitive : public key encryption 
+SIGNATURE <pre> public static final CryptoPrimitive SIGNATURE </pre> Asymmetric primitive : signature scheme 
+KEY _ ENCAPSULATION <pre> public static final CryptoPrimitive KEY _ ENCAPSULATION </pre> Asymmetric primitive : key encapsulation mechanism 
+KEY _ AGREEMENT <pre> public static final CryptoPrimitive KEY _ AGREEMENT </pre> Asymmetric primitive : key agreement and key distribution 
+Method Detail 
+values <pre> public static CryptoPrimitive [ ] values ( ) </pre> Returns an array containing the constants of this enum type , in the order they are declared . 
+This method may be used to iterate over the constants as follows : <pre> for ( CryptoPrimitive c : CryptoPrimitive . values ( ) ) System . out . println ( c ) ; </pre> 
+Returns : an array containing the constants of this enum type , in the order they are declared 
+valueOf <pre> public static CryptoPrimitive valueOf ( String name ) </pre> Returns the enum constant of this type with the specified name . The string must match exactly an identifier used to declare an enum constant in this type . ( Extraneous whitespace characters are not permitted . ) 
+Parameters : <code> name </code> - the name of the enum constant to be returned . Returns : the enum constant with the specified name Throws : <code> IllegalArgumentException </code> - if this enum type has no constant with the specified name <code> NullPointerException </code> - if the argument is null 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Enum Constants | Field | Method 
+Detail : Enum Constants | Field | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

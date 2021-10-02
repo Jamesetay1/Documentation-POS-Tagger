@@ -1,0 +1,16 @@
+<p> Given <code> n </code> non - negative integers <code> a1 , a2 , . . . , an </code> , where each represents a point at coordinate <code> ( i , ai ) </code> . <code> n </code> vertical lines are drawn such that the two endpoints of the line <code> i </code> is at <code> ( i , ai ) </code> and <code> ( i , 0 ) </code> . 
+Find two lines , which , together with the x - axis forms a container , such that the container contains the most water . </p> 
+<p> Notice that you may not slant the container . </p> 
+<p> </p> 
+<p> Example 1 : </p> 
+<pre> Input : height = [ 1 , 8 , 6 , 2 , 5 , 4 , 8 , 3 , 7 ] Output : 49 Explanation : The above vertical lines are represented by array [ 1 , 8 , 6 , 2 , 5 , 4 , 8 , 3 , 7 ] . 
+In this case , the max area of water ( blue section ) the container can contain is 49 . </pre> 
+<p> Example 2 : </p> 
+<pre> Input : height = [ 1 , 1 ] Output : 1 </pre> 
+<p> Example 3 : </p> 
+<pre> Input : height = [ 4 , 3 , 2 , 1 , 4 ] Output : 16 </pre> 
+<p> Example 4 : </p> 
+<pre> Input : height = [ 1 , 2 , 1 ] Output : 2 </pre> 
+<p> </p> 
+<p> Constraints : </p> 
+<code> n = = height . length </code> <code> 2 < = n < = 3 * 104 </code> <code> 0 < = height [ i ] < = 3 * 104 </code> 

@@ -1,0 +1,47 @@
+<p>Given two integers <code>dividend</code> and <code>divisor</code>, divide two integers without using multiplication, division, and mod operator.</p>
+
+<p>Return the quotient after dividing <code>dividend</code> by <code>divisor</code>.</p>
+
+<p>The integer division should truncate toward zero, which means losing its fractional part. For example, <code>truncate(8.345) = 8</code> and <code>truncate(-2.7335) = -2</code>.</p>
+
+<p>Note:</p>
+
+Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. For this problem, assume that your function returns 231 − 1 when the division result overflows.
+
+<p> </p>
+<p>Example 1:</p>
+
+<pre>
+Input: dividend = 10, divisor = 3
+Output: 3
+Explanation: 10/3 = truncate(3.33333..) = 3.
+</pre>
+
+<p>Example 2:</p>
+
+<pre>
+Input: dividend = 7, divisor = -3
+Output: -2
+Explanation: 7/-3 = truncate(-2.33333..) = -2.
+</pre>
+
+<p>Example 3:</p>
+
+<pre>
+Input: dividend = 0, divisor = 1
+Output: 0
+</pre>
+
+<p>Example 4:</p>
+
+<pre>
+Input: dividend = 1, divisor = 1
+Output: 1
+</pre>
+
+<p> </p>
+<p>Constraints:</p>
+
+<code>-231 <= dividend, divisor <= 231 - 1</code>
+<code>divisor != 0</code>
+

@@ -1,0 +1,103 @@
+FilePermission ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . io Class FilePermission 
+java . lang . 
+Object 
+java . security . 
+Permission 
+java . io . 
+FilePermission 
+All Implemented Interfaces : Serializable , Guard 
+<pre> public final class FilePermission extends Permission implements Serializable </pre> This class represents access to a file or directory . 
+A FilePermission consists of a pathname and a set of actions valid for that pathname . 
+Pathname is the pathname of the file or directory granted the specified actions . 
+A pathname that ends in " / * " ( where " / " is the file separator character , <code> File . separatorChar </code> ) indicates all the files and directories contained in that directory . 
+A pathname that ends with " / - " indicates ( recursively ) all files and subdirectories contained in that directory . 
+A pathname consisting of the special token " < < ALL FILES > > " matches any file . 
+Note : A pathname consisting of a single " * " indicates all the files in the current directory , while a pathname consisting of a single " - " indicates all the files in the current directory and ( recursively ) all files and subdirectories contained in the current directory . 
+The actions to be granted are passed to the constructor in a string containing a list of one or more comma - separated keywords . 
+The possible keywords are " read " , " write " , " execute " , " delete " , and " readlink " . 
+Their meaning is defined as follows : 
+read read permission write write permission execute execute permission . 
+Allows <code> Runtime . exec </code> to be called . 
+Corresponds to <code> SecurityManager . checkExec </code> . delete delete permission . 
+Allows <code> File . delete </code> to be called . 
+Corresponds to <code> SecurityManager . checkDelete </code> . readlink read link permission . 
+Allows the target of a symbolic link to be read by invoking the <code> readSymbolicLink </code> method . 
+The actions string is converted to lowercase before processing . 
+Be careful when granting FilePermissions . 
+Think about the implications of granting read and especially write access to various files and directories . 
+The " < < ALL FILES > > " permission with write action is especially dangerous . 
+This grants permission to write to the entire file system . 
+One thing this effectively allows is replacement of the system binary , including the JVM runtime environment . 
+<p> Please note : Code can always read a file from the same directory it ' s in ( or a subdirectory of that directory ) ; it does not need explicit permission to do so . 
+Since : 1 . 2 See Also : <code> Permission </code> , <code> Permissions </code> , <code> PermissionCollection </code> 
+Constructor Summary 
+Constructors 
+Constructor and Description 
+<code> FilePermission ( String path , String actions ) </code> Creates a new FilePermission object with the specified actions . 
+Method Summary 
+All Methods Instance Methods Concrete Methods 
+Modifier and Type Method and Description 
+<code> boolean </code> <code> equals ( Object obj ) </code> Checks two FilePermission objects for equality . 
+<code> String </code> <code> getActions ( ) </code> Returns the " canonical string representation " of the actions . 
+<code> int </code> <code> hashCode ( ) </code> Returns the hash code value for this object . 
+<code> boolean </code> <code> implies ( Permission p ) </code> Checks if this FilePermission object " implies " the specified permission . 
+<code> PermissionCollection </code> <code> newPermissionCollection ( ) </code> Returns a new PermissionCollection object for storing FilePermission objects . 
+Methods inherited from class java . security . 
+Permission <code> checkGuard , getName , toString </code> 
+Methods inherited from class java . lang . 
+Object <code> clone , finalize , getClass , notify , notifyAll , wait , wait , wait </code> 
+Constructor Detail 
+FilePermission <pre> public FilePermission ( String path , String actions ) </pre> Creates a new FilePermission object with the specified actions . path is the pathname of a file or directory , and actions contains a comma - separated list of the desired actions granted on the file or directory . 
+Possible actions are " read " , " write " , " execute " , " delete " , and " readlink " . 
+<p> A pathname that ends in " / * " ( where " / " is the file separator character , <code> File . separatorChar </code> ) indicates all the files and directories contained in that directory . A pathname that ends with " / - " indicates ( recursively ) all files and subdirectories contained in that directory . 
+The special pathname " < < ALL FILES > > " matches any file . 
+<p> A pathname consisting of a single " * " indicates all the files in the current directory , while a pathname consisting of a single " - " indicates all the files in the current directory and ( recursively ) all files and subdirectories contained in the current directory . 
+<p> A pathname containing an empty string represents an empty path . 
+Parameters : <code> path </code> - the pathname of the file / directory . <code> actions </code> - the action string . Throws : <code> IllegalArgumentException </code> - If actions is <code> null </code> , empty or contains an action other than the specified possible actions . 
+Method Detail 
+implies <pre> public boolean implies ( Permission p ) </pre> Checks if this FilePermission object " implies " the specified permission . 
+More specifically , this method returns true if : 
+p is an instanceof FilePermission , p ' s actions are a proper subset of this object ' s actions , and p ' s pathname is implied by this object ' s pathname . 
+For example , " / tmp / * " implies " / tmp / foo " , since " / tmp / * " encompasses all files in the " / tmp " directory , including the one named " foo " . 
+Specified by : <code> implies </code> in class <code> Permission </code> Parameters : <code> p </code> - the permission to check against . Returns : <code> true </code> if the specified permission is not <code> null </code> and is implied by this object , <code> false </code> otherwise . 
+equals <pre> public boolean equals ( Object obj ) </pre> Checks two FilePermission objects for equality . 
+Checks that obj is a FilePermission , and has the same pathname and actions as this object . 
+Specified by : <code> equals </code> in class <code> Permission </code> Parameters : <code> obj </code> - the object we are testing for equality with this object . Returns : <code> true </code> if obj is a FilePermission , and has the same pathname and actions as this FilePermission object , <code> false </code> otherwise . See Also : <code> Object . hashCode ( ) </code> , <code> HashMap </code> 
+hashCode <pre> public int hashCode ( ) </pre> Returns the hash code value for this object . 
+Specified by : <code> hashCode </code> in class <code> Permission </code> Returns : a hash code value for this object . See Also : <code> Object . equals ( java . lang . Object ) </code> , <code> System . identityHashCode ( java . lang . Object ) </code> 
+getActions <pre> public String getActions ( ) </pre> Returns the " canonical string representation " of the actions . That is , this method always returns present actions in the following order : read , write , execute , delete , readlink . 
+For example , if this FilePermission object allows both write and read actions , a call to <code> getActions </code> will return the string " read , write " . 
+Specified by : <code> getActions </code> in class <code> Permission </code> Returns : the canonical string representation of the actions . 
+newPermissionCollection <pre> public PermissionCollection newPermissionCollection ( ) </pre> Returns a new PermissionCollection object for storing FilePermission objects . 
+<p> FilePermission objects must be stored in a manner that allows them to be inserted into the collection in any order , but that also enables the PermissionCollection <code> implies </code> method to be implemented in an efficient ( and consistent ) manner . 
+<p> For example , if you have two FilePermissions : 
+<code> " / tmp / - " , " read " </code> <code> " / tmp / scratch / foo " , " write " </code> 
+<p> and you are calling the <code> implies </code> method with the FilePermission : 
+<pre> " / tmp / scratch / foo " , " read , write " , </pre> 
+then the <code> implies </code> function must take into account both the " / tmp / - " and " / tmp / scratch / foo " permissions , so the effective permission is " read , write " , and <code> implies </code> returns true . 
+The " implies " semantics for FilePermissions are handled properly by the PermissionCollection object returned by this <code> newPermissionCollection </code> method . 
+Overrides : <code> newPermissionCollection </code> in class <code> Permission </code> Returns : a new PermissionCollection object suitable for storing FilePermissions . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

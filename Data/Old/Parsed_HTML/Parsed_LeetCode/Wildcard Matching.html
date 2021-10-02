@@ -1,0 +1,54 @@
+<p>Given an input string (<code>s</code>) and a pattern (<code>p</code>), implement wildcard pattern matching with support for <code>'?'</code> and <code>'*'</code> where:</p>
+
+<code>'?'</code> Matches any single character.
+<code>'*'</code> Matches any sequence of characters (including the empty sequence).
+
+<p>The matching should cover the entire input string (not partial).</p>
+
+<p> </p>
+<p>Example 1:</p>
+
+<pre>
+Input: s = "aa", p = "a"
+Output: false
+Explanation: "a" does not match the entire string "aa".
+</pre>
+
+<p>Example 2:</p>
+
+<pre>
+Input: s = "aa", p = "*"
+Output: true
+Explanation: '*' matches any sequence.
+</pre>
+
+<p>Example 3:</p>
+
+<pre>
+Input: s = "cb", p = "?a"
+Output: false
+Explanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.
+</pre>
+
+<p>Example 4:</p>
+
+<pre>
+Input: s = "adceb", p = "*a*b"
+Output: true
+Explanation: The first '*' matches the empty sequence, while the second '*' matches the substring "dce".
+</pre>
+
+<p>Example 5:</p>
+
+<pre>
+Input: s = "acdcb", p = "a*c?b"
+Output: false
+</pre>
+
+<p> </p>
+<p>Constraints:</p>
+
+<code>0 <= s.length, p.length <= 2000</code>
+<code>s</code> contains only lowercase English letters.
+<code>p</code> contains only lowercase English letters, <code>'?'</code> or <code>'*'</code>.
+

@@ -1,0 +1,7 @@
+<p> Given <code> n </code> pairs of parentheses , write a function to <em> generate all combinations of well - formed parentheses </em> . </p> 
+<p> </p> 
+<p> Example 1 : </p> <pre> Input : n = 3 Output : [ " ( ( ( ) ) ) " , " ( ( ) ( ) ) " , " ( ( ) ) ( ) " , " ( ) ( ( ) ) " , " ( ) ( ) ( ) " ] </pre> 
+<p> Example 2 : </p> <pre> Input : n = 1 Output : [ " ( ) " ] </pre> 
+<p> </p> 
+<p> Constraints : </p> 
+<code> 1 < = n < = 8 </code> 

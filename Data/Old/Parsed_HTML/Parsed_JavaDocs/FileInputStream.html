@@ -1,0 +1,463 @@
+
+
+FileInputStream (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.io
+Class FileInputStream
+
+java.lang.Object
+
+java.io.InputStream
+
+java.io.FileInputStream
+
+All Implemented Interfaces:
+Closeable, AutoCloseable
+
+<pre>public class FileInputStream
+extends InputStream</pre>
+A <code>FileInputStream</code> obtains input bytes
+ from a file in a file system. What files
+ are  available depends on the host environment.
+
+ <p><code>FileInputStream</code> is meant for reading streams of raw bytes
+ such as image data. For reading streams of characters, consider using
+ <code>FileReader</code>.
+
+Since:
+JDK1.0
+See Also:
+<code>File</code>, 
+<code>FileDescriptor</code>, 
+<code>FileOutputStream</code>, 
+<code>Files.newInputStream(java.nio.file.Path, java.nio.file.OpenOption...)</code>
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>FileInputStream(File file)</code>
+Creates a <code>FileInputStream</code> by
+ opening a connection to an actual file,
+ the file named by the <code>File</code>
+ object <code>file</code> in the file system.
+
+<code>FileInputStream(FileDescriptor fdObj)</code>
+Creates a <code>FileInputStream</code> by using the file descriptor
+ <code>fdObj</code>, which represents an existing connection to an
+ actual file in the file system.
+
+<code>FileInputStream(String name)</code>
+Creates a <code>FileInputStream</code> by
+ opening a connection to an actual file,
+ the file named by the path name <code>name</code>
+ in the file system.
+
+Method Summary
+
+All Methods Instance Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>int</code>
+<code>available()</code>
+Returns an estimate of the number of remaining bytes that can be read (or
+ skipped over) from this input stream without blocking by the next
+ invocation of a method for this input stream.
+
+<code>void</code>
+<code>close()</code>
+Closes this file input stream and releases any system resources
+ associated with the stream.
+
+<code>protected void</code>
+<code>finalize()</code>
+Ensures that the <code>close</code> method of this file input stream is
+ called when there are no more references to it.
+
+<code>FileChannel</code>
+<code>getChannel()</code>
+Returns the unique <code>FileChannel</code>
+ object associated with this file input stream.
+
+<code>FileDescriptor</code>
+<code>getFD()</code>
+Returns the <code>FileDescriptor</code>
+ object  that represents the connection to
+ the actual file in the file system being
+ used by this <code>FileInputStream</code>.
+
+<code>int</code>
+<code>read()</code>
+Reads a byte of data from this input stream.
+
+<code>int</code>
+<code>read(byte[] b)</code>
+Reads up to <code>b.length</code> bytes of data from this input
+ stream into an array of bytes.
+
+<code>int</code>
+<code>read(byte[] b,
+    int off,
+    int len)</code>
+Reads up to <code>len</code> bytes of data from this input stream
+ into an array of bytes.
+
+<code>long</code>
+<code>skip(long n)</code>
+Skips over and discards <code>n</code> bytes of data from the
+ input stream.
+
+Methods inherited from class java.io.InputStream
+<code>mark, markSupported, reset</code>
+
+Methods inherited from class java.lang.Object
+<code>clone, equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code>
+
+Constructor Detail
+
+FileInputStream
+<pre>public FileInputStream(String name)
+                throws FileNotFoundException</pre>
+Creates a <code>FileInputStream</code> by
+ opening a connection to an actual file,
+ the file named by the path name <code>name</code>
+ in the file system.  A new <code>FileDescriptor</code>
+ object is created to represent this file
+ connection.
+ <p>
+ First, if there is a security
+ manager, its <code>checkRead</code> method
+ is called with the <code>name</code> argument
+ as its argument.
+ <p>
+ If the named file does not exist, is a directory rather than a regular
+ file, or for some other reason cannot be opened for reading then a
+ <code>FileNotFoundException</code> is thrown.
+
+Parameters:
+<code>name</code> - the system-dependent file name.
+Throws:
+<code>FileNotFoundException</code> - if the file does not exist,
+                   is a directory rather than a regular file,
+                   or for some other reason cannot be opened for
+                   reading.
+<code>SecurityException</code> - if a security manager exists and its
+               <code>checkRead</code> method denies read access
+               to the file.
+See Also:
+<code>SecurityManager.checkRead(java.lang.String)</code>
+
+FileInputStream
+<pre>public FileInputStream(File file)
+                throws FileNotFoundException</pre>
+Creates a <code>FileInputStream</code> by
+ opening a connection to an actual file,
+ the file named by the <code>File</code>
+ object <code>file</code> in the file system.
+ A new <code>FileDescriptor</code> object
+ is created to represent this file connection.
+ <p>
+ First, if there is a security manager,
+ its <code>checkRead</code> method  is called
+ with the path represented by the <code>file</code>
+ argument as its argument.
+ <p>
+ If the named file does not exist, is a directory rather than a regular
+ file, or for some other reason cannot be opened for reading then a
+ <code>FileNotFoundException</code> is thrown.
+
+Parameters:
+<code>file</code> - the file to be opened for reading.
+Throws:
+<code>FileNotFoundException</code> - if the file does not exist,
+                   is a directory rather than a regular file,
+                   or for some other reason cannot be opened for
+                   reading.
+<code>SecurityException</code> - if a security manager exists and its
+               <code>checkRead</code> method denies read access to the file.
+See Also:
+<code>File.getPath()</code>, 
+<code>SecurityManager.checkRead(java.lang.String)</code>
+
+FileInputStream
+<pre>public FileInputStream(FileDescriptor fdObj)</pre>
+Creates a <code>FileInputStream</code> by using the file descriptor
+ <code>fdObj</code>, which represents an existing connection to an
+ actual file in the file system.
+ <p>
+ If there is a security manager, its <code>checkRead</code> method is
+ called with the file descriptor <code>fdObj</code> as its argument to
+ see if it's ok to read the file descriptor. If read access is denied
+ to the file descriptor a <code>SecurityException</code> is thrown.
+ <p>
+ If <code>fdObj</code> is null then a <code>NullPointerException</code>
+ is thrown.
+ <p>
+ This constructor does not throw an exception if <code>fdObj</code>
+ is <code>invalid</code>.
+ However, if the methods are invoked on the resulting stream to attempt
+ I/O on the stream, an <code>IOException</code> is thrown.
+
+Parameters:
+<code>fdObj</code> - the file descriptor to be opened for reading.
+Throws:
+<code>SecurityException</code> - if a security manager exists and its
+                 <code>checkRead</code> method denies read access to the
+                 file descriptor.
+See Also:
+<code>SecurityManager.checkRead(java.io.FileDescriptor)</code>
+
+Method Detail
+
+read
+<pre>public int read()
+         throws IOException</pre>
+Reads a byte of data from this input stream. This method blocks
+ if no input is yet available.
+
+Specified by:
+<code>read</code> in class <code>InputStream</code>
+Returns:
+the next byte of data, or <code>-1</code> if the end of the
+             file is reached.
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+
+read
+<pre>public int read(byte[] b)
+         throws IOException</pre>
+Reads up to <code>b.length</code> bytes of data from this input
+ stream into an array of bytes. This method blocks until some input
+ is available.
+
+Overrides:
+<code>read</code> in class <code>InputStream</code>
+Parameters:
+<code>b</code> - the buffer into which the data is read.
+Returns:
+the total number of bytes read into the buffer, or
+             <code>-1</code> if there is no more data because the end of
+             the file has been reached.
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+See Also:
+<code>InputStream.read(byte[], int, int)</code>
+
+read
+<pre>public int read(byte[] b,
+                int off,
+                int len)
+         throws IOException</pre>
+Reads up to <code>len</code> bytes of data from this input stream
+ into an array of bytes. If <code>len</code> is not zero, the method
+ blocks until some input is available; otherwise, no
+ bytes are read and <code>0</code> is returned.
+
+Overrides:
+<code>read</code> in class <code>InputStream</code>
+Parameters:
+<code>b</code> - the buffer into which the data is read.
+<code>off</code> - the start offset in the destination array <code>b</code>
+<code>len</code> - the maximum number of bytes read.
+Returns:
+the total number of bytes read into the buffer, or
+             <code>-1</code> if there is no more data because the end of
+             the file has been reached.
+Throws:
+<code>NullPointerException</code> - If <code>b</code> is <code>null</code>.
+<code>IndexOutOfBoundsException</code> - If <code>off</code> is negative,
+ <code>len</code> is negative, or <code>len</code> is greater than
+ <code>b.length - off</code>
+<code>IOException</code> - if an I/O error occurs.
+See Also:
+<code>InputStream.read()</code>
+
+skip
+<pre>public long skip(long n)
+          throws IOException</pre>
+Skips over and discards <code>n</code> bytes of data from the
+ input stream.
+
+ <p>The <code>skip</code> method may, for a variety of
+ reasons, end up skipping over some smaller number of bytes,
+ possibly <code>0</code>. If <code>n</code> is negative, the method
+ will try to skip backwards. In case the backing file does not support
+ backward skip at its current position, an <code>IOException</code> is
+ thrown. The actual number of bytes skipped is returned. If it skips
+ forwards, it returns a positive value. If it skips backwards, it
+ returns a negative value.
+
+ <p>This method may skip more bytes than what are remaining in the
+ backing file. This produces no exception and the number of bytes skipped
+ may include some number of bytes that were beyond the EOF of the
+ backing file. Attempting to read from the stream after skipping past
+ the end will result in -1 indicating the end of the file.
+
+Overrides:
+<code>skip</code> in class <code>InputStream</code>
+Parameters:
+<code>n</code> - the number of bytes to be skipped.
+Returns:
+the actual number of bytes skipped.
+Throws:
+<code>IOException</code> - if n is negative, if the stream does not
+             support seek, or if an I/O error occurs.
+
+available
+<pre>public int available()
+              throws IOException</pre>
+Returns an estimate of the number of remaining bytes that can be read (or
+ skipped over) from this input stream without blocking by the next
+ invocation of a method for this input stream. Returns 0 when the file
+ position is beyond EOF. The next invocation might be the same thread
+ or another thread. A single read or skip of this many bytes will not
+ block, but may read or skip fewer bytes.
+
+ <p> In some cases, a non-blocking read (or skip) may appear to be
+ blocked when it is merely slow, for example when reading large
+ files over slow networks.
+
+Overrides:
+<code>available</code> in class <code>InputStream</code>
+Returns:
+an estimate of the number of remaining bytes that can be read
+             (or skipped over) from this input stream without blocking.
+Throws:
+<code>IOException</code> - if this file input stream has been closed by calling
+             <code>close</code> or an I/O error occurs.
+
+close
+<pre>public void close()
+           throws IOException</pre>
+Closes this file input stream and releases any system resources
+ associated with the stream.
+
+ <p> If this stream has an associated channel then the channel is closed
+ as well.
+
+Specified by:
+<code>close</code> in interface <code>Closeable</code>
+Specified by:
+<code>close</code> in interface <code>AutoCloseable</code>
+Overrides:
+<code>close</code> in class <code>InputStream</code>
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+
+getFD
+<pre>public final FileDescriptor getFD()
+                           throws IOException</pre>
+Returns the <code>FileDescriptor</code>
+ object  that represents the connection to
+ the actual file in the file system being
+ used by this <code>FileInputStream</code>.
+
+Returns:
+the file descriptor object associated with this stream.
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+See Also:
+<code>FileDescriptor</code>
+
+getChannel
+<pre>public FileChannel getChannel()</pre>
+Returns the unique <code>FileChannel</code>
+ object associated with this file input stream.
+
+ <p> The initial <code>position</code> of the returned channel will be equal to the
+ number of bytes read from the file so far.  Reading bytes from this
+ stream will increment the channel's position.  Changing the channel's
+ position, either explicitly or by reading, will change this stream's
+ file position.
+
+Returns:
+the file channel associated with this file input stream
+Since:
+1.4
+
+finalize
+<pre>protected void finalize()
+                 throws IOException</pre>
+Ensures that the <code>close</code> method of this file input stream is
+ called when there are no more references to it.
+
+Overrides:
+<code>finalize</code> in class <code>Object</code>
+Throws:
+<code>IOException</code> - if an I/O error occurs.
+See Also:
+<code>close()</code>
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

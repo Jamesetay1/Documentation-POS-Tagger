@@ -1,0 +1,217 @@
+Hashtable ( Java Platform SE 8 ) 
+JavaScript is disabled on your browser . 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+compact1 , compact2 , compact3 java . util Class Hashtable < K , V > 
+java . lang . 
+Object 
+java . util . 
+Dictionary < K , V > 
+java . util . 
+Hashtable < K , V > 
+All Implemented Interfaces : Serializable , Cloneable , Map < K , V > 
+Direct Known Subclasses : Properties , UIDefaults 
+<pre> public class Hashtable < K , V > extends Dictionary < K , V > implements Map < K , V > , Cloneable , Serializable </pre> This class implements a hash table , which maps keys to values . 
+Any non - <code> null </code> object can be used as a key or as a value . 
+<p> 
+To successfully store and retrieve objects from a hashtable , the objects used as keys must implement the <code> hashCode </code> method and the <code> equals </code> method . 
+<p> 
+An instance of <code> Hashtable </code> has two parameters that affect its performance : initial capacity and load factor . 
+The capacity is the number of buckets in the hash table , and the initial capacity is simply the capacity at the time the hash table is created . 
+Note that the hash table is open : in the case of a " hash collision " , a single bucket stores multiple entries , which must be searched sequentially . 
+The load factor is a measure of how full the hash table is allowed to get before its capacity is automatically increased . The initial capacity and load factor parameters are merely hints to the implementation . 
+The exact details as to when and whether the rehash method is invoked are implementation - dependent . 
+<p> 
+Generally , the default load factor ( . 75 ) offers a good tradeoff between time and space costs . 
+Higher values decrease the space overhead but increase the time cost to look up an entry ( which is reflected in most Hashtable operations , including get and put ) . 
+<p> 
+The initial capacity controls a tradeoff between wasted space and the need for <code> rehash </code> operations , which are time - consuming . No <code> rehash </code> operations will ever occur if the initial capacity is greater than the maximum number of entries the Hashtable will contain divided by its load factor . 
+However , setting the initial capacity too high can waste space . 
+<p> 
+If many entries are to be made into a <code> Hashtable </code> , creating it with a sufficiently large capacity may allow the entries to be inserted more efficiently than letting it perform automatic rehashing as needed to grow the table . 
+<p> 
+This example creates a hashtable of numbers . 
+It uses the names of the numbers as keys : <pre> <code> Hashtable < String , Integer > numbers = new Hashtable < String , Integer > ( ) ; numbers . put ( " one " , 1 ) ; numbers . put ( " two " , 2 ) ; numbers . put ( " three " , 3 ) ; 
+<p> To retrieve a number , use the following code : <pre> <code> Integer n = numbers . get ( " two " ) ; if ( n ! = null ) { System . out . println ( " two = " + n ) ; } 
+<p> The iterators returned by the iterator method of the collections returned by all of this class ' s " collection view methods " are <em> fail - fast </em> : if the Hashtable is structurally modified at any time after the iterator is created , in any way except through the iterator ' s own remove method , the iterator will throw a <code> ConcurrentModificationException </code> . 
+Thus , in the face of concurrent modification , the iterator fails quickly and cleanly , rather than risking arbitrary , non - deterministic behavior at an undetermined time in the future . The Enumerations returned by Hashtable ' s keys and elements methods are <em> not </em> fail - fast . 
+<p> Note that the fail - fast behavior of an iterator cannot be guaranteed as it is , generally speaking , impossible to make any hard guarantees in the presence of unsynchronized concurrent modification . 
+Fail - fast iterators throw ConcurrentModificationException on a best - effort basis . Therefore , it would be wrong to write a program that depended on this exception for its correctness : the fail - fast behavior of iterators should be used only to detect bugs . 
+<p> As of the Java 2 platform v1 . 2 , this class was retrofitted to implement the <code> Map </code> interface , making it a member of the 
+Java Collections Framework . 
+Unlike the new collection implementations , <code> Hashtable </code> is synchronized . 
+If a thread - safe implementation is not needed , it is recommended to use <code> HashMap </code> in place of <code> Hashtable </code> . 
+If a thread - safe highly - concurrent implementation is desired , then it is recommended to use <code> ConcurrentHashMap </code> in place of <code> Hashtable </code> . 
+Since : JDK1 . 0 See Also : <code> Object . equals ( java . lang . Object ) </code> , <code> Object . hashCode ( ) </code> , <code> rehash ( ) </code> , <code> Collection </code> , <code> Map </code> , <code> HashMap </code> , <code> TreeMap </code> , Serialized Form 
+Constructor Summary 
+Constructors 
+Constructor and Description 
+<code> Hashtable ( ) </code> Constructs a new , empty hashtable with a default initial capacity ( 11 ) and load factor ( 0 . 75 ) . 
+<code> Hashtable ( int initialCapacity ) </code> Constructs a new , empty hashtable with the specified initial capacity and default load factor ( 0 . 75 ) . 
+<code> Hashtable ( int initialCapacity , float loadFactor ) </code> Constructs a new , empty hashtable with the specified initial capacity and the specified load factor . 
+<code> Hashtable ( Map < ? extends K , ? extends V > t ) </code> Constructs a new hashtable with the same mappings as the given Map . 
+Method Summary 
+All Methods Instance Methods Concrete Methods 
+Modifier and Type Method and Description 
+<code> void </code> <code> clear ( ) </code> Clears this hashtable so that it contains no keys . 
+<code> Object </code> <code> clone ( ) </code> Creates a shallow copy of this hashtable . 
+<code> V </code> <code> compute ( K key , BiFunction < ? super K , ? super V , ? extends V > remappingFunction ) </code> Attempts to compute a mapping for the specified key and its current mapped value ( or <code> null </code> if there is no current mapping ) . 
+<code> V </code> <code> computeIfAbsent ( K key , Function < ? super K , ? extends V > mappingFunction ) </code> If the specified key is not already associated with a value ( or is mapped to <code> null </code> ) , attempts to compute its value using the given mapping function and enters it into this map unless <code> null </code> . 
+<code> V </code> <code> computeIfPresent ( K key , BiFunction < ? super K , ? super V , ? extends V > remappingFunction ) </code> If the value for the specified key is present and non - null , attempts to compute a new mapping given the key and its current mapped value . 
+<code> boolean </code> <code> contains ( Object value ) </code> Tests if some key maps into the specified value in this hashtable . 
+<code> boolean </code> <code> containsKey ( Object key ) </code> Tests if the specified object is a key in this hashtable . 
+<code> boolean </code> <code> containsValue ( Object value ) </code> Returns true if this hashtable maps one or more keys to this value . 
+<code> Enumeration <code> elements ( ) </code> Returns an enumeration of the values in this hashtable . 
+<code> Set < Map . Entry < K , V > > </code> <code> entrySet ( ) </code> Returns a <code> Set </code> view of the mappings contained in this map . 
+<code> boolean </code> <code> equals ( Object o ) </code> Compares the specified Object with this Map for equality , as per the definition in the Map interface . 
+<code> void </code> <code> forEach ( BiConsumer < ? super K , ? super V > action ) </code> Performs the given action for each entry in this map until all entries have been processed or the action throws an exception . 
+<code> V </code> <code> get ( Object key ) </code> Returns the value to which the specified key is mapped , or <code> null </code> if this map contains no mapping for the key . 
+<code> V </code> <code> getOrDefault ( Object key , V defaultValue ) </code> Returns the value to which the specified key is mapped , or <code> defaultValue </code> if this map contains no mapping for the key . 
+<code> int </code> <code> hashCode ( ) </code> Returns the hash code value for this Map as per the definition in the Map interface . 
+<code> boolean </code> <code> isEmpty ( ) </code> Tests if this hashtable maps no keys to values . 
+<code> Enumeration <code> keys ( ) </code> Returns an enumeration of the keys in this hashtable . 
+<code> Set <code> keySet ( ) </code> Returns a <code> Set </code> view of the keys contained in this map . 
+<code> V </code> <code> merge ( K key , V value , BiFunction < ? super V , ? super V , ? extends V > remappingFunction ) </code> If the specified key is not already associated with a value or is associated with null , associates it with the given non - null value . 
+<code> V </code> <code> put ( K key , V value ) </code> Maps the specified <code> key </code> to the specified <code> value </code> in this hashtable . 
+<code> void </code> <code> putAll ( Map < ? extends K , ? extends V > t ) </code> Copies all of the mappings from the specified map to this hashtable . 
+<code> V </code> <code> putIfAbsent ( K key , V value ) </code> If the specified key is not already associated with a value ( or is mapped to <code> null </code> ) associates it with the given value and returns <code> null </code> , else returns the current value . 
+<code> protected void </code> <code> rehash ( ) </code> Increases the capacity of and internally reorganizes this hashtable , in order to accommodate and access its entries more efficiently . 
+<code> V </code> <code> remove ( Object key ) </code> Removes the key ( and its corresponding value ) from this hashtable . 
+<code> boolean </code> <code> remove ( Object key , Object value ) </code> Removes the entry for the specified key only if it is currently mapped to the specified value . 
+<code> V </code> <code> replace ( K key , V value ) </code> Replaces the entry for the specified key only if it is currently mapped to some value . 
+<code> boolean </code> <code> replace ( K key , V oldValue , V newValue ) </code> Replaces the entry for the specified key only if currently mapped to the specified value . 
+<code> void </code> <code> replaceAll ( BiFunction < ? super K , ? super V , ? extends V > function ) </code> Replaces each entry ' s value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception . 
+<code> int </code> <code> size ( ) </code> Returns the number of keys in this hashtable . 
+<code> String </code> <code> toString ( ) </code> Returns a string representation of this Hashtable object in the form of a set of entries , enclosed in braces and separated by the ASCII characters " , " ( comma and space ) . 
+<code> Collection <code> values ( ) </code> Returns a <code> Collection </code> view of the values contained in this map . 
+Methods inherited from class java . lang . 
+Object <code> finalize , getClass , notify , notifyAll , wait , wait , wait </code> 
+Constructor Detail 
+Hashtable <pre> public Hashtable ( int initialCapacity , float loadFactor ) </pre> Constructs a new , empty hashtable with the specified initial capacity and the specified load factor . 
+Parameters : <code> initialCapacity </code> - the initial capacity of the hashtable . <code> loadFactor </code> - the load factor of the hashtable . Throws : <code> IllegalArgumentException </code> - if the initial capacity is less than zero , or if the load factor is nonpositive . 
+Hashtable <pre> public Hashtable ( int initialCapacity ) </pre> Constructs a new , empty hashtable with the specified initial capacity and default load factor ( 0 . 75 ) . 
+Parameters : <code> initialCapacity </code> - the initial capacity of the hashtable . Throws : <code> IllegalArgumentException </code> - if the initial capacity is less than zero . 
+Hashtable <pre> public Hashtable ( ) </pre> Constructs a new , empty hashtable with a default initial capacity ( 11 ) and load factor ( 0 . 75 ) . 
+Hashtable <pre> public Hashtable ( Map < ? extends K , ? extends V > t ) </pre> Constructs a new hashtable with the same mappings as the given Map . 
+The hashtable is created with an initial capacity sufficient to hold the mappings in the given Map and a default load factor ( 0 . 75 ) . 
+Parameters : <code> t </code> - the map whose mappings are to be placed in this map . Throws : <code> NullPointerException </code> - if the specified map is null . Since : 1 . 2 
+Method Detail 
+size <pre> public int size ( ) </pre> Returns the number of keys in this hashtable . 
+Specified by : <code> size </code> in interface <code> Map < K , V > </code> Specified by : <code> size </code> in class <code> Dictionary < K , V > </code> Returns : the number of keys in this hashtable . 
+isEmpty <pre> public boolean isEmpty ( ) </pre> Tests if this hashtable maps no keys to values . 
+Specified by : <code> isEmpty </code> in interface <code> Map < K , V > </code> Specified by : <code> isEmpty </code> in class <code> Dictionary < K , V > </code> Returns : <code> true </code> if this hashtable maps no keys to values ; <code> false </code> otherwise . 
+keys <pre> public Enumeration <K> keys ( ) </pre> Returns an enumeration of the keys in this hashtable . 
+Specified by : <code> keys </code> in class <code> Dictionary < K , V > </code> Returns : an enumeration of the keys in this hashtable . See Also : <code> Enumeration </code> , <code> elements ( ) </code> , <code> keySet ( ) </code> , <code> Map </code> 
+elements <pre> public Enumeration <V> elements ( ) </pre> Returns an enumeration of the values in this hashtable . Use the Enumeration methods on the returned object to fetch the elements sequentially . 
+Specified by : <code> elements </code> in class <code> Dictionary < K , V > </code> Returns : an enumeration of the values in this hashtable . See Also : <code> Enumeration </code> , <code> keys ( ) </code> , <code> values ( ) </code> , <code> Map </code> 
+contains <pre> public boolean contains ( Object value ) </pre> Tests if some key maps into the specified value in this hashtable . This operation is more expensive than the <code> containsKey </code> method . 
+<p> Note that this method is identical in functionality to <code> containsValue </code> , ( which is part of the <code> Map </code> interface in the collections framework ) . 
+Parameters : <code> value </code> - a value to search for Returns : <code> true </code> if and only if some key maps to the <code> value </code> argument in this hashtable as determined by the equals method ; <code> false </code> otherwise . Throws : <code> NullPointerException </code> - if the value is <code> null </code> 
+containsValue <pre> public boolean containsValue ( Object value ) </pre> Returns true if this hashtable maps one or more keys to this value . 
+<p> Note that this method is identical in functionality to <code> contains </code> ( which predates the <code> Map </code> interface ) . 
+Specified by : <code> containsValue </code> in interface <code> Map < K , V > </code> Parameters : <code> value </code> - value whose presence in this hashtable is to be tested Returns : true if this map maps one or more keys to the specified value Throws : <code> NullPointerException </code> - if the value is <code> null </code> Since : 1 . 2 
+containsKey <pre> public boolean containsKey ( Object key ) </pre> Tests if the specified object is a key in this hashtable . 
+Specified by : <code> containsKey </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - possible key Returns : <code> true </code> if and only if the specified object is a key in this hashtable , as determined by the equals method ; <code> false </code> otherwise . Throws : <code> NullPointerException </code> - if the key is <code> null </code> See Also : <code> contains ( Object ) </code> 
+get <pre> public V get ( Object key ) </pre> Returns the value to which the specified key is mapped , or <code> null </code> if this map contains no mapping for the key . 
+<p> More formally , if this map contains a mapping from a key <code> k </code> to a value <code> v </code> such that <code> ( key . equals ( k ) ) </code> , then this method returns <code> v </code> ; otherwise it returns <code> null </code> . ( There can be at most one such mapping . ) 
+Specified by : <code> get </code> in interface <code> Map < K , V > </code> Specified by : <code> get </code> in class <code> Dictionary < K , V > </code> Parameters : <code> key </code> - the key whose associated value is to be returned Returns : the value to which the specified key is mapped , or <code> null </code> if this map contains no mapping for the key Throws : <code> NullPointerException </code> - if the specified key is null See Also : <code> put ( Object , Object ) </code> 
+rehash <pre> protected void rehash ( ) </pre> Increases the capacity of and internally reorganizes this hashtable , in order to accommodate and access its entries more efficiently . 
+This method is called automatically when the number of keys in the hashtable exceeds this hashtable ' s capacity and load factor . 
+put <pre> public V put ( K key , V value ) </pre> Maps the specified <code> key </code> to the specified <code> value </code> in this hashtable . 
+Neither the key nor the value can be <code> null </code> . 
+<p> 
+The value can be retrieved by calling the <code> get </code> method with a key that is equal to the original key . 
+Specified by : <code> put </code> in interface <code> Map < K , V > </code> Specified by : <code> put </code> in class <code> Dictionary < K , V > </code> Parameters : <code> key </code> - the hashtable key <code> value </code> - the value Returns : the previous value of the specified key in this hashtable , or <code> null </code> if it did not have one Throws : <code> NullPointerException </code> - if the key or value is <code> null </code> See Also : <code> Object . equals ( Object ) </code> , <code> get ( Object ) </code> 
+remove <pre> public V remove ( Object key ) </pre> Removes the key ( and its corresponding value ) from this hashtable . 
+This method does nothing if the key is not in the hashtable . 
+Specified by : <code> remove </code> in interface <code> Map < K , V > </code> Specified by : <code> remove </code> in class <code> Dictionary < K , V > </code> Parameters : <code> key </code> - the key that needs to be removed Returns : the value to which the key had been mapped in this hashtable , or <code> null </code> if the key did not have a mapping Throws : <code> NullPointerException </code> - if the key is <code> null </code> 
+putAll <pre> public void putAll ( Map < ? extends K , ? extends V > t ) </pre> Copies all of the mappings from the specified map to this hashtable . These mappings will replace any mappings that this hashtable had for any of the keys currently in the specified map . 
+Specified by : <code> putAll </code> in interface <code> Map < K , V > </code> Parameters : <code> t </code> - mappings to be stored in this map Throws : <code> NullPointerException </code> - if the specified map is null Since : 1 . 2 
+clear <pre> public void clear ( ) </pre> Clears this hashtable so that it contains no keys . 
+Specified by : <code> clear </code> in interface <code> Map < K , V > </code> 
+clone <pre> public Object clone ( ) </pre> Creates a shallow copy of this hashtable . 
+All the structure of the hashtable itself is copied , but the keys and values are not cloned . This is a relatively expensive operation . 
+Overrides : <code> clone </code> in class <code> Object </code> Returns : a clone of the hashtable See Also : <code> Cloneable </code> 
+toString <pre> public String toString ( ) </pre> Returns a string representation of this Hashtable object in the form of a set of entries , enclosed in braces and separated by the ASCII characters " , " ( comma and space ) . 
+Each entry is rendered as the key , an equals sign = , and the associated element , where the toString method is used to convert the key and element to strings . 
+Overrides : <code> toString </code> in class <code> Object </code> Returns : a string representation of this hashtable 
+keySet <pre> public Set <K> keySet ( ) </pre> Returns a <code> Set </code> view of the keys contained in this map . The set is backed by the map , so changes to the map are reflected in the set , and vice - versa . 
+If the map is modified while an iteration over the set is in progress ( except through the iterator ' s own remove operation ) , the results of the iteration are undefined . 
+The set supports element removal , which removes the corresponding mapping from the map , via the Iterator . remove , Set . remove , removeAll , retainAll , and clear operations . 
+It does not support the add or addAll operations . 
+Specified by : <code> keySet </code> in interface <code> Map < K , V > </code> Returns : a set view of the keys contained in this map Since : 1 . 2 
+entrySet <pre> public Set < Map . 
+Entry < K , V > > entrySet ( ) </pre> Returns a <code> Set </code> view of the mappings contained in this map . The set is backed by the map , so changes to the map are reflected in the set , and vice - versa . 
+If the map is modified while an iteration over the set is in progress ( except through the iterator ' s own remove operation , or through the setValue operation on a map entry returned by the iterator ) the results of the iteration are undefined . 
+The set supports element removal , which removes the corresponding mapping from the map , via the Iterator . remove , Set . remove , removeAll , retainAll and clear operations . 
+It does not support the add or addAll operations . 
+Specified by : <code> entrySet </code> in interface <code> Map < K , V > </code> Returns : a set view of the mappings contained in this map Since : 1 . 2 
+values <pre> public Collection <V> values ( ) </pre> Returns a <code> Collection </code> view of the values contained in this map . The collection is backed by the map , so changes to the map are reflected in the collection , and vice - versa . 
+If the map is modified while an iteration over the collection is in progress ( except through the iterator ' s own remove operation ) , the results of the iteration are undefined . 
+The collection supports element removal , which removes the corresponding mapping from the map , via the Iterator . remove , Collection . remove , removeAll , retainAll and clear operations . 
+It does not support the add or addAll operations . 
+Specified by : <code> values </code> in interface <code> Map < K , V > </code> Returns : a collection view of the values contained in this map Since : 1 . 2 
+equals <pre> public boolean equals ( Object o ) </pre> Compares the specified Object with this Map for equality , as per the definition in the Map interface . 
+Specified by : <code> equals </code> in interface <code> Map < K , V > </code> Overrides : <code> equals </code> in class <code> Object </code> Parameters : <code> o </code> - object to be compared for equality with this hashtable Returns : true if the specified Object is equal to this Map Since : 1 . 2 See Also : <code> Map . equals ( Object ) </code> 
+hashCode <pre> public int hashCode ( ) </pre> Returns the hash code value for this Map as per the definition in the Map interface . 
+Specified by : <code> hashCode </code> in interface <code> Map < K , V > </code> Overrides : <code> hashCode </code> in class <code> Object </code> Returns : a hash code value for this object . Since : 1 . 2 See Also : <code> Map . hashCode ( ) </code> 
+getOrDefault <pre> public V getOrDefault ( Object key , V defaultValue ) </pre> Description copied from interface : <code> Map </code> Returns the value to which the specified key is mapped , or <code> defaultValue </code> if this map contains no mapping for the key . 
+Specified by : <code> getOrDefault </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - the key whose associated value is to be returned <code> defaultValue </code> - the default mapping of the key Returns : the value to which the specified key is mapped , or <code> defaultValue </code> if this map contains no mapping for the key 
+forEach <pre> public void forEach ( BiConsumer < ? super K , ? super V > action ) </pre> Description copied from interface : <code> Map </code> Performs the given action for each entry in this map until all entries have been processed or the action throws an exception . 
+Unless otherwise specified by the implementing class , actions are performed in the order of entry set iteration ( if an iteration order is specified . ) Exceptions thrown by the action are relayed to the caller . 
+Specified by : <code> forEach </code> in interface <code> Map < K , V > </code> Parameters : <code> action </code> - The action to be performed for each entry 
+replaceAll <pre> public void replaceAll ( BiFunction < ? super K , ? super V , ? extends V > function ) </pre> Description copied from interface : <code> Map </code> Replaces each entry ' s value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception . 
+Exceptions thrown by the function are relayed to the caller . 
+Specified by : <code> replaceAll </code> in interface <code> Map < K , V > </code> Parameters : <code> function </code> - the function to apply to each entry 
+putIfAbsent <pre> public V putIfAbsent ( K key , V value ) </pre> Description copied from interface : <code> Map </code> If the specified key is not already associated with a value ( or is mapped to <code> null </code> ) associates it with the given value and returns <code> null </code> , else returns the current value . 
+Specified by : <code> putIfAbsent </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - key with which the specified value is to be associated <code> value </code> - value to be associated with the specified key Returns : the previous value associated with the specified key , or <code> null </code> if there was no mapping for the key . ( A <code> null </code> return can also indicate that the map previously associated <code> null </code> with the key , if the implementation supports null values . ) 
+remove <pre> public boolean remove ( Object key , Object value ) </pre> Description copied from interface : <code> Map </code> Removes the entry for the specified key only if it is currently mapped to the specified value . 
+Specified by : <code> remove </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - key with which the specified value is associated <code> value </code> - value expected to be associated with the specified key Returns : <code> true </code> if the value was removed 
+replace <pre> public boolean replace ( K key , V oldValue , V newValue ) </pre> Description copied from interface : <code> Map </code> Replaces the entry for the specified key only if currently mapped to the specified value . 
+Specified by : <code> replace </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - key with which the specified value is associated <code> oldValue </code> - value expected to be associated with the specified key <code> newValue </code> - value to be associated with the specified key Returns : <code> true </code> if the value was replaced 
+replace <pre> public V replace ( K key , V value ) </pre> Description copied from interface : <code> Map </code> Replaces the entry for the specified key only if it is currently mapped to some value . 
+Specified by : <code> replace </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - key with which the specified value is associated <code> value </code> - value to be associated with the specified key Returns : the previous value associated with the specified key , or <code> null </code> if there was no mapping for the key . ( A <code> null </code> return can also indicate that the map previously associated <code> null </code> with the key , if the implementation supports null values . ) 
+computeIfAbsent <pre> public V computeIfAbsent ( K key , Function < ? super K , ? extends V > mappingFunction ) </pre> Description copied from interface : <code> Map </code> If the specified key is not already associated with a value ( or is mapped to <code> null </code> ) , attempts to compute its value using the given mapping function and enters it into this map unless <code> null </code> . 
+<p> If the function returns <code> null </code> no mapping is recorded . 
+If the function itself throws an ( unchecked ) exception , the exception is rethrown , and no mapping is recorded . 
+The most common usage is to construct a new object serving as an initial mapped value or memoized result , as in : 
+<pre> <code> map . computeIfAbsent ( key , k - > new Value ( f ( k ) ) ) ; 
+<p> Or to implement a multi - value map , <code> Map < K , Collection <V> > </code> , supporting multiple values per key : 
+<pre> <code> map . computeIfAbsent ( key , k - > new HashSet <V> ( ) ) . add ( v ) ; 
+Specified by : <code> computeIfAbsent </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - key with which the specified value is to be associated <code> mappingFunction </code> - the function to compute a value Returns : the current ( existing or computed ) value associated with the specified key , or null if the computed value is null 
+computeIfPresent <pre> public V computeIfPresent ( K key , BiFunction < ? super K , ? super V , ? extends V > remappingFunction ) </pre> Description copied from interface : <code> Map </code> If the value for the specified key is present and non - null , attempts to compute a new mapping given the key and its current mapped value . 
+<p> If the function returns <code> null </code> , the mapping is removed . 
+If the function itself throws an ( unchecked ) exception , the exception is rethrown , and the current mapping is left unchanged . 
+Specified by : <code> computeIfPresent </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - key with which the specified value is to be associated <code> remappingFunction </code> - the function to compute a value Returns : the new value associated with the specified key , or null if none 
+compute <pre> public V compute ( K key , BiFunction < ? super K , ? super V , ? extends V > remappingFunction ) </pre> Description copied from interface : <code> Map </code> Attempts to compute a mapping for the specified key and its current mapped value ( or <code> null </code> if there is no current mapping ) . 
+For example , to either create or append a <code> String </code> msg to a value mapping : 
+<pre> <code> map . compute ( key , ( k , v ) - > ( v = = null ) ? msg : v . concat ( msg ) ) ( Method <code> merge ( ) </code> is often simpler to use for such purposes . ) 
+<p> If the function returns <code> null </code> , the mapping is removed ( or remains absent if initially absent ) . 
+If the function itself throws an ( unchecked ) exception , the exception is rethrown , and the current mapping is left unchanged . 
+Specified by : <code> compute </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - key with which the specified value is to be associated <code> remappingFunction </code> - the function to compute a value Returns : the new value associated with the specified key , or null if none 
+merge <pre> public V merge ( K key , V value , BiFunction < ? super V , ? super V , ? extends V > remappingFunction ) </pre> Description copied from interface : <code> Map </code> If the specified key is not already associated with a value or is associated with null , associates it with the given non - null value . Otherwise , replaces the associated value with the results of the given remapping function , or removes if the result is <code> null </code> . 
+This method may be of use when combining multiple mapped values for a key . For example , to either create or append a <code> String msg </code> to a value mapping : 
+<pre> <code> map . merge ( key , msg , String : : concat ) 
+<p> If the function returns <code> null </code> the mapping is removed . 
+If the function itself throws an ( unchecked ) exception , the exception is rethrown , and the current mapping is left unchanged . 
+Specified by : <code> merge </code> in interface <code> Map < K , V > </code> Parameters : <code> key </code> - key with which the resulting value is to be associated <code> value </code> - the non - null value to be merged with the existing value associated with the key or , if no existing value or a null value is associated with the key , to be associated with the key <code> remappingFunction </code> - the function to recompute a value if present Returns : the new value associated with the specified key , or null if no value is associated with the key 
+Skip navigation links 
+Overview Package Class Use Tree Deprecated Index Help 
+Java™ PlatformStandard Ed . 8 
+Prev Class Next Class 
+Frames No Frames 
+All Classes 
+Summary : Nested | Field | Constr | Method 
+Detail : Field | Constr | Method 
+Submit a bug or feature For further API reference and developer documentation , see Java SE Documentation . 
+That documentation contains more detailed , developer - targeted descriptions , with conceptual overviews , definitions of terms , workarounds , and working code examples . 
+Copyright © 1993 , 2020 , Oracle and / or its affiliates . 
+All rights reserved . 
+Use is subject to license terms . 
+Also see the documentation redistribution policy . 

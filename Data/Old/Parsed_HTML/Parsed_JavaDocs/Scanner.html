@@ -1,0 +1,1714 @@
+
+
+Scanner (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.util
+Class Scanner
+
+java.lang.Object
+
+java.util.Scanner
+
+All Implemented Interfaces:
+Closeable, AutoCloseable, Iterator<String>
+
+<pre>public final class Scanner
+extends Object
+implements Iterator<String>, Closeable</pre>
+A simple text scanner which can parse primitive types and strings using
+ regular expressions.
+
+ <p>A <code>Scanner</code> breaks its input into tokens using a
+ delimiter pattern, which by default matches whitespace. The resulting
+ tokens may then be converted into values of different types using the
+ various next methods.
+
+ <p>For example, this code allows a user to read a number from
+ System.in:
+ <pre><code>
+     Scanner sc = new Scanner(System.in);
+     int i = sc.nextInt();
+ </code></pre>
+
+ <p>As another example, this code allows <code>long</code> types to be
+ assigned from entries in a file <code>myNumbers</code>:
+ <pre><code>
+      Scanner sc = new Scanner(new File("myNumbers"));
+      while (sc.hasNextLong()) {
+          long aLong = sc.nextLong();
+      }
+ </code></pre>
+
+ <p>The scanner can also use delimiters other than whitespace. This
+ example reads several items in from a string:
+ <pre><code>
+     String input = "1 fish 2 fish red fish blue fish";
+     Scanner s = new Scanner(input).useDelimiter("\\s*fish\\s*");
+     System.out.println(s.nextInt());
+     System.out.println(s.nextInt());
+     System.out.println(s.next());
+     System.out.println(s.next());
+     s.close();
+ </code></pre>
+ <p>
+ prints the following output:
+ <pre><code>
+     1
+     2
+     red
+     blue
+ </code></pre>
+
+ <p>The same output can be generated with this code, which uses a regular
+ expression to parse all four tokens at once:
+ <pre><code>
+     String input = "1 fish 2 fish red fish blue fish";
+     Scanner s = new Scanner(input);
+     s.findInLine("(\\d+) fish (\\d+) fish (\\w+) fish (\\w+)");
+     MatchResult result = s.match();
+     for (int i=1; i<=result.groupCount(); i++)
+         System.out.println(result.group(i));
+     s.close();
+ </code></pre>
+
+ <p>The default whitespace delimiter used
+ by a scanner is as recognized by <code>Character</code>.<code>isWhitespace</code>. The <code>reset()</code>
+ method will reset the value of the scanner's delimiter to the default
+ whitespace delimiter regardless of whether it was previously changed.
+
+ <p>A scanning operation may block waiting for input.
+
+ <p>The <code>next()</code> and <code>hasNext()</code> methods and their
+ primitive-type companion methods (such as <code>nextInt()</code> and
+ <code>hasNextInt()</code>) first skip any input that matches the delimiter
+ pattern, and then attempt to return the next token. Both hasNext
+ and next methods may block waiting for further input.  Whether a
+ hasNext method blocks has no connection to whether or not its
+ associated next method will block.
+
+ <p> The <code>findInLine(java.lang.String)</code>, <code>findWithinHorizon(java.lang.String, int)</code>, and <code>skip(java.util.regex.Pattern)</code>
+ methods operate independently of the delimiter pattern. These methods will
+ attempt to match the specified pattern with no regard to delimiters in the
+ input and thus can be used in special circumstances where delimiters are
+ not relevant. These methods may block waiting for more input.
+
+ <p>When a scanner throws an <code>InputMismatchException</code>, the scanner
+ will not pass the token that caused the exception, so that it may be
+ retrieved or skipped via some other method.
+
+ <p>Depending upon the type of delimiting pattern, empty tokens may be
+ returned. For example, the pattern "\\s+" will return no empty
+ tokens since it matches multiple instances of the delimiter. The delimiting
+ pattern "\\s" could return empty tokens since it only passes one
+ space at a time.
+
+ <p> A scanner can read text from any object which implements the <code>Readable</code> interface.  If an invocation of the underlying
+ readable's <code>Readable.read(java.nio.CharBuffer)</code> method throws an <code>IOException</code> then the scanner assumes that the end of the input
+ has been reached.  The most recent IOException thrown by the
+ underlying readable can be retrieved via the <code>ioException()</code> method.
+
+ <p>When a <code>Scanner</code> is closed, it will close its input source
+ if the source implements the <code>Closeable</code> interface.
+
+ <p>A <code>Scanner</code> is not safe for multithreaded use without
+ external synchronization.
+
+ <p>Unless otherwise mentioned, passing a <code>null</code> parameter into
+ any method of a <code>Scanner</code> will cause a
+ <code>NullPointerException</code> to be thrown.
+
+ <p>A scanner will default to interpreting numbers as decimal unless a
+ different radix has been set by using the <code>useRadix(int)</code> method. The
+ <code>reset()</code> method will reset the value of the scanner's radix to
+ <code>10</code> regardless of whether it was previously changed.
+
+  Localized numbers 
+
+ <p> An instance of this class is capable of scanning numbers in the standard
+ formats as well as in the formats of the scanner's locale. A scanner's
+ initial locale is the value returned by the <code>Locale.getDefault(Locale.Category.FORMAT)</code> method; it may be changed via the <code>useLocale(java.util.Locale)</code> method. The <code>reset()</code> method will reset the value of the
+ scanner's locale to the initial locale regardless of whether it was
+ previously changed.
+
+ <p>The localized formats are defined in terms of the following parameters,
+ which for a particular locale are taken from that locale's <code>DecimalFormat</code> object, df, and its and
+ <code>DecimalFormatSymbols</code> object,
+ dfs.
+
+ 
+LocalGroupSeparator  
+The character used to separate thousands groups,
+         i.e., dfs.<code>getGroupingSeparator()</code>
+LocalDecimalSeparator  
+The character used for the decimal point,
+     i.e., dfs.<code>getDecimalSeparator()</code>
+LocalPositivePrefix  
+The string that appears before a positive number (may
+         be empty), i.e., df.<code>getPositivePrefix()</code>
+LocalPositiveSuffix  
+The string that appears after a positive number (may be
+         empty), i.e., df.<code>getPositiveSuffix()</code>
+LocalNegativePrefix  
+The string that appears before a negative number (may
+         be empty), i.e., df.<code>getNegativePrefix()</code>
+LocalNegativeSuffix  
+The string that appears after a negative number (may be
+         empty), i.e., df.<code>getNegativeSuffix()</code>
+LocalNaN  
+The string that represents not-a-number for
+         floating-point values,
+         i.e., dfs.<code>getNaN()</code>
+LocalInfinity  
+The string that represents infinity for floating-point
+         values, i.e., dfs.<code>getInfinity()</code>
+
+ Number syntax 
+
+ <p> The strings that can be parsed as numbers by an instance of this class
+ are specified in terms of the following regular-expression grammar, where
+ Rmax is the highest digit in the radix being used (for example, Rmax is 9 in base 10).
+
+ 
+NonAsciiDigit:
+       A non-ASCII character c for which
+            <code>Character.isDigit</code>(c)
+                        returns true
+
+   Non0Digit:
+       [1-Rmax] | NonASCIIDigit
+Digit:
+       [0-Rmax] | NonASCIIDigit
+GroupedNumeral:
+       ( Non0Digit
+Digit?
+                   Digit?
+    ( LocalGroupSeparator
+Digit
+Digit
+Digit )+ )
+Numeral:
+       ( ( Digit+ )
+               | GroupedNumeral )
+Integer:
+( [-+]? ( Numeral
+                               ) )
+| LocalPositivePrefix Numeral
+LocalPositiveSuffix
+| LocalNegativePrefix Numeral
+LocalNegativeSuffix
+DecimalNumeral:
+       Numeral
+| Numeral
+LocalDecimalSeparator
+Digit*
+| LocalDecimalSeparator
+Digit+
+Exponent:
+       ( [eE] [+-]? Digit+ )
+Decimal:
+( [-+]? DecimalNumeral
+Exponent? )
+| LocalPositivePrefix
+DecimalNumeral
+LocalPositiveSuffix
+Exponent?
+| LocalNegativePrefix
+DecimalNumeral
+LocalNegativeSuffix
+Exponent?
+HexFloat:
+       [-+]? 0[xX][0-9a-fA-F]*\.[0-9a-fA-F]+
+                 ([pP][-+]?[0-9]+)?
+NonNumber:
+       NaN
+                          | LocalNan
+                          | Infinity
+                          | LocalInfinity
+SignedNonNumber:
+       ( [-+]? NonNumber )
+| LocalPositivePrefix
+NonNumber
+LocalPositiveSuffix
+| LocalNegativePrefix
+NonNumber
+LocalNegativeSuffix
+Float:
+       Decimal
+| HexFloat
+| SignedNonNumber
+
+ <p>Whitespace is not significant in the above regular expressions.
+
+Since:
+1.5
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>Scanner(File source)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified file.
+
+<code>Scanner(File source,
+       String charsetName)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified file.
+
+<code>Scanner(InputStream source)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified input stream.
+
+<code>Scanner(InputStream source,
+       String charsetName)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified input stream.
+
+<code>Scanner(Path source)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified file.
+
+<code>Scanner(Path source,
+       String charsetName)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified file.
+
+<code>Scanner(Readable source)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified source.
+
+<code>Scanner(ReadableByteChannel source)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified channel.
+
+<code>Scanner(ReadableByteChannel source,
+       String charsetName)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified channel.
+
+<code>Scanner(String source)</code>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified string.
+
+Method Summary
+
+All Methods Instance Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>void</code>
+<code>close()</code>
+Closes this scanner.
+
+<code>Pattern</code>
+<code>delimiter()</code>
+Returns the <code>Pattern</code> this <code>Scanner</code> is currently
+ using to match delimiters.
+
+<code>String</code>
+<code>findInLine(Pattern pattern)</code>
+Attempts to find the next occurrence of the specified pattern ignoring
+ delimiters.
+
+<code>String</code>
+<code>findInLine(String pattern)</code>
+Attempts to find the next occurrence of a pattern constructed from the
+ specified string, ignoring delimiters.
+
+<code>String</code>
+<code>findWithinHorizon(Pattern pattern,
+                 int horizon)</code>
+Attempts to find the next occurrence of the specified pattern.
+
+<code>String</code>
+<code>findWithinHorizon(String pattern,
+                 int horizon)</code>
+Attempts to find the next occurrence of a pattern constructed from the
+ specified string, ignoring delimiters.
+
+<code>boolean</code>
+<code>hasNext()</code>
+Returns true if this scanner has another token in its input.
+
+<code>boolean</code>
+<code>hasNext(Pattern pattern)</code>
+Returns true if the next complete token matches the specified pattern.
+
+<code>boolean</code>
+<code>hasNext(String pattern)</code>
+Returns true if the next token matches the pattern constructed from the
+ specified string.
+
+<code>boolean</code>
+<code>hasNextBigDecimal()</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a <code>BigDecimal</code> using the
+ <code>nextBigDecimal()</code> method.
+
+<code>boolean</code>
+<code>hasNextBigInteger()</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a <code>BigInteger</code> in the default radix using the
+ <code>nextBigInteger()</code> method.
+
+<code>boolean</code>
+<code>hasNextBigInteger(int radix)</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a <code>BigInteger</code> in the specified radix using
+ the <code>nextBigInteger()</code> method.
+
+<code>boolean</code>
+<code>hasNextBoolean()</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a boolean value using a case insensitive pattern
+ created from the string "true|false".
+
+<code>boolean</code>
+<code>hasNextByte()</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a byte value in the default radix using the
+ <code>nextByte()</code> method.
+
+<code>boolean</code>
+<code>hasNextByte(int radix)</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a byte value in the specified radix using the
+ <code>nextByte()</code> method.
+
+<code>boolean</code>
+<code>hasNextDouble()</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a double value using the <code>nextDouble()</code>
+ method.
+
+<code>boolean</code>
+<code>hasNextFloat()</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a float value using the <code>nextFloat()</code>
+ method.
+
+<code>boolean</code>
+<code>hasNextInt()</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as an int value in the default radix using the
+ <code>nextInt()</code> method.
+
+<code>boolean</code>
+<code>hasNextInt(int radix)</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as an int value in the specified radix using the
+ <code>nextInt()</code> method.
+
+<code>boolean</code>
+<code>hasNextLine()</code>
+Returns true if there is another line in the input of this scanner.
+
+<code>boolean</code>
+<code>hasNextLong()</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a long value in the default radix using the
+ <code>nextLong()</code> method.
+
+<code>boolean</code>
+<code>hasNextLong(int radix)</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a long value in the specified radix using the
+ <code>nextLong()</code> method.
+
+<code>boolean</code>
+<code>hasNextShort()</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a short value in the default radix using the
+ <code>nextShort()</code> method.
+
+<code>boolean</code>
+<code>hasNextShort(int radix)</code>
+Returns true if the next token in this scanner's input can be
+ interpreted as a short value in the specified radix using the
+ <code>nextShort()</code> method.
+
+<code>IOException</code>
+<code>ioException()</code>
+Returns the <code>IOException</code> last thrown by this
+ <code>Scanner</code>'s underlying <code>Readable</code>.
+
+<code>Locale</code>
+<code>locale()</code>
+Returns this scanner's locale.
+
+<code>MatchResult</code>
+<code>match()</code>
+Returns the match result of the last scanning operation performed
+ by this scanner.
+
+<code>String</code>
+<code>next()</code>
+Finds and returns the next complete token from this scanner.
+
+<code>String</code>
+<code>next(Pattern pattern)</code>
+Returns the next token if it matches the specified pattern.
+
+<code>String</code>
+<code>next(String pattern)</code>
+Returns the next token if it matches the pattern constructed from the
+ specified string.
+
+<code>BigDecimal</code>
+<code>nextBigDecimal()</code>
+Scans the next token of the input as a <code>BigDecimal</code>.
+
+<code>BigInteger</code>
+<code>nextBigInteger()</code>
+Scans the next token of the input as a <code>BigInteger</code>.
+
+<code>BigInteger</code>
+<code>nextBigInteger(int radix)</code>
+Scans the next token of the input as a <code>BigInteger</code>.
+
+<code>boolean</code>
+<code>nextBoolean()</code>
+Scans the next token of the input into a boolean value and returns
+ that value.
+
+<code>byte</code>
+<code>nextByte()</code>
+Scans the next token of the input as a byte.
+
+<code>byte</code>
+<code>nextByte(int radix)</code>
+Scans the next token of the input as a byte.
+
+<code>double</code>
+<code>nextDouble()</code>
+Scans the next token of the input as a double.
+
+<code>float</code>
+<code>nextFloat()</code>
+Scans the next token of the input as a float.
+
+<code>int</code>
+<code>nextInt()</code>
+Scans the next token of the input as an int.
+
+<code>int</code>
+<code>nextInt(int radix)</code>
+Scans the next token of the input as an int.
+
+<code>String</code>
+<code>nextLine()</code>
+Advances this scanner past the current line and returns the input
+ that was skipped.
+
+<code>long</code>
+<code>nextLong()</code>
+Scans the next token of the input as a long.
+
+<code>long</code>
+<code>nextLong(int radix)</code>
+Scans the next token of the input as a long.
+
+<code>short</code>
+<code>nextShort()</code>
+Scans the next token of the input as a short.
+
+<code>short</code>
+<code>nextShort(int radix)</code>
+Scans the next token of the input as a short.
+
+<code>int</code>
+<code>radix()</code>
+Returns this scanner's default radix.
+
+<code>void</code>
+<code>remove()</code>
+The remove operation is not supported by this implementation of
+ <code>Iterator</code>.
+
+<code>Scanner</code>
+<code>reset()</code>
+Resets this scanner.
+
+<code>Scanner</code>
+<code>skip(Pattern pattern)</code>
+Skips input that matches the specified pattern, ignoring delimiters.
+
+<code>Scanner</code>
+<code>skip(String pattern)</code>
+Skips input that matches a pattern constructed from the specified
+ string.
+
+<code>String</code>
+<code>toString()</code>
+Returns the string representation of this <code>Scanner</code>.
+
+<code>Scanner</code>
+<code>useDelimiter(Pattern pattern)</code>
+Sets this scanner's delimiting pattern to the specified pattern.
+
+<code>Scanner</code>
+<code>useDelimiter(String pattern)</code>
+Sets this scanner's delimiting pattern to a pattern constructed from
+ the specified <code>String</code>.
+
+<code>Scanner</code>
+<code>useLocale(Locale locale)</code>
+Sets this scanner's locale to the specified locale.
+
+<code>Scanner</code>
+<code>useRadix(int radix)</code>
+Sets this scanner's default radix to the specified radix.
+
+Methods inherited from class java.lang.Object
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code>
+
+Methods inherited from interface java.util.Iterator
+<code>forEachRemaining</code>
+
+Constructor Detail
+
+Scanner
+<pre>public Scanner(Readable source)</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified source.
+
+Parameters:
+<code>source</code> - A character source implementing the <code>Readable</code>
+         interface
+
+Scanner
+<pre>public Scanner(InputStream source)</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified input stream. Bytes from the stream are converted
+ into characters using the underlying platform's
+ default charset.
+
+Parameters:
+<code>source</code> - An input stream to be scanned
+
+Scanner
+<pre>public Scanner(InputStream source,
+               String charsetName)</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified input stream. Bytes from the stream are converted
+ into characters using the specified charset.
+
+Parameters:
+<code>source</code> - An input stream to be scanned
+<code>charsetName</code> - The encoding type used to convert bytes from the
+        stream into characters to be scanned
+Throws:
+<code>IllegalArgumentException</code> - if the specified character set
+         does not exist
+
+Scanner
+<pre>public Scanner(File source)
+        throws FileNotFoundException</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified file. Bytes from the file are converted into
+ characters using the underlying platform's
+ default charset.
+
+Parameters:
+<code>source</code> - A file to be scanned
+Throws:
+<code>FileNotFoundException</code> - if source is not found
+
+Scanner
+<pre>public Scanner(File source,
+               String charsetName)
+        throws FileNotFoundException</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified file. Bytes from the file are converted into
+ characters using the specified charset.
+
+Parameters:
+<code>source</code> - A file to be scanned
+<code>charsetName</code> - The encoding type used to convert bytes from the file
+        into characters to be scanned
+Throws:
+<code>FileNotFoundException</code> - if source is not found
+<code>IllegalArgumentException</code> - if the specified encoding is
+         not found
+
+Scanner
+<pre>public Scanner(Path source)
+        throws IOException</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified file. Bytes from the file are converted into
+ characters using the underlying platform's
+ default charset.
+
+Parameters:
+<code>source</code> - the path to the file to be scanned
+Throws:
+<code>IOException</code> - if an I/O error occurs opening source
+Since:
+1.7
+
+Scanner
+<pre>public Scanner(Path source,
+               String charsetName)
+        throws IOException</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified file. Bytes from the file are converted into
+ characters using the specified charset.
+
+Parameters:
+<code>source</code> - the path to the file to be scanned
+<code>charsetName</code> - The encoding type used to convert bytes from the file
+          into characters to be scanned
+Throws:
+<code>IOException</code> - if an I/O error occurs opening source
+<code>IllegalArgumentException</code> - if the specified encoding is not found
+Since:
+1.7
+
+Scanner
+<pre>public Scanner(String source)</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified string.
+
+Parameters:
+<code>source</code> - A string to scan
+
+Scanner
+<pre>public Scanner(ReadableByteChannel source)</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified channel. Bytes from the source are converted into
+ characters using the underlying platform's
+ default charset.
+
+Parameters:
+<code>source</code> - A channel to scan
+
+Scanner
+<pre>public Scanner(ReadableByteChannel source,
+               String charsetName)</pre>
+Constructs a new <code>Scanner</code> that produces values scanned
+ from the specified channel. Bytes from the source are converted into
+ characters using the specified charset.
+
+Parameters:
+<code>source</code> - A channel to scan
+<code>charsetName</code> - The encoding type used to convert bytes from the
+        channel into characters to be scanned
+Throws:
+<code>IllegalArgumentException</code> - if the specified character set
+         does not exist
+
+Method Detail
+
+close
+<pre>public void close()</pre>
+Closes this scanner.
+
+ <p> If this scanner has not yet been closed then if its underlying
+ readable also implements the <code>Closeable</code> interface then the readable's close method
+ will be invoked.  If this scanner is already closed then invoking this
+ method will have no effect.
+
+ <p>Attempting to perform search operations after a scanner has
+ been closed will result in an <code>IllegalStateException</code>.
+
+Specified by:
+<code>close</code> in interface <code>Closeable</code>
+Specified by:
+<code>close</code> in interface <code>AutoCloseable</code>
+
+ioException
+<pre>public IOException ioException()</pre>
+Returns the <code>IOException</code> last thrown by this
+ <code>Scanner</code>'s underlying <code>Readable</code>. This method
+ returns <code>null</code> if no such exception exists.
+
+Returns:
+the last exception thrown by this scanner's readable
+
+delimiter
+<pre>public Pattern delimiter()</pre>
+Returns the <code>Pattern</code> this <code>Scanner</code> is currently
+ using to match delimiters.
+
+Returns:
+this scanner's delimiting pattern.
+
+useDelimiter
+<pre>public Scanner useDelimiter(Pattern pattern)</pre>
+Sets this scanner's delimiting pattern to the specified pattern.
+
+Parameters:
+<code>pattern</code> - A delimiting pattern
+Returns:
+this scanner
+
+useDelimiter
+<pre>public Scanner useDelimiter(String pattern)</pre>
+Sets this scanner's delimiting pattern to a pattern constructed from
+ the specified <code>String</code>.
+
+ <p> An invocation of this method of the form
+ useDelimiter(pattern) behaves in exactly the same way as the
+ invocation useDelimiter(Pattern.compile(pattern)).
+
+ <p> Invoking the <code>reset()</code> method will set the scanner's delimiter
+ to the default.
+
+Parameters:
+<code>pattern</code> - A string specifying a delimiting pattern
+Returns:
+this scanner
+
+locale
+<pre>public Locale locale()</pre>
+Returns this scanner's locale.
+
+ <p>A scanner's locale affects many elements of its default
+ primitive matching regular expressions; see
+ localized numbers above.
+
+Returns:
+this scanner's locale
+
+useLocale
+<pre>public Scanner useLocale(Locale locale)</pre>
+Sets this scanner's locale to the specified locale.
+
+ <p>A scanner's locale affects many elements of its default
+ primitive matching regular expressions; see
+ localized numbers above.
+
+ <p>Invoking the <code>reset()</code> method will set the scanner's locale to
+ the initial locale.
+
+Parameters:
+<code>locale</code> - A string specifying the locale to use
+Returns:
+this scanner
+
+radix
+<pre>public int radix()</pre>
+Returns this scanner's default radix.
+
+ <p>A scanner's radix affects elements of its default
+ number matching regular expressions; see
+ localized numbers above.
+
+Returns:
+the default radix of this scanner
+
+useRadix
+<pre>public Scanner useRadix(int radix)</pre>
+Sets this scanner's default radix to the specified radix.
+
+ <p>A scanner's radix affects elements of its default
+ number matching regular expressions; see
+ localized numbers above.
+
+ <p>If the radix is less than <code>Character.MIN_RADIX</code>
+ or greater than <code>Character.MAX_RADIX</code>, then an
+ <code>IllegalArgumentException</code> is thrown.
+
+ <p>Invoking the <code>reset()</code> method will set the scanner's radix to
+ <code>10</code>.
+
+Parameters:
+<code>radix</code> - The radix to use when scanning numbers
+Returns:
+this scanner
+Throws:
+<code>IllegalArgumentException</code> - if radix is out of range
+
+match
+<pre>public MatchResult match()</pre>
+Returns the match result of the last scanning operation performed
+ by this scanner. This method throws <code>IllegalStateException</code>
+ if no match has been performed, or if the last match was
+ not successful.
+
+ <p>The various <code>next</code>methods of <code>Scanner</code>
+ make a match result available if they complete without throwing an
+ exception. For instance, after an invocation of the <code>nextInt()</code>
+ method that returned an int, this method returns a
+ <code>MatchResult</code> for the search of the
+ Integer regular expression
+ defined above. Similarly the <code>findInLine(java.lang.String)</code>,
+ <code>findWithinHorizon(java.lang.String, int)</code>, and <code>skip(java.util.regex.Pattern)</code> methods will make a
+ match available if they succeed.
+
+Returns:
+a match result for the last match operation
+Throws:
+<code>IllegalStateException</code> - If no match result is available
+
+toString
+<pre>public String toString()</pre>
+<p>Returns the string representation of this <code>Scanner</code>. The
+ string representation of a <code>Scanner</code> contains information
+ that may be useful for debugging. The exact format is unspecified.
+
+Overrides:
+<code>toString</code> in class <code>Object</code>
+Returns:
+The string representation of this scanner
+
+hasNext
+<pre>public boolean hasNext()</pre>
+Returns true if this scanner has another token in its input.
+ This method may block while waiting for input to scan.
+ The scanner does not advance past any input.
+
+Specified by:
+<code>hasNext</code> in interface <code>Iterator<String></code>
+Returns:
+true if and only if this scanner has another token
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+See Also:
+<code>Iterator</code>
+
+next
+<pre>public String next()</pre>
+Finds and returns the next complete token from this scanner.
+ A complete token is preceded and followed by input that matches
+ the delimiter pattern. This method may block while waiting for input
+ to scan, even if a previous invocation of <code>hasNext()</code> returned
+ <code>true</code>.
+
+Specified by:
+<code>next</code> in interface <code>Iterator<String></code>
+Returns:
+the next token
+Throws:
+<code>NoSuchElementException</code> - if no more tokens are available
+<code>IllegalStateException</code> - if this scanner is closed
+See Also:
+<code>Iterator</code>
+
+remove
+<pre>public void remove()</pre>
+The remove operation is not supported by this implementation of
+ <code>Iterator</code>.
+
+Specified by:
+<code>remove</code> in interface <code>Iterator<String></code>
+Throws:
+<code>UnsupportedOperationException</code> - if this method is invoked.
+See Also:
+<code>Iterator</code>
+
+hasNext
+<pre>public boolean hasNext(String pattern)</pre>
+Returns true if the next token matches the pattern constructed from the
+ specified string. The scanner does not advance past any input.
+
+ <p> An invocation of this method of the form hasNext(pattern)
+ behaves in exactly the same way as the invocation
+ hasNext(Pattern.compile(pattern)).
+
+Parameters:
+<code>pattern</code> - a string specifying the pattern to scan
+Returns:
+true if and only if this scanner has another token matching
+         the specified pattern
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+next
+<pre>public String next(String pattern)</pre>
+Returns the next token if it matches the pattern constructed from the
+ specified string.  If the match is successful, the scanner advances
+ past the input that matched the pattern.
+
+ <p> An invocation of this method of the form next(pattern)
+ behaves in exactly the same way as the invocation
+ next(Pattern.compile(pattern)).
+
+Parameters:
+<code>pattern</code> - a string specifying the pattern to scan
+Returns:
+the next token
+Throws:
+<code>NoSuchElementException</code> - if no such tokens are available
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNext
+<pre>public boolean hasNext(Pattern pattern)</pre>
+Returns true if the next complete token matches the specified pattern.
+ A complete token is prefixed and postfixed by input that matches
+ the delimiter pattern. This method may block while waiting for input.
+ The scanner does not advance past any input.
+
+Parameters:
+<code>pattern</code> - the pattern to scan for
+Returns:
+true if and only if this scanner has another token matching
+         the specified pattern
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+next
+<pre>public String next(Pattern pattern)</pre>
+Returns the next token if it matches the specified pattern. This
+ method may block while waiting for input to scan, even if a previous
+ invocation of <code>hasNext(Pattern)</code> returned <code>true</code>.
+ If the match is successful, the scanner advances past the input that
+ matched the pattern.
+
+Parameters:
+<code>pattern</code> - the pattern to scan for
+Returns:
+the next token
+Throws:
+<code>NoSuchElementException</code> - if no more tokens are available
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextLine
+<pre>public boolean hasNextLine()</pre>
+Returns true if there is another line in the input of this scanner.
+ This method may block while waiting for input. The scanner does not
+ advance past any input.
+
+Returns:
+true if and only if this scanner has another line of input
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextLine
+<pre>public String nextLine()</pre>
+Advances this scanner past the current line and returns the input
+ that was skipped.
+
+ This method returns the rest of the current line, excluding any line
+ separator at the end. The position is set to the beginning of the next
+ line.
+
+ <p>Since this method continues to search through the input looking
+ for a line separator, it may buffer all of the input searching for
+ the line to skip if no line separators are present.
+
+Returns:
+the line that was skipped
+Throws:
+<code>NoSuchElementException</code> - if no line was found
+<code>IllegalStateException</code> - if this scanner is closed
+
+findInLine
+<pre>public String findInLine(String pattern)</pre>
+Attempts to find the next occurrence of a pattern constructed from the
+ specified string, ignoring delimiters.
+
+ <p>An invocation of this method of the form findInLine(pattern)
+ behaves in exactly the same way as the invocation
+ findInLine(Pattern.compile(pattern)).
+
+Parameters:
+<code>pattern</code> - a string specifying the pattern to search for
+Returns:
+the text that matched the specified pattern
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+findInLine
+<pre>public String findInLine(Pattern pattern)</pre>
+Attempts to find the next occurrence of the specified pattern ignoring
+ delimiters. If the pattern is found before the next line separator, the
+ scanner advances past the input that matched and returns the string that
+ matched the pattern.
+ If no such pattern is detected in the input up to the next line
+ separator, then <code>null</code> is returned and the scanner's
+ position is unchanged. This method may block waiting for input that
+ matches the pattern.
+
+ <p>Since this method continues to search through the input looking
+ for the specified pattern, it may buffer all of the input searching for
+ the desired token if no line separators are present.
+
+Parameters:
+<code>pattern</code> - the pattern to scan for
+Returns:
+the text that matched the specified pattern
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+findWithinHorizon
+<pre>public String findWithinHorizon(String pattern,
+                                int horizon)</pre>
+Attempts to find the next occurrence of a pattern constructed from the
+ specified string, ignoring delimiters.
+
+ <p>An invocation of this method of the form
+ findWithinHorizon(pattern) behaves in exactly the same way as
+ the invocation
+ findWithinHorizon(Pattern.compile(pattern, horizon)).
+
+Parameters:
+<code>pattern</code> - a string specifying the pattern to search for
+<code>horizon</code> - the search horizon
+Returns:
+the text that matched the specified pattern
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+<code>IllegalArgumentException</code> - if horizon is negative
+
+findWithinHorizon
+<pre>public String findWithinHorizon(Pattern pattern,
+                                int horizon)</pre>
+Attempts to find the next occurrence of the specified pattern.
+
+ <p>This method searches through the input up to the specified
+ search horizon, ignoring delimiters. If the pattern is found the
+ scanner advances past the input that matched and returns the string
+ that matched the pattern. If no such pattern is detected then the
+ null is returned and the scanner's position remains unchanged. This
+ method may block waiting for input that matches the pattern.
+
+ <p>A scanner will never search more than <code>horizon</code> code
+ points beyond its current position. Note that a match may be clipped
+ by the horizon; that is, an arbitrary match result may have been
+ different if the horizon had been larger. The scanner treats the
+ horizon as a transparent, non-anchoring bound (see <code>Matcher.useTransparentBounds(boolean)</code> and <code>Matcher.useAnchoringBounds(boolean)</code>).
+
+ <p>If horizon is <code>0</code>, then the horizon is ignored and
+ this method continues to search through the input looking for the
+ specified pattern without bound. In this case it may buffer all of
+ the input searching for the pattern.
+
+ <p>If horizon is negative, then an IllegalArgumentException is
+ thrown.
+
+Parameters:
+<code>pattern</code> - the pattern to scan for
+<code>horizon</code> - the search horizon
+Returns:
+the text that matched the specified pattern
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+<code>IllegalArgumentException</code> - if horizon is negative
+
+skip
+<pre>public Scanner skip(Pattern pattern)</pre>
+Skips input that matches the specified pattern, ignoring delimiters.
+ This method will skip input if an anchored match of the specified
+ pattern succeeds.
+
+ <p>If a match to the specified pattern is not found at the
+ current position, then no input is skipped and a
+ NoSuchElementException is thrown.
+
+ <p>Since this method seeks to match the specified pattern starting at
+ the scanner's current position, patterns that can match a lot of
+ input (".*", for example) may cause the scanner to buffer a large
+ amount of input.
+
+ <p>Note that it is possible to skip something without risking a
+ <code>NoSuchElementException</code> by using a pattern that can
+ match nothing, e.g., <code>sc.skip("[ \t]*")</code>.
+
+Parameters:
+<code>pattern</code> - a string specifying the pattern to skip over
+Returns:
+this scanner
+Throws:
+<code>NoSuchElementException</code> - if the specified pattern is not found
+<code>IllegalStateException</code> - if this scanner is closed
+
+skip
+<pre>public Scanner skip(String pattern)</pre>
+Skips input that matches a pattern constructed from the specified
+ string.
+
+ <p> An invocation of this method of the form skip(pattern)
+ behaves in exactly the same way as the invocation
+ skip(Pattern.compile(pattern)).
+
+Parameters:
+<code>pattern</code> - a string specifying the pattern to skip over
+Returns:
+this scanner
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextBoolean
+<pre>public boolean hasNextBoolean()</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a boolean value using a case insensitive pattern
+ created from the string "true|false".  The scanner does not
+ advance past the input that matched.
+
+Returns:
+true if and only if this scanner's next token is a valid
+         boolean value
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextBoolean
+<pre>public boolean nextBoolean()</pre>
+Scans the next token of the input into a boolean value and returns
+ that value. This method will throw <code>InputMismatchException</code>
+ if the next token cannot be translated into a valid boolean value.
+ If the match is successful, the scanner advances past the input that
+ matched.
+
+Returns:
+the boolean scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token is not a valid boolean
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextByte
+<pre>public boolean hasNextByte()</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a byte value in the default radix using the
+ <code>nextByte()</code> method. The scanner does not advance past any input.
+
+Returns:
+true if and only if this scanner's next token is a valid
+         byte value
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextByte
+<pre>public boolean hasNextByte(int radix)</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a byte value in the specified radix using the
+ <code>nextByte()</code> method. The scanner does not advance past any input.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token as a byte value
+Returns:
+true if and only if this scanner's next token is a valid
+         byte value
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextByte
+<pre>public byte nextByte()</pre>
+Scans the next token of the input as a byte.
+
+ <p> An invocation of this method of the form
+ nextByte() behaves in exactly the same way as the
+ invocation nextByte(radix), where <code>radix</code>
+ is the default radix of this scanner.
+
+Returns:
+the byte scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextByte
+<pre>public byte nextByte(int radix)</pre>
+Scans the next token of the input as a byte.
+ This method will throw <code>InputMismatchException</code>
+ if the next token cannot be translated into a valid byte value as
+ described below. If the translation is successful, the scanner advances
+ past the input that matched.
+
+ <p> If the next token matches the Integer regular expression defined
+ above then the token is converted into a byte value as if by
+ removing all locale specific prefixes, group separators, and locale
+ specific suffixes, then mapping non-ASCII digits into ASCII
+ digits via <code>Character.digit</code>, prepending a
+ negative sign (-) if the locale specific negative prefixes and suffixes
+ were present, and passing the resulting string to
+ <code>Byte.parseByte</code> with the
+ specified radix.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token as a byte value
+Returns:
+the byte scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextShort
+<pre>public boolean hasNextShort()</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a short value in the default radix using the
+ <code>nextShort()</code> method. The scanner does not advance past any input.
+
+Returns:
+true if and only if this scanner's next token is a valid
+         short value in the default radix
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextShort
+<pre>public boolean hasNextShort(int radix)</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a short value in the specified radix using the
+ <code>nextShort()</code> method. The scanner does not advance past any input.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token as a short value
+Returns:
+true if and only if this scanner's next token is a valid
+         short value in the specified radix
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextShort
+<pre>public short nextShort()</pre>
+Scans the next token of the input as a short.
+
+ <p> An invocation of this method of the form
+ nextShort() behaves in exactly the same way as the
+ invocation nextShort(radix), where <code>radix</code>
+ is the default radix of this scanner.
+
+Returns:
+the short scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextShort
+<pre>public short nextShort(int radix)</pre>
+Scans the next token of the input as a short.
+ This method will throw <code>InputMismatchException</code>
+ if the next token cannot be translated into a valid short value as
+ described below. If the translation is successful, the scanner advances
+ past the input that matched.
+
+ <p> If the next token matches the Integer regular expression defined
+ above then the token is converted into a short value as if by
+ removing all locale specific prefixes, group separators, and locale
+ specific suffixes, then mapping non-ASCII digits into ASCII
+ digits via <code>Character.digit</code>, prepending a
+ negative sign (-) if the locale specific negative prefixes and suffixes
+ were present, and passing the resulting string to
+ <code>Short.parseShort</code> with the
+ specified radix.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token as a short value
+Returns:
+the short scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextInt
+<pre>public boolean hasNextInt()</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as an int value in the default radix using the
+ <code>nextInt()</code> method. The scanner does not advance past any input.
+
+Returns:
+true if and only if this scanner's next token is a valid
+         int value
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextInt
+<pre>public boolean hasNextInt(int radix)</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as an int value in the specified radix using the
+ <code>nextInt()</code> method. The scanner does not advance past any input.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token as an int value
+Returns:
+true if and only if this scanner's next token is a valid
+         int value
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextInt
+<pre>public int nextInt()</pre>
+Scans the next token of the input as an int.
+
+ <p> An invocation of this method of the form
+ nextInt() behaves in exactly the same way as the
+ invocation nextInt(radix), where <code>radix</code>
+ is the default radix of this scanner.
+
+Returns:
+the int scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextInt
+<pre>public int nextInt(int radix)</pre>
+Scans the next token of the input as an int.
+ This method will throw <code>InputMismatchException</code>
+ if the next token cannot be translated into a valid int value as
+ described below. If the translation is successful, the scanner advances
+ past the input that matched.
+
+ <p> If the next token matches the Integer regular expression defined
+ above then the token is converted into an int value as if by
+ removing all locale specific prefixes, group separators, and locale
+ specific suffixes, then mapping non-ASCII digits into ASCII
+ digits via <code>Character.digit</code>, prepending a
+ negative sign (-) if the locale specific negative prefixes and suffixes
+ were present, and passing the resulting string to
+ <code>Integer.parseInt</code> with the
+ specified radix.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token as an int value
+Returns:
+the int scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextLong
+<pre>public boolean hasNextLong()</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a long value in the default radix using the
+ <code>nextLong()</code> method. The scanner does not advance past any input.
+
+Returns:
+true if and only if this scanner's next token is a valid
+         long value
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextLong
+<pre>public boolean hasNextLong(int radix)</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a long value in the specified radix using the
+ <code>nextLong()</code> method. The scanner does not advance past any input.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token as a long value
+Returns:
+true if and only if this scanner's next token is a valid
+         long value
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextLong
+<pre>public long nextLong()</pre>
+Scans the next token of the input as a long.
+
+ <p> An invocation of this method of the form
+ nextLong() behaves in exactly the same way as the
+ invocation nextLong(radix), where <code>radix</code>
+ is the default radix of this scanner.
+
+Returns:
+the long scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextLong
+<pre>public long nextLong(int radix)</pre>
+Scans the next token of the input as a long.
+ This method will throw <code>InputMismatchException</code>
+ if the next token cannot be translated into a valid long value as
+ described below. If the translation is successful, the scanner advances
+ past the input that matched.
+
+ <p> If the next token matches the Integer regular expression defined
+ above then the token is converted into a long value as if by
+ removing all locale specific prefixes, group separators, and locale
+ specific suffixes, then mapping non-ASCII digits into ASCII
+ digits via <code>Character.digit</code>, prepending a
+ negative sign (-) if the locale specific negative prefixes and suffixes
+ were present, and passing the resulting string to
+ <code>Long.parseLong</code> with the
+ specified radix.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token as an int value
+Returns:
+the long scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextFloat
+<pre>public boolean hasNextFloat()</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a float value using the <code>nextFloat()</code>
+ method. The scanner does not advance past any input.
+
+Returns:
+true if and only if this scanner's next token is a valid
+         float value
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextFloat
+<pre>public float nextFloat()</pre>
+Scans the next token of the input as a float.
+ This method will throw <code>InputMismatchException</code>
+ if the next token cannot be translated into a valid float value as
+ described below. If the translation is successful, the scanner advances
+ past the input that matched.
+
+ <p> If the next token matches the Float regular expression defined above
+ then the token is converted into a float value as if by
+ removing all locale specific prefixes, group separators, and locale
+ specific suffixes, then mapping non-ASCII digits into ASCII
+ digits via <code>Character.digit</code>, prepending a
+ negative sign (-) if the locale specific negative prefixes and suffixes
+ were present, and passing the resulting string to
+ <code>Float.parseFloat</code>. If the token matches
+ the localized NaN or infinity strings, then either "Nan" or "Infinity"
+ is passed to <code>Float.parseFloat</code> as
+ appropriate.
+
+Returns:
+the float scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Float
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextDouble
+<pre>public boolean hasNextDouble()</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a double value using the <code>nextDouble()</code>
+ method. The scanner does not advance past any input.
+
+Returns:
+true if and only if this scanner's next token is a valid
+         double value
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextDouble
+<pre>public double nextDouble()</pre>
+Scans the next token of the input as a double.
+ This method will throw <code>InputMismatchException</code>
+ if the next token cannot be translated into a valid double value.
+ If the translation is successful, the scanner advances past the input
+ that matched.
+
+ <p> If the next token matches the Float regular expression defined above
+ then the token is converted into a double value as if by
+ removing all locale specific prefixes, group separators, and locale
+ specific suffixes, then mapping non-ASCII digits into ASCII
+ digits via <code>Character.digit</code>, prepending a
+ negative sign (-) if the locale specific negative prefixes and suffixes
+ were present, and passing the resulting string to
+ <code>Double.parseDouble</code>. If the token matches
+ the localized NaN or infinity strings, then either "Nan" or "Infinity"
+ is passed to <code>Double.parseDouble</code> as
+ appropriate.
+
+Returns:
+the double scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Float
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if the input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextBigInteger
+<pre>public boolean hasNextBigInteger()</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a <code>BigInteger</code> in the default radix using the
+ <code>nextBigInteger()</code> method. The scanner does not advance past any
+ input.
+
+Returns:
+true if and only if this scanner's next token is a valid
+         <code>BigInteger</code>
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextBigInteger
+<pre>public boolean hasNextBigInteger(int radix)</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a <code>BigInteger</code> in the specified radix using
+ the <code>nextBigInteger()</code> method. The scanner does not advance past
+ any input.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token as an integer
+Returns:
+true if and only if this scanner's next token is a valid
+         <code>BigInteger</code>
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextBigInteger
+<pre>public BigInteger nextBigInteger()</pre>
+Scans the next token of the input as a <code>BigInteger</code>.
+
+ <p> An invocation of this method of the form
+ nextBigInteger() behaves in exactly the same way as the
+ invocation nextBigInteger(radix), where <code>radix</code>
+ is the default radix of this scanner.
+
+Returns:
+the BigInteger scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if the input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextBigInteger
+<pre>public BigInteger nextBigInteger(int radix)</pre>
+Scans the next token of the input as a <code>BigInteger</code>.
+
+ <p> If the next token matches the Integer regular expression defined
+ above then the token is converted into a BigInteger value as if
+ by removing all group separators, mapping non-ASCII digits into ASCII
+ digits via the <code>Character.digit</code>, and passing the
+ resulting string to the <code>BigInteger(String, int)</code> constructor with the specified radix.
+
+Parameters:
+<code>radix</code> - the radix used to interpret the token
+Returns:
+the BigInteger scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Integer
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if the input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+hasNextBigDecimal
+<pre>public boolean hasNextBigDecimal()</pre>
+Returns true if the next token in this scanner's input can be
+ interpreted as a <code>BigDecimal</code> using the
+ <code>nextBigDecimal()</code> method. The scanner does not advance past any
+ input.
+
+Returns:
+true if and only if this scanner's next token is a valid
+         <code>BigDecimal</code>
+Throws:
+<code>IllegalStateException</code> - if this scanner is closed
+
+nextBigDecimal
+<pre>public BigDecimal nextBigDecimal()</pre>
+Scans the next token of the input as a <code>BigDecimal</code>.
+
+ <p> If the next token matches the Decimal regular expression defined
+ above then the token is converted into a BigDecimal value as if
+ by removing all group separators, mapping non-ASCII digits into ASCII
+ digits via the <code>Character.digit</code>, and passing the
+ resulting string to the <code>BigDecimal(String)</code>
+ constructor.
+
+Returns:
+the BigDecimal scanned from the input
+Throws:
+<code>InputMismatchException</code> - if the next token does not match the Decimal
+         regular expression, or is out of range
+<code>NoSuchElementException</code> - if the input is exhausted
+<code>IllegalStateException</code> - if this scanner is closed
+
+reset
+<pre>public Scanner reset()</pre>
+Resets this scanner.
+
+ <p> Resetting a scanner discards all of its explicit state
+ information which may have been changed by invocations of <code>useDelimiter(java.util.regex.Pattern)</code>, <code>useLocale(java.util.Locale)</code>, or <code>useRadix(int)</code>.
+
+ <p> An invocation of this method of the form
+ scanner.reset() behaves in exactly the same way as the
+ invocation
+
+ <pre><code>
+   scanner.useDelimiter("\\p{javaWhitespace}+")
+          .useLocale(Locale.getDefault(Locale.Category.FORMAT))
+          .useRadix(10);
+ </code></pre>
+
+Returns:
+this scanner
+Since:
+1.6
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

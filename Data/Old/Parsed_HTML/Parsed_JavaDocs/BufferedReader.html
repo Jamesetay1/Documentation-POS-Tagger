@@ -1,0 +1,423 @@
+
+
+BufferedReader (Java Platform SE 8 )
+
+JavaScript is disabled on your browser.
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+compact1, compact2, compact3
+java.io
+Class BufferedReader
+
+java.lang.Object
+
+java.io.Reader
+
+java.io.BufferedReader
+
+All Implemented Interfaces:
+Closeable, AutoCloseable, Readable
+
+Direct Known Subclasses:
+LineNumberReader
+
+<pre>public class BufferedReader
+extends Reader</pre>
+Reads text from a character-input stream, buffering characters so as to
+ provide for the efficient reading of characters, arrays, and lines.
+
+ <p> The buffer size may be specified, or the default size may be used.  The
+ default is large enough for most purposes.
+
+ <p> In general, each read request made of a Reader causes a corresponding
+ read request to be made of the underlying character or byte stream.  It is
+ therefore advisable to wrap a BufferedReader around any Reader whose read()
+ operations may be costly, such as FileReaders and InputStreamReaders.  For
+ example,
+
+ <pre>
+ BufferedReader in
+   = new BufferedReader(new FileReader("foo.in"));
+ </pre>
+
+ will buffer the input from the specified file.  Without buffering, each
+ invocation of read() or readLine() could cause bytes to be read from the
+ file, converted into characters, and then returned, which can be very
+ inefficient.
+
+ <p> Programs that use DataInputStreams for textual input can be localized by
+ replacing each DataInputStream with an appropriate BufferedReader.
+
+Since:
+JDK1.1
+See Also:
+<code>FileReader</code>, 
+<code>InputStreamReader</code>, 
+<code>Files.newBufferedReader(java.nio.file.Path, java.nio.charset.Charset)</code>
+
+Field Summary
+
+Fields inherited from class java.io.Reader
+<code>lock</code>
+
+Constructor Summary
+
+Constructors 
+
+Constructor and Description
+
+<code>BufferedReader(Reader in)</code>
+Creates a buffering character-input stream that uses a default-sized
+ input buffer.
+
+<code>BufferedReader(Reader in,
+              int sz)</code>
+Creates a buffering character-input stream that uses an input buffer of
+ the specified size.
+
+Method Summary
+
+All Methods Instance Methods Concrete Methods 
+
+Modifier and Type
+Method and Description
+
+<code>void</code>
+<code>close()</code>
+Closes the stream and releases any system resources associated with
+ it.
+
+<code>Stream<String></code>
+<code>lines()</code>
+Returns a <code>Stream</code>, the elements of which are lines read from
+ this <code>BufferedReader</code>.
+
+<code>void</code>
+<code>mark(int readAheadLimit)</code>
+Marks the present position in the stream.
+
+<code>boolean</code>
+<code>markSupported()</code>
+Tells whether this stream supports the mark() operation, which it does.
+
+<code>int</code>
+<code>read()</code>
+Reads a single character.
+
+<code>int</code>
+<code>read(char[] cbuf,
+    int off,
+    int len)</code>
+Reads characters into a portion of an array.
+
+<code>String</code>
+<code>readLine()</code>
+Reads a line of text.
+
+<code>boolean</code>
+<code>ready()</code>
+Tells whether this stream is ready to be read.
+
+<code>void</code>
+<code>reset()</code>
+Resets the stream to the most recent mark.
+
+<code>long</code>
+<code>skip(long n)</code>
+Skips characters.
+
+Methods inherited from class java.io.Reader
+<code>read, read</code>
+
+Methods inherited from class java.lang.Object
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code>
+
+Constructor Detail
+
+BufferedReader
+<pre>public BufferedReader(Reader in,
+                      int sz)</pre>
+Creates a buffering character-input stream that uses an input buffer of
+ the specified size.
+
+Parameters:
+<code>in</code> - A Reader
+<code>sz</code> - Input-buffer size
+Throws:
+<code>IllegalArgumentException</code> - If <code>sz <= 0</code>
+
+BufferedReader
+<pre>public BufferedReader(Reader in)</pre>
+Creates a buffering character-input stream that uses a default-sized
+ input buffer.
+
+Parameters:
+<code>in</code> - A Reader
+
+Method Detail
+
+read
+<pre>public int read()
+         throws IOException</pre>
+Reads a single character.
+
+Overrides:
+<code>read</code> in class <code>Reader</code>
+Returns:
+The character read, as an integer in the range
+         0 to 65535 (0x00-0xffff), or -1 if the
+         end of the stream has been reached
+Throws:
+<code>IOException</code> - If an I/O error occurs
+
+read
+<pre>public int read(char[] cbuf,
+                int off,
+                int len)
+         throws IOException</pre>
+Reads characters into a portion of an array.
+
+ <p> This method implements the general contract of the corresponding
+ <code><code>read</code></code> method of the
+ <code><code>Reader</code></code> class.  As an additional convenience, it
+ attempts to read as many characters as possible by repeatedly invoking
+ the <code>read</code> method of the underlying stream.  This iterated
+ <code>read</code> continues until one of the following conditions becomes
+ true: 
+ The specified number of characters have been read,
+
+    The <code>read</code> method of the underlying stream returns
+   <code>-1</code>, indicating end-of-file, or
+
+    The <code>ready</code> method of the underlying stream
+   returns <code>false</code>, indicating that further input requests
+   would block.
+
+  If the first <code>read</code> on the underlying stream returns
+ <code>-1</code> to indicate end-of-file then this method returns
+ <code>-1</code>.  Otherwise this method returns the number of characters
+ actually read.
+
+ <p> Subclasses of this class are encouraged, but not required, to
+ attempt to read as many characters as possible in the same fashion.
+
+ <p> Ordinarily this method takes characters from this stream's character
+ buffer, filling it from the underlying stream as necessary.  If,
+ however, the buffer is empty, the mark is not valid, and the requested
+ length is at least as large as the buffer, then this method will read
+ characters directly from the underlying stream into the given array.
+ Thus redundant <code>BufferedReader</code>s will not copy data
+ unnecessarily.
+
+Specified by:
+<code>read</code> in class <code>Reader</code>
+Parameters:
+<code>cbuf</code> - Destination buffer
+<code>off</code> - Offset at which to start storing characters
+<code>len</code> - Maximum number of characters to read
+Returns:
+The number of characters read, or -1 if the end of the
+             stream has been reached
+Throws:
+<code>IOException</code> - If an I/O error occurs
+
+readLine
+<pre>public String readLine()
+                throws IOException</pre>
+Reads a line of text.  A line is considered to be terminated by any one
+ of a line feed ('\n'), a carriage return ('\r'), or a carriage return
+ followed immediately by a linefeed.
+
+Returns:
+A String containing the contents of the line, not including
+             any line-termination characters, or null if the end of the
+             stream has been reached
+Throws:
+<code>IOException</code> - If an I/O error occurs
+See Also:
+<code>Files.readAllLines(java.nio.file.Path, java.nio.charset.Charset)</code>
+
+skip
+<pre>public long skip(long n)
+          throws IOException</pre>
+Skips characters.
+
+Overrides:
+<code>skip</code> in class <code>Reader</code>
+Parameters:
+<code>n</code> - The number of characters to skip
+Returns:
+The number of characters actually skipped
+Throws:
+<code>IllegalArgumentException</code> - If <code>n</code> is negative.
+<code>IOException</code> - If an I/O error occurs
+
+ready
+<pre>public boolean ready()
+              throws IOException</pre>
+Tells whether this stream is ready to be read.  A buffered character
+ stream is ready if the buffer is not empty, or if the underlying
+ character stream is ready.
+
+Overrides:
+<code>ready</code> in class <code>Reader</code>
+Returns:
+True if the next read() is guaranteed not to block for input,
+ false otherwise.  Note that returning false does not guarantee that the
+ next read will block.
+Throws:
+<code>IOException</code> - If an I/O error occurs
+
+markSupported
+<pre>public boolean markSupported()</pre>
+Tells whether this stream supports the mark() operation, which it does.
+
+Overrides:
+<code>markSupported</code> in class <code>Reader</code>
+Returns:
+true if and only if this stream supports the mark operation.
+
+mark
+<pre>public void mark(int readAheadLimit)
+          throws IOException</pre>
+Marks the present position in the stream.  Subsequent calls to reset()
+ will attempt to reposition the stream to this point.
+
+Overrides:
+<code>mark</code> in class <code>Reader</code>
+Parameters:
+<code>readAheadLimit</code> - Limit on the number of characters that may be
+                         read while still preserving the mark. An attempt
+                         to reset the stream after reading characters
+                         up to this limit or beyond may fail.
+                         A limit value larger than the size of the input
+                         buffer will cause a new buffer to be allocated
+                         whose size is no smaller than limit.
+                         Therefore large values should be used with care.
+Throws:
+<code>IllegalArgumentException</code> - If <code>readAheadLimit < 0</code>
+<code>IOException</code> - If an I/O error occurs
+
+reset
+<pre>public void reset()
+           throws IOException</pre>
+Resets the stream to the most recent mark.
+
+Overrides:
+<code>reset</code> in class <code>Reader</code>
+Throws:
+<code>IOException</code> - If the stream has never been marked,
+                          or if the mark has been invalidated
+
+close
+<pre>public void close()
+           throws IOException</pre>
+Description copied from class: <code>Reader</code>
+Closes the stream and releases any system resources associated with
+ it.  Once the stream has been closed, further read(), ready(),
+ mark(), reset(), or skip() invocations will throw an IOException.
+ Closing a previously closed stream has no effect.
+
+Specified by:
+<code>close</code> in interface <code>Closeable</code>
+Specified by:
+<code>close</code> in interface <code>AutoCloseable</code>
+Specified by:
+<code>close</code> in class <code>Reader</code>
+Throws:
+<code>IOException</code> - If an I/O error occurs
+
+lines
+<pre>public Stream<String> lines()</pre>
+Returns a <code>Stream</code>, the elements of which are lines read from
+ this <code>BufferedReader</code>.  The <code>Stream</code> is lazily populated,
+ i.e., read only occurs during the
+ terminal
+ stream operation.
+
+ <p> The reader must not be operated on during the execution of the
+ terminal stream operation. Otherwise, the result of the terminal stream
+ operation is undefined.
+
+ <p> After execution of the terminal stream operation there are no
+ guarantees that the reader will be at a specific position from which to
+ read the next character or line.
+
+ <p> If an <code>IOException</code> is thrown when accessing the underlying
+ <code>BufferedReader</code>, it is wrapped in an <code>UncheckedIOException</code> which will be thrown from the <code>Stream</code>
+ method that caused the read to take place. This method will return a
+ Stream if invoked on a BufferedReader that is closed. Any operation on
+ that stream that requires reading from the BufferedReader after it is
+ closed, will cause an UncheckedIOException to be thrown.
+
+Returns:
+a <code>Stream<String></code> providing the lines of text
+         described by this <code>BufferedReader</code>
+Since:
+1.8
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Deprecated
+Index
+Help
+
+Java™ PlatformStandard Ed. 8
+
+Prev Class
+Next Class
+
+Frames
+No Frames
+
+All Classes
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+ Submit a bug or feature For further API reference and developer documentation, see Java SE Documentation. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples. Copyright © 1993, 2020, Oracle and/or its affiliates.  All rights reserved. Use is subject to license terms. Also see the documentation redistribution policy. </p>
+

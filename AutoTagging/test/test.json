@@ -1,0 +1,61 @@
+{
+  "tokens": [
+    {
+      "code": false,
+      "token": "To"
+    },
+    {
+      "code": false,
+      "token": "test"
+    },
+    {
+      "code": false,
+      "token": "the"
+    },
+    {
+      "code": false,
+      "token": "tagger"
+    },
+    {
+      "code": false,
+      "token": "run"
+    },
+    {
+      "code": true,
+      "token": "tagger.tag"
+    },
+    {
+      "code": true,
+      "token": "("
+    },
+    {
+      "code": true,
+      "token": ")"
+    },
+    {
+      "code": false,
+      "token": "and"
+    },
+    {
+      "code": false,
+      "token": "then"
+    },
+    {
+      "code": false,
+      "token": "check"
+    },
+    {
+      "code": false,
+      "token": "the"
+    },
+    {
+      "code": false,
+      "token": "output"
+    },
+    {
+      "code": false,
+      "token": "."
+    }
+  ],
+  "type": "tokens"
+}

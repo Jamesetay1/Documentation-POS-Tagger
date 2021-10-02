@@ -1,0 +1,1 @@
+To test the tagger run tagger.tag() and then check the output.
