@@ -1,3 +1,7 @@
+# Project Overview
+This project was my Senior design project for SE491 and SE492 Iowa State.  
+We created a POS tagger specifically for Software Documentation by adding a new tag set, getting new training data, and using various models - ultimately ending on a CRF to get the best results.
+
 # Table of Contents
 * Important Directories are marked with a (*)
 ## `Consistency Checking`
@@ -12,8 +16,6 @@ A small temporary directory full of files. The live-parser resides here, but is 
 The tokenization module for the pipeline. This is a java module capable of tokenizing and sentence splitting plaintext HTML input. The tokenization module is one of the more important modules, and is used within the universal HTML parser.
 ## (*)`AutoTagging`
 Autotagging contains the auto tagger module used for automatically tagging JSON formatted datafiles. The autotagger will automatically tag any obvious missing tags (pure english, numbers, etc) and leave the rest for manual tagging.
-## (*)`TrainingModel`
-This was an early iteration of the training system used in the project. This is now deprecated and not important.
 ## (*)`Manual Tagger`
 The manual tagger is a javafx gui used to tag untagged data in a directory full of JSON datafiles. For any manual tagging, this tool will be of good use. Additionally, the patcher is located here, which can tag all of a given token with a specified tag.
 ## `Data`
